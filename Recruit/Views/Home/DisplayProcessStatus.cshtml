@@ -1,0 +1,50 @@
+﻿@model List<tbl_process_statuses>
+
+@{
+    ViewBag.Title = "Process Status";
+}
+<h3>Process Status</h3>
+@*@{
+        var data = ViewBag.Message;
+    }*@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css/layoutstyles.css">
+</head>
+<body>
+
+    <table cellpadding="0" cellspacing="0" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Code</th>
+            <th>Status</th>
+            <th>Colour</th>
+
+        </tr>
+
+        @foreach (var data in Model)
+        {
+            <tr>
+                <td>@data.id</td>
+                <td>@data.code</td>
+                <td>@data.status</td>
+                <td>@data.colour</td>
+
+            </tr>
+        }
+    </table>
+    <div>
+        <a asp-action="Index">Back to Dashboard</a>
+    </div>
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+</html>

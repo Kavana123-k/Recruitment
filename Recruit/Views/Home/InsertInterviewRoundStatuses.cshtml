@@ -1,0 +1,47 @@
+﻿@model Recruit.Models.tbl_interview_round_statuses
+
+@{
+    ViewData["Title"] = "InsertInterviewRoundStatus";
+
+}
+
+<h1>Insert Interview Round Status</h1>
+
+
+<hr />
+<link rel="stylesheet" href="~/css/layoutstyles.css">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="InsertInterviewRoundStatuses">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+          
+            <div class="form-group">
+                <label asp-for="status" class="control-label"></label>
+                <input asp-for="status" class="form-control" />
+                <span asp-validation-for="status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Dashboard</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+@{
+    if (@TempData["Msg"] != null)
+    {
+        <script>
+
+            alert('@TempData["msg"]')
+        </script>
+
+    }
+} 

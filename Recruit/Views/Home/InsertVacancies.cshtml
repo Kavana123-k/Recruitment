@@ -1,0 +1,56 @@
+﻿@model Recruit.Models.tbl_vacancies
+
+@{
+    ViewData["Title"] = "InsertVacancies";
+
+}
+
+<h1>Insert Vacancies</h1>
+
+
+<hr />
+<link rel="stylesheet" href="~/css/layoutstyles.css">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="InsertVacancies">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="code" class="control-label"></label>
+                <input asp-for="code" class="form-control" />
+                <span asp-validation-for="code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="vacancy" class="control-label"></label>
+                <input asp-for="vacancy" class="form-control" />
+                <span asp-validation-for="vacancy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Dashboard</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+@{
+    if (@TempData["Msg"] != null)
+    {
+        <script>
+
+            alert('@TempData["msg"]')
+        </script>
+
+    }
+} 

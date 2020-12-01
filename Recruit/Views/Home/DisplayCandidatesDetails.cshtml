@@ -1,0 +1,102 @@
+﻿@model List<tbl_candidates>
+
+@{
+    ViewBag.Title = "CandidatesDetails";
+}
+<h3>Candidate Details</h3>
+@*@{
+        var data = ViewBag.Message;
+    }*@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css/layoutstyles.css">
+</head>
+<body>
+
+    <table cellpadding="0" cellspacing="0" border="1">
+        <tr>
+            <th>id</th>
+            <th>first_name</th>
+            <th>last_name</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>source_code</th>
+            <th>referral_id</th>
+            <th>total_experience</th>
+            <th>relevant_experience</th>
+            <th>current_employer</th>
+            <th>current_designation</th>
+            <th>position_applied_code</th>
+            <th>current_ctc</th>
+            <th>expected_ctc</th>
+            <th>reason_for_change</th>
+            <th>notice_period</th>
+            <th>is_serving_notice</th>
+            <th>last_working_day</th>
+            <th>current_location</th>
+            <th>process_stage_id</th>
+            <th>process_stage_date</th>
+            <th>process_start_date</th>
+            <th>process_end_date</th>
+            <th>interview_status_id</th>
+            <th>resume_owner_id</th>
+            <th>owner_for_reminder_id</th>
+            <th>comments</th>
+            <th>date_of_joining</th>
+            <th>notes</th>
+            <th>links_for_interview</th>
+
+        </tr>
+
+        @foreach (var data in Model)
+        {
+            <tr>
+                <td>@data.id</td>
+                <td>@data.first_name</td>
+                <td>@data.last_name</td>
+                <td>@data.email</td>
+                <td>@data.phone</td>
+                <td>@data.source_code</td>
+                <td>@data.referral_id</td>
+                <td>@data.total_experience</td>
+                <td>@data.relevant_experience</td>
+                <td>@data.current_employer</td>
+                <td>@data.current_designation</td>
+                <td>@data.position_applied_code</td>
+                <td>@data.current_ctc</td>
+                <td>@data.expected_ctc</td>
+                <td>@data.reason_for_change</td>
+                <td>@data.notice_period</td>
+                <td>@data.is_serving_notice</td>
+                <td>@data.last_working_day</td>
+                <td>@data.current_location</td>
+                <td>@data.process_stage_id</td>
+                <td>@data.process_stage_date</td>
+                <td>@data.process_start_date</td>
+                <td>@data.process_end_date</td>
+                <td>@data.interview_status_id</td>
+                <td>@data.resume_owner_id</td>
+                <td>@data.owner_for_reminder_id</td>
+                <td>@data.comments</td>
+                <td>@data.date_of_joining</td>
+                <td>@data.notes</td>
+                <td>@data.links_for_interview</td>
+            </tr>
+        }
+    </table>
+    <div>
+        <a asp-action="Index">Back to Dashboard</a>
+    </div>
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+
+</html>

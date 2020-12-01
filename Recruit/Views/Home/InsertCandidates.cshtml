@@ -1,0 +1,323 @@
+﻿@model Recruit.Models.tbl_candidates
+
+
+
+
+
+
+<hr />
+@{
+    List<SelectListItem> sources = new List<SelectListItem>();
+    @foreach (var items in (IEnumerable<tbl_sources>)TempData["Sources"])
+    {
+        sources.Add(new SelectListItem
+        {
+
+
+            Text = items.name,
+            Value = items.code,
+            Selected = true
+
+        });
+    }
+    List<SelectListItem> stages = new List<SelectListItem>();
+    @foreach (var items in (IEnumerable<tbl_process_stages>)TempData["ProcessStages"])
+    {
+        stages.Add(new SelectListItem
+        {
+
+
+            Text = items.stage,
+            Value = items.id.ToString(),
+            Selected = true
+
+        });
+    }
+    List<SelectListItem> status = new List<SelectListItem>();
+    @foreach (var items in (IEnumerable<tbl_process_statuses>)TempData["ProcessStatuses"])
+    {
+        status.Add(new SelectListItem
+        {
+
+
+            Text = items.status,
+            Value = items.id.ToString(),
+            Selected = true
+
+        });
+    }
+    List<SelectListItem> vacancy = new List<SelectListItem>();
+    @foreach (var items in (IEnumerable<tbl_vacancies>)TempData["Vacancies"])
+    {
+        vacancy.Add(new SelectListItem
+        {
+
+
+            Text = items.name,
+            Value = items.code,
+            Selected = true
+
+        });
+    }
+
+    List<SelectListItem> employees = new List<SelectListItem>();
+    @foreach (var items in (IEnumerable<tbl_employees>)TempData["Employees"])
+    {
+        employees.Add(new SelectListItem
+        {
+
+
+            Text = items.name,
+            Value = items.id,
+            Selected = true
+
+        });
+    }
+    List<SelectListItem> owners = new List<SelectListItem>();
+    @foreach (var items in (IEnumerable<tbl_owners>)TempData["Owners"])
+    {
+        owners.Add(new SelectListItem
+        {
+
+
+            Text = items.first_name,
+            Value = items.id.ToString(),
+            Selected = true
+
+        });
+    }
+}
+
+
+<link rel="stylesheet" href="~/css/layoutstyles.css">
+
+
+
+<body>
+
+
+    <h4>Insert Candidate Details</h4>
+
+    <form asp-action="InsertCandidates" class="form-horizontal">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @*<div class="form-group">
+                <label class="control-label">Candidate Id</label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>*@
+        <div class="row">
+            <div class="column">
+                <label class="control-label">First Name</label>
+                <input asp-for="first_name" class="form-control" />
+                <span asp-validation-for="first_name" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Last Name</label>
+                <input asp-for="last_name" class="form-control" />
+                <span asp-validation-for="last_name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label"> Email</label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Phone</label>
+                <input asp-for="phone" class="form-control" />
+                <span asp-validation-for="phone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Source</label>
+                @*<input asp-for="source_code" class="form-control" />
+                    <span asp-validation-for="source_code" class="text-danger"></span>*@
+                @Html.DropDownListFor(model => model.source_code, sources, "--Choose Your Source--")
+                @*@Html.DropDownList("Sources", ViewBag.items as SelectList)*@
+                @*@Html.DropDownList("source_code", (SelectList)ViewBag.sources, "--Choose Your Source--")*@
+
+            </div>
+
+            <div class="column">
+                <label class="control-label">Referred by</label>
+                @*<input asp-for="referral_id" class="form-control" />
+                    <span asp-validation-for="referral_id" class="text-danger"></span>*@
+                @Html.DropDownListFor(model => model.referral_id, employees, "--Choose the Employee--")
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Total experience</label>
+                <input asp-for="total_experience" class="form-control" />
+                <span asp-validation-for="total_experience" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Relevant experience</label>
+                <input asp-for="relevant_experience" class="form-control" />
+                <span asp-validation-for="relevant_experience" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Current employer</label>
+                <input asp-for="current_employer" class="form-control" />
+                <span asp-validation-for="current_employer" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Current designation</label>
+                <input asp-for="current_designation" class="form-control" />
+                <span asp-validation-for="current_designation" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Position applied </label>
+                @*<input asp-for="position_applied_code" class="form-control" />
+                    <span asp-validation-for="position_applied_code" class="text-danger"></span>*@
+                @Html.DropDownListFor(model => model.position_applied_code, vacancy, "--Choose Your Source--")
+
+            </div>
+            <div class="column">
+                <label class="control-label">Current ctc</label>
+                <input asp-for="current_ctc" class="form-control" />
+                <span asp-validation-for="current_ctc" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Expected ctc</label>
+                <input asp-for="expected_ctc" class="form-control" />
+                <span asp-validation-for="expected_ctc" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Reason for change</label>
+                <input asp-for="reason_for_change" class="form-control" />
+                <span asp-validation-for="reason_for_change" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Notice period</label>
+                <input asp-for="notice_period" class="form-control" />
+                <span asp-validation-for="notice_period" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Is serving notice</label>
+                <input asp-for="is_serving_notice" class="form-control" />
+                <span asp-validation-for="is_serving_notice" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Last working day</label>
+                <input asp-for="last_working_day" class="form-control" />
+                <span asp-validation-for="last_working_day" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Current Location</label>
+                <input asp-for="current_location" class="form-control" />
+                <span asp-validation-for="current_location" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Process stage </label>
+                @*<input asp-for="process_stage_id" class="form-control" />
+                    <span asp-validation-for="process_stage_id" class="text-danger"></span>*@
+                @Html.DropDownListFor(model => model.process_stage_id, stages, "--Choose Process Stage--")
+            </div>
+            <div class="column">
+                <label class="control-label">Process Stage date</label>
+                <input asp-for="process_stage_date" class="form-control" />
+                <span asp-validation-for="process_stage_date" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Process start date</label>
+                <input asp-for="process_start_date" class="form-control" />
+                <span asp-validation-for="process_start_date" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Process end date</label>
+                <input asp-for="process_end_date" class="form-control" />
+                <span asp-validation-for="process_end_date" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Interview status </label>
+                @*<input asp-for="interview_status_id" class="form-control" />
+                    <span asp-validation-for="interview_status_id" class="text-danger"></span>*@
+                @Html.DropDownListFor(model => model.interview_status_id, status, "--Choose Interview Status--")
+            </div>
+            <div class="column">
+                <label class="control-label">Resume owner id</label>
+                @*<input asp-for="resume_owner_id" class="form-control" />
+                    <span asp-validation-for="resume_owner_id" class="text-danger"></span>*@
+                @Html.DropDownListFor(model => model.resume_owner_id, owners@*, "-- Select Resume Owner --"*@)
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Owner for reminder id</label>
+                @*<input asp-for="owner_for_reminder_id" class="form-control" />
+                    <span asp-validation-for="owner_for_reminder_id" class="text-danger"></span>*@
+                @Html.DropDownListFor(model => model.owner_for_reminder_id, owners@*, "-- Select Resume Owner --"*@)
+            </div>
+            <div class="column">
+                <label class="control-label">Comments</label>
+                <input asp-for="comments" class="form-control" />
+                <span asp-validation-for="comments" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="control-label">Date of joining</label>
+                <input asp-for="date_of_joining" class="form-control" />
+                <span asp-validation-for="date_of_joining" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Notes</label>
+                <input asp-for="notes" class="form-control" />
+                <span asp-validation-for="notes" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Links for Interview</label>
+                <input asp-for="links_for_interview" class="form-control" />
+                <span asp-validation-for="links_for_interview" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <input type="submit" value="Submit" class="btn bg-primary" />
+
+            </div>
+        </div>
+
+
+    </form>
+
+
+</body>
+<div>
+    <a asp-action="Index">Back to Dashboard</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+@{
+    if (@TempData["Msg"] != null)
+    {
+        <script>
+
+            alert('@TempData["msg"]')
+        </script>
+
+    }
+}

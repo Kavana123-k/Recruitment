@@ -1,0 +1,83 @@
+﻿@model Recruit.Models.tbl_interview_details
+
+
+<h2>Insert</h2>
+<h4>Interview Details</h4>
+<hr />
+@{
+    List<SelectListItem> statusId = new List<SelectListItem>();
+    @foreach (var items in (IEnumerable<tbl_interview_round_statuses>)TempData["Data"])
+    {
+        statusId.Add(new SelectListItem
+        {
+
+
+            Text = items.status,
+            Value = (items.id).ToString(),
+            Selected = true
+
+        });
+    }
+}
+
+<link rel="stylesheet" href="~/css/layoutstyles.css">
+<body>
+
+
+
+    <form asp-action="InsertInterviewDetails" class="form-horizontal">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="column">
+            <label class="control-label">Candidate Id</label>
+            <input asp-for="candidate_id" class="form-control" />
+            <span asp-validation-for="candidate_id" class="text-danger"></span>
+        </div>
+        <div class="column">
+
+        </div>
+        <div class="column">
+            <label class="control-label">Interview Start Date and Time</label>
+            <input asp-for="start_date_time" class="form-control" />
+            <span asp-validation-for="start_date_time" class="text-danger"></span>
+        </div>
+        <div class="column">
+            <label class="control-label">Interview End Date and Time</label>
+            <input asp-for="end_date_time" class="form-control" />
+            <span asp-validation-for="end_date_time" class="text-danger"></span>
+        </div>
+        <div class="column">
+            <label class="control-label">Status Id</label>
+            @*<input asp-for="status_id" class="form-control" />
+            <span asp-validation-for="status_id" class="text-danger"></span>*@
+            @Html.DropDownListFor(model => model.status_id, statusId)
+        </div>
+        <div class="column">
+            <label class="control-label">Reason</label>
+            <input asp-for="reason" class="form-control" />
+            <span asp-validation-for="reason" class="text-danger"></span>
+        </div>
+        <div class="column">
+            <input type="submit" value="Submit" class="btn bg-primary" align="center" /><br />
+
+       
+            <a asp-action="Index">Back to Dashboard</a>
+        </div>
+
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
+    </form>
+   
+</body>
+
+@{
+    if (@TempData["Msg"] != null)
+    {
+        <script>
+
+            alert('@TempData["msg"]')
+        </script>
+
+    }
+}  
