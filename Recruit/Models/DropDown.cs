@@ -99,35 +99,12 @@ namespace Recruit.Models
             List<tbl_process_stages> items = new List<tbl_process_stages>();
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (IDbConnection db = new SqlConnection(connectionString))
                 {
-                    string query = " SELECT id,code,stage FROM tbl_process_stages";
-                    using (SqlCommand cmd = new SqlCommand(query))
-                    {
-                        cmd.Connection = con;
-                        con.Open();
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                try
-                                {
-                                    items.Add(new tbl_process_stages
-                                    {
-                                        id = reader.GetInt64(reader.GetOrdinal("id")),
-                                        code = reader.GetString(reader.GetOrdinal("code")),
-                                        stage = reader.GetString(reader.GetOrdinal("stage")),
-                                    });
-                                }
-                                catch
-                                {
-                                    //writelog
-                                }
-                            }
-                        }
-                        con.Close();
-                    }
+
+                    items = db.Query<tbl_process_stages>(" SELECT id,code,stage FROM tbl_process_stages").ToList();
                 }
+               
             }
             catch
             {
@@ -146,35 +123,13 @@ namespace Recruit.Models
             List<tbl_vacancies> items = new List<tbl_vacancies>();
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (IDbConnection db = new SqlConnection(connectionString))
                 {
-                    string query = " SELECT code, name,vacancy FROM tbl_vacancies";
-                    using (SqlCommand cmd = new SqlCommand(query))
-                    {
-                        cmd.Connection = con;
-                        con.Open();
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                try
-                                {
-                                    items.Add(new tbl_vacancies
-                                    {
-                                        code = reader.GetString(reader.GetOrdinal("code")),
-                                        name = reader.GetString(reader.GetOrdinal("name")),
-                                        vacancy = reader.GetInt64(reader.GetOrdinal("vacancy")),
-                                    });
-                                }
-                                catch
-                                {
-                                    //writelog
-                                }
-                            }
-                        }
-                        con.Close();
-                    }
+
+                    items = db.Query<tbl_vacancies>(" SELECT code, name,vacancy FROM tbl_vacancies").ToList();
                 }
+
+              
             }
             catch
             {
@@ -193,34 +148,12 @@ namespace Recruit.Models
             List<tbl_interview_round_statuses> items = new List<tbl_interview_round_statuses>();
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (IDbConnection db = new SqlConnection(connectionString))
                 {
-                    string query = " SELECT id,status FROM tbl_interview_round_statuses";
-                    using (SqlCommand cmd = new SqlCommand(query))
-                    {
-                        cmd.Connection = con;
-                        con.Open();
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            try
-                            {
-                                while (reader.Read())
-                                {
-                                    items.Add(new tbl_interview_round_statuses
-                                    {
-                                        id = reader.GetInt64(reader.GetOrdinal("id")),
-                                        status = reader.GetString(reader.GetOrdinal("status")),
-                                    });
-                                }
-                            }
-                            catch
-                            {
-                                //writelog
-                            }
-                        }
-                        con.Close();
-                    }
+
+                    items = db.Query<tbl_interview_round_statuses>(" SELECT id,status FROM tbl_interview_round_statuses").ToList();
                 }
+               
             }
             catch
             {
@@ -239,34 +172,13 @@ namespace Recruit.Models
             List<tbl_employees> items = new List<tbl_employees>();
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (IDbConnection db = new SqlConnection(connectionString))
                 {
-                    string query = " SELECT id,name FROM tbl_employees";
-                    using (SqlCommand cmd = new SqlCommand(query))
-                    {
-                        cmd.Connection = con;
-                        con.Open();
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            try
-                            {
-                                while (reader.Read())
-                                {
-                                    items.Add(new tbl_employees
-                                    {
-                                        id = reader.GetString(reader.GetOrdinal("id")),
-                                        name = reader.GetString(reader.GetOrdinal("name")),
-                                    });
-                                }
-                            }
-                            catch
-                            {
-                                //writelog
-                            }
-                        }
-                        con.Close();
-                    }
+
+                    items = db.Query<tbl_employees>(" SELECT id,name FROM tbl_employees").ToList();
                 }
+
+
             }
             catch
             {
@@ -283,40 +195,13 @@ namespace Recruit.Models
             List<tbl_sources> items = new List<tbl_sources>();
             try
             {
-
-
-                //String connectionString = this.Configuration.GetConnectionString("MyConn");
-
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (IDbConnection db = new SqlConnection(connectionString))
                 {
-                    string query = " SELECT code,name FROM tbl_sources";
-                    using (SqlCommand cmd = new SqlCommand(query))
-                    {
-                        cmd.Connection = con;
-                        con.Open();
-                        using (SqlDataReader sdr = cmd.ExecuteReader())
-                        {
-                            try
-                            {
-                                while (sdr.Read())
-                                {
-                                    items.Add(new tbl_sources
-                                    {
-                                        code = sdr.GetString(sdr.GetOrdinal("code")),
-                                        name = sdr.GetString(sdr.GetOrdinal("name")),
-                                    });
-                                }
-                            }
-                            catch
-                            {
-                                //writelog
-                            }
-                        }
-                        con.Close();
-                    }
+
+                    items = db.Query<tbl_sources>("SELECT code,name FROM tbl_sources").ToList();
                 }
 
-
+              
             }
             catch
             {
