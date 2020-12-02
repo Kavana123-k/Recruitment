@@ -9,8 +9,11 @@ namespace Recruit.Models
 {
     public class tbl_sources
     {
-     
+        [Key]
         public string code { get; set; }
+        [StringLength(15)]
+        [DataType(DataType.Text)]
+        [Required(ErrorMessage = "name invalid")]
         public string name { get; set; }
 
     }

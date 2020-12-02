@@ -11,6 +11,7 @@ namespace Recruit.Models
 {
     public class DropDown
     {
+
         public static String connectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True";
         /// <summary>
         /// method to get the value from tbl_owners 
@@ -19,13 +20,10 @@ namespace Recruit.Models
         public List<tbl_owners> SetOwners()
         {
 
-            // String connectionString = this.Configuration.GetConnectionString("MyConn");
+            
             List<tbl_owners> items = new List<tbl_owners>();
             try
             {
-                //using (SqlConnection con = new SqlConnection(connectionString))
-                //{
-                  //  string query = " SELECT id,first_name,last_name FROM tbl_owners";
                     using (IDbConnection db = new SqlConnection(connectionString))
                     {
 
@@ -46,8 +44,6 @@ namespace Recruit.Models
         /// <returns></returns>
         public List<tbl_locations> SetLocations()
         {
-            // String connectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True";
-            // String connectionString = this.Configuration.GetConnectionString("MyConn");
             List<tbl_locations> items = new List<tbl_locations>();
             try
             {
@@ -69,8 +65,7 @@ namespace Recruit.Models
         /// </summary>
         /// <returns></returns>
         public List<tbl_process_statuses> SetProcessStatuses()
-        {  //  String connectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True";
-           // String connectionString = this.Configuration.GetConnectionString("MyConn");
+        {  
             List<tbl_process_statuses> items = new List<tbl_process_statuses>();
 
             try
@@ -94,8 +89,7 @@ namespace Recruit.Models
         /// <returns></returns>
         public List<tbl_process_stages> SetProcessStages()
         {
-            //  String connectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True";
-            // String connectionString = this.Configuration.GetConnectionString("MyConn");
+            
             List<tbl_process_stages> items = new List<tbl_process_stages>();
             try
             {
@@ -118,8 +112,6 @@ namespace Recruit.Models
         /// <returns></returns>
         public List<tbl_vacancies> SetVacancies()
         {
-            //   String connectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True";
-            // String connectionString = this.Configuration.GetConnectionString("MyConn");
             List<tbl_vacancies> items = new List<tbl_vacancies>();
             try
             {
@@ -143,8 +135,6 @@ namespace Recruit.Models
         /// <returns></returns>
         public List<tbl_interview_round_statuses> SetInterviewRoundStatuses()
         {
-            //  String connectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True";
-            // String connectionString = this.Configuration.GetConnectionString("MyConn");
             List<tbl_interview_round_statuses> items = new List<tbl_interview_round_statuses>();
             try
             {
@@ -167,8 +157,6 @@ namespace Recruit.Models
         /// <returns></returns>
         public List<tbl_employees> SetEmployees()
         {
-            //  String connectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True";
-            // String connectionString = this.Configuration.GetConnectionString("MyConn");
             List<tbl_employees> items = new List<tbl_employees>();
             try
             {

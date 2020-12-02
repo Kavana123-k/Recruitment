@@ -48,8 +48,6 @@ namespace Recruit.Controllers
         public IActionResult DisplayInterviewDetails()
         {
            String connectionString = this.Configuration.GetConnectionString("MyConn");
-           // String sql = "SELECT candidate_id,start_date_time,end_date_time,status_id,reason FROM tbl_interview_details";
-         //   var model = new List<tbl_interview_details>();
             List<tbl_interview_details> model = new List<tbl_interview_details>();
             using (IDbConnection db = new SqlConnection(connectionString))
             {
@@ -57,30 +55,7 @@ namespace Recruit.Controllers
                 model = db.Query<tbl_interview_details>("SELECT candidate_id,start_date_time,end_date_time,status_id,reason FROM tbl_interview_details").ToList();
             }
             return View(model);
-            //using (SqlConnection conn = new SqlConnection(connectionString))
-            //{
-            //    SqlCommand cmd = new SqlCommand(sql, conn);
-            //    conn.Open();
-            //    using (SqlDataReader rdr = cmd.ExecuteReader())
-            //    {
-            //        while (rdr.Read())
-            //        {
-            //            var data = new tbl_interview_details
-            //            {
-            //                candidate_id = rdr.GetInt64(rdr.GetOrdinal("candidate_id")),
-            //                start_date_time = rdr.GetDateTime(rdr.GetOrdinal("start_date_time")),
-            //                end_date_time = rdr.GetDateTime(rdr.GetOrdinal("end_date_time")),
-            //                status_id = rdr.GetInt64(rdr.GetOrdinal("status_id")),
-            //                reason = rdr.GetString(rdr.GetOrdinal("reason")),
-            //            };
-
-            //            model.Add(data);
-            //        }rdr.Close();
-            //    }conn.Close();
-
-            //}
-
-           // return View(model);
+           
         }
         /// <summary>
         /// Method to display Candidate details
@@ -89,12 +64,7 @@ namespace Recruit.Controllers
         public IActionResult DisplayCandidatesDetails()
         {
           String connectionString = this.Configuration.GetConnectionString("MyConn");
-          //String sql = "SELECT id,first_name,last_name,email,phone,source_code,referral_id," +
-          //      "total_experience,relevant_experience,current_employer,current_designation,position_applied_code," +
-          //      "current_ctc,expected_ctc,reason_for_change,notice_period,is_serving_notice,last_working_day,current_location,process_stage_id," +
-          //      "process_stage_date,process_start_date,process_end_date,interview_status_id,resume_owner_id,owner_for_reminder_id," +
-          //      "comments,date_of_joining,notes,links_for_interview FROM tbl_Candidates";
-            var model = new List<tbl_candidates>();
+           var model = new List<tbl_candidates>();
             using (IDbConnection db = new SqlConnection(connectionString))
             {
 
@@ -105,52 +75,7 @@ namespace Recruit.Controllers
                 "comments,date_of_joining,notes,links_for_interview FROM tbl_Candidates").ToList();
             }
             return View(model);
-            //using (SqlConnection conn = new SqlConnection(connectionString))
-            //{
-            //    SqlCommand cmd = new SqlCommand(sql, conn);
-            //    conn.Open();
-            //    using (SqlDataReader rdr = cmd.ExecuteReader())
-            //    {
-            //        while (rdr.Read())
-            //        {
-            //            var data = new tbl_candidates
-            //            {
-            //                id = rdr.GetInt64(rdr.GetOrdinal("id")),
-            //                first_name = rdr.GetString(rdr.GetOrdinal("first_name")),
-            //                last_name = rdr.GetString(rdr.GetOrdinal("last_name")),
-            //                email= rdr.GetString(rdr.GetOrdinal("email")),
-            //                phone = rdr.GetString(rdr.GetOrdinal("phone")),
-            //                source_code = rdr.GetString(rdr.GetOrdinal("source_code")),
-            //                referral_id = rdr.GetString(rdr.GetOrdinal("referral_id")),
-            //                total_experience = rdr.GetInt64(rdr.GetOrdinal("total_experience")),
-            //                relevant_experience = rdr.GetInt64(rdr.GetOrdinal("relevant_experience")),
-            //                current_employer = rdr.GetString(rdr.GetOrdinal("current_employer")),
-            //                current_designation = rdr.GetString(rdr.GetOrdinal("current_designation")),
-            //                position_applied_code = rdr.GetString(rdr.GetOrdinal("position_applied_code")),
-            //                current_ctc = rdr.GetInt64(rdr.GetOrdinal("current_ctc")),
-            //                expected_ctc = rdr.GetInt64(rdr.GetOrdinal("expected_ctc")),
-            //                reason_for_change = rdr.GetString(rdr.GetOrdinal("reason_for_change")),
-            //                notice_period = rdr.GetInt64(rdr.GetOrdinal("notice_period")),
-            //                is_serving_notice = rdr.GetBoolean(rdr.GetOrdinal("is_serving_notice")),
-            //                last_working_day = rdr.GetDateTime(rdr.GetOrdinal("last_working_day")),
-            //                current_location = rdr.GetString(rdr.GetOrdinal("current_location")),
-            //                process_stage_id = rdr.GetInt64(rdr.GetOrdinal("process_stage_id")),
-            //                process_stage_date = rdr.GetDateTime(rdr.GetOrdinal("process_stage_date")),
-            //                process_start_date = rdr.GetDateTime(rdr.GetOrdinal("process_start_date")),
-            //                process_end_date = rdr.GetDateTime(rdr.GetOrdinal("process_end_date")),
-            //                interview_status_id = rdr.GetInt64(rdr.GetOrdinal("interview_status_id")),
-            //                resume_owner_id = rdr.GetInt64(rdr.GetOrdinal("resume_owner_id")),
-            //                owner_for_reminder_id = rdr.GetInt64(rdr.GetOrdinal("owner_for_reminder_id")),
-            //                comments = rdr.GetString(rdr.GetOrdinal("comments")),
-            //                date_of_joining = rdr.GetDateTime(rdr.GetOrdinal("date_of_joining")),
-            //                notes = rdr.GetString(rdr.GetOrdinal("notes")),
-            //                links_for_interview = rdr.GetString(rdr.GetOrdinal("links_for_interview")),
-            //            };
-            //            model.Add(data);
-            //        }rdr.Close();
-            //    }conn.Close();
-            //}
-            //return View(model);
+           
         }
         /// <summary>
         /// Method to display the page with forms to insert into interview details
@@ -221,6 +146,7 @@ namespace Recruit.Controllers
 
             try
             {
+
                 if (ModelState.IsValid)
                 {
                  
