@@ -15,12 +15,15 @@ namespace Recruit
 {
     public class Program
     {
+        public static Logger log = LogManager.GetCurrentClassLogger();
         public static void Main(string[] args)
         {
+            log.Info("[Main]:Application Start");
             var serviceProvider = Init.CreateServices();
 
             // Put the database update into a scope to ensure
             // that all resources will be disposed.
+            log.Info("[Main]: Fluent Migrator to setup Database tables");
             using (var scope = serviceProvider.CreateScope())
             {
                 Init.UpdateDatabase(scope.ServiceProvider);

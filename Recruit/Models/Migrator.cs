@@ -1,18 +1,19 @@
 ﻿using FluentMigrator;
 using FluentMigrator.Runner;
 using Microsoft.Extensions.DependencyInjection;
+using NLog;
 using System;
 namespace Recruit.Models
 {
     [Migration(20201117141200)]
     public class CreateTables : Migration
     {
+      
+
         public override void Up()
         {
 
-            //GetSP("StoreCandidates");
-
-            //Creating the independent Tables
+           
             Create.Table("tbl_logins").WithDescription("Table to Store the Login credentials")                                   //Creation of tbl_logins
                 .WithColumn("user_id").AsString(20).PrimaryKey("PK_tbl_logins_UserId").WithColumnDescription("Userid for login")
                 .WithColumn("first_name").AsString(50).NotNullable().WithColumnDescription("First name of the user for login")
@@ -378,6 +379,7 @@ namespace Recruit.Models
 
     public class Init
     {
+        public static Logger log = LogManager.GetCurrentClassLogger();
         /// <summary>
         /// Configure the dependency injection services
         /// </summary>
@@ -422,7 +424,9 @@ namespace Recruit.Models
             var runner = serviceProvider.GetRequiredService<IMigrationRunner>();
 
             // Execute the migrations
+            log.Info("[UpdateDatabase]:Migrate Start");
             runner.MigrateUp();
+            log.Info("[UpdateDatabase]:Migrate End");
         }
     }
 }

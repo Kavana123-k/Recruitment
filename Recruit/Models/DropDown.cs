@@ -26,17 +26,17 @@ namespace Recruit.Models
             List<tbl_owners> items = new List<tbl_owners>();
             try
             {
-                    using (IDbConnection db = new SqlConnection(connectionString))
+                    using (IDbConnection database = new SqlConnection(connectionString))
                     {
 
-                        items = db.Query<tbl_owners>(" SELECT id,first_name,last_name FROM tbl_owners").ToList();
+                        items = database.Query<tbl_owners>(" SELECT id,first_name,last_name FROM tbl_owners").ToList();
                     }
                   
 
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                log.Error(ex.Message);
+                log.Error("[SetOwners]:"+ exception);
             }
             return (items);
         }
@@ -50,15 +50,15 @@ namespace Recruit.Models
             List<tbl_locations> items = new List<tbl_locations>();
             try
             {
-                using (IDbConnection db = new SqlConnection(connectionString))
+                using (IDbConnection database = new SqlConnection(connectionString))
                 {
-                  items = db.Query<tbl_locations>(" SELECT id,city FROM tbl_locations").ToList();
+                  items = database.Query<tbl_locations>(" SELECT id,city FROM tbl_locations").ToList();
                 }
                
             }
-            catch(Exception ex)
+            catch(Exception exception)
             {
-               log.Error(ex.Message);
+               log.Error(exception.Message);
             }
             return (items);
         }
@@ -72,16 +72,16 @@ namespace Recruit.Models
 
             try
             {
-                using (IDbConnection db = new SqlConnection(connectionString))
+                using (IDbConnection database = new SqlConnection(connectionString))
                 {
 
-                    items = db.Query<tbl_process_statuses>("SELECT id,code,status,colour FROM tbl_process_statuses").ToList();
+                    items = database.Query<tbl_process_statuses>("SELECT id,code,status,colour FROM tbl_process_statuses").ToList();
                 }
                
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                log.Error(ex.Message);
+                log.Error("[SetProcessStatuses]: " + exception); 
             }
             return (items);
         }
@@ -95,16 +95,16 @@ namespace Recruit.Models
             List<tbl_process_stages> items = new List<tbl_process_stages>();
             try
             {
-                using (IDbConnection db = new SqlConnection(connectionString))
+                using (IDbConnection database = new SqlConnection(connectionString))
                 {
 
-                    items = db.Query<tbl_process_stages>(" SELECT id,code,stage FROM tbl_process_stages").ToList();
+                    items = database.Query<tbl_process_stages>(" SELECT id,code,stage FROM tbl_process_stages").ToList();
                 }
                
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                log.Error(ex.Message);
+                log.Error(exception.Message);
             }
             return (items);
         }
@@ -117,17 +117,17 @@ namespace Recruit.Models
             List<tbl_vacancies> items = new List<tbl_vacancies>();
             try
             {
-                using (IDbConnection db = new SqlConnection(connectionString))
+                using (IDbConnection database = new SqlConnection(connectionString))
                 {
 
-                    items = db.Query<tbl_vacancies>(" SELECT code, name,vacancy FROM tbl_vacancies").ToList();
+                    items = database.Query<tbl_vacancies>(" SELECT code, name,vacancy FROM tbl_vacancies").ToList();
                 }
 
               
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                log.Error(ex.Message);
+                log.Error(exception.Message);
             }
             return (items);
         }
@@ -140,16 +140,16 @@ namespace Recruit.Models
             List<tbl_interview_round_statuses> items = new List<tbl_interview_round_statuses>();
             try
             {
-                using (IDbConnection db = new SqlConnection(connectionString))
+                using (IDbConnection database = new SqlConnection(connectionString))
                 {
 
-                    items = db.Query<tbl_interview_round_statuses>(" SELECT id,status FROM tbl_interview_round_statuses").ToList();
+                    items = database.Query<tbl_interview_round_statuses>(" SELECT id,status FROM tbl_interview_round_statuses").ToList();
                 }
                
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                log.Error(ex.Message);
+                log.Error(exception.Message);
             }
             return (items);
         }
@@ -162,17 +162,17 @@ namespace Recruit.Models
             List<tbl_employees> items = new List<tbl_employees>();
             try
             {
-                using (IDbConnection db = new SqlConnection(connectionString))
+                using (IDbConnection database = new SqlConnection(connectionString))
                 {
 
-                    items = db.Query<tbl_employees>(" SELECT id,name FROM tbl_employees").ToList();
+                    items = database.Query<tbl_employees>(" SELECT id,name FROM tbl_employees").ToList();
                 }
 
 
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                log.Error(ex.Message);
+                log.Error(exception.Message);
             }
             return (items);
         }
@@ -185,17 +185,17 @@ namespace Recruit.Models
             List<tbl_sources> items = new List<tbl_sources>();
             try
             {
-                using (IDbConnection db = new SqlConnection(connectionString))
+                using (IDbConnection database = new SqlConnection(connectionString))
                 {
 
-                    items = db.Query<tbl_sources>("SELECT code,name FROM tbl_sources").ToList();
+                    items = database.Query<tbl_sources>("SELECT code,name FROM tbl_sources").ToList();
                 }
 
               
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                log.Error(ex.Message);
+                log.Error(exception.Message);
             }
             return (items);
         }

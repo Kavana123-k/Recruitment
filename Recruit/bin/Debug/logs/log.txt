@@ -1,43 +1,87 @@
-2020-12-03 12:02:58.4163|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2020-12-03 12:02:58.6669|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2020-12-03 12:02:58.7038|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
-2020-12-03 12:07:51.4113|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2020-12-03 12:07:51.4756|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2020-12-03 12:07:51.4935|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
-2020-12-03 12:09:40.6864|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2020-12-03 12:09:40.7473|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2020-12-03 12:09:40.8120|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
-2020-12-03 12:39:42.7997|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2020-12-03 12:39:43.2382|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2020-12-03 12:39:43.2507|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
-2020-12-03 12:39:49.5891|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
-2020-12-03 13:07:56.8543|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2020-12-03 13:07:56.9478|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2020-12-03 13:07:57.2167|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
-2020-12-03 13:07:57.2599|INFO|Recruit.Controllers.HomeController|Method dashboard view
-2020-12-03 13:08:07.7537|INFO|Recruit.Controllers.HomeController|Method dashboard view
-2020-12-03 14:06:26.7051|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2020-12-03 14:06:26.8158|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2020-12-03 14:06:26.8752|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
-2020-12-03 14:06:26.8752|INFO|Recruit.Controllers.HomeController|Dashboard
-2020-12-03 14:07:10.6844|ERROR|Recruit.Models.DropDown|This is an error message
-2020-12-03 14:07:13.8709|INFO|Recruit.Controllers.HomeController|Dashboard
-2020-12-03 14:12:08.7205|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2020-12-03 14:12:08.7691|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2020-12-03 14:12:08.8416|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
-2020-12-03 14:12:08.9026|INFO|Recruit.Controllers.HomeController|Dashboard
-2020-12-03 14:12:18.9934|ERROR|Recruit.Models.DropDown|Exception of type 'System.Exception' was thrown.
-2020-12-03 14:12:20.8090|INFO|Recruit.Controllers.HomeController|Dashboard
-2020-12-03 14:24:50.9133|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2020-12-03 14:24:50.9920|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2020-12-03 14:24:51.0386|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
-2020-12-03 14:24:51.2112|INFO|Recruit.Controllers.HomeController|Dashboard
-2020-12-03 14:26:05.5819|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2020-12-03 14:26:05.7389|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2020-12-03 14:26:05.7965|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
-2020-12-03 14:26:05.8617|INFO|Recruit.Controllers.HomeController|Dashboard
-2020-12-03 14:26:25.7444|ERROR|Recruit.Models.InsertDataAccessLayer|Overflow or underflow in the arithmetic operation.
-2020-12-03 14:30:05.0685|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2020-12-03 14:30:05.1423|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2020-12-03 14:30:05.1812|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
-2020-12-03 14:30:05.3351|INFO|Recruit.Controllers.HomeController|Dashboard
+2020-12-03 16:40:13.7491|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 16:40:13.8368|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 16:40:13.9226|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 16:40:14.0183|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-03 16:47:10.4856|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-03 16:48:31.0517|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-03 16:48:38.0500|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-03 16:49:29.7090|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-03 16:49:33.3363|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-03 16:50:03.4320|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-03 16:50:08.5080|INFO|Recruit.Controllers.HomeController|[DisplayVacancies]:Action Method returns view which displays the Vacancies Details
+2020-12-03 16:50:12.1051|INFO|Recruit.Controllers.HomeController|[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details
+2020-12-03 16:50:18.2802|INFO|Recruit.Controllers.HomeController|[DisplayProcessStages]:Action Method returns view which displays the ProcessStages Details
+2020-12-03 16:51:02.9729|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-03 16:51:26.5533|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details
+2020-12-03 16:51:45.4251|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-03 16:51:46.5750|ERROR|Recruit.Models.InsertDataAccessLayer|[AddInterviewDetails]:System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_tbl_interview_details_tbl_candidates_CandidateId". The conflict occurred in database "RecruitMain", table "dbo.tbl_candidates", column 'id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Recruit.Models.InsertDataAccessLayer.AddInterviewDetails(tbl_interview_details Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 87
+ClientConnectionId:52229b72-7ff3-43e1-a14b-966a43abbf3a
+Error Number:547,State:0,Class:16
+2020-12-03 16:53:12.6584|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-03 16:53:50.8216|INFO|Recruit.Controllers.HomeController|[InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details
+2020-12-03 16:53:54.5949|INFO|Recruit.Controllers.HomeController|[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details
+2020-12-03 16:53:54.8777|ERROR|Recruit.Models.InsertDataAccessLayer|[AddLocations]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (chennai).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Recruit.Models.InsertDataAccessLayer.AddLocations(tbl_locations Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 116
+ClientConnectionId:52229b72-7ff3-43e1-a14b-966a43abbf3a
+Error Number:2627,State:1,Class:14
+2020-12-03 16:54:24.0698|INFO|Recruit.Controllers.HomeController|[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details
+2020-12-03 16:56:05.4329|INFO|Recruit.Controllers.HomeController|[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details
+2020-12-03 16:56:05.5539|ERROR|Recruit.Models.InsertDataAccessLayer|[AddLocations]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (goa).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Recruit.Models.InsertDataAccessLayer.AddLocations(tbl_locations Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 116
+ClientConnectionId:52229b72-7ff3-43e1-a14b-966a43abbf3a
+Error Number:2627,State:1,Class:14
+2020-12-03 16:56:23.1863|INFO|Recruit.Controllers.HomeController|[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details
+2020-12-03 17:52:33.3210|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 17:52:33.5933|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-03 17:52:33.5933|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 17:52:33.6532|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 17:56:26.9240|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-03 17:56:34.5967|INFO|Recruit.Controllers.HomeController|[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details
+2020-12-03 17:57:29.3951|INFO|Recruit.Controllers.HomeController|[DisplayProcessStages]:Action Method returns view which displays the ProcessStages Details
+2020-12-03 17:57:33.1493|INFO|Recruit.Controllers.HomeController|[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details
+2020-12-03 17:57:37.4491|INFO|Recruit.Controllers.HomeController|[DisplayVacancies]:Action Method returns view which displays the Vacancies Details
+2020-12-03 18:05:08.6024|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-03 18:05:10.7280|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-03 18:05:12.4208|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 18:05:12.4521|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 18:05:12.4976|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 18:05:12.6580|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-03 18:09:52.8793|INFO|Recruit.Program|[Main]:Application Start
+2020-12-03 18:09:53.0758|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-03 18:09:53.3123|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-03 18:09:53.9492|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-03 18:09:55.1819|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 18:09:55.2302|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 18:09:55.3200|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 18:09:55.3594|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page

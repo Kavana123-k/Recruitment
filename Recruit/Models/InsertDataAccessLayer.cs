@@ -11,19 +11,16 @@ namespace Recruit.Models
 {
     public class InsertDataAccessLayer
     {
-       public static SqlConnection con = new SqlConnection("Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True");
+        public static SqlConnection connection = new SqlConnection("Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True");
         Logger log = LogManager.GetCurrentClassLogger();
         public string AddCandidateDetails(tbl_candidates Entities)
         {
 
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True");
-            Logger log = LogManager.GetCurrentClassLogger();
             try
             {
 
-                SqlCommand cmd = new SqlCommand("sp_candidates_add", con);
+                SqlCommand cmd = new SqlCommand("sp_candidates_add", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-                //   cmd.Parameters.AddWithValue("@id", Entities.id);
                 cmd.Parameters.AddWithValue("@first_name", Entities.first_name);
                 cmd.Parameters.AddWithValue("@last_name", Entities.last_name);
                 cmd.Parameters.AddWithValue("@email", Entities.email);
@@ -53,20 +50,20 @@ namespace Recruit.Models
                 cmd.Parameters.AddWithValue("@date_of_joining", Entities.date_of_joining);
                 cmd.Parameters.AddWithValue("@notes", Entities.notes);
                 cmd.Parameters.AddWithValue("@links_for_interview", Entities.links_for_interview);
-                con.Open();
+                connection.Open();
                 cmd.ExecuteNonQuery();
-                con.Close();
+                connection.Close();
                 return ("Data save Successfully");
 
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                if (con.State == ConnectionState.Open)
+                if (connection.State == ConnectionState.Open)
                 {
-                    con.Close();
+                    connection.Close();
                 }
-                log.Error(ex.Message);
-                return (ex.Message.ToString());
+                log.Error("[AddCandidateDetails]:" + exception);
+                return (exception.Message.ToString());
             }
         }
         /// <summary>
@@ -76,29 +73,29 @@ namespace Recruit.Models
         /// <returns></returns>
         public string AddInterviewDetails(tbl_interview_details Entities)
         {
-            
+
             try
             {
-                 SqlCommand cmd = new SqlCommand("sp_interview_details_add", con);
+                SqlCommand cmd = new SqlCommand("sp_interview_details_add", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@candidate_id", Entities.candidate_id);
-                cmd.Parameters.AddWithValue("@start_date_time",Entities.start_date_time);
+                cmd.Parameters.AddWithValue("@start_date_time", Entities.start_date_time);
                 cmd.Parameters.AddWithValue("@end_date_time", Entities.end_date_time);
-                cmd.Parameters.AddWithValue("@status_id", Entities.status_id );
+                cmd.Parameters.AddWithValue("@status_id", Entities.status_id);
                 cmd.Parameters.AddWithValue("@reason", Entities.reason);
-                con.Open();
+                connection.Open();
                 cmd.ExecuteNonQuery();
-                con.Close();
+                connection.Close();
                 return ("Data save Successfully");
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                if (con.State == ConnectionState.Open)
+                if (connection.State == ConnectionState.Open)
                 {
-                    con.Close();
+                    connection.Close();
                 }
-                log.Error(ex.Message);
-                return (ex.Message.ToString());
+                log.Error("[AddInterviewDetails]:" + exception);
+                return (exception.Message.ToString());
             }
         }
         /// <summary>
@@ -108,26 +105,26 @@ namespace Recruit.Models
         /// <returns></returns>
         public string AddLocations(tbl_locations Entities)
         {
-          //  SqlConnection con = new SqlConnection("Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True");
+
             try
             {
 
-                SqlCommand cmd = new SqlCommand("sp_locations_add", con);
+                SqlCommand cmd = new SqlCommand("sp_locations_add", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@city", Entities.city);
-                con.Open();
+                connection.Open();
                 cmd.ExecuteNonQuery();
-                con.Close();
+                connection.Close();
                 return ("Data save Successfully");
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                if (con.State == ConnectionState.Open)
+                if (connection.State == ConnectionState.Open)
                 {
-                    con.Close();
+                    connection.Close();
                 }
-                log.Error(ex.Message);
-                return (ex.Message.ToString());
+                log.Error("[AddLocations]:" + exception);
+                return (exception.Message.ToString());
             }
         }
         /// <summary>
@@ -137,28 +134,28 @@ namespace Recruit.Models
         /// <returns></returns>
         public string AddSources(tbl_sources Entities)
         {
-          //  SqlConnection con = new SqlConnection("Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True");
+
             try
             {
 
-                SqlCommand cmd = new SqlCommand("sp_sources_add", con);
+                SqlCommand cmd = new SqlCommand("sp_sources_add", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@code", Entities.code);
                 cmd.Parameters.AddWithValue("@name", Entities.name);
-                
-                con.Open();
+
+                connection.Open();
                 cmd.ExecuteNonQuery();
-                con.Close();
+                connection.Close();
                 return ("Data save Successfully");
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                if (con.State == ConnectionState.Open)
+                if (connection.State == ConnectionState.Open)
                 {
-                    con.Close();
+                    connection.Close();
                 }
-                log.Error(ex.Message);
-                return (ex.Message.ToString());
+                log.Error("[AddSources]:" + exception);
+                return (exception.Message.ToString());
             }
         }
         /// <summary>
@@ -168,29 +165,29 @@ namespace Recruit.Models
         /// <returns></returns>
         public string AddVacancies(tbl_vacancies Entities)
         {
-          //  SqlConnection con = new SqlConnection("Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True");
+
             try
             {
 
-                SqlCommand cmd = new SqlCommand("sp_vacancies_add", con);
+                SqlCommand cmd = new SqlCommand("sp_vacancies_add", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@code", Entities.code);
                 cmd.Parameters.AddWithValue("@name", Entities.name);
                 cmd.Parameters.AddWithValue("@vacancy", Entities.vacancy);
 
-                con.Open();
+                connection.Open();
                 cmd.ExecuteNonQuery();
-                con.Close();
+                connection.Close();
                 return ("Data save Successfully");
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                if (con.State == ConnectionState.Open)
+                if (connection.State == ConnectionState.Open)
                 {
-                    con.Close();
+                    connection.Close();
                 }
-                log.Error(ex.Message);
-                return (ex.Message.ToString());
+                log.Error("[AddVacancies]:" + exception);
+                return (exception.Message.ToString());
             }
         }
         /// <summary>
@@ -200,29 +197,29 @@ namespace Recruit.Models
         /// <returns></returns>
         public string AddProcessStatus(tbl_process_statuses Entities)
         {
-          //  SqlConnection con = new SqlConnection("Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True");
+
             try
             {
 
-                SqlCommand cmd = new SqlCommand("sp_process_statuses_add", con);
+                SqlCommand cmd = new SqlCommand("sp_process_statuses_add", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@code", Entities.code);
                 cmd.Parameters.AddWithValue("@status", Entities.status);
                 cmd.Parameters.AddWithValue("@colour", Entities.colour);
 
-                con.Open();
+                connection.Open();
                 cmd.ExecuteNonQuery();
-                con.Close();
+                connection.Close();
                 return ("Data save Successfully");
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                if (con.State == ConnectionState.Open)
+                if (connection.State == ConnectionState.Open)
                 {
-                    con.Close();
+                    connection.Close();
                 }
-                log.Error(ex.Message);
-                return (ex.Message.ToString());
+                log.Error("[AddProcessStatus]:" + exception);
+                return (exception.Message.ToString());
             }
         }
         /// <summary>
@@ -232,29 +229,28 @@ namespace Recruit.Models
         /// <returns></returns>
         public string AddProcessStages(tbl_process_stages Entities)
         {
-           // SqlConnection con = new SqlConnection("Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True");
             try
             {
 
-                SqlCommand cmd = new SqlCommand("sp_process_stages_add", con);
+                SqlCommand cmd = new SqlCommand("sp_process_stages_add", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@code", Entities.code);
                 cmd.Parameters.AddWithValue("@stage", Entities.stage);
-                
 
-                con.Open();
+
+                connection.Open();
                 cmd.ExecuteNonQuery();
-                con.Close();
+                connection.Close();
                 return ("Data save Successfully");
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                if (con.State == ConnectionState.Open)
+                if (connection.State == ConnectionState.Open)
                 {
-                    con.Close();
+                    connection.Close();
                 }
-                log.Error(ex.Message);
-                return (ex.Message.ToString());
+                log.Error("[AddProcessStages]:" + exception);
+                return (exception.Message.ToString());
             }
         }
         /// <summary>
@@ -264,29 +260,29 @@ namespace Recruit.Models
         /// <returns></returns>
         public string AddRoundStatuses(tbl_interview_round_statuses Entities)
         {
-          try
+            try
             {
 
-                SqlCommand cmd = new SqlCommand("sp_interview_round_statuses_add", con);
+                SqlCommand cmd = new SqlCommand("sp_interview_round_statuses_add", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-            
+
                 cmd.Parameters.AddWithValue("@status", Entities.status);
 
 
-                con.Open();
+                connection.Open();
                 cmd.ExecuteNonQuery();
-                con.Close();
+                connection.Close();
                 return ("Data save Successfully");
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                
-                if (con.State == ConnectionState.Open)
+
+                if (connection.State == ConnectionState.Open)
                 {
-                    con.Close();
+                    connection.Close();
                 }
-                log.Error(ex.Message);
-                return (ex.Message.ToString());
+                log.Error("[AddRoundStatuses]:" + exception);
+                return (exception.Message.ToString());
             }
         }
     }
