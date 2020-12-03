@@ -12,7 +12,7 @@ namespace Recruit.Models
         public string id { get; set; }
         [StringLength(50)]
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "Name is invalid")]
+        [Required(ErrorMessage = "Employee Name is invalid")]
         public string name { get; set; }
     }
 }

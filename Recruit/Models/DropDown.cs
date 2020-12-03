@@ -6,12 +6,14 @@ using System.Linq;
 using Dapper;
 using System.Threading.Tasks;
 using System.Data;
+using Microsoft.Extensions.Logging;
+using NLog;
 
 namespace Recruit.Models
 {
     public class DropDown
     {
-
+        Logger log = LogManager.GetCurrentClassLogger();
         public static String connectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True";
         /// <summary>
         /// method to get the value from tbl_owners 
@@ -32,9 +34,9 @@ namespace Recruit.Models
                   
 
             }
-            catch
+            catch (Exception ex)
             {
-                //writelog
+                log.Error(ex.Message);
             }
             return (items);
         }
@@ -44,19 +46,19 @@ namespace Recruit.Models
         /// <returns></returns>
         public List<tbl_locations> SetLocations()
         {
+
             List<tbl_locations> items = new List<tbl_locations>();
             try
             {
                 using (IDbConnection db = new SqlConnection(connectionString))
                 {
-
-                    items = db.Query<tbl_locations>(" SELECT id,city FROM tbl_locations").ToList();
+                  items = db.Query<tbl_locations>(" SELECT id,city FROM tbl_locations").ToList();
                 }
                
             }
-            catch
+            catch(Exception ex)
             {
-                //writelog
+               log.Error(ex.Message);
             }
             return (items);
         }
@@ -77,9 +79,9 @@ namespace Recruit.Models
                 }
                
             }
-            catch
+            catch (Exception ex)
             {
-                //writelog
+                log.Error(ex.Message);
             }
             return (items);
         }
@@ -100,9 +102,9 @@ namespace Recruit.Models
                 }
                
             }
-            catch
+            catch (Exception ex)
             {
-                //writelog
+                log.Error(ex.Message);
             }
             return (items);
         }
@@ -123,9 +125,9 @@ namespace Recruit.Models
 
               
             }
-            catch
+            catch (Exception ex)
             {
-                //writelog
+                log.Error(ex.Message);
             }
             return (items);
         }
@@ -145,9 +147,9 @@ namespace Recruit.Models
                 }
                
             }
-            catch
+            catch (Exception ex)
             {
-                //writelog
+                log.Error(ex.Message);
             }
             return (items);
         }
@@ -168,9 +170,9 @@ namespace Recruit.Models
 
 
             }
-            catch
+            catch (Exception ex)
             {
-                //writelog
+                log.Error(ex.Message);
             }
             return (items);
         }
@@ -191,9 +193,9 @@ namespace Recruit.Models
 
               
             }
-            catch
+            catch (Exception ex)
             {
-                //writelogs
+                log.Error(ex.Message);
             }
             return (items);
         }

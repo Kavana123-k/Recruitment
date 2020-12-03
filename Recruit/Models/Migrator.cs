@@ -317,12 +317,12 @@ namespace Recruit.Models
         public override void Up()
         {
             Execute.Sql(@"CREATE proc sp_candidates_add    @first_name	nvarchar(50), @last_name	nvarchar(50), @email	nvarchar(50),
-                            @phone	nvarchar(15),@source_code	nvarchar(15),  @referral_id	nvarchar(5)	, @total_experience	bigint	,
-                        @relevant_experience	bigint,	 @current_employer	nvarchar(30),   @current_designation	nvarchar(25),
-                        @position_applied_code	nvarchar(15),@current_ctc	bigint	,@expected_ctc	bigint	,@reason_for_change	nvarchar(150),
-                        @notice_period	bigint	,@is_serving_notice	bit	,@last_working_day	date,@current_location	nvarchar(30),@process_stage_id	bigint	,@process_stage_date	datetime,	
-                        @process_start_date	datetime,@process_end_date	datetime,@interview_status_id	bigint	,@resume_owner_id	bigint	,@owner_for_reminder_id	bigint,@comments	nvarchar(150),
-                        @date_of_joining	date	,@notes	nvarchar(150),@links_for_interview	nvarchar(100)
+                            @phone	nvarchar(15),@source_code	nvarchar(15),  @referral_id	nvarchar(5)=' '	, @total_experience	bigint	,
+                        @relevant_experience	bigint,	 @current_employer	nvarchar(30)=' ',   @current_designation	nvarchar(25),
+                        @position_applied_code	nvarchar(15),@current_ctc	bigint	,@expected_ctc	bigint	,@reason_for_change	nvarchar(150)=' ',
+                        @notice_period	bigint	,@is_serving_notice	bit	,@last_working_day	date=NULL,@current_location	nvarchar(30),@process_stage_id	bigint	,@process_stage_date	datetime,	
+                        @process_start_date	datetime,@process_end_date	datetime=NULL ,@interview_status_id	bigint	,@resume_owner_id	bigint	,@owner_for_reminder_id	bigint,@comments	nvarchar(150)=' ',
+                        @date_of_joining	date= NULL,@notes	nvarchar(150)=' ',@links_for_interview	nvarchar(100)=' '
 
                                as
                                  begin
@@ -334,7 +334,7 @@ namespace Recruit.Models
             
             Execute.Sql(@"CREATE proc sp_interview_details_add
                         @candidate_id	bigint,
-                        @start_date_time datetime,@end_date_time datetime,@status_id  bigint,@reason nvarchar(150)
+                        @start_date_time datetime,@end_date_time datetime,@status_id  bigint,@reason nvarchar(150)='None'
 
                                  as
                                     begin
@@ -347,13 +347,13 @@ namespace Recruit.Models
                         begin
              insert into tbl_sources values (@code,	@name) end");
            
-            Execute.Sql(@"	CREATE proc sp_process_statuses_add @code nvarchar(15),@status nvarchar(50),@colour nvarchar(10)
+            Execute.Sql(@"	CREATE proc sp_process_statuses_add @code nvarchar(15),@status nvarchar(50),@colour nvarchar(10)='#FFFFFF'
 
                        as
                        begin
                        insert into tbl_process_statuses values (@code,	@status,@colour)end");
           
-            Execute.Sql(@"CREATE proc sp_vacancies_add @code nvarchar(15),@name nvarchar(50),@vacancy bigint 
+            Execute.Sql(@"CREATE proc sp_vacancies_add @code nvarchar(15),@name nvarchar(50),@vacancy bigint =0
 
                          as
                          begin

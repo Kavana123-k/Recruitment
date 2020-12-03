@@ -1,0 +1,43 @@
+2020-12-03 12:02:58.4163|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 12:02:58.6669|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 12:02:58.7038|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 12:07:51.4113|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 12:07:51.4756|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 12:07:51.4935|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 12:09:40.6864|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 12:09:40.7473|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 12:09:40.8120|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 12:39:42.7997|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 12:39:43.2382|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 12:39:43.2507|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 12:39:49.5891|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-12-03 13:07:56.8543|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 13:07:56.9478|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 13:07:57.2167|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 13:07:57.2599|INFO|Recruit.Controllers.HomeController|Method dashboard view
+2020-12-03 13:08:07.7537|INFO|Recruit.Controllers.HomeController|Method dashboard view
+2020-12-03 14:06:26.7051|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 14:06:26.8158|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 14:06:26.8752|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 14:06:26.8752|INFO|Recruit.Controllers.HomeController|Dashboard
+2020-12-03 14:07:10.6844|ERROR|Recruit.Models.DropDown|This is an error message
+2020-12-03 14:07:13.8709|INFO|Recruit.Controllers.HomeController|Dashboard
+2020-12-03 14:12:08.7205|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 14:12:08.7691|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 14:12:08.8416|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 14:12:08.9026|INFO|Recruit.Controllers.HomeController|Dashboard
+2020-12-03 14:12:18.9934|ERROR|Recruit.Models.DropDown|Exception of type 'System.Exception' was thrown.
+2020-12-03 14:12:20.8090|INFO|Recruit.Controllers.HomeController|Dashboard
+2020-12-03 14:24:50.9133|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 14:24:50.9920|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 14:24:51.0386|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 14:24:51.2112|INFO|Recruit.Controllers.HomeController|Dashboard
+2020-12-03 14:26:05.5819|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 14:26:05.7389|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 14:26:05.7965|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 14:26:05.8617|INFO|Recruit.Controllers.HomeController|Dashboard
+2020-12-03 14:26:25.7444|ERROR|Recruit.Models.InsertDataAccessLayer|Overflow or underflow in the arithmetic operation.
+2020-12-03 14:30:05.0685|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-03 14:30:05.1423|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-03 14:30:05.1812|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-03 14:30:05.3351|INFO|Recruit.Controllers.HomeController|Dashboard

@@ -13,7 +13,7 @@ namespace Recruit.Models
         public string code { get; set; }
         [StringLength(15)]
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "name invalid")]
+        [Required(ErrorMessage = "Source Name is invalid")]
         public string name { get; set; }
 
     }

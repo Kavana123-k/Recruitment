@@ -26,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://113.11.252.49/TetherfiNuGet/NuGet": {}
+          "http://113.11.252.49/TetherfiNuGet/NuGet": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -62,9 +63,21 @@
               "target": "Package",
               "version": "[3.1.4, )"
             },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.5, )"
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[1.6.5, )"
+            },
             "OCM.ORM": {
               "target": "Package",
               "version": "[1.1.11.6, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[1.2.11.10, )"
             }
           },
           "imports": [

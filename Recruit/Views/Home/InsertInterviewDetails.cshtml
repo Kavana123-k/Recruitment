@@ -1,11 +1,11 @@
 ﻿@model Recruit.Models.tbl_interview_details
 
 
-<h2>Insert</h2>
-<h4>Interview Details</h4>
+<h2>Insert Interview Details</h2>
 <hr />
 @{
     List<SelectListItem> statusId = new List<SelectListItem>();
+
     @foreach (var items in (IEnumerable<tbl_interview_round_statuses>)TempData["Data"])
     {
         statusId.Add(new SelectListItem
@@ -14,7 +14,7 @@
 
             Text = items.status,
             Value = (items.id).ToString(),
-            Selected = true
+            //Selected = true
 
         });
     }
@@ -47,9 +47,8 @@
         </div>
         <div class="column">
             <label class="control-label">Status Id</label>
-            @*<input asp-for="status_id" class="form-control" />
-            <span asp-validation-for="status_id" class="text-danger"></span>*@
-            @Html.DropDownListFor(model => model.status_id, statusId)
+            @Html.DropDownListFor(model => model.status_id, new SelectList(statusId, "Value", "Text"), "---Choose Status---")<br />
+            <span asp-validation-for="status_id" class="text-danger"></span>
         </div>
         <div class="column">
             <label class="control-label">Reason</label>

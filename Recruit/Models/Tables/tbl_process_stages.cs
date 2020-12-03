@@ -13,12 +13,12 @@ namespace Recruit.Models
 
         [StringLength(15)]
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "code invalid")]
+        [Required(ErrorMessage = "Code is invalid")]
         public string code { get; set; }
 
         [StringLength(20)]
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "Stage invalid")]
+        [Required(ErrorMessage = "Stage is invalid")]
         public string stage { get; set; }
 
     }

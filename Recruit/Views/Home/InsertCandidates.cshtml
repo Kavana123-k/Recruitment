@@ -96,15 +96,11 @@
 <body>
 
 
-    <h4>Insert Candidate Details</h4>
+    <h1>Insert Candidate Details</h1>
 
     <form asp-action="InsertCandidates" class="form-horizontal">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        @*<div class="form-group">
-                <label class="control-label">Candidate Id</label>
-                <input asp-for="id" class="form-control" />
-                <span asp-validation-for="id" class="text-danger"></span>
-            </div>*@
+      
         <div class="row">
             <div class="column">
                 <label class="control-label">First Name</label>
@@ -132,19 +128,16 @@
         <div class="row">
             <div class="column">
                 <label class="control-label">Source</label>
-                @*<input asp-for="source_code" class="form-control" />
-                    <span asp-validation-for="source_code" class="text-danger"></span>*@
-                @Html.DropDownListFor(model => model.source_code, sources, "--Choose Your Source--")
-                @*@Html.DropDownList("Sources", ViewBag.items as SelectList)*@
-                @*@Html.DropDownList("source_code", (SelectList)ViewBag.sources, "--Choose Your Source--")*@
+                @Html.DropDownListFor(model => model.source_code, new SelectList(sources, "Value", "Text"), "---Choose Sources---")<br />
+                <span asp-validation-for="source_code" class="text-danger"></span>
+
 
             </div>
 
             <div class="column">
                 <label class="control-label">Referred by</label>
-                @*<input asp-for="referral_id" class="form-control" />
-                    <span asp-validation-for="referral_id" class="text-danger"></span>*@
-                @Html.DropDownListFor(model => model.referral_id, employees, "--Choose the Employee--")
+                @Html.DropDownListFor(model => model.referral_id, new SelectList(employees, "Value", "Text"), "---Choose referred-by---")<br />
+                <span asp-validation-for="referral_id" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
@@ -174,9 +167,8 @@
         <div class="row">
             <div class="column">
                 <label class="control-label">Position applied </label>
-                @*<input asp-for="position_applied_code" class="form-control" />
-                    <span asp-validation-for="position_applied_code" class="text-danger"></span>*@
-                @Html.DropDownListFor(model => model.position_applied_code, vacancy, "--Choose Your Source--")
+                @Html.DropDownListFor(model => model.position_applied_code, new SelectList(vacancy, "Value", "Text"), "---Choose Position---")<br />
+                <span asp-validation-for="position_applied_code" class="text-danger"></span>
 
             </div>
             <div class="column">
@@ -224,9 +216,10 @@
         <div class="row">
             <div class="column">
                 <label class="control-label">Process stage </label>
-                @*<input asp-for="process_stage_id" class="form-control" />
-                    <span asp-validation-for="process_stage_id" class="text-danger"></span>*@
-                @Html.DropDownListFor(model => model.process_stage_id, stages, "--Choose Process Stage--")
+                @Html.DropDownListFor(model => model.process_stage_id, new SelectList(stages, "Value", "Text"), "---Choose Status---")<br />
+                <span asp-validation-for="process_stage_id" class="text-danger"></span>
+
+
             </div>
             <div class="column">
                 <label class="control-label">Process Stage date</label>
@@ -249,23 +242,20 @@
         <div class="row">
             <div class="column">
                 <label class="control-label">Interview status </label>
-                @*<input asp-for="interview_status_id" class="form-control" />
-                    <span asp-validation-for="interview_status_id" class="text-danger"></span>*@
-                @Html.DropDownListFor(model => model.interview_status_id, status, "--Choose Interview Status--")
+                @Html.DropDownListFor(model => model.interview_status_id, new SelectList(status, "Value", "Text"), "---Choose Status---")<br />
+                <span asp-validation-for="interview_status_id" class="text-danger"></span>
             </div>
             <div class="column">
                 <label class="control-label">Resume owner id</label>
-                @*<input asp-for="resume_owner_id" class="form-control" />
-                    <span asp-validation-for="resume_owner_id" class="text-danger"></span>*@
-                @Html.DropDownListFor(model => model.resume_owner_id, owners@*, "-- Select Resume Owner --"*@)
+                @Html.DropDownListFor(model => model.resume_owner_id, new SelectList(owners, "Value", "Text"), "---Choose Status---")<br />
+                <span asp-validation-for="resume_owner_id" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
             <div class="column">
                 <label class="control-label">Owner for reminder id</label>
-                @*<input asp-for="owner_for_reminder_id" class="form-control" />
-                    <span asp-validation-for="owner_for_reminder_id" class="text-danger"></span>*@
-                @Html.DropDownListFor(model => model.owner_for_reminder_id, owners@*, "-- Select Resume Owner --"*@)
+                @Html.DropDownListFor(model => model.owner_for_reminder_id, new SelectList(owners, "Value", "Text"), "---Choose Status---")<br />
+                <span asp-validation-for="owner_for_reminder_id" class="text-danger"></span>
             </div>
             <div class="column">
                 <label class="control-label">Comments</label>

@@ -12,34 +12,39 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Recruit.Models;
 using Dapper;
-
+using NLog;
 
 namespace Recruit.Controllers
 {
     public class HomeController : Controller
     {
-      //  private readonly ILogger<HomeController> _logger;
+        public static Logger logger;
        
         private IConfiguration Configuration;
-         
+        
+       
+        ///// <summary>
+        /// constructor for configuration to use connectionstring from appsettings.json
+        /// </summary>
+        /// <param name="_configuration"></param>
         public HomeController(IConfiguration _configuration)
         {
             Configuration = _configuration;
+            logger = LogManager.GetCurrentClassLogger();
         }
-
-        //public HomeController(ILogger<HomeController> logger)
-        //{
-        //    _logger = logger;
-        //}
+       
+        
         DropDown dropdown = new DropDown();
-        CandidatesDataAccessLayer Candidatesdb = new CandidatesDataAccessLayer();
+        InsertDataAccessLayer insertDB = new InsertDataAccessLayer();
         /// <summary>
         /// function to display the index play ie the dashboard
         /// </summary>
         /// <returns></returns>
         public IActionResult Index()
         {
+            logger.Info("Dashboard");
             return View();
+           
         }
         /// <summary>
         /// Method to display interview details
@@ -89,7 +94,7 @@ namespace Recruit.Controllers
             TempData["Data"] = dropdown.SetInterviewRoundStatuses();
             return View();
         }
-        InsertDataAccessLayer insertDB = new InsertDataAccessLayer();
+        
         /// <summary>
         /// method used to post the inputs to the interview details table
         /// </summary>
@@ -108,6 +113,10 @@ namespace Recruit.Controllers
             catch (Exception ex)
             {
                 TempData["msg"] = ex.Message;
+            }
+            finally
+            {
+                TempData["Data"] = dropdown.SetInterviewRoundStatuses();
             }
             return View();
         }
@@ -150,12 +159,21 @@ namespace Recruit.Controllers
                 if (ModelState.IsValid)
                 {
                  
-                    TempData["msg"] = Candidatesdb.AddCandidateDetails(employeeEntities);
+                    TempData["msg"] = insertDB.AddCandidateDetails(employeeEntities);
                 }
             }
             catch (Exception ex)
             {
                 TempData["msg"] = ex.Message;
+            }
+            finally
+            {
+                TempData["Sources"] = dropdown.SetSources();
+                TempData["ProcessStages"] = dropdown.SetProcessStages();
+                TempData["ProcessStatuses"] = dropdown.SetProcessStatuses();
+                TempData["Vacancies"] = dropdown.SetVacancies();
+                TempData["Employees"] = dropdown.SetEmployees();
+                TempData["Owners"] = dropdown.SetOwners();
             }
             return View();
         }

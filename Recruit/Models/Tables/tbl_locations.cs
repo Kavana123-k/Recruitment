@@ -12,7 +12,7 @@ namespace Recruit.Models
         public Int64 id { get; set; }
         [StringLength(20)]
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "last_name is invalid")]
+        [Required(ErrorMessage = "City is invalid")]
         public string city { get; set; }
     }
 }

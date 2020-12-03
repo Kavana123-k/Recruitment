@@ -15,12 +15,12 @@
         <form asp-action="InsertProcessStages">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="code" class="control-label"></label>
+                <label asp-for="code" class="control-label">Code</label>
                 <input asp-for="code" class="form-control" />
                 <span asp-validation-for="code" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="stage" class="control-label"></label>
+                <label asp-for="stage" class="control-label">Stage</label>
                 <input asp-for="stage" class="form-control" />
                 <span asp-validation-for="stage" class="text-danger"></span>
             </div>

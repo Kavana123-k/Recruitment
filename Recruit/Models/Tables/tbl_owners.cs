@@ -13,12 +13,12 @@ namespace Recruit.Models
 
         [StringLength(50)]
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "first name invalid")]
+        [Required(ErrorMessage = "Firstname invalid")]
         public string first_name { get; set; }
 
         [StringLength(50)]
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "last name invalid")]
+        [Required(ErrorMessage = "Lastname invalid")]
         public string last_name { get; set; }
 
     }

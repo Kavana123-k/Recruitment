@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lMd28/l6Jod7+novP7stra6IsFU8afkp3uh/8DjO9UfqgCf4h/TqBvwQlTP6qWBjp9BGCLzc5dewfKIpVQPXqw==",
+  "dgSpecHash": "Ei/2fLBhlytjYKK2ts8EoWS139xK5JC0e5RCNSxPGAVAaMuEAwHQHrxXk82QM3SNlv6Gveva4ZwA1roGLTdADQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\Recruit\\Recruit\\Recruit.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\fluentmigrator.runner.sqlite\\3.2.9\\fluentmigrator.runner.sqlite.3.2.9.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\fluentmigrator.runner.sqlserver\\3.2.9\\fluentmigrator.runner.sqlserver.3.2.9.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\fluentmigrator.runner.sqlserverce\\3.2.9\\fluentmigrator.runner.sqlserverce.3.2.9.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\log4net\\1.2.11.10\\log4net.1.2.11.10.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
@@ -64,6 +65,8 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\nlog\\4.7.5\\nlog.4.7.5.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\nlog.extensions.logging\\1.6.5\\nlog.extensions.logging.1.6.5.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\ocm.orm\\1.1.11.6\\ocm.orm.1.1.11.6.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -123,7 +126,7 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.reflection.emit\\4.6.0\\system.reflection.emit.4.6.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",
@@ -165,21 +168,11 @@
   ],
   "logs": [
     {
-      "code": "NU1603",
+      "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "OCM.ORM 1.1.11.6 depends on System.ComponentModel.Annotations (>= 4.5.0) but System.ComponentModel.Annotations 4.5.0 was not found. An approximate best match of System.ComponentModel.Annotations 4.7.0 was resolved.",
-      "libraryId": "System.ComponentModel.Annotations",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "OCM.ORM 1.1.11.6 depends on System.Reflection.Emit (>= 4.6.0) but System.Reflection.Emit 4.6.0 was not found. An approximate best match of System.Reflection.Emit 4.7.0 was resolved.",
-      "libraryId": "System.Reflection.Emit",
+      "message": "Package 'log4net 1.2.11.10' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "log4net",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

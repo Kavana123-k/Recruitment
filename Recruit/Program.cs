@@ -8,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Recruit.Models;
+using NLog;
+using NLog.Extensions.Logging;
 
 namespace Recruit
 {
@@ -28,6 +30,12 @@ namespace Recruit
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+             .ConfigureLogging((hostingContext, logging) =>
+             {
+                 logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                 logging.AddDebug();
+                 logging.AddNLog();
+             })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

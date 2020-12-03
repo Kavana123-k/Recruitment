@@ -302,6 +302,15 @@
           "build/netstandard2.0/_._": {}
         }
       },
+      "log4net/1.2.11.10": {
+        "type": "package",
+        "compile": {
+          "lib/net452/log4net.dll": {}
+        },
+        "runtime": {
+          "lib/net452/log4net.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -988,6 +997,28 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NLog/4.7.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
+      "NLog.Extensions.Logging/1.6.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "3.0.0",
+          "NLog": "4.7.4"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/NLog.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/NLog.Extensions.Logging.dll": {}
         }
       },
       "NuGet.Frameworks/4.7.0": {
@@ -1832,7 +1863,7 @@
           "ref/netstandard1.5/System.Reflection.dll": {}
         }
       },
-      "System.Reflection.Emit/4.7.0": {
+      "System.Reflection.Emit/4.6.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -2906,6 +2937,17 @@
         "runtimes/win-x86/sqlceme40.dll",
         "runtimes/win-x86/sqlceqp40.dll",
         "runtimes/win-x86/sqlcese40.dll"
+      ]
+    },
+    "log4net/1.2.11.10": {
+      "sha512": "J60fJlWyoB8DtCaN+UAxgWPChhi2l1xi2BMYwGSeDYtqChk8RpiSxh0se6UVvUPKT4iCmQhUkL3/fbz7uRLbhQ==",
+      "type": "package",
+      "path": "log4net/1.2.11.10",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net452/log4net.dll",
+        "log4net.1.2.11.10.nupkg.sha512",
+        "log4net.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -4069,6 +4111,62 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.11.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "NLog/4.7.5": {
+      "sha512": "1Udzim+UwoAGk0vW6T2rEBXJq1COvqTuE+4NFj2zHytuX1WOu+1Yes1qABG1IJOA5V3OMilIufUU1Ha9T0rrzQ==",
+      "type": "package",
+      "path": "nlog/4.7.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/NLog.dll",
+        "lib/monoandroid44/NLog.xml",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net40-client/NLog.dll",
+        "lib/net40-client/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "lib/sl4/NLog.dll",
+        "lib/sl4/NLog.xml",
+        "lib/sl5/NLog.dll",
+        "lib/sl5/NLog.xml",
+        "lib/wp8/NLog.dll",
+        "lib/wp8/NLog.xml",
+        "lib/xamarinios10/NLog.dll",
+        "lib/xamarinios10/NLog.xml",
+        "nlog.4.7.5.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
+    "NLog.Extensions.Logging/1.6.5": {
+      "sha512": "f+7W4DhNkpFdg2X6fNR8Ts06TSM9Hd2BdfXem3esTFGR9cAVdQRPwf/N0H0Fc1vidrLJVETkmywXG/0Qz/lxjw==",
+      "type": "package",
+      "path": "nlog.extensions.logging/1.6.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/NLog.Extensions.Logging.dll",
+        "lib/net451/NLog.Extensions.Logging.xml",
+        "lib/net461/NLog.Extensions.Logging.dll",
+        "lib/net461/NLog.Extensions.Logging.xml",
+        "lib/netcoreapp3.0/NLog.Extensions.Logging.dll",
+        "lib/netcoreapp3.0/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.3/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.3/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.5/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.5/NLog.Extensions.Logging.xml",
+        "lib/netstandard2.0/NLog.Extensions.Logging.dll",
+        "lib/netstandard2.0/NLog.Extensions.Logging.xml",
+        "nlog.extensions.logging.1.6.5.nupkg.sha512",
+        "nlog.extensions.logging.nuspec"
       ]
     },
     "NuGet.Frameworks/4.7.0": {
@@ -6193,17 +6291,16 @@
         "system.reflection.nuspec"
       ]
     },
-    "System.Reflection.Emit/4.7.0": {
-      "sha512": "VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+    "System.Reflection.Emit/4.6.0": {
+      "sha512": "qAo4jyXtC9i71iElngX7P2r+zLaiHzxKwf66sc3X91tL5Ks6fnQ1vxL04o7ZSm3sYfLExySL7GN8aTpNYpU1qw==",
       "type": "package",
-      "path": "system.reflection.emit/4.7.0",
+      "path": "system.reflection.emit/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
+        "lib/monoandroid10/_._",
         "lib/net45/_._",
         "lib/netcore50/System.Reflection.Emit.dll",
         "lib/netcoreapp2.0/_._",
@@ -6213,12 +6310,8 @@
         "lib/netstandard2.0/System.Reflection.Emit.dll",
         "lib/netstandard2.0/System.Reflection.Emit.xml",
         "lib/netstandard2.1/_._",
-        "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
+        "ref/monoandroid10/_._",
         "ref/net45/_._",
         "ref/netcoreapp2.0/_._",
         "ref/netstandard1.1/System.Reflection.Emit.dll",
@@ -6235,13 +6328,10 @@
         "ref/netstandard2.0/System.Reflection.Emit.dll",
         "ref/netstandard2.0/System.Reflection.Emit.xml",
         "ref/netstandard2.1/_._",
-        "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Reflection.Emit.dll",
         "runtimes/aot/lib/netcore50/System.Reflection.Emit.xml",
-        "system.reflection.emit.4.7.0.nupkg.sha512",
+        "system.reflection.emit.4.6.0.nupkg.sha512",
         "system.reflection.emit.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -8151,7 +8241,10 @@
       "FluentMigrator.Runner >= 3.2.9",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
-      "OCM.ORM >= 1.1.11.6"
+      "NLog >= 4.7.5",
+      "NLog.Extensions.Logging >= 1.6.5",
+      "OCM.ORM >= 1.1.11.6",
+      "log4net >= 1.2.11.10"
     ]
   },
   "packageFolders": {
@@ -8180,7 +8273,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://113.11.252.49/TetherfiNuGet/NuGet": {}
+        "http://113.11.252.49/TetherfiNuGet/NuGet": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -8216,9 +8310,21 @@
             "target": "Package",
             "version": "[3.1.4, )"
           },
+          "NLog": {
+            "target": "Package",
+            "version": "[4.7.5, )"
+          },
+          "NLog.Extensions.Logging": {
+            "target": "Package",
+            "version": "[1.6.5, )"
+          },
           "OCM.ORM": {
             "target": "Package",
             "version": "[1.1.11.6, )"
+          },
+          "log4net": {
+            "target": "Package",
+            "version": "[1.2.11.10, )"
           }
         },
         "imports": [
@@ -8245,21 +8351,11 @@
   },
   "logs": [
     {
-      "code": "NU1603",
+      "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "OCM.ORM 1.1.11.6 depends on System.ComponentModel.Annotations (>= 4.5.0) but System.ComponentModel.Annotations 4.5.0 was not found. An approximate best match of System.ComponentModel.Annotations 4.7.0 was resolved.",
-      "libraryId": "System.ComponentModel.Annotations",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "OCM.ORM 1.1.11.6 depends on System.Reflection.Emit (>= 4.6.0) but System.Reflection.Emit 4.6.0 was not found. An approximate best match of System.Reflection.Emit 4.7.0 was resolved.",
-      "libraryId": "System.Reflection.Emit",
+      "message": "Package 'log4net 1.2.11.10' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "log4net",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

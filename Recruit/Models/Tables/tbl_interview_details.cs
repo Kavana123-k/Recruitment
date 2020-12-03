@@ -21,7 +21,7 @@ namespace Recruit.Models
         [DataType(DataType.DateTime)]
         public DateTime end_date_time { get; set; }
         [ForeignKey("status_id")]
-        [Required(ErrorMessage ="Status id invalid")]
+        [Required(ErrorMessage ="Interview Round Status invalid")]
         public Int64 status_id { get; set; }
         [StringLength(150)]
         [DataType(DataType.Text)]
