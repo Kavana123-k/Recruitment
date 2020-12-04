@@ -85,3 +85,514 @@ Error Number:2627,State:1,Class:14
 2020-12-03 18:09:55.2302|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2020-12-03 18:09:55.3200|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
 2020-12-03 18:09:55.3594|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 11:02:12.7471|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 11:02:13.8242|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 11:02:14.8089|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 11:02:17.9611|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 11:02:21.9540|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 11:02:22.0228|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 11:02:22.0449|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 11:02:22.4911|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 11:02:45.4755|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 11:02:51.7329|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details
+2020-12-04 11:03:29.0914|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-04 11:03:30.9326|ERROR|Recruit.Models.InsertDataAccessLayer|[AddInterviewDetails]:System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@reason".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddInterviewDetails(tbl_interview_details Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 95
+ClientConnectionId:a6f5dc88-1070-4b1a-9053-6b29d95eca74
+Error Number:137,State:2,Class:15
+2020-12-04 11:03:51.5893|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-04 11:03:51.7130|ERROR|Recruit.Models.InsertDataAccessLayer|[AddInterviewDetails]:System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at System.Data.SqlClient.SqlConnection.PermissionDemand()
+   at System.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddInterviewDetails(tbl_interview_details Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 95
+2020-12-04 11:09:23.7100|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 11:09:23.9435|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 11:09:24.1624|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 11:09:24.8341|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 11:09:26.1438|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 11:09:26.1636|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 11:09:26.2367|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 11:09:26.3423|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 11:09:38.1959|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details
+2020-12-04 11:09:59.5570|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-04 11:11:29.5353|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 11:11:29.7193|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 11:11:29.9795|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 11:11:30.4040|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 11:11:31.5895|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 11:11:31.6073|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 11:11:31.6207|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 11:11:31.7200|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 11:11:37.4633|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details
+2020-12-04 11:11:56.1946|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-04 11:11:56.7210|ERROR|Recruit.Models.InsertDataAccessLayer|[AddInterviewDetails]:System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'status_id', table 'RecruitMain.dbo.tbl_interview_details'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddInterviewDetails(tbl_interview_details Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 96
+ClientConnectionId:fef6858b-77d9-4f65-a283-e79d63da548a
+Error Number:515,State:2,Class:16
+2020-12-04 11:12:31.9328|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-04 11:12:32.0150|ERROR|Recruit.Models.InsertDataAccessLayer|[AddInterviewDetails]:System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'status_id', table 'RecruitMain.dbo.tbl_interview_details'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddInterviewDetails(tbl_interview_details Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 96
+ClientConnectionId:fef6858b-77d9-4f65-a283-e79d63da548a
+Error Number:515,State:2,Class:16
+2020-12-04 11:13:29.9533|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 11:13:30.1123|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 11:13:30.5085|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 11:13:31.2474|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 11:13:32.4742|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 11:13:32.4935|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 11:13:32.5096|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 11:13:32.6419|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 11:13:38.8499|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details
+2020-12-04 11:13:56.6448|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-04 11:18:31.9431|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 13:48:03.0185|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 13:48:04.0549|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 13:48:04.7373|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 13:48:06.5721|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 13:48:11.4805|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 13:48:11.5667|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 13:48:11.6117|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 13:48:12.3162|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 13:48:17.4706|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details
+2020-12-04 13:48:36.8783|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-04 13:48:49.5993|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-04 13:49:16.5688|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details
+2020-12-04 13:49:34.7300|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-04 13:49:35.8809|ERROR|Recruit.Models.InsertDataAccessLayer|[AddInterviewDetails]:System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at System.Data.SqlClient.SqlConnection.PermissionDemand()
+   at System.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddInterviewDetails(tbl_interview_details Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 87
+2020-12-04 13:49:52.4133|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-04 13:49:52.4987|ERROR|Recruit.Models.InsertDataAccessLayer|[AddInterviewDetails]:System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at System.Data.SqlClient.SqlConnection.PermissionDemand()
+   at System.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddInterviewDetails(tbl_interview_details Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 87
+2020-12-04 14:10:36.9005|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 14:10:37.9173|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 14:10:38.1653|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 14:10:38.8393|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 14:10:42.7464|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 14:10:42.8120|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 14:10:42.8339|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 14:10:42.9263|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 14:11:22.6979|INFO|Recruit.Controllers.HomeController|[InsertInterviewRoundStatuses]:[GET]Action Method returns view which gets the page to insert the table Interview Round Statuses Details
+2020-12-04 14:11:32.2641|INFO|Recruit.Controllers.HomeController|[InsertInterviewRoundStatuses]:[Post]Action Method returns view which posts the input page to the table Interview Round Statuses Details
+2020-12-04 14:11:38.5596|INFO|Recruit.Controllers.HomeController|[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details
+2020-12-04 14:11:47.5428|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details
+2020-12-04 14:11:54.5149|INFO|Recruit.Controllers.HomeController|[InsertProcessStages]:[GET]Action Method returns view which gets the page to insert the Process Stages Details
+2020-12-04 14:12:44.2413|INFO|Recruit.Controllers.HomeController|[InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details
+2020-12-04 14:12:50.3127|INFO|Recruit.Controllers.HomeController|[InsertProcessStatus]:[GET]Action Method returns view which gets the page to insert the Process Status Details
+2020-12-04 14:13:38.4761|INFO|Recruit.Controllers.HomeController|[InsertProcessStatus]:[Post]Action Method returns view which posts the input page to the table Process Status Details
+2020-12-04 14:13:50.7428|INFO|Recruit.Controllers.HomeController|[InsertVacancies]:[GET]Action Method returns view which gets the page to insert the Vacancies Details
+2020-12-04 14:14:08.2155|INFO|Recruit.Controllers.HomeController|[InsertVacancies]:[Post]Action Method returns view which posts the input page to the table Vacancies Details
+2020-12-04 14:14:08.6571|ERROR|Recruit.Models.InsertDataAccessLayer|[AddVacancies]:System.ArgumentException: No mapping exists from DbType UInt64 to a known SqlDbType.
+   at System.Data.SqlClient.MetaType.GetMetaTypeFromDbType(DbType target)
+   at System.Data.SqlClient.SqlParameter.set_DbType(DbType value)
+   at ParamInfo61e50de2-6d92-4155-93a8-b8dc47c04be7(IDbCommand , Object )
+   at Dapper.CommandDefinition.SetupCommand(IDbConnection cnn, Action`2 paramReader)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Recruit.Models.InsertDataAccessLayer.AddVacancies(tbl_vacancies Entities)
+2020-12-04 14:15:24.1074|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 14:15:24.5219|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 14:15:24.8311|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 14:15:25.3551|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 14:15:26.5661|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 14:15:26.5822|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 14:15:26.6038|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 14:15:26.7470|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 14:15:33.3310|INFO|Recruit.Controllers.HomeController|[InsertVacancies]:[GET]Action Method returns view which gets the page to insert the Vacancies Details
+2020-12-04 14:16:51.0188|INFO|Recruit.Controllers.HomeController|[InsertVacancies]:[Post]Action Method returns view which posts the input page to the table Vacancies Details
+2020-12-04 14:16:51.6296|ERROR|Recruit.Models.InsertDataAccessLayer|[AddVacancies]:System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_tbl_vacancies_Code'. Cannot insert duplicate key in object 'dbo.tbl_vacancies'. The duplicate key value is (test).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddVacancies(tbl_vacancies Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 196
+ClientConnectionId:287bccd1-9d16-4b35-93fd-fd16f968e41b
+Error Number:2627,State:1,Class:14
+2020-12-04 14:17:04.4767|INFO|Recruit.Controllers.HomeController|[InsertVacancies]:[Post]Action Method returns view which posts the input page to the table Vacancies Details
+2020-12-04 14:17:07.2171|INFO|Recruit.Controllers.HomeController|[InsertVacancies]:[Post]Action Method returns view which posts the input page to the table Vacancies Details
+2020-12-04 14:17:07.3573|ERROR|Recruit.Models.InsertDataAccessLayer|[AddVacancies]:System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_tbl_vacancies_Code'. Cannot insert duplicate key in object 'dbo.tbl_vacancies'. The duplicate key value is (test1).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddVacancies(tbl_vacancies Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 196
+ClientConnectionId:287bccd1-9d16-4b35-93fd-fd16f968e41b
+Error Number:2627,State:1,Class:14
+2020-12-04 14:17:35.6360|INFO|Recruit.Controllers.HomeController|[InsertSources]:[GET]Action Method returns view which gets the page to insert the table Sources Details
+2020-12-04 14:17:45.8740|INFO|Recruit.Controllers.HomeController|[InsertSources]:[Post]Action Method returns view which posts the input page to the table Sources Details
+2020-12-04 14:17:54.7880|INFO|Recruit.Controllers.HomeController|[InsertSources]:[Post]Action Method returns view which posts the input page to the table Sources Details
+2020-12-04 14:17:54.8933|ERROR|Recruit.Models.InsertDataAccessLayer|[AddSources]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_sources_name'. Cannot insert duplicate key in object 'dbo.tbl_sources'. The duplicate key value is (test).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddSources(tbl_sources Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 163
+ClientConnectionId:287bccd1-9d16-4b35-93fd-fd16f968e41b
+Error Number:2627,State:1,Class:14
+2020-12-04 14:18:01.2720|INFO|Recruit.Controllers.HomeController|[InsertSources]:[Post]Action Method returns view which posts the input page to the table Sources Details
+2020-12-04 14:18:01.3457|ERROR|Recruit.Models.InsertDataAccessLayer|[AddSources]:System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_tbl_sources_Code'. Cannot insert duplicate key in object 'dbo.tbl_sources'. The duplicate key value is (test).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddSources(tbl_sources Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 163
+ClientConnectionId:287bccd1-9d16-4b35-93fd-fd16f968e41b
+Error Number:2627,State:1,Class:14
+2020-12-04 14:18:09.9381|INFO|Recruit.Controllers.HomeController|[InsertSources]:[Post]Action Method returns view which posts the input page to the table Sources Details
+2020-12-04 14:18:21.8472|INFO|Recruit.Controllers.HomeController|[InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details
+2020-12-04 14:18:31.2799|INFO|Recruit.Controllers.HomeController|[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details
+2020-12-04 14:18:34.4408|INFO|Recruit.Controllers.HomeController|[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details
+2020-12-04 14:18:34.5355|ERROR|Recruit.Models.InsertDataAccessLayer|[AddLocations]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (mandi).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddLocations(tbl_locations Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 122
+ClientConnectionId:287bccd1-9d16-4b35-93fd-fd16f968e41b
+Error Number:2627,State:1,Class:14
+2020-12-04 14:18:41.4393|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details
+2020-12-04 14:38:52.2810|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 14:38:52.5332|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 14:38:52.7617|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 14:38:53.1748|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 14:38:54.4025|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 14:38:54.4209|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 14:38:54.4359|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 14:38:54.5281|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 14:38:58.3747|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 14:39:06.1535|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 14:41:20.7751|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details
+2020-12-04 14:41:21.4400|ERROR|Recruit.Models.InsertDataAccessLayer|[AddCandidateDetails]:System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'notice_period'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddCandidateDetails(tbl_candidates Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 70
+ClientConnectionId:29bf711a-3088-4b06-89e1-03e19989094f
+Error Number:102,State:1,Class:15
+2020-12-04 14:41:49.4626|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details
+2020-12-04 14:41:49.5725|ERROR|Recruit.Models.InsertDataAccessLayer|[AddCandidateDetails]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_candidates_email'. Cannot insert duplicate key in object 'dbo.tbl_candidates'. The duplicate key value is (barish.awlva@tetherfi.com).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Recruit.Models.InsertDataAccessLayer.AddCandidateDetails(tbl_candidates Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 57
+ClientConnectionId:29bf711a-3088-4b06-89e1-03e19989094f
+Error Number:2627,State:1,Class:14
+2020-12-04 14:42:05.4355|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details
+2020-12-04 14:42:05.5390|ERROR|Recruit.Models.InsertDataAccessLayer|[AddCandidateDetails]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_candidates_phone'. Cannot insert duplicate key in object 'dbo.tbl_candidates'. The duplicate key value is (+918073379725).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Recruit.Models.InsertDataAccessLayer.AddCandidateDetails(tbl_candidates Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 57
+ClientConnectionId:29bf711a-3088-4b06-89e1-03e19989094f
+Error Number:2627,State:1,Class:14
+2020-12-04 14:42:23.7364|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-04 14:42:30.9730|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-04 14:42:46.1710|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 14:44:18.4630|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details
+2020-12-04 14:44:18.5625|ERROR|Recruit.Models.InsertDataAccessLayer|[AddCandidateDetails]:System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_tbl_candidates_tbl_employees_ReferralId". The conflict occurred in database "RecruitMain", table "dbo.tbl_employees", column 'id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Recruit.Models.InsertDataAccessLayer.AddCandidateDetails(tbl_candidates Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 57
+ClientConnectionId:29bf711a-3088-4b06-89e1-03e19989094f
+Error Number:547,State:0,Class:16
+2020-12-04 14:44:56.1240|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details
+2020-12-04 14:44:56.3094|ERROR|Recruit.Models.InsertDataAccessLayer|[AddCandidateDetails]:System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'notice_period'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddCandidateDetails(tbl_candidates Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 70
+ClientConnectionId:29bf711a-3088-4b06-89e1-03e19989094f
+Error Number:102,State:1,Class:15
+2020-12-04 14:47:23.3844|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 14:47:23.6680|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 14:47:24.2565|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 14:47:25.2649|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 14:47:26.5150|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 14:47:26.5314|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 14:47:26.5492|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 14:47:26.6427|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 14:47:30.9927|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 14:48:45.9704|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details
+2020-12-04 14:48:46.2733|ERROR|Recruit.Models.InsertDataAccessLayer|[AddCandidateDetails]:System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@id".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.Models.InsertDataAccessLayer.AddCandidateDetails(tbl_candidates Entities) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Models\InsertDataAccessLayer.cs:line 70
+ClientConnectionId:953d6746-eeda-40c9-8df1-e5d2a7567a5f
+Error Number:137,State:2,Class:15
+2020-12-04 14:49:27.3650|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 14:49:27.7475|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 14:49:27.9926|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 14:49:28.4509|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 14:49:29.6422|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 14:49:29.6591|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 14:49:29.6745|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 14:49:29.7647|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 14:50:30.8612|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 14:51:45.1942|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details
+2020-12-04 15:39:49.1990|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 15:39:49.3944|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 15:39:49.6499|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 15:39:50.2272|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 15:39:52.1061|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 15:39:52.1449|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 15:39:52.1732|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 15:39:52.2999|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 15:40:03.0776|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details
+2020-12-04 15:40:17.3225|INFO|Recruit.Controllers.HomeController|[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details
+2020-12-04 15:40:17.4251|INFO|Recruit.Models.InsertDataAccessLayer|[AddInterviewDetails]:Data save Successfully
+2020-12-04 15:47:30.0999|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 15:47:30.2949|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 15:47:30.4886|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 15:47:30.9450|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 15:47:32.0469|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 15:47:32.0677|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 15:47:32.1111|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 15:47:32.2040|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 15:50:11.4862|INFO|Recruit.Controllers.HomeController|[InsertInterviewRoundStatuses]:[GET]Action Method returns view which gets the page to insert the table Interview Round Statuses Details
+2020-12-04 15:50:18.9026|INFO|Recruit.Controllers.HomeController|[InsertInterviewRoundStatuses]:[Post]Action Method returns view which posts the input page to the table Interview Round Statuses Details
+2020-12-04 15:50:19.1820|INFO|Recruit.Models.InsertDataAccessLayer|[AddRoundStatuses]:Data save Successfully
+2020-12-04 16:51:00.6082|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 16:51:00.9821|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 16:51:01.1760|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 16:51:01.6004|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 16:51:02.7110|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 16:51:02.7266|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 16:51:02.7266|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 16:51:02.8467|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 16:51:20.9511|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 18:03:05.5057|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 18:03:06.0560|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 18:03:06.5272|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 18:03:07.5077|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 18:03:10.8677|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 18:03:10.9033|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 18:03:10.9411|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 18:03:11.2636|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 18:03:17.6022|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 18:03:41.7032|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 18:05:09.0271|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 18:05:09.3632|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 18:05:09.5688|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 18:05:10.3517|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 18:05:11.4520|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 18:05:11.4712|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 18:05:11.5027|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 18:05:11.6258|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 18:07:42.2999|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-04 18:18:21.8865|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 18:18:22.1728|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 18:18:22.4107|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 18:18:22.8436|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 18:18:24.9170|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 18:18:24.9951|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 18:18:25.0188|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 18:18:25.0935|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 18:18:34.6130|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-04 18:21:34.5316|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 18:21:34.7146|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 18:21:34.9136|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 18:21:35.3391|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 18:21:36.5360|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 18:21:36.5602|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 18:21:36.5787|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 18:21:36.6797|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 18:21:41.4385|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-04 18:30:06.5605|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 18:30:06.7946|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 18:30:07.2312|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 18:30:07.6147|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 18:30:08.7988|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 18:30:08.8147|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 18:30:08.8272|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 18:30:08.9541|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 18:30:21.5597|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-04 18:30:33.4901|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-04 18:30:47.8429|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-04 18:30:51.8467|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-04 18:31:03.5903|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-04 18:31:08.6764|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-04 18:31:14.7822|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-04 18:31:18.2403|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-04 18:31:23.1535|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-04 18:31:27.1421|INFO|Recruit.Controllers.HomeController|[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details
+2020-12-04 18:31:33.3011|INFO|Recruit.Controllers.HomeController|[DisplayProcessStages]:Action Method returns view which displays the ProcessStages Details
+2020-12-04 18:34:40.2063|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 18:34:40.3580|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 18:34:41.0188|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 18:34:41.7077|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 18:34:42.9589|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 18:34:42.9769|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 18:34:43.0053|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 18:34:43.1327|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 18:35:18.9674|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-04 18:35:28.2185|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-04 18:35:32.7125|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-04 18:35:39.1705|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-04 18:35:48.5125|INFO|Recruit.Controllers.HomeController|[DisplayVacancies]:Action Method returns view which displays the Vacancies Details
+2020-12-04 18:35:53.6593|INFO|Recruit.Controllers.HomeController|[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details
+2020-12-04 18:36:00.9128|INFO|Recruit.Controllers.HomeController|[DisplayProcessStages]:Action Method returns view which displays the ProcessStages Details
+2020-12-04 18:36:37.8741|INFO|Recruit.Controllers.HomeController|[DisplayProcessStages]:Action Method returns view which displays the ProcessStages Details
+2020-12-04 18:36:41.9240|INFO|Recruit.Controllers.HomeController|[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details
+2020-12-04 18:36:45.2907|INFO|Recruit.Controllers.HomeController|[DisplayVacancies]:Action Method returns view which displays the Vacancies Details
+2020-12-04 18:36:48.5795|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-04 18:36:58.2557|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-04 18:37:05.5195|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-04 18:37:11.4352|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details

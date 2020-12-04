@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "InterviewDetails";
 }
-<h3>Interview Details</h3>
+
 @*@{
     var data = ViewBag.Message;
 }*@
@@ -15,29 +15,37 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <link rel="stylesheet" href="~/css/layoutstyles.css">
+    <link rel="stylesheet" href="~/css/tablestyles.css">
 </head>
 <body>
+    <h2>Interview Details</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>CandidateID</th>
+                    <th>Start time and date</th>
+                    <th>End time and date</th>
+                    <th>Status</th>
+                    <th>Reason</th>
+                </tr>
+            </thead>
 
-    <table cellpadding="0" cellspacing="0" border="1">
-        <tr>
-            <th>CandidateID</th>
-            <th>Start time and date</th>
-            <th>End time and date</th>
-            <th>Status</th>
-            <th>Reason</th>
-        </tr>
 
-        @foreach (var data in Model)
+            <tbody>
+                @foreach (var data in Model)
         {
-            <tr>
-                <td>@data.candidate_id</td>
-                <td>@data.start_date_time</td>
-                <td>@data.end_date_time</td>
-                <td>@data.status_id</td>
-                <td>@data.reason</td>
-            </tr>
+                <tr>
+                    <td>@data.candidate_id</td>
+                    <td>@data.start_date_time</td>
+                    <td>@data.end_date_time</td>
+                    <td>@data.status_id</td>
+                    <td>@data.reason</td>
+                </tr>
         }
-    </table>
+            </tbody>
+        </table>
+    </div>
     <div>
         <a asp-action="Index">Back to Dashboard</a>
     </div>

@@ -14,12 +14,11 @@ namespace Recruit.Models
     public class DropDown
     {
         Logger log = LogManager.GetCurrentClassLogger();
-        public static String connectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = RecruitMain; Integrated Security = True";
         /// <summary>
         /// method to get the value from tbl_owners 
         /// </summary>
         /// <returns></returns>
-        public List<tbl_owners> SetOwners()
+        public List<tbl_owners> SetOwners(String connectionString)
         {
 
             
@@ -44,7 +43,7 @@ namespace Recruit.Models
         ///  method to get the value from tbl_locations
         /// </summary>
         /// <returns></returns>
-        public List<tbl_locations> SetLocations()
+        public List<tbl_locations> SetLocations(String connectionString)
         {
 
             List<tbl_locations> items = new List<tbl_locations>();
@@ -66,7 +65,7 @@ namespace Recruit.Models
         ///  method to get the value from tbl_process_statuses
         /// </summary>
         /// <returns></returns>
-        public List<tbl_process_statuses> SetProcessStatuses()
+        public List<tbl_process_statuses> SetProcessStatuses(String connectionString)
         {  
             List<tbl_process_statuses> items = new List<tbl_process_statuses>();
 
@@ -89,7 +88,7 @@ namespace Recruit.Models
         ///  method to get the value from tbl_process_stages
         /// </summary>
         /// <returns></returns>
-        public List<tbl_process_stages> SetProcessStages()
+        public List<tbl_process_stages> SetProcessStages(String connectionString)
         {
             
             List<tbl_process_stages> items = new List<tbl_process_stages>();
@@ -112,7 +111,7 @@ namespace Recruit.Models
         ///  method to get the value from tbl_vacancies
         /// </summary>
         /// <returns></returns>
-        public List<tbl_vacancies> SetVacancies()
+        public List<tbl_vacancies> SetVacancies(String connectionString)
         {
             List<tbl_vacancies> items = new List<tbl_vacancies>();
             try
@@ -135,7 +134,7 @@ namespace Recruit.Models
         ///  method to get the value from tbl_interview_round_statuses
         /// </summary>
         /// <returns></returns>
-        public List<tbl_interview_round_statuses> SetInterviewRoundStatuses()
+        public List<tbl_interview_round_statuses> SetInterviewRoundStatuses(String connectionString)
         {
             List<tbl_interview_round_statuses> items = new List<tbl_interview_round_statuses>();
             try
@@ -157,7 +156,7 @@ namespace Recruit.Models
         ///  method to get the value from tbl_employees
         /// </summary>
         /// <returns></returns>
-        public List<tbl_employees> SetEmployees()
+        public List<tbl_employees> SetEmployees(String connectionString)
         {
             List<tbl_employees> items = new List<tbl_employees>();
             try
@@ -180,7 +179,7 @@ namespace Recruit.Models
         ///  method to get the value from tbl_sources
         /// </summary>
         /// <returns></returns>
-        public List<tbl_sources> SetSources()
+        public List<tbl_sources> SetSources(String connectionString)
         {
             List<tbl_sources> items = new List<tbl_sources>();
             try

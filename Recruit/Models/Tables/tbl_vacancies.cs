@@ -16,7 +16,7 @@ namespace Recruit.Models
         [Required(ErrorMessage = "Name is not valid")]
         public string name { get; set; }
 
-        public UInt64? vacancy { get; set; }
+        public Int64? vacancy { get; set; }
     }
 }
                                    

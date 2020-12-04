@@ -32,10 +32,11 @@ namespace Recruit.Controllers
             Configuration = _configuration;
             log = LogManager.GetCurrentClassLogger();
         }
-
+       
 
         DropDown dropDown = new DropDown();
         InsertDataAccessLayer insertData = new InsertDataAccessLayer();
+        
         /// <summary>
         /// function to display the index play ie the dashboard
         /// </summary>
@@ -108,8 +109,8 @@ namespace Recruit.Controllers
         public IActionResult InsertInterviewDetails()
         {
             log.Info("[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details");
-
-            TempData["Data"] = dropDown.SetInterviewRoundStatuses();
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
+            TempData["Data"] = dropDown.SetInterviewRoundStatuses(connectionString);
             return View();
         }
 
@@ -121,12 +122,14 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertInterviewDetails([Bind] tbl_interview_details employeeEntities)
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details");
             try
             {
+                
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddInterviewDetails(employeeEntities);
+                    TempData["msg"] = insertData.AddInterviewDetails(employeeEntities,connectionString);
                 }
             }
             catch (Exception exception)
@@ -137,7 +140,7 @@ namespace Recruit.Controllers
             finally
             {
                 
-                TempData["Data"] = dropDown.SetInterviewRoundStatuses();
+                TempData["Data"] = dropDown.SetInterviewRoundStatuses(connectionString);
             }
             return View();
         }
@@ -150,13 +153,13 @@ namespace Recruit.Controllers
         {
 
             log.Info("[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details");
-
-            TempData["Sources"] = dropDown.SetSources();
-            TempData["ProcessStages"] = dropDown.SetProcessStages();
-            TempData["ProcessStatuses"] = dropDown.SetProcessStatuses();
-            TempData["Vacancies"] = dropDown.SetVacancies();
-            TempData["Employees"] = dropDown.SetEmployees();
-            TempData["Owners"] = dropDown.SetOwners();
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
+            TempData["Sources"] = dropDown.SetSources(connectionString);
+            TempData["ProcessStages"] = dropDown.SetProcessStages(connectionString);
+            TempData["ProcessStatuses"] = dropDown.SetProcessStatuses(connectionString);
+            TempData["Vacancies"] = dropDown.SetVacancies(connectionString);
+            TempData["Employees"] = dropDown.SetEmployees(connectionString);
+            TempData["Owners"] = dropDown.SetOwners(connectionString);
             
 
 
@@ -173,7 +176,7 @@ namespace Recruit.Controllers
 
         public IActionResult InsertCandidates([Bind] tbl_candidates employeeEntities)
         {
-
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details");
             try
             {
@@ -181,7 +184,7 @@ namespace Recruit.Controllers
                 if (ModelState.IsValid)
                 {
 
-                    TempData["msg"] = insertData.AddCandidateDetails(employeeEntities);
+                    TempData["msg"] = insertData.AddCandidateDetails(employeeEntities,connectionString);
                 }
             }
             catch (Exception exception)
@@ -191,12 +194,12 @@ namespace Recruit.Controllers
             }
             finally
             {
-                TempData["Sources"] = dropDown.SetSources();
-                TempData["ProcessStages"] = dropDown.SetProcessStages();
-                TempData["ProcessStatuses"] = dropDown.SetProcessStatuses();
-                TempData["Vacancies"] = dropDown.SetVacancies();
-                TempData["Employees"] = dropDown.SetEmployees();
-                TempData["Owners"] = dropDown.SetOwners();
+                TempData["Sources"] = dropDown.SetSources(connectionString);
+                TempData["ProcessStages"] = dropDown.SetProcessStages(connectionString);
+                TempData["ProcessStatuses"] = dropDown.SetProcessStatuses(connectionString);
+                TempData["Vacancies"] = dropDown.SetVacancies(connectionString);
+                TempData["Employees"] = dropDown.SetEmployees(connectionString);
+                TempData["Owners"] = dropDown.SetOwners(connectionString);
             }
             return View();
         }
@@ -216,12 +219,13 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertLocations([Bind] tbl_locations cityEntities)
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddLocations(cityEntities);
+                    TempData["msg"] = insertData.AddLocations(cityEntities, connectionString);
                 }
             }
             catch (Exception exception)
@@ -246,12 +250,13 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertSources([Bind] tbl_sources Entities)
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[InsertSources]:[Post]Action Method returns view which posts the input page to the table Sources Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddSources(Entities);
+                    TempData["msg"] = insertData.AddSources(Entities, connectionString);
                 }
             }
             catch (Exception exception)
@@ -276,12 +281,13 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertVacancies([Bind] tbl_vacancies Entities)
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[InsertVacancies]:[Post]Action Method returns view which posts the input page to the table Vacancies Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddVacancies(Entities);
+                    TempData["msg"] = insertData.AddVacancies(Entities, connectionString);
                 }
             }
             catch (Exception exception)
@@ -306,12 +312,13 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertProcessStatus([Bind] tbl_process_statuses Entities)
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[InsertProcessStatus]:[Post]Action Method returns view which posts the input page to the table Process Status Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddProcessStatus(Entities);
+                    TempData["msg"] = insertData.AddProcessStatus(Entities, connectionString);
                 }
             }
             catch (Exception exception)
@@ -336,12 +343,13 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertProcessStages([Bind] tbl_process_stages Entities)
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddProcessStages(Entities);
+                    TempData["msg"] = insertData.AddProcessStages(Entities, connectionString);
                 }
             }
             catch (Exception exception)
@@ -367,12 +375,13 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertInterviewRoundStatuses([Bind] tbl_interview_round_statuses Entities)
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[InsertInterviewRoundStatuses]:[Post]Action Method returns view which posts the input page to the table Interview Round Statuses Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddRoundStatuses(Entities);
+                    TempData["msg"] = insertData.AddRoundStatuses(Entities, connectionString);
                 }
             }
             catch (Exception exception)
@@ -389,8 +398,9 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayLocations()
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[DisplayLocations]:Action Method returns view which displays the Locations Details");
-            List<tbl_locations> model = dropDown.SetLocations();
+            List<tbl_locations> model = dropDown.SetLocations(connectionString);
             return View(model);
         }
         /// <summary>
@@ -399,8 +409,9 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayProcessStatus()
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details");
-            List<tbl_process_statuses> model = dropDown.SetProcessStatuses();
+            List<tbl_process_statuses> model = dropDown.SetProcessStatuses(connectionString);
             return View(model);
         }
         /// <summary>
@@ -409,8 +420,9 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayProcessStages()
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[DisplayProcessStages]:Action Method returns view which displays the ProcessStages Details");
-            List<tbl_process_stages> model = dropDown.SetProcessStages();
+            List<tbl_process_stages> model = dropDown.SetProcessStages(connectionString);
             return View(model);
         }
         /// <summary>
@@ -419,8 +431,9 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayVacancies()
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[DisplayVacancies]:Action Method returns view which displays the Vacancies Details");
-            List<tbl_vacancies> model = dropDown.SetVacancies();
+            List<tbl_vacancies> model = dropDown.SetVacancies(connectionString);
             return View(model);
         }
         /// <summary>
@@ -429,9 +442,10 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayEmployees()
         {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[DisplayEmployees]:Action Method returns view which displays the Employees Details");
     
-            List<tbl_employees> model = dropDown.SetEmployees();
+            List<tbl_employees> model = dropDown.SetEmployees(connectionString);
             return View(model);
         }
 

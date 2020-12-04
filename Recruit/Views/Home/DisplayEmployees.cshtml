@@ -15,34 +15,40 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <link rel="stylesheet" href="~/css/layoutstyles.css">
+    <link rel="stylesheet" href="~/css/tablestyles.css">
 </head>
 <body>
-    <h3>Employee Details</h3>
-    <table cellpadding="0" cellspacing="0" border="1">
-        <tr>
-            <th>ID</th>
-            <th>name</th>
+    <h2>Employees Details</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>              
+                <tr>
+                    <th>ID</th>
+                    <th>name</th>
 
 
-        </tr>
-
-        @foreach (var data in Model)
-        {
-            <tr>
-                <td>@data.id</td>
-                <td>@data.name</td>
-
-
-            </tr>
-        }
-    </table>
-    <div>
-        <a asp-action="Index">Back to Dashboard</a>
-    </div>
+                </tr>
+            </thread>
+                <tbody>
+                    @foreach (var data in Model)
+                     {
+                    <tr>
+                        <td>@data.id</td>
+                        <td>@data.name</td>
 
 
-    @section Scripts {
-        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    }
+                    </tr>
+                     }
+                </tbody>
+            </table>
+        </div>
+                <div>
+                    <a asp-action="Index">Back to Dashboard</a>
+                </div>
+
+
+                @section Scripts {
+                    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+                }
 </body>
 </html>
