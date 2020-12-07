@@ -596,3 +596,387 @@ Error Number:137,State:2,Class:15
 2020-12-04 18:36:58.2557|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
 2020-12-04 18:37:05.5195|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
 2020-12-04 18:37:11.4352|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-04 18:56:50.4594|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 18:56:50.7129|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 18:56:51.1037|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 18:56:51.9162|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 18:56:54.2537|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 18:56:54.2934|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 18:56:54.3263|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 18:56:54.4284|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:00:04.0088|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 19:00:04.2691|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 19:00:04.5299|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 19:00:05.2314|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 19:00:06.4673|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 19:00:06.4851|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 19:00:06.4975|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 19:00:06.6037|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:00:14.7887|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:01:21.1365|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 19:01:21.4442|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 19:01:21.7273|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 19:01:22.3703|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 19:01:23.5091|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 19:01:23.5355|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 19:01:23.5807|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 19:01:23.7033|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:01:26.9556|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:01:50.1664|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 19:01:50.6381|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 19:01:51.1269|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 19:01:51.5249|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 19:01:52.7886|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 19:01:52.8022|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 19:01:52.8247|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 19:01:52.9796|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:03:46.9282|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 19:03:47.0866|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 19:03:47.2984|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 19:03:49.0480|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 19:03:50.5621|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 19:03:50.5812|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 19:03:50.6049|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 19:03:50.7387|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:03:54.4163|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:03:55.3971|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:03:55.7537|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:03:55.9294|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:03:56.2597|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:03:56.6502|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:07:42.0516|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 19:07:42.2263|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 19:07:42.4472|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 19:07:43.1431|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 19:07:44.5001|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 19:07:44.5244|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 19:07:44.5829|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 19:07:44.7729|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:08:00.0273|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:08:05.8219|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:08:08.5177|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 19:08:11.8390|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:08:17.9516|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:08:22.9252|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:08:27.7432|INFO|Recruit.Controllers.HomeController|[InsertSources]:[GET]Action Method returns view which gets the page to insert the table Sources Details
+2020-12-04 19:08:31.3712|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-04 19:13:13.1788|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 19:13:13.6163|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 19:13:14.0271|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 19:13:14.6332|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 19:13:15.7546|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 19:13:15.7739|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 19:13:15.7924|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 19:13:15.8972|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:13:49.9163|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 19:13:50.1222|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 19:13:50.3427|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 19:13:50.7272|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 19:13:52.8589|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 19:13:52.9004|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 19:13:52.9894|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 19:13:53.1188|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 19:14:17.6684|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 19:14:17.9926|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 19:14:21.9280|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-04 22:36:07.0307|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 22:36:07.5025|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 22:36:08.1250|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 22:36:11.3369|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 22:36:15.3807|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 22:36:15.4303|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 22:36:15.4600|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 22:36:15.8929|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 22:37:05.5894|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 22:37:06.0062|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 22:37:06.1933|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 22:37:06.7738|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 22:37:07.8180|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 22:37:07.8366|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 22:37:07.8547|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 22:37:07.9762|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 22:41:25.4908|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 22:41:25.6946|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 22:41:25.9153|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 22:41:26.7715|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 22:41:28.9421|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 22:41:28.9657|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 22:41:29.0077|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 22:41:29.1595|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 22:46:25.4885|INFO|Recruit.Controllers.HomeController|[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details
+2020-12-04 22:46:35.0577|INFO|Recruit.Controllers.HomeController|[DisplayProcessStages]:Action Method returns view which displays the ProcessStages Details
+2020-12-04 22:46:46.9392|INFO|Recruit.Controllers.HomeController|[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details
+2020-12-04 22:48:30.2333|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 22:51:33.2075|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 22:51:33.7092|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 22:51:34.0794|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 22:51:34.6760|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 22:51:36.0553|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 22:51:36.1177|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 22:51:36.1388|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 22:51:36.1995|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 22:54:39.5445|INFO|Recruit.Program|[Main]:Application Start
+2020-12-04 22:54:40.0565|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-04 22:54:40.2373|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-04 22:54:40.9558|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-04 22:54:42.2113|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-04 22:54:42.2821|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-04 22:54:42.3122|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-04 22:54:42.4370|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 22:58:13.1757|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 22:58:23.2708|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-04 22:58:31.3530|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-04 22:58:37.7854|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 22:59:24.4414|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-04 22:59:51.5320|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-04 22:59:56.7836|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-04 23:00:06.0026|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-07 12:08:17.4129|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 12:08:19.8921|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 12:08:23.6347|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 12:08:26.3950|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 12:08:30.6934|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 12:08:30.7481|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 12:08:30.7644|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 12:08:31.2875|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 12:08:31.2875|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 12:08:42.0280|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 12:08:51.1466|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-07 16:02:03.7215|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:02:04.4345|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:02:05.1172|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:02:07.5851|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:02:11.4527|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:02:11.4867|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:02:11.5165|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:02:12.1598|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:03:17.1406|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:06:19.0126|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:06:19.4107|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:06:19.6226|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:06:20.3386|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:06:21.6668|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:06:21.6832|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:06:21.7042|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:06:21.8888|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:06:36.4626|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:14:45.5708|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:14:46.0049|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:14:46.2244|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:14:47.2562|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:14:48.6111|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:14:48.6797|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:14:48.6797|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:14:48.7461|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:14:56.0035|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:16:12.1025|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:16:12.3371|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:16:12.5255|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:16:13.1605|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:16:14.2816|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:16:14.2992|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:16:14.3176|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:16:14.4194|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:16:31.2630|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:17:14.8504|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:17:15.1435|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:17:15.3378|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:17:15.7927|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:17:17.1038|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:17:17.1227|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:17:17.1548|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:17:17.2731|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:17:32.0747|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:18:03.6061|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:18:03.7726|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:18:03.9800|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:18:04.4753|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:18:05.6395|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:18:05.6569|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:18:05.6741|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:18:05.8150|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:18:12.7024|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:18:14.7902|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-07 16:18:19.8452|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:18:20.9986|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-07 16:18:29.6345|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:18:31.1332|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-07 16:19:04.1313|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:19:07.9017|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-07 16:23:32.4260|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:23:32.6915|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:23:32.9096|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:23:33.3591|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:23:34.5356|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:23:34.5501|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:23:34.5635|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:23:34.6618|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:23:51.8649|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:23:54.1992|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-07 16:26:37.1420|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:26:37.3983|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:26:37.6386|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:26:38.0840|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:26:39.3472|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:26:39.3678|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:26:39.3858|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:26:39.4947|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:26:46.8169|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:26:52.8166|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-07 16:27:07.4429|INFO|Recruit.Controllers.HomeController|[InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details
+2020-12-07 16:37:10.8592|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:37:11.0972|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:37:11.4310|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:37:11.9751|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:37:13.4524|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:37:13.4764|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:37:13.4942|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:37:13.6347|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:37:22.0323|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:37:26.4138|INFO|Recruit.Controllers.HomeController|[InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details
+2020-12-07 16:37:34.0640|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-07 16:39:31.5085|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:39:31.6847|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:39:31.9360|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:39:32.4170|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:39:33.8090|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:39:33.8361|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:39:33.8571|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:39:33.9727|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:39:40.6262|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-07 16:50:20.8694|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 16:50:21.0899|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 16:50:21.4043|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 16:50:21.9167|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 16:50:24.1533|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 16:50:24.1816|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 16:50:24.2197|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 16:50:24.5650|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 16:50:39.2705|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 16:50:44.5886|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-07 17:14:33.6977|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-07 17:17:18.5233|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-07 17:17:37.0048|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-07 17:18:42.7838|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-07 17:19:17.1953|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-07 17:19:25.3211|INFO|Recruit.Controllers.HomeController|[DisplayEmployees]:Action Method returns view which displays the Employees Details
+2020-12-07 17:19:40.1583|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-07 17:19:54.9866|INFO|Recruit.Controllers.HomeController|[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details
+2020-12-07 17:20:03.0973|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-07 17:41:56.0932|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 17:41:56.9934|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 17:41:58.3692|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 17:42:07.4223|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 17:42:18.9063|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 17:42:18.9384|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 17:42:18.9723|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 17:42:19.1327|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 17:43:47.3312|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 17:43:47.6730|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 17:43:48.2982|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 17:43:48.8335|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 17:43:49.9807|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 17:43:50.0042|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 17:43:50.0262|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 17:43:50.1604|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 17:44:03.6149|INFO|Recruit.Controllers.HomeController|[DisplayLocations]:Action Method returns view which displays the Locations Details
+2020-12-07 18:02:38.8175|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 18:02:38.9947|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 18:02:39.3536|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 18:02:39.9528|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 18:02:41.5232|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 18:02:41.5427|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 18:02:41.5613|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 18:02:41.7150|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 18:02:51.8448|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:20:16.6424|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 18:20:16.9868|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 18:20:17.1750|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 18:20:18.1817|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 18:20:19.3874|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 18:20:19.4008|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 18:20:19.4168|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 18:20:19.5047|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 18:20:23.6766|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:23:55.8400|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:23:58.8217|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:23:59.3512|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:24:23.9523|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 18:24:24.3800|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 18:24:24.8241|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 18:24:25.9422|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 18:24:27.7780|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 18:24:27.8312|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 18:24:27.8659|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 18:24:28.0205|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 18:24:37.1328|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:27:48.3544|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 18:27:48.8516|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 18:27:49.0972|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 18:27:50.0679|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 18:27:51.3528|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 18:27:51.3719|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 18:27:51.3929|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 18:27:51.5308|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 18:27:57.6354|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:34:02.5715|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 18:34:02.8933|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 18:34:03.2783|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 18:34:03.7784|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 18:34:05.0238|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 18:34:05.0472|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 18:34:05.0694|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 18:34:05.1888|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 18:34:13.1253|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:34:39.0997|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:35:02.7905|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:36:05.0915|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:36:35.5966|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 18:36:35.8841|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 18:36:36.1749|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 18:36:36.8047|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 18:36:38.5364|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 18:36:38.5683|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 18:36:38.5952|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 18:36:38.7367|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 18:36:45.1143|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:37:18.5620|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:37:34.1934|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 18:37:34.6262|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 18:37:34.8337|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 18:37:35.2785|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 18:37:36.5053|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 18:37:36.5276|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 18:37:36.5501|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 18:37:36.6433|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 18:38:43.1171|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:38:52.4162|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:40:31.7742|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 18:40:31.9532|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 18:40:32.2554|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 18:40:32.7786|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 18:40:34.1987|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 18:40:34.2143|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 18:40:34.2394|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 18:40:34.3727|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 18:40:40.3679|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 18:40:57.7610|INFO|Recruit.Controllers.HomeController|[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details
+2020-12-07 20:16:59.7273|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 20:17:00.4819|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 20:17:04.0826|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 20:17:05.7117|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 20:17:09.6384|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 20:17:09.6741|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 20:17:09.6973|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 20:17:10.0318|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 20:17:17.1527|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 20:22:58.7598|INFO|Recruit.Program|[Main]:Application Start
+2020-12-07 20:22:58.9899|INFO|Recruit.Program|[Main]: Fluent Migrator to setup Database tables
+2020-12-07 20:22:59.2636|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-07 20:23:03.0080|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-07 20:23:04.6371|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-12-07 20:23:04.6538|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-12-07 20:23:04.6746|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit
+2020-12-07 20:23:04.9883|INFO|Recruit.Controllers.HomeController|[Index]:Action Method returns view of the Index page
+2020-12-07 20:23:20.8246|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details
+2020-12-07 20:25:10.9501|INFO|Recruit.Controllers.HomeController|[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details

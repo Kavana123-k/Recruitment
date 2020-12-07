@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Locations";
-   // Layout = "~/Views/Home/CandidatesDetails.cshtml";
+    // Layout = "~/Views/Home/CandidatesDetails.cshtml";
 }
 
 <!DOCTYPE html>
@@ -26,24 +26,30 @@
             </thead>
             <tbody>
                 @foreach (var data in Model)
-        {
-                <tr>
-                    <td>@data.id</td>
-                    <td>@data.city</td>
-                </tr>
-        }
-            </tbody> 
+                {
+                    <tr>
+                        <td>
+                            <a href="~/Home/UpdateLocations/@data.id" class="btn btn-default" onclick="Update">@data.id </a>
 
-              
+                        </td>
+                        @*<td>@data.id</td>*@
+                        <td>@data.city</td>
+                    </tr>
+                }
+            </tbody>
+
+
         </table>
-        </div>
-        <div>
-            <a asp-action="Index">Back to Dashboard</a>
-        </div>
+    </div>
+    <div>
+        <a asp-action="Index">Back to Dashboard</a>
+    </div>
 
 
-        @section Scripts {
-            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-        }
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+    
+    }
 </body>
 </html>

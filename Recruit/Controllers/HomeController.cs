@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using Recruit.Models;
 using Dapper;
 using NLog;
+using Recruit.BusinessAccessLayer;
 
 namespace Recruit.Controllers
 {
@@ -144,12 +141,14 @@ namespace Recruit.Controllers
             }
             return View();
         }
+
         /// <summary>
-        /// method is to set the page with the insertion to candidate table
+        /// 
         /// </summary>
-        /// <returns>a view</returns>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
-        public IActionResult InsertCandidates()
+        public IActionResult InsertCandidates(int id)
         {
 
             log.Info("[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details");
@@ -160,10 +159,21 @@ namespace Recruit.Controllers
             TempData["Vacancies"] = dropDown.SetVacancies(connectionString);
             TempData["Employees"] = dropDown.SetEmployees(connectionString);
             TempData["Owners"] = dropDown.SetOwners(connectionString);
-            
 
 
-            return View();
+            var candidate = new Recruit.Models.Candidate();
+            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            {
+                // goto db and fetch candicate records
+                //Assign to 'tblCandidate'variable
+                var candidateBusinessAcess =new CandidateService(Configuration);
+                candidate =candidateBusinessAcess.Findby(3);
+
+                
+            }
+
+            // return model back to View
+            return View(candidate);
         }
 
 
@@ -183,7 +193,7 @@ namespace Recruit.Controllers
 
                 if (ModelState.IsValid)
                 {
-
+                   
                     TempData["msg"] = insertData.AddCandidateDetails(employeeEntities,connectionString);
                 }
             }
@@ -429,6 +439,8 @@ namespace Recruit.Controllers
         /// method to display the vacancies table
         /// </summary>
         /// <returns></returns>
+        /// 
+
         public IActionResult DisplayVacancies()
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
@@ -436,6 +448,7 @@ namespace Recruit.Controllers
             List<tbl_vacancies> model = dropDown.SetVacancies(connectionString);
             return View(model);
         }
+       
         /// <summary>
         /// method to display the employee table
         /// </summary>
@@ -447,6 +460,16 @@ namespace Recruit.Controllers
     
             List<tbl_employees> model = dropDown.SetEmployees(connectionString);
             return View(model);
+        }
+       public IActionResult UpdateLocations(string id)
+        {
+            // Conenct to db and get the detsils for id
+
+            // Generate a model object
+
+
+            // return to view
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

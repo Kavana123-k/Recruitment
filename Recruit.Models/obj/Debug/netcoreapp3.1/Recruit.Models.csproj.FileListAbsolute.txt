@@ -1,0 +1,9 @@
+C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\bin\Debug\netcoreapp3.1\Recruit.Models.deps.json
+C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\bin\Debug\netcoreapp3.1\Recruit.Models.dll
+C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\bin\Debug\netcoreapp3.1\Recruit.Models.pdb
+C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recruit.Models.csprojAssemblyReference.cache
+C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recruit.Models.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recruit.Models.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recruit.Models.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recruit.Models.dll
+C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recruit.Models.pdb

@@ -1,0 +1,12 @@
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\bin\Debug\netcoreapp3.1\Recruit.DataAccessLayer.deps.json
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\bin\Debug\netcoreapp3.1\Recruit.DataAccessLayer.dll
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\obj\Debug\netcoreapp3.1\Recruit.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\obj\Debug\netcoreapp3.1\Recruit.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\obj\Debug\netcoreapp3.1\Recruit.DataAccessLayer.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\bin\Debug\netcoreapp3.1\Recruit.DataAccessLayer.pdb
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\bin\Debug\netcoreapp3.1\Recruit.Models.dll
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\bin\Debug\netcoreapp3.1\Recruit.Models.pdb
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\obj\Debug\netcoreapp3.1\Recruit.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\obj\Debug\netcoreapp3.1\Recruit.DataAccessLayer.csproj.CopyComplete
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\obj\Debug\netcoreapp3.1\Recruit.DataAccessLayer.dll
+C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\obj\Debug\netcoreapp3.1\Recruit.DataAccessLayer.pdb

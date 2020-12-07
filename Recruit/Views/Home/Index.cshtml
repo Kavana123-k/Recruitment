@@ -1,22 +1,96 @@
-﻿
-@using Recruit.Models
-
-@{
-    ViewBag.Title = "Index";
-}
-<html>
+﻿<html>
 <head>
-    <title>Application For Recruitment</title>
-    @*<style>
-            body {
-                background-image: url('C:/Users/LENOVO/Downloads/bg.jpg');
-            }
-        </style>*@
-   
-<link rel="stylesheet" href="~/css/layoutstyles.css">
-</head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:Condensed" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+    <link href='~/css/indexpagestyles.css' rel='stylesheet' type='text/css'>
 
-    <body>
-        <h1>Application For Recruitment</h1>
-    </body>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="~/js/index.js"></script>
+
+
+</head>
+<body>
+    <div id="container">
+        <div class="whole">
+            <div class="type">
+                <p>Interview Status</p>
+            </div>
+            <div class="plan">
+
+                <div class="header">
+                    <span></span>29<sup>99</sup>
+                <p class="month">At Present</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>Initial Stage:10</li>
+                        <li>Offer Letter sent:15</li>
+                        <li>Offer accepted:10</li>
+                        <li>Candidates Joined:10</li>
+                    </ul>
+
+                </div>
+
+                <div class="price">
+                    <a href="#" class="bottom"><p class="cart">View Details</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="whole">
+            <div class="type standard">
+                <p>Active Candidates</p>
+            </div>
+            <div class="plan">
+
+                <div class="header">
+                    <span></span>49<sup>99</sup>
+                    <p class="month">At Present</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>Initial Stage:101</li>
+                        <li>Screening Done:25</li>
+                        <li>Final Round:10</li>
+                        <li>Offered:2</li>
+                    </ul>
+                </div>
+                <div class="price">
+                    <a href="#" class="bottom"><p class="cart">View Details</p></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="whole ">
+            <div class="type ultimate">
+                <p>interview Details</p>
+            </div>
+            <div class="plan">
+
+                <div class="header">
+                    <span></span>79<sup>99</sup>
+                  <p class="month">At Present</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>Accepted:2</li>
+                        <li>Onhold:10</li>
+                        <li>Cleared:15</li>
+                        <li>Rejected:10</li>
+                    </ul>
+                </div>
+                <div class="price">
+                    <a href="#" class="bottom"><p class="cart">View Details</p></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+</body>
 </html>
