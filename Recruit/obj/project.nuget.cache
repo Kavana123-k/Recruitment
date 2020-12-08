@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1OGUY+xhLZ6zCxRbSBwUToesqlviR2QqMDiMKR22gYBNKdAWMD+J9zIIe7h601SkPh7USpxNBDZrEMolNed2ug==",
+  "dgSpecHash": "c8J84rlxvPJLbFiizu2XF9qSdXDrfHMDleOeJZonCtjKSWb1PlGLaxzrx9L9uR5lGMqNcGV1BfN3i8V38kQTPw==",
   "success": true,
   "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\Recruit\\Recruit\\Recruit.csproj",
   "expectedPackageFiles": [
@@ -66,7 +66,7 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\nlog\\4.7.5\\nlog.4.7.5.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\nlog\\4.7.6\\nlog.4.7.6.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\nlog.extensions.logging\\1.6.5\\nlog.extensions.logging.1.6.5.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\ocm.orm\\1.1.11.6\\ocm.orm.1.1.11.6.nupkg.sha512",

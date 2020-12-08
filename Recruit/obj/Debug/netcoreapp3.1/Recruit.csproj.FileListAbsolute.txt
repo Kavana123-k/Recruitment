@@ -224,7 +224,6 @@ C:\Users\LENOVO\source\repos\Recruit\Recruit\bin\Debug\netcoreapp3.1\NLog.config
 C:\Users\LENOVO\source\repos\Recruit\Recruit\bin\Debug\netcoreapp3.1\NLog.dll
 C:\Users\LENOVO\source\repos\Recruit\Recruit\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Controllers\Edit.cshtml.g.cs
-C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Home\UpdateLocations.cshtml.g.cs
 C:\Users\LENOVO\source\repos\Recruit\Recruit\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 C:\Users\LENOVO\source\repos\Recruit\Recruit\bin\Debug\netcoreapp3.1\Recruit.BusinessAccessLayer.dll
 C:\Users\LENOVO\source\repos\Recruit\Recruit\bin\Debug\netcoreapp3.1\Recruit.DataAccessLayer.dll
@@ -234,3 +233,4 @@ C:\Users\LENOVO\source\repos\Recruit\Recruit\bin\Debug\netcoreapp3.1\Recruit.Dat
 C:\Users\LENOVO\source\repos\Recruit\Recruit\bin\Debug\netcoreapp3.1\Recruit.Models.pdb
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Recruit.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Recruit.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Home\DisplaySources.cshtml.g.cs

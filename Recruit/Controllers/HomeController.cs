@@ -166,8 +166,8 @@ namespace Recruit.Controllers
             {
                 // goto db and fetch candicate records
                 //Assign to 'tblCandidate'variable
-                var candidateBusinessAcess =new CandidateService(Configuration);
-                candidate =candidateBusinessAcess.Findby(3);
+                var candidateBusinessAccess =new CandidateService(Configuration);
+                candidate = candidateBusinessAccess.Findby(id);
 
                 
             }
@@ -184,17 +184,19 @@ namespace Recruit.Controllers
         /// <returns></returns>
         [HttpPost]
 
-        public IActionResult InsertCandidates([Bind] tbl_candidates employeeEntities)
+        public IActionResult InsertCandidates([Bind] Candidate employeeEntities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
+            var candidateBusinessAccess = new CandidateService(Configuration);
             log.Info("[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details");
             try
             {
-
+              
+                
                 if (ModelState.IsValid)
                 {
                    
-                    TempData["msg"] = insertData.AddCandidateDetails(employeeEntities,connectionString);
+                    TempData["msg"] = candidateBusinessAccess.CandidateDetails(employeeEntities); 
                 }
             }
             catch (Exception exception)
@@ -215,10 +217,23 @@ namespace Recruit.Controllers
         }
 
         [HttpGet]
-        public IActionResult InsertLocations()
+        public IActionResult InsertLocations(int id)
         {
             log.Info("[InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details");
-            return View();
+            var location = new Recruit.Models.Location();
+            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            {
+                // goto db and fetch candicate records
+                //Assign to 'tblCandidate'variable
+                var locationBusinessAccess = new LocationService(Configuration);
+                location = locationBusinessAccess.Findby(id);
+
+
+            }
+
+            // return model back to View
+            return View(location);
+           
         }
 
         /// <summary>
@@ -227,15 +242,16 @@ namespace Recruit.Controllers
         /// <param name="employeeEntities"></param>
         /// <returns>a view</returns>
         [HttpPost]
-        public IActionResult InsertLocations([Bind] tbl_locations cityEntities)
+        public IActionResult InsertLocations([Bind] Location cityEntities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
+            var locationBusinessAccess = new LocationService(Configuration);
             log.Info("[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddLocations(cityEntities, connectionString);
+                    TempData["msg"] = locationBusinessAccess.LocationDetails(cityEntities);
                 }
             }
             catch (Exception exception)
@@ -246,10 +262,20 @@ namespace Recruit.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult InsertSources()
+        public IActionResult InsertSources(string id)
         {
             log.Info("[InsertSources]:[GET]Action Method returns view which gets the page to insert the table Sources Details");
-            return View();
+            var source= new Recruit.Models.Source();
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                // goto db and fetch candicate records
+                //Assign to 'tblCandidate'variable
+                var sourceBusinessAccess = new SourceService(Configuration);
+                source = sourceBusinessAccess.Findby(id);
+            }
+            //return model back to View
+            return View(source);
+      
         }
 
         /// <summary>
@@ -258,15 +284,16 @@ namespace Recruit.Controllers
         /// <param name="employeeEntities"></param>
         /// <returns>a view</returns>
         [HttpPost]
-        public IActionResult InsertSources([Bind] tbl_sources Entities)
+        public IActionResult InsertSources([Bind] Source Entities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
+            var sourceBusinessAccess = new SourceService(Configuration);
             log.Info("[InsertSources]:[Post]Action Method returns view which posts the input page to the table Sources Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddSources(Entities, connectionString);
+                    TempData["msg"] = sourceBusinessAccess.SourceDetails(Entities);
                 }
             }
             catch (Exception exception)
@@ -277,10 +304,19 @@ namespace Recruit.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult InsertVacancies()
+        public IActionResult InsertVacancies(string id)
         {
             log.Info("[InsertVacancies]:[GET]Action Method returns view which gets the page to insert the Vacancies Details");
-            return View();
+            var vacancy = new Recruit.Models.Vacancy();
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                // goto db and fetch candicate records
+                //Assign to 'tblCandidate'variable
+                var vacancyBusinessAccess = new VacancyService(Configuration);
+                vacancy = vacancyBusinessAccess.Findby(id);
+            }
+            //return model back to View
+            return View(vacancy);
         }
 
         /// <summary>
@@ -289,15 +325,16 @@ namespace Recruit.Controllers
         /// <param name="employeeEntities"></param>
         /// <returns>a view</returns>
         [HttpPost]
-        public IActionResult InsertVacancies([Bind] tbl_vacancies Entities)
+        public IActionResult InsertVacancies([Bind] Vacancy Entities)
         {
+            var vacancyBusinessAccess = new VacancyService(Configuration);
             String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[InsertVacancies]:[Post]Action Method returns view which posts the input page to the table Vacancies Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddVacancies(Entities, connectionString);
+                    TempData["msg"] = vacancyBusinessAccess.VacancyDetails(Entities);
                 }
             }
             catch (Exception exception)
@@ -410,7 +447,7 @@ namespace Recruit.Controllers
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
             log.Info("[DisplayLocations]:Action Method returns view which displays the Locations Details");
-            List<tbl_locations> model = dropDown.SetLocations(connectionString);
+            var model = dropDown.SetLocations(connectionString);
             return View(model);
         }
         /// <summary>
@@ -461,7 +498,15 @@ namespace Recruit.Controllers
             List<tbl_employees> model = dropDown.SetEmployees(connectionString);
             return View(model);
         }
-       public IActionResult UpdateLocations(string id)
+        public IActionResult DisplaySources()
+        {
+            String connectionString = this.Configuration.GetConnectionString("MyConn");
+            log.Info("[DisplayEmployees]:Action Method returns view which displays the Employees Details");
+
+            List<tbl_sources> model = dropDown.SetSources(connectionString);
+            return View(model);
+        }
+        public IActionResult UpdateLocations(string id)
         {
             // Conenct to db and get the detsils for id
 

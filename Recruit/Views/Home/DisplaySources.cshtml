@@ -1,0 +1,58 @@
+﻿@model List<tbl_sources>
+
+@{
+    ViewBag.Title = "Sources";
+}
+
+@*@{
+        var data = ViewBag.Message;
+    }*@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css/layoutstyles.css">
+    <link rel="stylesheet" href="~/css/tablestyles.css">
+</head>
+<body>
+    <h2>Sources</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Source</th>
+                   
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var data in Model)
+                {
+                <tr>
+                    @*<td>@data.code</td>*@
+                    <td><a href="~/Home/InsertSources/@data.code" class="btn btn-default" onclick="Update">@data.code</a></td>
+                    <td>@data.name</td>
+
+
+
+                </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <div>
+        <a asp-action="Index">Back to Dashboard</a>
+    </div>
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+
+</html>

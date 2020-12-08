@@ -24,11 +24,14 @@ namespace Recruit.BusinessAccessLayer
 
         public Candidate Findby(int id)
         {
-            CandidateEngine candidateEnglkine = new CandidateEngine(_Configuration);
+            CandidateEngine candidateEngine = new CandidateEngine(_Configuration);
 
-            return candidateEnglkine.FindById(id);
-
-
+            return candidateEngine.FindById(id);
+        }
+        public string CandidateDetails(Candidate Entities)
+        {
+            CandidateEngine candidateEngine = new CandidateEngine(_Configuration);
+            return candidateEngine.CandidateCRU(Entities);
 
         }
     }

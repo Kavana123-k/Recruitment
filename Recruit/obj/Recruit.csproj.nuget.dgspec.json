@@ -119,6 +119,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.6, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.2, )"
@@ -269,7 +273,7 @@
             },
             "NLog": {
               "target": "Package",
-              "version": "[4.7.5, )"
+              "version": "[4.7.6, )"
             },
             "NLog.Extensions.Logging": {
               "target": "Package",
