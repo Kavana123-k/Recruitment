@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recruit.Models
 {
-    public class ProcessStages
+    public class ProcessStage
     {
         [Key]
         public Int64 id { get; set; }

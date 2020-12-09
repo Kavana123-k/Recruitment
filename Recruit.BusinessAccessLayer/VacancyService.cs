@@ -29,7 +29,7 @@ namespace Recruit.BusinessAccessLayer
 
                 return vacancyEngine.FindByCode(code);
             }
-            public string VacancyDetails(Vacancy Entities)
+            public string VacancyDetail(Vacancy Entities)
             {
                 VacancyEngine vacancyEngine = new VacancyEngine(_Configuration);
                 return vacancyEngine.VacancyCRU(Entities);

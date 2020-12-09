@@ -5,8 +5,9 @@ using Microsoft.Extensions.Configuration;
 
 namespace Recruit.BusinessAccessLayer
 {
-    public class CandidateService
+    public class InterviewDetailService
     {
+
 
         // public static Logger log;
         private IConfiguration _Configuration;
@@ -16,23 +17,24 @@ namespace Recruit.BusinessAccessLayer
         /// constructor for configuration to use connectionstring from appsettings.json
         /// </summary>
         /// <param name="_configuration"></param>
-        public CandidateService(IConfiguration _configuration)
+        public InterviewDetailService(IConfiguration _configuration)
         {
             _Configuration = _configuration;
             // log = LogManager.GetCurrentClassLogger();
         }
 
-        public Candidate Findby(int id)
+        public InterviewDetail Findby(int id)
         {
-            CandidateEngine candidateEngine = new CandidateEngine(_Configuration);
+            InterviewDetailEngine interviewDetailEngine = new InterviewDetailEngine(_Configuration);
 
-            return candidateEngine.FindById(id);
+            return interviewDetailEngine.FindById(id);
         }
-        public string CandidateDetail(Candidate Entities)
+        public string InterviewDetail(InterviewDetail Entities)
         {
-            CandidateEngine candidateEngine = new CandidateEngine(_Configuration);
-            return candidateEngine.CandidateCRU(Entities);
+            InterviewDetailEngine interviewDetailEngine = new InterviewDetailEngine(_Configuration);
+            return interviewDetailEngine.InterviewDetailCRU(Entities);
 
         }
+
     }
 }

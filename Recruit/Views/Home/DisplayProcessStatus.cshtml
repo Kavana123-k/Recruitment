@@ -34,7 +34,8 @@
                 @foreach (var data in Model)
         {
                 <tr>
-                    <td>@data.id</td>
+                    @*<td>@data.id</td>*@
+                    <td><a href="~/Home/InsertProcessStatus/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
                     <td>@data.code</td>
                     <td>@data.status</td>
                     <td>@data.colour</td>

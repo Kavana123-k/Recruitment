@@ -59,7 +59,10 @@ namespace Recruit.Controllers
                 using (IDbConnection database = new SqlConnection(connectionString))
                 {
 
-                    model = database.Query<tbl_interview_details>("SELECT candidate_id,start_date_time,end_date_time,status_id,reason FROM tbl_interview_details").ToList();
+                    model = database.Query<tbl_interview_details>("SELECT tbl_interview_details.id,first_name," +
+                        "start_date_time,end_date_time,status,reason FROM tbl_interview_details," +
+                        "tbl_candidates,tbl_interview_round_statuses where" +
+                        " tbl_interview_details.candidate_id = tbl_candidates.id and tbl_interview_details.status_id = tbl_interview_round_statuses.id").ToList();
                 }
             }
             catch(Exception exception)
@@ -83,11 +86,14 @@ namespace Recruit.Controllers
                 using (IDbConnection database = new SqlConnection(connectionString))
                 {
 
-                    model = database.Query<tbl_candidates>("SELECT id,first_name,last_name,email,phone,source_code,referral_id," +
-                    "total_experience,relevant_experience,current_employer,current_designation,position_applied_code," +
-                    "current_ctc,expected_ctc,reason_for_change,notice_period,is_serving_notice,last_working_day,current_location,process_stage_id," +
-                    "process_stage_date,process_start_date,process_end_date,interview_status_id,resume_owner_id,owner_for_reminder_id," +
-                    "comments,date_of_joining,notes,links_for_interview FROM tbl_Candidates").ToList();
+                    //                    model = database.Query<tbl_candidates>("SELECT id, first_name, last_name," +
+                    //                        "email, phone, tbl_sources.name as 'source_name' FROM tbl_Candidates, tbl_sources, tbl_employees, tbl_vacancies," +
+                    //"tbl_process_stages, tbl_process_statuses, tbl_owners as t1, tbl_owners as t2" +
+                    //"where tbl_candidates.source_code = tbl_sources.code and tbl_candidates.referral_id = tbl_employees.id " +
+                    //"and tbl_candidates.position_applied_code = tbl_vacancies.code and tbl_candidates.process_stage_id = tbl_process_stages.id" +
+                    //" and tbl_candidates.interview_status_id = tbl_process_statuses.id and tbl_candidates.resume_owner_id = t1.id " +
+                    //" and tbl_candidates.owner_for_reminder_id = t2.id").ToList();
+                    model = database.Query<tbl_candidates>("select  tbl_candidates.id,tbl_candidates.first_name,tbl_candidates.last_name,email,phone,tbl_sources.name as 'source_name',tbl_process_stages.stage as 'stage' from tbl_Candidates,tbl_sources where tbl_candidates.source_code=tbl_sources.code and tbl_candidates.process_stage_id=tbl_process_stages.id").ToList();
                 }
             }
             catch (Exception exception)
@@ -103,12 +109,24 @@ namespace Recruit.Controllers
         /// </summary>
         /// <returns>a view </returns>
         [HttpGet]
-        public IActionResult InsertInterviewDetails()
+        public IActionResult InsertInterviewDetails(int id)
         {
             log.Info("[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details");
             String connectionString = this.Configuration.GetConnectionString("MyConn");
             TempData["Data"] = dropDown.SetInterviewRoundStatuses(connectionString);
-            return View();
+            var interviewDetail = new Recruit.Models.InterviewDetail();
+            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            {
+                // goto db and fetch candicate records
+                //Assign to 'tblCandidate'variable
+                var interviewDetailBusinessAccess = new InterviewDetailService(Configuration);
+                interviewDetail = interviewDetailBusinessAccess.Findby(id);
+
+
+            }
+
+            // return model back to View
+            return View(interviewDetail);
         }
 
         /// <summary>
@@ -117,16 +135,17 @@ namespace Recruit.Controllers
         /// <param name="employeeEntities"></param>
         /// <returns>a view</returns>
         [HttpPost]
-        public IActionResult InsertInterviewDetails([Bind] tbl_interview_details employeeEntities)
+        public IActionResult InsertInterviewDetails([Bind] InterviewDetail Entities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
+            var interviewDetailBusinessAccess = new InterviewDetailService(Configuration);
             log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details");
             try
             {
                 
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddInterviewDetails(employeeEntities,connectionString);
+                    TempData["msg"] = interviewDetailBusinessAccess.InterviewDetail(Entities);
                 }
             }
             catch (Exception exception)
@@ -196,7 +215,7 @@ namespace Recruit.Controllers
                 if (ModelState.IsValid)
                 {
                    
-                    TempData["msg"] = candidateBusinessAccess.CandidateDetails(employeeEntities); 
+                    TempData["msg"] = candidateBusinessAccess.CandidateDetail(employeeEntities); 
                 }
             }
             catch (Exception exception)
@@ -251,7 +270,7 @@ namespace Recruit.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = locationBusinessAccess.LocationDetails(cityEntities);
+                    TempData["msg"] = locationBusinessAccess.LocationDetail(cityEntities);
                 }
             }
             catch (Exception exception)
@@ -293,7 +312,7 @@ namespace Recruit.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = sourceBusinessAccess.SourceDetails(Entities);
+                    TempData["msg"] = sourceBusinessAccess.SourceDetail(Entities);
                 }
             }
             catch (Exception exception)
@@ -334,7 +353,7 @@ namespace Recruit.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = vacancyBusinessAccess.VacancyDetails(Entities);
+                    TempData["msg"] = vacancyBusinessAccess.VacancyDetail(Entities);
                 }
             }
             catch (Exception exception)
@@ -345,10 +364,18 @@ namespace Recruit.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult InsertProcessStatus()
+        public IActionResult InsertProcessStatus(int id)
         {
             log.Info("[InsertProcessStatus]:[GET]Action Method returns view which gets the page to insert the Process Status Details");
-            return View();
+            var processStatus = new Recruit.Models.ProcessStatus();
+            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            {
+                // goto db and fetch candicate records
+                //Assign to 'tblCandidate'variable
+                var processStatusBusinessAccess = new ProcessStatusService(Configuration);
+                processStatus = processStatusBusinessAccess.Findby(id);
+            }
+            return View(processStatus);
         }
 
         /// <summary>
@@ -357,15 +384,16 @@ namespace Recruit.Controllers
         /// <param name="employeeEntities"></param>
         /// <returns>a view</returns>
         [HttpPost]
-        public IActionResult InsertProcessStatus([Bind] tbl_process_statuses Entities)
+        public IActionResult InsertProcessStatus([Bind] ProcessStatus Entities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
+            var processStatusBusinessAccess = new ProcessStatusService(Configuration);
             log.Info("[InsertProcessStatus]:[Post]Action Method returns view which posts the input page to the table Process Status Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddProcessStatus(Entities, connectionString);
+                    TempData["msg"] = processStatusBusinessAccess.ProcessStatusDetail(Entities);
                 }
             }
             catch (Exception exception)
@@ -376,10 +404,18 @@ namespace Recruit.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult InsertProcessStages()
+        public IActionResult InsertProcessStages(int id)
         {
             log.Info("[InsertProcessStages]:[GET]Action Method returns view which gets the page to insert the Process Stages Details");
-            return View();
+            var processStage = new Recruit.Models.ProcessStage();
+            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            {
+                // goto db and fetch candicate records
+                //Assign to 'tblCandidate'variable
+                var processStageBusinessAccess = new ProcessStageService(Configuration);
+                processStage = processStageBusinessAccess.Findby(id);
+            }
+            return View(processStage);
         }
 
         /// <summary>
@@ -388,15 +424,16 @@ namespace Recruit.Controllers
         /// <param name="employeeEntities"></param>
         /// <returns>a view</returns>
         [HttpPost]
-        public IActionResult InsertProcessStages([Bind] tbl_process_stages Entities)
+        public IActionResult InsertProcessStages([Bind] ProcessStage Entities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
+            var processStageBusinessAccess = new ProcessStageService(Configuration);
             log.Info("[InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddProcessStages(Entities, connectionString);
+                    TempData["msg"] = processStageBusinessAccess.ProcessStageDetail(Entities);
                 }
             }
             catch (Exception exception)

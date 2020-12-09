@@ -28,7 +28,7 @@ namespace Recruit.BusinessAccessLayer
 
             return LocationEngine.FindById(id);
         }
-        public string LocationDetails(Location Entities)
+        public string LocationDetail(Location Entities)
         {
             LocationEngine LocationEngine = new LocationEngine(_Configuration);
             return LocationEngine.LocationCRU(Entities);

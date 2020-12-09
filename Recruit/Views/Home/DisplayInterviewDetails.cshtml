@@ -23,7 +23,8 @@
         <table class="fl-table">
             <thead>
                 <tr>
-                    <th>CandidateID</th>
+                    <th>id</th>
+                    <th>Candidate Name</th>
                     <th>Start time and date</th>
                     <th>End time and date</th>
                     <th>Status</th>
@@ -36,10 +37,11 @@
                 @foreach (var data in Model)
         {
                 <tr>
-                    <td>@data.candidate_id</td>
+                    <td><a href="~/Home/InsertInterviewDetails/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
+                    <td>@data.first_name</td>
                     <td>@data.start_date_time</td>
                     <td>@data.end_date_time</td>
-                    <td>@data.status_id</td>
+                    <td>@data.status</td>
                     <td>@data.reason</td>
                 </tr>
         }

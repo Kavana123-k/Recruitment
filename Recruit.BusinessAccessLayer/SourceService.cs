@@ -28,7 +28,7 @@ namespace Recruit.BusinessAccessLayer
 
             return sourceEngine.FindByCode(code);
         }
-        public string SourceDetails(Source Entities)
+        public string SourceDetail(Source Entities)
         {
             SourceEngine sourceEngine = new SourceEngine(_Configuration);
             return sourceEngine.SourceCRU(Entities);

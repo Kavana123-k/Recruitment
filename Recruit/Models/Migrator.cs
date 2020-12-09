@@ -8,12 +8,12 @@ namespace Recruit.Models
     [Migration(20201117141200)]
     public class CreateTables : Migration
     {
-      
+
 
         public override void Up()
         {
 
-           
+
             Create.Table("tbl_logins").WithDescription("Table to Store the Login credentials")                                   //Creation of tbl_logins
                 .WithColumn("user_id").AsString(20).PrimaryKey("PK_tbl_logins_UserId").WithColumnDescription("Userid for login")
                 .WithColumn("first_name").AsString(50).NotNullable().WithColumnDescription("First name of the user for login")
@@ -105,7 +105,8 @@ namespace Recruit.Models
             .WithColumn("location_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_locations table defines the cities")
             .ForeignKey("FK_tbl_preferred_locations_tbl_Locations_LocationId", "tbl_locations", "id");
 
-            Create.Table("tbl_interview_details").WithDescription("Table used to store the Interview Details")                                             //Creation of tbl_interview_details
+            Create.Table("tbl_interview_details").WithDescription("Table used to store the Interview Details")
+                .WithColumn("id").AsInt64().Identity().PrimaryKey().WithColumnDescription("Primary key")//Creation of tbl_interview_details
                 .WithColumn("candidate_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_candidates table defines the id of the candidate")
                  .ForeignKey("FK_tbl_interview_details_tbl_candidates_CandidateId", "tbl_candidates", "id")
 
@@ -332,7 +333,7 @@ namespace Recruit.Models
                     @first_name	,@last_name	,@email	,@phone	,@source_code	,@referral_id		,@total_experience,@relevant_experience,@current_employer,@current_designation	,@position_applied_code,
                     @current_ctc		,@expected_ctc		,@reason_for_change	,@notice_period		,@is_serving_notice	,@last_working_day	,@current_location	,@process_stage_id	,@process_stage_date	,	
                     @process_start_date	,@process_end_date	,@interview_status_id		,@resume_owner_id	,@owner_for_reminder_id	,@comments	,@date_of_joining	,@notes	,@links_for_interview)end");
-            
+
             Execute.Sql(@"CREATE proc sp_interview_details_add
                         @candidate_id	bigint,
                         @start_date_time datetime,@end_date_time datetime,@status_id  bigint,@reason nvarchar(150)='None'
@@ -343,17 +344,17 @@ namespace Recruit.Models
             Execute.Sql(@"CREATE proc sp_locations_add @city nvarchar(20)     as
                            begin
                  insert into tbl_locations values (	@city)     end");
-            
+
             Execute.Sql(@"CREATE proc sp_sources_add @code nvarchar(15),@name nvarchar(25)     as
                         begin
              insert into tbl_sources values (@code,	@name) end");
-           
+
             Execute.Sql(@"	CREATE proc sp_process_statuses_add @code nvarchar(15),@status nvarchar(50),@colour nvarchar(10)='#FFFFFF'
 
                        as
                        begin
                        insert into tbl_process_statuses values (@code,	@status,@colour)end");
-          
+
             Execute.Sql(@"CREATE proc sp_vacancies_add @code nvarchar(15),@name nvarchar(50),@vacancy bigint =0
 
                          as
@@ -375,8 +376,27 @@ namespace Recruit.Models
 
         }
     }
+    [Migration(20201209105000)]
+    public class InsertInterviewDetails : Migration
+    {
+        public override void Up()
+        {
+            Create.Table("tbl_interview_details").WithDescription("Table used to store the Interview Details")                                             //Creation of tbl_interview_details
+               .WithColumn("id").AsInt64().Identity().PrimaryKey().WithColumnDescription("Primary key")
+                .WithColumn("candidate_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_candidates table defines the id of the candidate")
+                 .ForeignKey("FK_tbl_interview_details_tbl_candidates_CandidateId", "tbl_candidates", "id")
 
+                .WithColumn("start_date_time").AsDateTime().NotNullable().WithColumnDescription("Start date for the candidate used for keeping of history of the candidate interview details")
+                 .WithColumn("end_date_time").AsDateTime().NotNullable().WithColumnDescription("end date for the candidate used for keeping track of history of the candidate interview details")
+                 .WithColumn("status_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_interview_round_statuses table defines the the round status")
+                 .ForeignKey("FK_tbl_interview_details_tblInteviewRoundStatuses_StatusId", "tbl_interview_round_statuses", "id")
+                 .WithColumn("reason").AsString(150).Nullable().WithColumnDescription("Notes on the Interview Process if needed");
+        }
+        public override void Down()
+        {
 
+        }
+    }
     public class Init
     {
         public static Logger log = LogManager.GetCurrentClassLogger();
@@ -401,12 +421,12 @@ namespace Recruit.Models
                      // Add SQLite support to FluentMigrator
                      .AddSqlServer();
 
-                    //supp = rb.AddSQLite();
+                        //supp = rb.AddSQLite();
 
-                    // Set the connection string
-                    supp.WithGlobalConnectionString("Data Source=DESKTOP-T3N0J77;Initial Catalog=RecruitMain;Integrated Security=True")
-                   // Define the assembly containing the migrations
-                   .ScanIn(typeof(CreateTables).Assembly).For.Migrations();
+                        // Set the connection string
+                        supp.WithGlobalConnectionString("Data Source=DESKTOP-T3N0J77;Initial Catalog=RecruitMain;Integrated Security=True")
+                           // Define the assembly containing the migrations
+                           .ScanIn(typeof(CreateTables).Assembly).For.Migrations();
                 }
                 )
                 // Enable logging to console in the FluentMigrator way

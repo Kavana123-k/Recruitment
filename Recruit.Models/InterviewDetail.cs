@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Recruit.Models
 {
-    public class InterviewDetails
+    public class InterviewDetail
     {
+        [Key]
+        public Int64 id { get; set; }
         [ForeignKey("candidate_id")]
         [Required(ErrorMessage ="Candidate id invalid")]
         public Int64 candidate_id { get; set; }

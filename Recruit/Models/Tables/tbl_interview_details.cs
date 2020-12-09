@@ -9,9 +9,12 @@ namespace Recruit.Models
 {
     public class tbl_interview_details
     {
+        [Key]
+        public Int64 id { get; set; }
         [ForeignKey("candidate_id")]
         [Required(ErrorMessage ="Candidate id invalid")]
         public Int64 candidate_id { get; set; }
+        public String first_name { get; set; }
         [Required(ErrorMessage = "Please choose correct date time")]
         [Display(Name = "Interview Start date")]
         [DataType(DataType.DateTime)]
@@ -23,6 +26,7 @@ namespace Recruit.Models
         [ForeignKey("status_id")]
         [Required(ErrorMessage ="Interview Round Status invalid")]
         public Int64 status_id { get; set; }
+        public string status { get; set; }
         [StringLength(150)]
         [DataType(DataType.Text)]
         public string reason { get; set; }
