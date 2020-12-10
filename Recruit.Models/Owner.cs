@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recruit.Models
 {
-    public class Owners
+    public class Owner
     {
         [Key]
         public Int64 id { get; set; }

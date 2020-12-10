@@ -8,7 +8,7 @@
 <hr />
 @{
     List<SelectListItem> sources = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<tbl_sources>)TempData["Sources"])
+    @foreach (var items in (IEnumerable<Source>)TempData["Sources"])
     {
         sources.Add(new SelectListItem
         {
@@ -21,7 +21,7 @@
         });
     }
     List<SelectListItem> stages = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<tbl_process_stages>)TempData["ProcessStages"])
+    @foreach (var items in (IEnumerable<ProcessStage>)TempData["ProcessStages"])
     {
         stages.Add(new SelectListItem
         {
@@ -34,7 +34,7 @@
         });
     }
     List<SelectListItem> status = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<tbl_process_statuses>)TempData["ProcessStatuses"])
+    @foreach (var items in (IEnumerable<ProcessStatus>)TempData["ProcessStatuses"])
     {
         status.Add(new SelectListItem
         {
@@ -47,7 +47,7 @@
         });
     }
     List<SelectListItem> vacancy = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<tbl_vacancies>)TempData["Vacancies"])
+    @foreach (var items in (IEnumerable<Vacancy>)TempData["Vacancies"])
     {
         vacancy.Add(new SelectListItem
         {
@@ -61,7 +61,7 @@
     }
 
     List<SelectListItem> employees = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<tbl_employees>)TempData["Employees"])
+    @foreach (var items in (IEnumerable<Employee>)TempData["Employees"])
     {
         employees.Add(new SelectListItem
         {
@@ -74,7 +74,7 @@
         });
     }
     List<SelectListItem> owners = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<tbl_owners>)TempData["Owners"])
+    @foreach (var items in (IEnumerable<Owner>)TempData["Owners"])
     {
         owners.Add(new SelectListItem
         {

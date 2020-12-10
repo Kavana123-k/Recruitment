@@ -2,6 +2,7 @@
 using Recruit.Models;
 using Recruit.DataAccessLayer;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
@@ -28,6 +29,12 @@ namespace Recruit.BusinessAccessLayer
             ProcessStatusEngine ProcessStatusEngine = new ProcessStatusEngine(_Configuration);
 
             return ProcessStatusEngine.FindById(id);
+        }
+        public List<ProcessStatus> FindbyAll()
+        {
+            ProcessStatusEngine processStatusEngine = new ProcessStatusEngine(_Configuration);
+
+            return processStatusEngine.FindByAll();
         }
         public string ProcessStatusDetail(ProcessStatus Entities)
         {

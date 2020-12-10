@@ -2,6 +2,7 @@
 using Recruit.Models;
 using Recruit.DataAccessLayer;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
@@ -27,6 +28,12 @@ namespace Recruit.BusinessAccessLayer
             LocationEngine LocationEngine = new LocationEngine(_Configuration);
 
             return LocationEngine.FindById(id);
+        }
+        public List<Location> FindbyAll()
+        {
+            LocationEngine locationEngine = new LocationEngine(_Configuration);
+
+            return locationEngine.FindByAll();
         }
         public string LocationDetail(Location Entities)
         {

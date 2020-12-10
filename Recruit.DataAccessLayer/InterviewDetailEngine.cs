@@ -31,7 +31,7 @@ namespace Recruit.DataAccessLayer
 
 
         /// <summary>
-        ///  method to get the value from tbl_locations
+        ///  method to get the value from tbl_InterviewDetail
         /// </summary>
         /// <returns></returns>
         public List<InterviewDetail> FindByAll()
@@ -44,7 +44,10 @@ namespace Recruit.DataAccessLayer
                 using (IDbConnection database = new SqlConnection(connectionString))
                 {
 
-                    data = database.Query<InterviewDetail>("SELECT id,candidate_id,start_date_time,end_date_time,status_id,reason FROM tbl_interview_details").ToList();
+                    data = database.Query<InterviewDetail>("SELECT tbl_interview_details.id,first_name," +
+                        "start_date_time,end_date_time,status,reason FROM tbl_interview_details," +
+                        "tbl_candidates,tbl_interview_round_statuses where" +
+                        " tbl_interview_details.candidate_id = tbl_candidates.id and tbl_interview_details.status_id = tbl_interview_round_statuses.id").ToList();
                 }
             }
             catch (Exception exception)
@@ -53,6 +56,11 @@ namespace Recruit.DataAccessLayer
             }
             return (data);
         }
+        /// <summary>
+        /// Method is used to get the contents of the specified primary key
+        /// </summary>
+        /// <param name="id">Primary key</param>
+        /// <returns></returns>
         public InterviewDetail FindById(int id)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
@@ -70,6 +78,11 @@ namespace Recruit.DataAccessLayer
             }
             return data;
         }
+        /// <summary>
+        /// Create or update operations on the table interview details
+        /// </summary>
+        /// <param name="Entities">contains the values that is inserted</param>
+        /// <returns></returns>
         public String InterviewDetailCRU(InterviewDetail Entities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");

@@ -2,6 +2,7 @@
 using Recruit.Models;
 using Recruit.DataAccessLayer;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
@@ -29,7 +30,13 @@ namespace Recruit.BusinessAccessLayer
 
                 return vacancyEngine.FindByCode(code);
             }
-            public string VacancyDetail(Vacancy Entities)
+        public List<Vacancy> FindbyAll()
+        {
+            VacancyEngine vacancyEngine = new VacancyEngine(_Configuration);
+
+            return vacancyEngine.FindByAll();
+        }
+        public string VacancyDetail(Vacancy Entities)
             {
                 VacancyEngine vacancyEngine = new VacancyEngine(_Configuration);
                 return vacancyEngine.VacancyCRU(Entities);

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
-    public class SourceService
+    public class OwnerService
     {
 
         // public static Logger log;
@@ -17,29 +17,29 @@ namespace Recruit.BusinessAccessLayer
         /// constructor for configuration to use connectionstring from appsettings.json
         /// </summary>
         /// <param name="_configuration"></param>
-        public SourceService(IConfiguration _configuration)
+        public OwnerService(IConfiguration _configuration)
         {
             _Configuration = _configuration;
             // log = LogManager.GetCurrentClassLogger();
         }
 
-        public Source Findby(String code)
+        public Owner Findby(int id)
         {
-            SourceEngine sourceEngine = new SourceEngine(_Configuration);
+            OwnerEngine ownerEngine = new OwnerEngine(_Configuration);
 
-            return sourceEngine.FindByCode(code);
+            return ownerEngine.FindById(id);
         }
-        public List<Source> FindbyAll()
+        public List<Owner> FindbyAll()
         {
-            SourceEngine sourceEngine = new SourceEngine(_Configuration);
+            OwnerEngine ownerEngine = new OwnerEngine(_Configuration);
 
-            return sourceEngine.FindByAll();
+            return ownerEngine.FindByAll();
         }
-        public string SourceDetail(Source Entities)
-        {
-            SourceEngine sourceEngine = new SourceEngine(_Configuration);
-            return sourceEngine.SourceCRU(Entities);
+        //public string EmployeeDetail(Employee Entities)
+        //{
+        //    EmployeeEngine employeeEngine = new EmployeeEngine(_Configuration);
+        //    return employeeEngine.EmployeeCRU(Entities);
 
-        }
+        //}
     }
 }

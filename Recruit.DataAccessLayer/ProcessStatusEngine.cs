@@ -31,7 +31,7 @@ namespace Recruit.DataAccessLayer
 
 
         /// <summary>
-        ///  method to get the value from tbl_locations
+        ///  method to get the value from tbl_ProcessStatus
         /// </summary>
         /// <returns></returns>
         public List<ProcessStatus> FindByAll()
@@ -54,6 +54,11 @@ namespace Recruit.DataAccessLayer
             }
             return (data);
         }
+        /// <summary>
+        /// Method is used to get the value from the db wrt to the primary key
+        /// </summary>
+        /// <param name="id">Primary key</param>
+        /// <returns></returns>
         public ProcessStatus FindById(int id)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
@@ -71,6 +76,11 @@ namespace Recruit.DataAccessLayer
             }
             return data;
         }
+        /// <summary>
+        /// Insert or update operations on the tabl_process_statuses
+        /// </summary>
+        /// <param name="Entities"></param>
+        /// <returns></returns>
         public String ProcessStatusCRU(ProcessStatus Entities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");

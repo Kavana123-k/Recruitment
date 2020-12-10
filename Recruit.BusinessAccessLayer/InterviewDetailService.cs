@@ -2,6 +2,7 @@
 using Recruit.Models;
 using Recruit.DataAccessLayer;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
@@ -28,6 +29,12 @@ namespace Recruit.BusinessAccessLayer
             InterviewDetailEngine interviewDetailEngine = new InterviewDetailEngine(_Configuration);
 
             return interviewDetailEngine.FindById(id);
+        }
+        public List<InterviewDetail> FindbyAll()
+        {
+            InterviewDetailEngine interviewDetailEngine = new InterviewDetailEngine(_Configuration);
+
+            return interviewDetailEngine.FindByAll();
         }
         public string InterviewDetail(InterviewDetail Entities)
         {

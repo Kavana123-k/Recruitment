@@ -11,7 +11,7 @@ using NLog;
 
 namespace Recruit.DataAccessLayer
 {
-    public class ProcessStageEngine
+    public class InterviewRoundStatusEngine
     {
 
         public static Logger log;
@@ -22,7 +22,7 @@ namespace Recruit.DataAccessLayer
         /// constructor for configuration to use connectionstring from appsettings.json
         /// </summary>
         /// <param name="_configuration"></param>
-        public ProcessStageEngine(IConfiguration _configuration)
+        public InterviewRoundStatusEngine(IConfiguration _configuration)
         {
             Configuration = _configuration;
             log = LogManager.GetCurrentClassLogger();
@@ -31,39 +31,38 @@ namespace Recruit.DataAccessLayer
 
 
         /// <summary>
-        ///  method to get the value from tbl_Process_stages
+        ///  Method displays all the value from InterviewRoundStatus
         /// </summary>
         /// <returns></returns>
-        public List<ProcessStage> FindByAll()
+        public List<InterviewRoundStatus> FindByAll()
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
-
-            var data = new List<ProcessStage>();
+            var data = new List<InterviewRoundStatus>();
             try
             {
                 using (IDbConnection database = new SqlConnection(connectionString))
                 {
 
-                    data = database.Query<ProcessStage>(" SELECT id,code,stage FROM tbl_process_stages").ToList();
+                    data = database.Query<InterviewRoundStatus>(" SELECT id,status FROM tbl_interview_round_statuses").ToList();
                 }
 
             }
             catch (Exception exception)
             {
-                log.Error("[FindByAll]: " + exception);
+                log.Error(exception.Message);
             }
             return (data);
         }
         /// <summary>
-        /// Methods gets the value from the db wrt the primary key
+        /// Method gets contents from the db of the specified primary key
         /// </summary>
         /// <param name="id">Primary key</param>
         /// <returns></returns>
-        public ProcessStage FindById(int id)
+        public InterviewRoundStatus FindById(int id)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
 
-            var data = new ProcessStage();
+            var data = new InterviewRoundStatus();
             try
             {
 
@@ -72,53 +71,51 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                log.Error("[FindById]:" + exception);
+                log.Error("[FindByCode]:" + exception);
             }
             return data;
         }
         /// <summary>
-        /// Create and update operations for the table ProcessStages
+        /// Create and update operation of the table InterviewRoundStatus
         /// </summary>
-        /// <param name="Entities">Value the nedds to be inserted or updated</param>
+        /// <param name="Entities">has the content that has to be insertedd or updated</param>
         /// <returns></returns>
-        public String ProcessStageCRU(ProcessStage Entities)
+        public String InterviewRoundStatusEngineCRU(InterviewRoundStatus Entities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
 
             try
             {
-
-                if (Entities.id == 0)
+                if (Entities.id==0)
                 {
                     using (IDbConnection database = new SqlConnection(connectionString))
                     {
-                        string insertQuery = @"INSERT INTO tbl_process_stages([code],[stage])VALUES (@code,@stage)";
+                        string insertQuery = @"INSERT INTO tbl_interview_round_statuses([id],[status])VALUES (@id,@status)";
 
                         var result = database.Execute(insertQuery, new
                         {
-                            Entities.code,
-                            Entities.stage
+                            Entities.id,
+                            Entities.status
+
                         });
                     }
-                    log.Info("[ProcessStageCRU]:Data save Successfully");
+                    log.Info("[EmployeeCRU]:Data save Successfully");
                     return ("Data save Successfully");
-
                 }
+
                 else
                 {
                     using (IDbConnection database = new SqlConnection(connectionString))
                     {
-                        string updateQuery = @"UPDATE tbl_process_stages SET code=@code,stage=@stage WHERE id=@id";
+                        string updateQuery = @"UPDATE tbl_interview_round_statuses SET status=@status WHERE id=@id";
 
                         var result = database.Execute(updateQuery, new
                         {
                             Entities.id,
-                            Entities.code,
-                            Entities.stage,
-                            
+                            Entities.status
                         });
                     }
-                    log.Info("[ProcessStatusCRU]:Data save Successfully");
+                    log.Info("[EmployeeCRU]:Data save Successfully");
                     return ("Data Updated Successfully");
                 }
 
@@ -127,7 +124,7 @@ namespace Recruit.DataAccessLayer
             catch (Exception exception)
             {
 
-                log.Error("[ProcessStatusCRU]:" + exception);
+                log.Error("[SourceCRU]:" + exception);
                 return (exception.Message.ToString());
             }
         }

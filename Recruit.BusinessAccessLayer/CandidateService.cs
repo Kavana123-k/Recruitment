@@ -2,6 +2,7 @@
 using Recruit.Models;
 using Recruit.DataAccessLayer;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
@@ -27,6 +28,12 @@ namespace Recruit.BusinessAccessLayer
             CandidateEngine candidateEngine = new CandidateEngine(_Configuration);
 
             return candidateEngine.FindById(id);
+        }
+        public List<Candidate> FindbyAll()
+        {
+            CandidateEngine candidateEngine = new CandidateEngine(_Configuration);
+
+            return candidateEngine.FindByAll();
         }
         public string CandidateDetail(Candidate Entities)
         {

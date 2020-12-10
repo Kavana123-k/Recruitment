@@ -6,7 +6,7 @@
 @{
     List<SelectListItem> statusId = new List<SelectListItem>();
 
-    @foreach (var items in (IEnumerable<tbl_interview_round_statuses>)TempData["Data"])
+    @foreach (var items in (IEnumerable<InterviewRoundStatus>)TempData["Data"])
     {
         statusId.Add(new SelectListItem
         {

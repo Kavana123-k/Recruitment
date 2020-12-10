@@ -31,8 +31,8 @@ namespace Recruit.Controllers
         }
        
 
-        DropDown dropDown = new DropDown();
-        InsertDataAccessLayer insertData = new InsertDataAccessLayer();
+       // DropDown dropDown = new DropDown();
+      //  InsertDataAccessLayer insertData = new InsertDataAccessLayer();
         
         /// <summary>
         /// function to display the index play ie the dashboard
@@ -52,25 +52,10 @@ namespace Recruit.Controllers
         public IActionResult DisplayInterviewDetails()
         {
             log.Info("[DisplayInterviewDetails]:Action Method returns view which displays the Interview Details");
-            String connectionString = this.Configuration.GetConnectionString("MyConn");
-            List<tbl_interview_details> model = new List<tbl_interview_details>();
-            try
-            {
-                using (IDbConnection database = new SqlConnection(connectionString))
-                {
-
-                    model = database.Query<tbl_interview_details>("SELECT tbl_interview_details.id,first_name," +
-                        "start_date_time,end_date_time,status,reason FROM tbl_interview_details," +
-                        "tbl_candidates,tbl_interview_round_statuses where" +
-                        " tbl_interview_details.candidate_id = tbl_candidates.id and tbl_interview_details.status_id = tbl_interview_round_statuses.id").ToList();
-                }
-            }
-            catch(Exception exception)
-            {
-                log.Error("[DisplayInterviewDetails]:" + exception);
-            }
-            return View(model);
-
+            var interviewDetailsBusinessAccess = new InterviewDetailService(Configuration);
+            List<InterviewDetail> interviewDetails = interviewDetailsBusinessAccess.FindbyAll();
+            return View(interviewDetails);
+          
         }
         /// <summary>
         /// Method to display Candidate details
@@ -80,29 +65,9 @@ namespace Recruit.Controllers
         {
             log.Info("[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details");
             String connectionString = this.Configuration.GetConnectionString("MyConn");
-            var model = new List<tbl_candidates>();
-            try
-            {
-                using (IDbConnection database = new SqlConnection(connectionString))
-                {
-
-                    //                    model = database.Query<tbl_candidates>("SELECT id, first_name, last_name," +
-                    //                        "email, phone, tbl_sources.name as 'source_name' FROM tbl_Candidates, tbl_sources, tbl_employees, tbl_vacancies," +
-                    //"tbl_process_stages, tbl_process_statuses, tbl_owners as t1, tbl_owners as t2" +
-                    //"where tbl_candidates.source_code = tbl_sources.code and tbl_candidates.referral_id = tbl_employees.id " +
-                    //"and tbl_candidates.position_applied_code = tbl_vacancies.code and tbl_candidates.process_stage_id = tbl_process_stages.id" +
-                    //" and tbl_candidates.interview_status_id = tbl_process_statuses.id and tbl_candidates.resume_owner_id = t1.id " +
-                    //" and tbl_candidates.owner_for_reminder_id = t2.id").ToList();
-                    model = database.Query<tbl_candidates>("select  tbl_candidates.id,tbl_candidates.first_name,tbl_candidates.last_name,email,phone,tbl_sources.name as 'source_name',tbl_process_stages.stage as 'stage' from tbl_Candidates,tbl_sources where tbl_candidates.source_code=tbl_sources.code and tbl_candidates.process_stage_id=tbl_process_stages.id").ToList();
-                }
-            }
-            catch (Exception exception)
-            {
-                log.Error("[DisplayCandidatesDetails]:" + exception);
-            }
-            return View(model);
-           
-
+            var candidateBusinessAccess = new CandidateService(Configuration);
+            List<Candidate> candidate = candidateBusinessAccess.FindbyAll();
+             return View(candidate);
         }
         /// <summary>
         /// Method to display the page with forms to insert into interview details
@@ -113,19 +78,14 @@ namespace Recruit.Controllers
         {
             log.Info("[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details");
             String connectionString = this.Configuration.GetConnectionString("MyConn");
-            TempData["Data"] = dropDown.SetInterviewRoundStatuses(connectionString);
+            var interviewRoundStatusBusinessAccess = new InterviewRoundStatusService(Configuration);
+            TempData["Data"] = interviewRoundStatusBusinessAccess.FindbyAll();
             var interviewDetail = new Recruit.Models.InterviewDetail();
             if (!string.IsNullOrWhiteSpace(id.ToString()))
             {
-                // goto db and fetch candicate records
-                //Assign to 'tblCandidate'variable
                 var interviewDetailBusinessAccess = new InterviewDetailService(Configuration);
                 interviewDetail = interviewDetailBusinessAccess.Findby(id);
-
-
             }
-
-            // return model back to View
             return View(interviewDetail);
         }
 
@@ -155,8 +115,8 @@ namespace Recruit.Controllers
             }
             finally
             {
-                
-                TempData["Data"] = dropDown.SetInterviewRoundStatuses(connectionString);
+                var interviewRoundStatusBusinessAccess = new InterviewRoundStatusService(Configuration);
+                TempData["Data"] = interviewRoundStatusBusinessAccess.FindbyAll();
             }
             return View();
         }
@@ -172,27 +132,30 @@ namespace Recruit.Controllers
 
             log.Info("[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details");
             String connectionString = this.Configuration.GetConnectionString("MyConn");
-            TempData["Sources"] = dropDown.SetSources(connectionString);
-            TempData["ProcessStages"] = dropDown.SetProcessStages(connectionString);
-            TempData["ProcessStatuses"] = dropDown.SetProcessStatuses(connectionString);
-            TempData["Vacancies"] = dropDown.SetVacancies(connectionString);
-            TempData["Employees"] = dropDown.SetEmployees(connectionString);
-            TempData["Owners"] = dropDown.SetOwners(connectionString);
+            var SourceBusinessAccess = new SourceService(Configuration);
+            var processStageBusinessAccess = new ProcessStageService(Configuration);
+            var ProcessStatusBusinessAccess = new ProcessStatusService(Configuration);
+            var VacancyBusinessAccess = new VacancyService(Configuration);
+            var EmployeeBusinessAccess = new EmployeeService(Configuration);
+            var OwnerBusinessAccess = new OwnerService(Configuration);
+            TempData["Sources"] = SourceBusinessAccess.FindbyAll();
+            
+            TempData["ProcessStages"] = processStageBusinessAccess.FindbyAll();
+            TempData["ProcessStatuses"] = ProcessStatusBusinessAccess.FindbyAll();
+            TempData["Vacancies"] = VacancyBusinessAccess.FindbyAll();
+            TempData["Employees"] = EmployeeBusinessAccess.FindbyAll();
+            TempData["Owners"] = OwnerBusinessAccess.FindbyAll();
 
 
             var candidate = new Recruit.Models.Candidate();
             if (!string.IsNullOrWhiteSpace(id.ToString()))
             {
-                // goto db and fetch candicate records
-                //Assign to 'tblCandidate'variable
                 var candidateBusinessAccess =new CandidateService(Configuration);
                 candidate = candidateBusinessAccess.Findby(id);
-
-                
+                               
             }
 
-            // return model back to View
-            return View(candidate);
+             return View(candidate);
         }
 
 
@@ -225,12 +188,19 @@ namespace Recruit.Controllers
             }
             finally
             {
-                TempData["Sources"] = dropDown.SetSources(connectionString);
-                TempData["ProcessStages"] = dropDown.SetProcessStages(connectionString);
-                TempData["ProcessStatuses"] = dropDown.SetProcessStatuses(connectionString);
-                TempData["Vacancies"] = dropDown.SetVacancies(connectionString);
-                TempData["Employees"] = dropDown.SetEmployees(connectionString);
-                TempData["Owners"] = dropDown.SetOwners(connectionString);
+                var SourceBusinessAccess = new SourceService(Configuration);
+                var processStageBusinessAccess = new ProcessStageService(Configuration);
+                var ProcessStatusBusinessAccess = new ProcessStatusService(Configuration);
+                var VacancyBusinessAccess = new VacancyService(Configuration);
+                var EmployeeBusinessAccess = new EmployeeService(Configuration);
+                var OwnerBusinessAccess = new OwnerService(Configuration);
+                TempData["Sources"] = SourceBusinessAccess.FindbyAll();
+
+                TempData["ProcessStages"] = processStageBusinessAccess.FindbyAll();
+                TempData["ProcessStatuses"] = ProcessStatusBusinessAccess.FindbyAll();
+                TempData["Vacancies"] = VacancyBusinessAccess.FindbyAll();
+                TempData["Employees"] = EmployeeBusinessAccess.FindbyAll();
+                TempData["Owners"] = OwnerBusinessAccess.FindbyAll();
             }
             return View();
         }
@@ -242,16 +212,10 @@ namespace Recruit.Controllers
             var location = new Recruit.Models.Location();
             if (!string.IsNullOrWhiteSpace(id.ToString()))
             {
-                // goto db and fetch candicate records
-                //Assign to 'tblCandidate'variable
                 var locationBusinessAccess = new LocationService(Configuration);
                 location = locationBusinessAccess.Findby(id);
-
-
             }
-
-            // return model back to View
-            return View(location);
+             return View(location);
            
         }
 
@@ -287,12 +251,10 @@ namespace Recruit.Controllers
             var source= new Recruit.Models.Source();
             if (!string.IsNullOrWhiteSpace(id))
             {
-                // goto db and fetch candicate records
-                //Assign to 'tblCandidate'variable
                 var sourceBusinessAccess = new SourceService(Configuration);
                 source = sourceBusinessAccess.Findby(id);
             }
-            //return model back to View
+            
             return View(source);
       
         }
@@ -329,12 +291,9 @@ namespace Recruit.Controllers
             var vacancy = new Recruit.Models.Vacancy();
             if (!string.IsNullOrWhiteSpace(id))
             {
-                // goto db and fetch candicate records
-                //Assign to 'tblCandidate'variable
-                var vacancyBusinessAccess = new VacancyService(Configuration);
+               var vacancyBusinessAccess = new VacancyService(Configuration);
                 vacancy = vacancyBusinessAccess.Findby(id);
             }
-            //return model back to View
             return View(vacancy);
         }
 
@@ -370,8 +329,6 @@ namespace Recruit.Controllers
             var processStatus = new Recruit.Models.ProcessStatus();
             if (!string.IsNullOrWhiteSpace(id.ToString()))
             {
-                // goto db and fetch candicate records
-                //Assign to 'tblCandidate'variable
                 var processStatusBusinessAccess = new ProcessStatusService(Configuration);
                 processStatus = processStatusBusinessAccess.Findby(id);
             }
@@ -410,8 +367,6 @@ namespace Recruit.Controllers
             var processStage = new Recruit.Models.ProcessStage();
             if (!string.IsNullOrWhiteSpace(id.ToString()))
             {
-                // goto db and fetch candicate records
-                //Assign to 'tblCandidate'variable
                 var processStageBusinessAccess = new ProcessStageService(Configuration);
                 processStage = processStageBusinessAccess.Findby(id);
             }
@@ -457,15 +412,16 @@ namespace Recruit.Controllers
         /// <param name="employeeEntities"></param>
         /// <returns>a view</returns>
         [HttpPost]
-        public IActionResult InsertInterviewRoundStatuses([Bind] tbl_interview_round_statuses Entities)
+        public IActionResult InsertInterviewRoundStatuses([Bind] InterviewRoundStatus Entities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
+            var interviewRoundStatusBusinessAccess = new InterviewRoundStatusService(Configuration);
             log.Info("[InsertInterviewRoundStatuses]:[Post]Action Method returns view which posts the input page to the table Interview Round Statuses Details");
             try
             {
                 if (ModelState.IsValid)
                 {
-                    TempData["msg"] = insertData.AddRoundStatuses(Entities, connectionString);
+                    TempData["msg"] = interviewRoundStatusBusinessAccess.InterviewRoundStatusDetail(Entities);
                 }
             }
             catch (Exception exception)
@@ -482,10 +438,11 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayLocations()
         {
-            String connectionString = this.Configuration.GetConnectionString("MyConn");
+            
             log.Info("[DisplayLocations]:Action Method returns view which displays the Locations Details");
-            var model = dropDown.SetLocations(connectionString);
-            return View(model);
+            var locationBusinessAccess = new LocationService(Configuration);
+            List<Location> location = locationBusinessAccess.FindbyAll();
+            return View(location);
         }
         /// <summary>
         /// method to display the Process Statuses table
@@ -493,10 +450,10 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayProcessStatus()
         {
-            String connectionString = this.Configuration.GetConnectionString("MyConn");
-            log.Info("[DisplayProcessStatus]:Action Method returns view which displays the ProcessStatus Details");
-            List<tbl_process_statuses> model = dropDown.SetProcessStatuses(connectionString);
-            return View(model);
+            log.Info("[DisplayProcessStatus]:Action Method returns view which displays the Locations Details");
+            var processStatusBusinessAccess = new ProcessStatusService(Configuration);
+            List<ProcessStatus> processStatus = processStatusBusinessAccess.FindbyAll();
+            return View(processStatus);
         }
         /// <summary>
         /// method to display the process stages table
@@ -504,10 +461,10 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayProcessStages()
         {
-            String connectionString = this.Configuration.GetConnectionString("MyConn");
-            log.Info("[DisplayProcessStages]:Action Method returns view which displays the ProcessStages Details");
-            List<tbl_process_stages> model = dropDown.SetProcessStages(connectionString);
-            return View(model);
+            log.Info("[DisplayProcessStages]:Action Method returns view which displays the Locations Details");
+            var processStageBusinessAccess = new ProcessStageService(Configuration);
+            List<ProcessStage> processStage = processStageBusinessAccess.FindbyAll();
+            return View(processStage);
         }
         /// <summary>
         /// method to display the vacancies table
@@ -517,10 +474,10 @@ namespace Recruit.Controllers
 
         public IActionResult DisplayVacancies()
         {
-            String connectionString = this.Configuration.GetConnectionString("MyConn");
-            log.Info("[DisplayVacancies]:Action Method returns view which displays the Vacancies Details");
-            List<tbl_vacancies> model = dropDown.SetVacancies(connectionString);
-            return View(model);
+            log.Info("[DisplayVacancies]:Action Method returns view which displays the Locations Details");
+            var vacanciesBusinessAccess = new VacancyService(Configuration);
+            List<Vacancy> vacancy = vacanciesBusinessAccess.FindbyAll();
+            return View(vacancy);
         }
        
         /// <summary>
@@ -529,30 +486,19 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayEmployees()
         {
-            String connectionString = this.Configuration.GetConnectionString("MyConn");
-            log.Info("[DisplayEmployees]:Action Method returns view which displays the Employees Details");
-    
-            List<tbl_employees> model = dropDown.SetEmployees(connectionString);
-            return View(model);
+            log.Info("[DisplayEmployees]:Action Method returns view which displays the Locations Details");
+            var EmployeeBusinessAccess = new EmployeeService(Configuration);
+            List<Employee> employee = EmployeeBusinessAccess.FindbyAll();
+            return View(employee);
         }
         public IActionResult DisplaySources()
         {
-            String connectionString = this.Configuration.GetConnectionString("MyConn");
-            log.Info("[DisplayEmployees]:Action Method returns view which displays the Employees Details");
-
-            List<tbl_sources> model = dropDown.SetSources(connectionString);
-            return View(model);
+            log.Info("[DisplaySource]:Action Method returns view which displays the Locations Details");
+            var sourceBusinessAccess = new SourceService(Configuration);
+            List<Source> source = sourceBusinessAccess.FindbyAll();
+            return View(source);
         }
-        public IActionResult UpdateLocations(string id)
-        {
-            // Conenct to db and get the detsils for id
-
-            // Generate a model object
-
-
-            // return to view
-            return View();
-        }
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -53,6 +53,11 @@ namespace Recruit.DataAccessLayer
                 }
                 return (data);
             }
+        /// <summary>
+        /// gets the contents from the table of the specified primary key
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Location FindById(int id)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
@@ -70,13 +75,18 @@ namespace Recruit.DataAccessLayer
             }
             return data;
         }
+        /// <summary>
+        /// Create or update operaations on the table tbl_locations
+        /// </summary>
+        /// <param name="Entities">value that is been inserted</param>
+        /// <returns></returns>
         public String LocationCRU(Location Entities)
         {
             String connectionString = this.Configuration.GetConnectionString("MyConn");
 
             try
             {
-                //if (FindByAll().Any(records => records.id == Entities.id) == false)
+                
                 if(Entities.id==0)
                 {
                     using (IDbConnection database = new SqlConnection(connectionString))
