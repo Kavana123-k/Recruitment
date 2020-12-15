@@ -14,18 +14,21 @@ namespace Recruit.Models
         {
 
 
-            Create.Table("tbl_logins").WithDescription("Table to Store the Login credentials")                                   //Creation of tbl_logins
-                .WithColumn("user_id").AsString(20).PrimaryKey("PK_tbl_logins_UserId").WithColumnDescription("Userid for login")
+            Create.Table("tbl_logins").WithDescription("Table to Store the Login credentials")
+                .WithColumn("id").AsInt64().PrimaryKey("PK_tbl_logins_id").WithColumnDescription("Primary key id").Identity()//Creation of tbl_logins
+                .WithColumn("user_id").AsString(20).WithColumnDescription("Userid for login")
                 .WithColumn("first_name").AsString(50).NotNullable().WithColumnDescription("First name of the user for login")
                 .WithColumn("last_name").AsString(50).NotNullable().WithColumnDescription("Last name of the user for login")
                 .WithColumn("password").AsString(16).NotNullable().WithColumnDescription("Password of specific user");
 
             Create.Table("tbl_employees").WithDescription("Table used to keep track of the Employee invovled")                       //Creation of tbl_employees
-                 .WithColumn("id").AsString(5).PrimaryKey("PK_tbl_employees_Id").WithColumnDescription("id of the employee")
+                 .WithColumn("id").AsInt64().Identity().PrimaryKey("PK_tbl_employees_Id").WithColumnDescription("Primary key")
+                .WithColumn("code").AsString(5).WithColumnDescription("code of the employee")
                 .WithColumn("name").AsString(50).NotNullable().WithColumnDescription("Name of the Employee");
 
             Create.Table("tbl_sources").WithDescription("Table used to store details About applicants Source")                           //Creation of tbl_sources
-                .WithColumn("code").AsString(15).PrimaryKey("PK_tbl_sources_Code").WithColumnDescription("Code for the respective Source")
+               .WithColumn("id").AsInt64().Identity().PrimaryKey("PK_tbl_sources_id").WithColumnDescription("id for the respective Source")
+                .WithColumn("code").AsString(15).WithColumnDescription("Code for the respective Source")
                .WithColumn("name").AsString(25).NotNullable().WithColumnDescription("Name of the Source");
 
             Create.Table("tbl_locations").WithDescription("Table used to Store Locations")                                                //Creation of tbl_locations
@@ -44,7 +47,8 @@ namespace Recruit.Models
                 .WithColumn("stage").AsString(50).NotNullable().WithColumnDescription("Stages of the round of interview");
 
             Create.Table("tbl_vacancies").WithDescription("Table used to store Requirements and vacancies Details")                          //Creation of tbl_vacancies
-                .WithColumn("code").AsString(15).PrimaryKey("PK_tbl_vacancies_Code").WithColumnDescription("Code for specific Job positions")
+               .WithColumn("id").AsInt64().PrimaryKey().Identity().NotNullable().PrimaryKey("PK_tbl_vacancies_id").WithColumnDescription("Code for specific Job positions")
+                .WithColumn("code").AsString(15).WithColumnDescription("Code for specific Job positions")
                .WithColumn("name").AsString(50).NotNullable().WithColumnDescription("Name of the Position that is open for applicant/Company Requirements")
                 .WithColumn("vacancy").AsInt64().Nullable().WithColumnDescription("Vacancies in the specified field");
 
@@ -64,16 +68,16 @@ namespace Recruit.Models
          .WithColumn("last_name").AsString(50).NotNullable().WithColumnDescription("LastName of the Candidate")
          .WithColumn("email").AsString(50).NotNullable().WithColumnDescription("Email of the Candidate")
          .WithColumn("phone").AsString(15).NotNullable().WithColumnDescription("Phone No of the Candidate")
-         .WithColumn("source_code").AsString(15).NotNullable().WithColumnDescription("Foreignkey references the Source table defines the source of the candidate resume")
-         .ForeignKey("FK_tbl_candidates_tbl_sources_Sources", "tbl_sources", "code")
-         .WithColumn("referral_id").AsString(5).Nullable().WithColumnDescription("Foreignkey references the tblEmployoee table defines the Id of the employee who refered the candidate")
+         .WithColumn("source_code").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the Source table defines the source of the candidate resume")
+         .ForeignKey("FK_tbl_candidates_tbl_sources_source_code", "tbl_sources", "id")
+         .WithColumn("referral_id").AsInt64().Nullable().WithColumnDescription("Foreignkey references the tblEmployoee table defines the Id of the employee who refered the candidate")
          .ForeignKey("FK_tbl_candidates_tbl_employees_ReferralId", "tbl_employees", "id")
          .WithColumn("total_experience").AsInt64().NotNullable().WithColumnDescription("Total experience of the candidate")
          .WithColumn("relevant_experience").AsInt64().NotNullable().WithColumnDescription("Relevant Experience of the candidate")
          .WithColumn("current_employer").AsString(30).Nullable().WithColumnDescription("Current Employer of the Candidate")
          .WithColumn("current_designation").AsString().NotNullable().WithColumnDescription("Current Designation of the candidate")
-         .WithColumn("position_applied_code").AsString(15).NotNullable().WithColumnDescription("Foreignkey references the tbl_vacancies table defines the Code of the position that is vacant")
-         .ForeignKey("FK_tbl_candidates_tbl_vacancies_PositionAppliedCode", "tbl_vacancies", "code")
+         .WithColumn("position_applied_code").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_vacancies table defines the Code of the position that is vacant")
+         .ForeignKey("FK_tbl_candidates_tbl_vacancies_position_applied_code", "tbl_vacancies", "id")
          .WithColumn("current_ctc").AsInt64().NotNullable().WithColumnDescription("Current ctc of the candidate")
          .WithColumn("expected_ctc").AsInt64().NotNullable().WithColumnDescription("Expected ctc of the candidate")
          .WithColumn("reason_for_change").AsString(150).Nullable().WithColumnDescription("Reason for the candidate to change")
@@ -100,7 +104,8 @@ namespace Recruit.Models
             //Creation of Linked table creation
 
             Create.Table("tbl_preferred_locations").WithDescription("Table used to store the prefered locations as it will be multiple")                  //Creation of tbl_preferred_locations
-            .WithColumn("candidate_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_candidates table defines the id of the candidate")
+              .WithColumn("id").AsInt64().Identity().PrimaryKey().WithColumnDescription("Primary key")
+                .WithColumn("candidate_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_candidates table defines the id of the candidate")
             .ForeignKey("FK_tbl_preferred_locations_tbl_candidates_CandidateId", "tbl_candidates", "id")
             .WithColumn("location_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_locations table defines the cities")
             .ForeignKey("FK_tbl_preferred_locations_tbl_Locations_LocationId", "tbl_locations", "id");
@@ -153,11 +158,11 @@ namespace Recruit.Models
             Insert.IntoTable("tbl_sources").Row(new { code = "linkedin", name = "LinkedIn" });
             Insert.IntoTable("tbl_sources").Row(new { code = "naukri", name = "Naukri.com" });
             Insert.IntoTable("tbl_sources").Row(new { code = "Refer", name = "Employee Referrals" });
-            Insert.IntoTable("tbl_employees").Row(new { id = "IN001", name = "Bharish" });
-            Insert.IntoTable("tbl_employees").Row(new { id = "IN002", name = "Vishal" });
-            Insert.IntoTable("tbl_employees").Row(new { id = "IN003", name = "Sharan" });
-            Insert.IntoTable("tbl_employees").Row(new { id = "IN004", name = "Adithya" });
-            Insert.IntoTable("tbl_employees").Row(new { id = "IN005", name = "Ankitha" });
+            Insert.IntoTable("tbl_employees").Row(new { code = "IN001", name = "Bharish" });
+            Insert.IntoTable("tbl_employees").Row(new { code = "IN002", name = "Vishal" });
+            Insert.IntoTable("tbl_employees").Row(new { code = "IN003", name = "Sharan" });
+            Insert.IntoTable("tbl_employees").Row(new { code = "IN004", name = "Adithya" });
+            Insert.IntoTable("tbl_employees").Row(new { code = "IN005", name = "Ankitha" });
             Insert.IntoTable("tbl_logins").Row(new { user_id = "admin", first_name = "Admin", last_name = "01", password = "password" });
             Insert.IntoTable("tbl_logins").Row(new { user_id = "IN001", first_name = "Jo", last_name = "tetherfi", password = "abc001" });
             Insert.IntoTable("tbl_logins").Row(new { user_id = "IN002", first_name = "Laxman", last_name = "tetherfi", password = "abc002" });
@@ -219,13 +224,13 @@ namespace Recruit.Models
                 last_name = "Alva",
                 email = "bsal@gl.com1111",
                 phone = "8073370940930",
-                source_code = "Refer",
-                referral_id = "IN003",
+                source_code = 1,
+                referral_id = 1,
                 total_experience = 12,
                 relevant_experience = 12,
                 current_employer = "Fresher",
                 current_designation = "Fresher",
-                position_applied_code = "dev_trainee",
+                position_applied_code = 1,
                 current_ctc = 000000,
                 expected_ctc = 1000000,
                 reason_for_change = "none",
@@ -258,9 +263,10 @@ namespace Recruit.Models
         public override void Up()
         {
             Create.Table("tbl_interviewers").WithDescription("Table used to store the multiple ineterviewer details")                  //Creation of tbl_preferred_locations
-            .WithColumn("candidate_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_candidates table defines the id of the candidate")
+             .WithColumn("id").AsInt64().Identity().PrimaryKey().WithColumnDescription("Primary key")
+                .WithColumn("candidate_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_candidates table defines the id of the candidate")
         .ForeignKey("FK_tbl_interviewers_tbl_candidates_CandidateId", "tbl_candidates", "id")
-        .WithColumn("employee_id").AsString(5).NotNullable().WithColumnDescription("Foreignkey references the tbl_employees table defines the interviewers")
+        .WithColumn("employee_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_employees table defines the interviewers")
         .ForeignKey("FK_tbl_interviewers_tbl_employees_employye_id", "tbl_employees", "id");
         }
 
@@ -269,134 +275,9 @@ namespace Recruit.Models
             Delete.Table("tbl_interviewers");
         }
     }
-    [Migration(20201120165000)]
-    public class InsertiontblCandidatethree : Migration
-    {
-        public override void Up()
-        {
-            Insert.IntoTable("tbl_candidates").Row(new
-            {
-                first_name = "barsa",
-                last_name = "Alva",
-                email = "bsal@gl.com1111",
-                phone = "8073370940930",
-                source_code = "Refer",
-                referral_id = "IN003",
-                total_experience = 12,
-                relevant_experience = 12,
-                current_employer = "Fresher",
-                current_designation = "Fresher",
-                position_applied_code = "dev_trainee",
-                current_ctc = 000000,
-                expected_ctc = 1000000,
-                reason_for_change = "none",
-                notice_period = 0,
-                is_serving_notice = false,
-                last_working_day = "2020/10/11",
-                current_location = "Mangaluru",
-                process_stage_id = 01,
-                process_stage_date = "2020/10/11",
-                process_start_date = "2020/10/11",
-                process_end_date = "2020/10/11",
-                interview_status_id = 1,
-                resume_owner_id = 01,
-                owner_for_reminder_id = 01,
-                comments = "none",
-                date_of_joining = "2020/10/11",
-                notes = "none",
-                links_for_interview = "none"
-            });
-        }
-
-        public override void Down()
-        {
-
-        }
-    }
-    [Migration(20201202105000)]
-    public class InsertStoredProcedure : Migration
-    {
-        public override void Up()
-        {
-            Execute.Sql(@"CREATE proc sp_candidates_add    @first_name	nvarchar(50), @last_name	nvarchar(50), @email	nvarchar(50),
-                            @phone	nvarchar(15),@source_code	nvarchar(15),  @referral_id	nvarchar(5)=' '	, @total_experience	bigint	,
-                        @relevant_experience	bigint,	 @current_employer	nvarchar(30)=' ',   @current_designation	nvarchar(25),
-                        @position_applied_code	nvarchar(15),@current_ctc	bigint	,@expected_ctc	bigint	,@reason_for_change	nvarchar(150)=' ',
-                        @notice_period	bigint	,@is_serving_notice	bit	,@last_working_day	date=NULL,@current_location	nvarchar(30),@process_stage_id	bigint	,@process_stage_date	datetime,	
-                        @process_start_date	datetime,@process_end_date	datetime=NULL ,@interview_status_id	bigint	,@resume_owner_id	bigint	,@owner_for_reminder_id	bigint,@comments	nvarchar(150)=' ',
-                        @date_of_joining	date= NULL,@notes	nvarchar(150)=' ',@links_for_interview	nvarchar(100)=' '
-
-                               as
-                                 begin
-                                 insert into tbl_candidates values (
-    
-                    @first_name	,@last_name	,@email	,@phone	,@source_code	,@referral_id		,@total_experience,@relevant_experience,@current_employer,@current_designation	,@position_applied_code,
-                    @current_ctc		,@expected_ctc		,@reason_for_change	,@notice_period		,@is_serving_notice	,@last_working_day	,@current_location	,@process_stage_id	,@process_stage_date	,	
-                    @process_start_date	,@process_end_date	,@interview_status_id		,@resume_owner_id	,@owner_for_reminder_id	,@comments	,@date_of_joining	,@notes	,@links_for_interview)end");
-
-            Execute.Sql(@"CREATE proc sp_interview_details_add
-                        @candidate_id	bigint,
-                        @start_date_time datetime,@end_date_time datetime,@status_id  bigint,@reason nvarchar(150)='None'
-
-                                 as
-                                    begin
-                                          insert into tbl_interview_details values (@candidate_id,@start_date_time ,@end_date_time ,@status_id ,@reason)     end");
-            Execute.Sql(@"CREATE proc sp_locations_add @city nvarchar(20)     as
-                           begin
-                 insert into tbl_locations values (	@city)     end");
-
-            Execute.Sql(@"CREATE proc sp_sources_add @code nvarchar(15),@name nvarchar(25)     as
-                        begin
-             insert into tbl_sources values (@code,	@name) end");
-
-            Execute.Sql(@"	CREATE proc sp_process_statuses_add @code nvarchar(15),@status nvarchar(50),@colour nvarchar(10)='#FFFFFF'
-
-                       as
-                       begin
-                       insert into tbl_process_statuses values (@code,	@status,@colour)end");
-
-            Execute.Sql(@"CREATE proc sp_vacancies_add @code nvarchar(15),@name nvarchar(50),@vacancy bigint =0
-
-                         as
-                         begin
-                         insert into tbl_vacancies values (	@code,	@name,	@vacancy)
-                                      end");
-            Execute.Sql(@"CREATE proc sp_process_stages_add @code nvarchar(15),@status nvarchar(50)
-
-                         as
-                                 begin
-                              insert into tbl_process_stages values (@code,	@status)     end");
-            Execute.Sql(@"CREATE proc sp_interview_round_statuses_add @status nvarchar(20)
-                         as
-                         begin
-                      insert into tbl_interview_round_statuses values (	@status)     end");
-        }
-        public override void Down()
-        {
-
-        }
-    }
-    [Migration(20201209105000)]
-    public class InsertInterviewDetails : Migration
-    {
-        public override void Up()
-        {
-            Create.Table("tbl_interview_details").WithDescription("Table used to store the Interview Details")                                             //Creation of tbl_interview_details
-               .WithColumn("id").AsInt64().Identity().PrimaryKey().WithColumnDescription("Primary key")
-                .WithColumn("candidate_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_candidates table defines the id of the candidate")
-                 .ForeignKey("FK_tbl_interview_details_tbl_candidates_CandidateId", "tbl_candidates", "id")
-
-                .WithColumn("start_date_time").AsDateTime().NotNullable().WithColumnDescription("Start date for the candidate used for keeping of history of the candidate interview details")
-                 .WithColumn("end_date_time").AsDateTime().NotNullable().WithColumnDescription("end date for the candidate used for keeping track of history of the candidate interview details")
-                 .WithColumn("status_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_interview_round_statuses table defines the the round status")
-                 .ForeignKey("FK_tbl_interview_details_tblInteviewRoundStatuses_StatusId", "tbl_interview_round_statuses", "id")
-                 .WithColumn("reason").AsString(150).Nullable().WithColumnDescription("Notes on the Interview Process if needed");
-        }
-        public override void Down()
-        {
-
-        }
-    }
+   
+   
+   
     public class Init
     {
         public static Logger log = LogManager.GetCurrentClassLogger();
@@ -424,7 +305,7 @@ namespace Recruit.Models
                         //supp = rb.AddSQLite();
 
                         // Set the connection string
-                        supp.WithGlobalConnectionString("Data Source=DESKTOP-T3N0J77;Initial Catalog=RecruitMain;Integrated Security=True")
+                        supp.WithGlobalConnectionString("Data Source=DESKTOP-T3N0J77;Initial Catalog=Recruitment;Integrated Security=True")
                            // Define the assembly containing the migrations
                            .ScanIn(typeof(CreateTables).Assembly).For.Migrations();
                 }

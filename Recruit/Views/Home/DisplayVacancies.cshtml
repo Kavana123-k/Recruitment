@@ -23,6 +23,7 @@
         <table class="fl-table">
             <thead>
                 <tr>
+                       <th>Id</th>
                     <th>Code</th>
                     <th>Position</th>
                     <th>Vacancies</th>
@@ -33,8 +34,8 @@
                 @foreach (var data in Model)
         {
                 <tr>
-                    @*<td>@data.code</td>*@
-                    <td><a href="~/Home/InsertVacancies/@data.code" class="btn btn-default" onclick="Update">@data.code</a></td>
+                    <td><a href="~/Home/InsertVacancies/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
+                    <td>@data.code</td>
                     <td>@data.name</td>
                     <td>@data.vacancy</td>
 

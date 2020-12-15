@@ -1,45 +1,64 @@
-﻿using System;
+﻿using Recruit.BusinessAccessLayer.Interface;
+using Recruit.DataAccessLayer.Interface;
 using Recruit.Models;
-using Recruit.DataAccessLayer;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
-    public class EmployeeService
+    public class EmployeeService : IService<Employee>
     {
-
-        // public static Logger log;
-        private IConfiguration _Configuration;
+        readonly IUnitOfWork _unitOfWork;
 
 
-        ///// <summary>
-        /// constructor for configuration to use connectionstring from appsettings.json
+        // private IGenericRepository<Candidate> _GenericRepositoy;
+        public EmployeeService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+        /// <summary>
+        /// BAL service Method to Get Specific Rows
         /// </summary>
-        /// <param name="_configuration"></param>
-        public EmployeeService(IConfiguration _configuration)
+        /// <param name="id">Primary key</param>
+        /// <returns>Contents of the Row that is Specified</returns>
+        public Employee FindBy(int id)
         {
-            _Configuration = _configuration;
-            // log = LogManager.GetCurrentClassLogger();
+            return _unitOfWork.employeeRepository.Get(id);
         }
-
-        public Employee Findby(String code)
-        {
-            EmployeeEngine employeeEngine = new EmployeeEngine(_Configuration);
-
-            return employeeEngine.FindByCode(code);
-        }
+        /// <summary>
+        /// BAL service Method to get all the Values from the table
+        /// </summary>
+        /// <returns>All the contents from the table</returns>
         public List<Employee> FindbyAll()
         {
-            EmployeeEngine employeeEngine = new EmployeeEngine(_Configuration);
 
-            return employeeEngine.FindByAll();
+            return _unitOfWork.employeeRepository.GetAll();
         }
-        //public string EmployeeDetail(Employee Entities)
-        //{
-        //    EmployeeEngine employeeEngine = new EmployeeEngine(_Configuration);
-        //    return employeeEngine.EmployeeCRU(Entities);
-
-        //}
+        /// <summary>
+        /// BAL service Method to INSERT
+        /// </summary>
+        /// <param name="Entity">Value that needs to be inserted</param>
+        /// <returns>Message</returns>
+        public string Insert(Employee Entity)
+        {
+            return _unitOfWork.employeeRepository.Add(Entity);
+        }
+        /// <summary>
+        /// BAL service Method to UPDATE 
+        /// </summary>
+        /// <param name="Entity">Contetns that has to be updated</param>
+        /// <returns></returns>
+        public string Update(Employee Entity)
+        {
+            return _unitOfWork.employeeRepository.Update(Entity);
+        }
+        /// <summary>
+        /// BAL Service Method to DELETE
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool Delete(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

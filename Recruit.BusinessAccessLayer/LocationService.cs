@@ -1,45 +1,64 @@
-﻿using System;
+﻿using Recruit.BusinessAccessLayer.Interface;
+using Recruit.DataAccessLayer.Interface;
 using Recruit.Models;
-using Recruit.DataAccessLayer;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
-    public class LocationService
+    public class LocationService : IService<Location>
     {
-
-        // public static Logger log;
-        private IConfiguration _Configuration;
+        readonly IUnitOfWork _unitOfWork;
 
 
-        ///// <summary>
-        /// constructor for configuration to use connectionstring from appsettings.json
+        // private IGenericRepository<Candidate> _GenericRepositoy;
+        public LocationService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+        /// <summary>
+        /// BAL service Method to Get Specific Rows
         /// </summary>
-        /// <param name="_configuration"></param>
-        public LocationService(IConfiguration _configuration)
+        /// <param name="id">Primary key</param>
+        /// <returns>Contents of the Row that is Specified</returns>
+        public Location FindBy(int id)
         {
-            _Configuration = _configuration;
-            // log = LogManager.GetCurrentClassLogger();
+            return _unitOfWork.locationRepository.Get(id);
         }
-
-        public Location Findby(int id)
-        {
-            LocationEngine LocationEngine = new LocationEngine(_Configuration);
-
-            return LocationEngine.FindById(id);
-        }
+        /// <summary>
+        /// BAL service Method to get all the Values from the table
+        /// </summary>
+        /// <returns>All the contents from the table</returns>
         public List<Location> FindbyAll()
         {
-            LocationEngine locationEngine = new LocationEngine(_Configuration);
 
-            return locationEngine.FindByAll();
+            return _unitOfWork.locationRepository.GetAll();
         }
-        public string LocationDetail(Location Entities)
+        /// <summary>
+        /// BAL service Method to INSERT
+        /// </summary>
+        /// <param name="Entity">Value that needs to be inserted</param>
+        /// <returns>Message</returns>
+        public string Insert(Location Entity)
         {
-            LocationEngine LocationEngine = new LocationEngine(_Configuration);
-            return LocationEngine.LocationCRU(Entities);
-
+            return _unitOfWork.locationRepository.Add(Entity);
+        }
+        /// <summary>
+        /// BAL service Method to UPDATE 
+        /// </summary>
+        /// <param name="Entity">Contetns that has to be updated</param>
+        /// <returns></returns>
+        public string Update(Location Entity)
+        {
+            return _unitOfWork.locationRepository.Update(Entity);
+        }
+        /// <summary>
+        /// BAL Service Method to DELETE
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool Delete(int id)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

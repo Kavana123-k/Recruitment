@@ -38,11 +38,11 @@ namespace Recruit.Models
 
         [ForeignKey("source_code")]
         [Required(ErrorMessage = "Enter the source")]
-        public String source_code { get; set; }
+        public Int64 source_code { get; set; }
         public String source_name { get; set; }
         [ForeignKey("referral_id")]
 
-        public String referral_id { get; set; }
+        public Int64? referral_id { get; set; }
         public String emp_ref { get; set; }
 
         [Required(ErrorMessage = "Total Experience is invalid")]
@@ -61,7 +61,7 @@ namespace Recruit.Models
         public String current_designation { get; set; }
         [ForeignKey("position_applied_code")]
         [Required(ErrorMessage = "Position Applied  is invalid")]
-        public String position_applied_code { get; set; }
+        public Int64 position_applied_code { get; set; }
         public String position { get; set; }
 
         [Required(ErrorMessage = "Current Ctc is invalid")]

@@ -9,7 +9,8 @@ namespace Recruit.Models
     public class Employee
     {
         [Key]
-        public string id { get; set; }
+        public Int64 id { get; set; }
+        public string code { get; set; }
         [StringLength(50)]
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Employee Name is invalid")]

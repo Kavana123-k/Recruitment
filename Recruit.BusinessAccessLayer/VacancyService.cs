@@ -1,47 +1,64 @@
-﻿using System;
+﻿using Recruit.BusinessAccessLayer.Interface;
+using Recruit.DataAccessLayer.Interface;
 using Recruit.Models;
-using Recruit.DataAccessLayer;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
-    public class VacancyService
+    public class VacancyService : IService<Vacancy>
     {
-       
-
-            // public static Logger log;
-            private IConfiguration _Configuration;
+        readonly IUnitOfWork _unitOfWork;
 
 
-            ///// <summary>
-            /// constructor for configuration to use connectionstring from appsettings.json
-            /// </summary>
-            /// <param name="_configuration"></param>
-            public VacancyService(IConfiguration _configuration)
-            {
-                _Configuration = _configuration;
-                // log = LogManager.GetCurrentClassLogger();
-            }
-
-            public Vacancy Findby(String code)
-            {
-                  VacancyEngine vacancyEngine = new VacancyEngine(_Configuration);
-
-                return vacancyEngine.FindByCode(code);
-            }
+        // private IGenericRepository<Candidate> _GenericRepositoy;
+        public VacancyService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+        /// <summary>
+        /// BAL service Method to Get Specific Rows
+        /// </summary>
+        /// <param name="id">Primary key</param>
+        /// <returns>Contents of the Row that is Specified</returns>
+        public Vacancy FindBy(int id)
+        {
+            return _unitOfWork.vacancyRepository.Get(id);
+        }
+        /// <summary>
+        /// BAL service Method to get all the Values from the table
+        /// </summary>
+        /// <returns>All the contents from the table</returns>
         public List<Vacancy> FindbyAll()
         {
-            VacancyEngine vacancyEngine = new VacancyEngine(_Configuration);
 
-            return vacancyEngine.FindByAll();
+            return _unitOfWork.vacancyRepository.GetAll();
         }
-        public string VacancyDetail(Vacancy Entities)
-            {
-                VacancyEngine vacancyEngine = new VacancyEngine(_Configuration);
-                return vacancyEngine.VacancyCRU(Entities);
-
-            }
-        
+        /// <summary>
+        /// BAL service Method to INSERT
+        /// </summary>
+        /// <param name="Entity">Value that needs to be inserted</param>
+        /// <returns>Message</returns>
+        public string Insert(Vacancy Entity)
+        {
+            return _unitOfWork.vacancyRepository.Add(Entity);
+        }
+        /// <summary>
+        /// BAL service Method to UPDATE 
+        /// </summary>
+        /// <param name="Entity">Contetns that has to be updated</param>
+        /// <returns></returns>
+        public string Update(Vacancy Entity)
+        {
+            return _unitOfWork.vacancyRepository.Update(Entity);
+        }
+        /// <summary>
+        /// BAL Service Method to DELETE
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool Delete(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -1,47 +1,64 @@
-﻿using System;
+﻿using Recruit.BusinessAccessLayer.Interface;
+using Recruit.DataAccessLayer.Interface;
 using Recruit.Models;
-using Recruit.DataAccessLayer;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
-    public class ProcessStatusService
+    public class ProcessStatusService : IService<ProcessStatus>
     {
+        readonly IUnitOfWork _unitOfWork;
 
 
-        // public static Logger log;
-        private IConfiguration _Configuration;
-
-
-        ///// <summary>
-        /// constructor for configuration to use connectionstring from appsettings.json
+        // private IGenericRepository<Candidate> _GenericRepositoy;
+        public ProcessStatusService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+        /// <summary>
+        /// BAL service Method to Get Specific Rows
         /// </summary>
-        /// <param name="_configuration"></param>
-        public ProcessStatusService(IConfiguration _configuration)
+        /// <param name="id">Primary key</param>
+        /// <returns>Contents of the Row that is Specified</returns>
+        public ProcessStatus FindBy(int id)
         {
-            _Configuration = _configuration;
-            // log = LogManager.GetCurrentClassLogger();
+            return _unitOfWork.processStatusRepository.Get(id);
         }
-
-        public ProcessStatus Findby(int id)
-        {
-            ProcessStatusEngine ProcessStatusEngine = new ProcessStatusEngine(_Configuration);
-
-            return ProcessStatusEngine.FindById(id);
-        }
+        /// <summary>
+        /// BAL service Method to get all the Values from the table
+        /// </summary>
+        /// <returns>All the contents from the table</returns>
         public List<ProcessStatus> FindbyAll()
         {
-            ProcessStatusEngine processStatusEngine = new ProcessStatusEngine(_Configuration);
 
-            return processStatusEngine.FindByAll();
+            return _unitOfWork.processStatusRepository.GetAll();
         }
-        public string ProcessStatusDetail(ProcessStatus Entities)
+        /// <summary>
+        /// BAL service Method to INSERT
+        /// </summary>
+        /// <param name="Entity">Value that needs to be inserted</param>
+        /// <returns>Message</returns>
+        public string Insert(ProcessStatus Entity)
         {
-            ProcessStatusEngine ProcessStatusEngine = new ProcessStatusEngine(_Configuration);
-            return ProcessStatusEngine.ProcessStatusCRU(Entities);
-
+            return _unitOfWork.processStatusRepository.Add(Entity);
         }
-
+        /// <summary>
+        /// BAL service Method to UPDATE 
+        /// </summary>
+        /// <param name="Entity">Contetns that has to be updated</param>
+        /// <returns></returns>
+        public string Update(ProcessStatus Entity)
+        {
+            return _unitOfWork.processStatusRepository.Update(Entity);
+        }
+        /// <summary>
+        /// BAL Service Method to DELETE
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool Delete(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -1,45 +1,64 @@
-﻿using System;
+﻿using Recruit.BusinessAccessLayer.Interface;
+using Recruit.DataAccessLayer.Interface;
 using Recruit.Models;
-using Recruit.DataAccessLayer;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
-    public class InterviewRoundStatusService
+    public class InterviewRoundStatusService : IService<InterviewRoundStatus>
     {
-
-        // public static Logger log;
-        private IConfiguration _Configuration;
+        readonly IUnitOfWork _unitOfWork;
 
 
-        ///// <summary>
-        /// constructor for configuration to use connectionstring from appsettings.json
+        // private IGenericRepository<Candidate> _GenericRepositoy;
+        public InterviewRoundStatusService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+        /// <summary>
+        /// BAL service Method to Get Specific Rows
         /// </summary>
-        /// <param name="_configuration"></param>
-        public InterviewRoundStatusService(IConfiguration _configuration)
+        /// <param name="id">Primary key</param>
+        /// <returns>Contents of the Row that is Specified</returns>
+        public InterviewRoundStatus FindBy(int id)
         {
-            _Configuration = _configuration;
-            // log = LogManager.GetCurrentClassLogger();
+            return _unitOfWork.interviewRoundStatusRepository.Get(id);
         }
-
-        public InterviewRoundStatus Findby(int id)
-        {
-            InterviewRoundStatusEngine interviewRoundStatusEngine = new InterviewRoundStatusEngine(_Configuration);
-
-            return interviewRoundStatusEngine.FindById(id);
-        }
+        /// <summary>
+        /// BAL service Method to get all the Values from the table
+        /// </summary>
+        /// <returns>All the contents from the table</returns>
         public List<InterviewRoundStatus> FindbyAll()
         {
-            InterviewRoundStatusEngine interviewRoundStatusEngine = new InterviewRoundStatusEngine(_Configuration);
 
-            return interviewRoundStatusEngine.FindByAll();
+            return _unitOfWork.interviewRoundStatusRepository.GetAll();
         }
-        public string InterviewRoundStatusDetail(InterviewRoundStatus Entities)
+        /// <summary>
+        /// BAL service Method to INSERT
+        /// </summary>
+        /// <param name="Entity">Value that needs to be inserted</param>
+        /// <returns>Message</returns>
+        public string Insert(InterviewRoundStatus Entity)
         {
-            InterviewRoundStatusEngine interviewRoundStatusEngine = new InterviewRoundStatusEngine(_Configuration);
-            return interviewRoundStatusEngine.InterviewRoundStatusEngineCRU(Entities);
-
+            return _unitOfWork.interviewRoundStatusRepository.Add(Entity);
+        }
+        /// <summary>
+        /// BAL service Method to UPDATE 
+        /// </summary>
+        /// <param name="Entity">Contetns that has to be updated</param>
+        /// <returns></returns>
+        public string Update(InterviewRoundStatus Entity)
+        {
+            return _unitOfWork.interviewRoundStatusRepository.Update(Entity);
+        }
+        /// <summary>
+        /// BAL Service Method to DELETE
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool Delete(int id)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

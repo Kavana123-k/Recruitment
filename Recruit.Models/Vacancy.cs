@@ -9,9 +9,10 @@ namespace Recruit.Models
     public class Vacancy
     {
         [Key]
+        public Int64 id { get; set; }
         public string code { get; set; }
 
-        [StringLength(15)]
+        [StringLength(50)]
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Name is not valid")]
         public string name { get; set; }

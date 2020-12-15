@@ -1,47 +1,65 @@
-﻿using System;
+﻿using Recruit.BusinessAccessLayer.Interface;
+using Recruit.DataAccessLayer.Interface;
 using Recruit.Models;
-using Recruit.DataAccessLayer;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
-    public class InterviewDetailService
+    public class InterviewDetailService : IService<InterviewDetail>
     {
+        readonly IUnitOfWork _unitOfWork;
 
 
-        // public static Logger log;
-        private IConfiguration _Configuration;
-
-
-        ///// <summary>
-        /// constructor for configuration to use connectionstring from appsettings.json
+        // private IGenericRepository<Candidate> _GenericRepositoy;
+        public InterviewDetailService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+        /// <summary>
+        /// BAL service Method to Get Specific Rows
         /// </summary>
-        /// <param name="_configuration"></param>
-        public InterviewDetailService(IConfiguration _configuration)
+        /// <param name="id">Primary key</param>
+        /// <returns>Contents of the Row that is Specified</returns>
+        public InterviewDetail FindBy(int id)
         {
-            _Configuration = _configuration;
-            // log = LogManager.GetCurrentClassLogger();
+            return _unitOfWork.interviewDetailRepository.Get(id);
         }
-
-        public InterviewDetail Findby(int id)
-        {
-            InterviewDetailEngine interviewDetailEngine = new InterviewDetailEngine(_Configuration);
-
-            return interviewDetailEngine.FindById(id);
-        }
+        /// <summary>
+        /// BAL service Method to get all the Values from the table
+        /// </summary>
+        /// <returns>All the contents from the table</returns>
         public List<InterviewDetail> FindbyAll()
         {
-            InterviewDetailEngine interviewDetailEngine = new InterviewDetailEngine(_Configuration);
 
-            return interviewDetailEngine.FindByAll();
+            return _unitOfWork.interviewDetailRepository.GetAll();
         }
-        public string InterviewDetail(InterviewDetail Entities)
+        /// <summary>
+        /// BAL service Method to INSERT
+        /// </summary>
+        /// <param name="Entity">Value that needs to be inserted</param>
+        /// <returns>Message</returns>
+        public string Insert(InterviewDetail Entity)
         {
-            InterviewDetailEngine interviewDetailEngine = new InterviewDetailEngine(_Configuration);
-            return interviewDetailEngine.InterviewDetailCRU(Entities);
-
+            return _unitOfWork.interviewDetailRepository.Add(Entity);
         }
-
+        /// <summary>
+        /// BAL service Method to UPDATE 
+        /// </summary>
+        /// <param name="Entity">Contetns that has to be updated</param>
+        /// <returns></returns>
+        public string Update(InterviewDetail Entity)
+        {
+            return _unitOfWork.interviewDetailRepository.Update(Entity);
+        }
+    
+        ///  <summary>
+        /// BAL Service Method to DELETE
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool Delete(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

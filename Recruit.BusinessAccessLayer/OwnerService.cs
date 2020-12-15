@@ -1,45 +1,64 @@
-﻿using System;
+﻿using Recruit.BusinessAccessLayer.Interface;
+using Recruit.DataAccessLayer.Interface;
 using Recruit.Models;
-using Recruit.DataAccessLayer;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 
 namespace Recruit.BusinessAccessLayer
 {
-    public class OwnerService
+    public class OwnerService : IService<Owner>
     {
-
-        // public static Logger log;
-        private IConfiguration _Configuration;
+        readonly IUnitOfWork _unitOfWork;
 
 
-        ///// <summary>
-        /// constructor for configuration to use connectionstring from appsettings.json
+        // private IGenericRepository<Candidate> _GenericRepositoy;
+        public OwnerService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+        /// <summary>
+        /// BAL service Method to Get Specific Rows
         /// </summary>
-        /// <param name="_configuration"></param>
-        public OwnerService(IConfiguration _configuration)
+        /// <param name="id">Primary key</param>
+        /// <returns>Contents of the Row that is Specified</returns>
+        public Owner FindBy(int id)
         {
-            _Configuration = _configuration;
-            // log = LogManager.GetCurrentClassLogger();
+            return _unitOfWork.ownerRepository.Get(id);
         }
-
-        public Owner Findby(int id)
-        {
-            OwnerEngine ownerEngine = new OwnerEngine(_Configuration);
-
-            return ownerEngine.FindById(id);
-        }
+        /// <summary>
+        /// BAL service Method to get all the Values from the table
+        /// </summary>
+        /// <returns>All the contents from the table</returns>
         public List<Owner> FindbyAll()
         {
-            OwnerEngine ownerEngine = new OwnerEngine(_Configuration);
 
-            return ownerEngine.FindByAll();
+            return _unitOfWork.ownerRepository.GetAll();
         }
-        //public string EmployeeDetail(Employee Entities)
-        //{
-        //    EmployeeEngine employeeEngine = new EmployeeEngine(_Configuration);
-        //    return employeeEngine.EmployeeCRU(Entities);
-
-        //}
+        /// <summary>
+        /// BAL service Method to INSERT
+        /// </summary>
+        /// <param name="Entity">Value that needs to be inserted</param>
+        /// <returns>Message</returns>
+        public string Insert(Owner Entity)
+        {
+            return _unitOfWork.ownerRepository.Add(Entity);
+        }
+        /// <summary>
+        /// BAL service Method to UPDATE 
+        /// </summary>
+        /// <param name="Entity">Contetns that has to be updated</param>
+        /// <returns></returns>
+        public string Update(Owner Entity)
+        {
+            return _unitOfWork.ownerRepository.Update(Entity);
+        }
+        /// <summary>
+        /// BAL Service Method to DELETE
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool Delete(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Recruit.BusinessAccessLayer\Recruit.BusinessAccessLayer.csproj" />
+    <ProjectReference Include="..\Recruit.DataAccessLayer\Recruit.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Recruit.Models\Recruit.Models.csproj" />
+  </ItemGroup>
+
+</Project>

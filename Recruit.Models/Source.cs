@@ -10,8 +10,11 @@ namespace Recruit.Models
     public class Source
     {
         [Key]
+        public Int64 id { get; set; }
+        [DataType(DataType.Text)]
+        [Required(ErrorMessage = "Source code is invalid")]
         public string code { get; set; }
-        [StringLength(15)]
+        [StringLength(25)]
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Source Name is invalid")]
         public string name { get; set; }
