@@ -236,3 +236,10 @@ C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Recruit.csp
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\staticwebassets\Recruit.StaticWebAssets.Manifest.cache
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\staticwebassets\Recruit.StaticWebAssets.xml
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Recruit.genruntimeconfig.cache
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_InterviewRoundStatusDropdownPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SourcesPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_OwnersPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ProcessStagesPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ProcessStatusesPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_VacanciesPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_EmployeesPartial.cshtml.g.cs

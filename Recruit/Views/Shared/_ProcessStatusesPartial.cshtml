@@ -1,0 +1,23 @@
+﻿@model Candidate 
+@{
+    List<SelectListItem>
+    status = new List<SelectListItem>
+        ();
+        @foreach (var items in (IEnumerable<ProcessStatus>)TempData["ProcessStatuses"])
+        {
+            status.Add(new SelectListItem
+            {
+
+
+                Text = items.status,
+                Value = items.id.ToString(),
+                Selected = true
+
+            });
+        }
+    }
+        <div class="column">
+            <label class="control-label">Interview status </label>
+            @Html.DropDownListFor(model => model.interview_status_id, new SelectList(status, "Value", "Text"), "---Choose Status---")<br />
+            <span asp-validation-for="interview_status_id" class="text-danger"></span>
+        </div>

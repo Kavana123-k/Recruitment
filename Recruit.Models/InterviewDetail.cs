@@ -31,6 +31,8 @@ namespace Recruit.Models
         [DataType(DataType.Text)]
         public string reason { get; set; }
 
+        public InterviewRoundStatus RoundStatus { get; set; }
 
+       
     }
 }

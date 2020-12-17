@@ -1,0 +1,23 @@
+﻿@model Candidate
+@{ List<SelectListItem>
+     vacancy = new List<SelectListItem>
+         ();
+    @foreach (var items in (IEnumerable<Vacancy>)TempData["Vacancies"])
+    {
+        vacancy.Add(new SelectListItem
+        {
+
+
+            Text = items.name,
+            Value = items.id.ToString(),
+            Selected = true
+
+        });
+    }
+}
+<div class="column">
+    <label class="control-label">Position applied </label>
+    @Html.DropDownListFor(model => model.position_applied_code, new SelectList(vacancy, "Value", "Text"), "---Choose Position---")<br />
+    <span asp-validation-for="position_applied_code" class="text-danger"></span>
+
+</div>

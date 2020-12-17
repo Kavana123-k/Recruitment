@@ -83,8 +83,9 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult Index()
         {
-       //     _logger.LogInformation("[Index]:Action Method returns view of the Index page###########################");
-             return View();
+            //     _logger.LogInformation("[Index]:Action Method returns view of the Index page###########################");
+         
+           return View();
         }
         public IActionResult DisplayCandidatesDetails()
         {
@@ -109,7 +110,7 @@ namespace Recruit.Controllers
             {
                 interviewDetail = _serviceInterviewDetail.FindBy(id);
                 return View(interviewDetail);
-
+                
             }
             else
             {
@@ -127,6 +128,7 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertInterviewDetails([Bind] InterviewDetail entity)
         {
+            TempData["Data"] = _serviceInterviewRoundStatus.FindbyAll();
             // log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details");
             if (entity.id == 0)
             {
@@ -142,11 +144,7 @@ namespace Recruit.Controllers
                   //  log.Error("[InsertInterviewDetails]:" + exception);
                     TempData["msg"] = exception.Message;
                 }
-                finally
-                {
-
-                    TempData["Data"] = _serviceInterviewRoundStatus.FindbyAll();
-                }
+               
             }
             else
             {
@@ -162,10 +160,7 @@ namespace Recruit.Controllers
                    // log.Error("[InsertInterviewDetails]:" + exception);
                     TempData["msg"] = exception.Message;
                 }
-                finally
-                {
-                    TempData["Data"] = _serviceInterviewRoundStatus.FindbyAll();
-                }
+               
             }
             return View();
         }
@@ -214,7 +209,12 @@ namespace Recruit.Controllers
         public IActionResult InsertCandidates([Bind] Candidate entity)
         {
             //  log.Info("[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details");
-
+            TempData["Sources"] = _serviceSource.FindbyAll();
+            TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
+            TempData["ProcessStatuses"] = _serviceProcessStatus.FindbyAll();
+            TempData["Vacancies"] = _serviceVacancy.FindbyAll();
+            TempData["Employees"] = _serviceEmployee.FindbyAll();
+            TempData["Owners"] = _serviceOwner.FindbyAll();
             if (entity.id == 0)
             {
                 try
@@ -232,16 +232,7 @@ namespace Recruit.Controllers
                    // log.Error("[InsertCandidates]:" + exception);
                     TempData["msg"] = exception.Message;
                 }
-                finally
-                {
-
-                    TempData["Sources"] = _serviceSource.FindbyAll();
-                    TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
-                    TempData["ProcessStatuses"] = _serviceProcessStatus.FindbyAll();
-                    TempData["Vacancies"] = _serviceVacancy.FindbyAll();
-                    TempData["Employees"] = _serviceEmployee.FindbyAll();
-                    TempData["Owners"] = _serviceOwner.FindbyAll();
-                }
+               
             }
             else
             {
@@ -278,7 +269,7 @@ namespace Recruit.Controllers
         public IActionResult InsertLocations(int id)
         {
             // log.Info("[InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details");
-   
+            
             var location = new Location();
             var locationAll = new List<Location>();
             if (!string.IsNullOrWhiteSpace(id.ToString()))

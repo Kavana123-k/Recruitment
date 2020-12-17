@@ -1,0 +1,21 @@
+﻿@model Candidate 
+@{List<SelectListItem>
+    employees = new List<SelectListItem>
+        ();
+        @foreach (var items in (IEnumerable<Employee>)TempData["Employees"])
+        {
+            employees.Add(new SelectListItem
+            {
+
+
+                Text = items.name,
+                Value = items.id.ToString(),
+                Selected = true
+
+            });
+        }}
+        <div class="column">
+            <label class="control-label">Referred by</label>
+            @Html.DropDownListFor(model => model.referral_id, new SelectList(employees, "Value", "Text"), "---Choose referred-by---")<br />
+            <span asp-validation-for="referral_id" class="text-danger"></span>
+        </div>

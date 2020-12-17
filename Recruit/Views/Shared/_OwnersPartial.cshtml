@@ -1,0 +1,27 @@
+﻿@model Candidate
+@{
+    List<SelectListItem> owners = new List<SelectListItem>
+        ();
+    @foreach (var items in (IEnumerable<Owner>)TempData["Owners"])
+    {
+        owners.Add(new SelectListItem
+        {
+
+
+            Text = items.first_name,
+            Value = items.id.ToString(),
+            Selected = true
+
+        });
+    }
+}
+<div class="column">
+    <label class="control-label">Resume owner id</label>
+    @Html.DropDownListFor(model => model.resume_owner_id, new SelectList(owners, "Value", "Text"), "---Choose Status---")<br />
+    <span asp-validation-for="resume_owner_id" class="text-danger"></span>
+</div>
+<div class="column">
+    <label class="control-label">Owner for reminder id</label>
+    @Html.DropDownListFor(model => model.owner_for_reminder_id, new SelectList(owners, "Value", "Text"), "---Choose Status---")<br />
+    <span asp-validation-for="owner_for_reminder_id" class="text-danger"></span>
+</div>

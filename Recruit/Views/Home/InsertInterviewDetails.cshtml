@@ -3,22 +3,7 @@
 
 <h2>Insert Interview Details</h2>
 <hr />
-@{
-    List<SelectListItem> statusId = new List<SelectListItem>();
 
-    @foreach (var items in (IEnumerable<InterviewRoundStatus>)TempData["Data"])
-    {
-        statusId.Add(new SelectListItem
-        {
-
-
-            Text = items.status,
-            Value = (items.id).ToString(),
-            //Selected = true
-
-        });
-    }
-}
 
 <link rel="stylesheet" href="~/css/layoutstyles.css">
 <body>
@@ -46,9 +31,9 @@
             <span asp-validation-for="end_date_time" class="text-danger"></span>
         </div>
         <div class="column">
-            <label class="control-label">Status Id</label>
-            @Html.DropDownListFor(model => model.status_id, new SelectList(statusId, "Value", "Text"), "---Choose Status---")<br />
-            <span asp-validation-for="status_id" class="text-danger"></span>
+          
+            <partial name="_InterviewRoundStatusDropdownPartial" data=@TempData["Data"]/>
+            
         </div>
         <div class="column">
             <label class="control-label">Reason</label>
@@ -58,7 +43,7 @@
         <div class="column">
             <input type="submit" value="Submit" class="btn bg-primary" align="center" /><br />
 
-       
+
             <a asp-action="Index">Back to Dashboard</a>
         </div>
 
@@ -67,7 +52,7 @@
             @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
         }
     </form>
-   
+
 </body>
 
 @{
