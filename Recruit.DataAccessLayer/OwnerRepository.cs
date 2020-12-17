@@ -12,7 +12,7 @@ namespace Recruit.DataAccessLayer
 {
     public class OwnerRepository : IGenericRepository<Owner>
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(OwnerRepository));
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(OwnerRepository));
 
 
         IConnectionFactory _connectionFactory;
@@ -27,6 +27,8 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         public string Add(Owner entity)
         {
+            log.Info("[OwnerRepository][Add]");
+            
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -38,12 +40,12 @@ namespace Recruit.DataAccessLayer
                         entity.last_name
                     });
                 }
-                log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[OwnerRepository][Add]:Data save Successfully");
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+               log.Error("[OwnerRepository][Add]:" + exception);
                 return ("Insert Unsuccessful" + exception);
             }
 
@@ -70,7 +72,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //log
+                log.Error("[OwnerRepository][Get]:" + exception);
             }
             return data;
         }
@@ -81,7 +83,7 @@ namespace Recruit.DataAccessLayer
         public List<Owner> GetAll()
         {
 
-            //  log.Info("#########################################");
+          log.Info("[OwnerRepository][GetAll]");
             var data = new List<Owner>();
             try
             {
@@ -92,7 +94,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+             log.Error("[OwnerRepository][GetAll]:" + exception);
             }
             return data;
 
@@ -105,6 +107,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         string IGenericRepository<Owner>.Update(Owner entity)
         {
+            log.Info("[OwnerRepository][Update]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -118,12 +121,12 @@ namespace Recruit.DataAccessLayer
                         entity.last_name
                     });
                 }
-                // log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[OwnerRepository][Update]:Data save Successfully");
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[OwnerRepository][Update]:" + exception);
                 return ("Update Unsuccessful" + exception);
             }
 

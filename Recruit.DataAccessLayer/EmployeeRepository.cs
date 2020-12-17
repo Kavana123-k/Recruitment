@@ -12,7 +12,7 @@ namespace Recruit.DataAccessLayer
 {
     public class EmployeeRepository : IGenericRepository<Employee>
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(EmployeeRepository));
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(EmployeeRepository));
 
 
         IConnectionFactory _connectionFactory;
@@ -27,6 +27,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         public string Add(Employee entity)
         {
+            log.Info("[EmployeeRepository][Add]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -41,12 +42,12 @@ namespace Recruit.DataAccessLayer
                     });
 
                 }
-                log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[EmployeeRepository][Add]:Data save Successfully");
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+               log.Error("[EmployeeRepository][Add]:" + exception);
                 return ("Insert Unsuccessful" + exception);
             }
 
@@ -66,6 +67,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>The Row values for the specified Primary Key</returns>
         public Employee Get(int id)
         {
+            log.Info("[EmployeeRepository][Get]");
             var data = new Employee();
             try
             {
@@ -73,7 +75,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //log
+                log.Error("[EmployeeRepository][Get]" + exception);
             }
             return data;
         }
@@ -84,8 +86,9 @@ namespace Recruit.DataAccessLayer
         public List<Employee> GetAll()
         {
 
-            //  log.Info("#########################################");
-            var data = new List<Employee>();
+            log.Info("[EmployeeRepository][GetAll]");
+ 
+             var data = new List<Employee>();
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -95,7 +98,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+               log.Error("[EmployeeRepository][GetAll]:" + exception);
             }
             return data;
 
@@ -108,6 +111,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         string IGenericRepository<Employee>.Update(Employee entity)
         {
+            log.Info("[EmployeeRepository][Update]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -120,12 +124,12 @@ namespace Recruit.DataAccessLayer
                         entity.name
                     });
                 }
-                // log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[EmployeeRepository][Update]:Data save Successfully");
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[EmployeeRepository][Update]:" + exception);
                 return ("Update Unsuccessful" + exception);
             }
 

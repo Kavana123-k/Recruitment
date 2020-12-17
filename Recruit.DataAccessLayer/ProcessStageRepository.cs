@@ -12,7 +12,7 @@ namespace Recruit.DataAccessLayer
 {
     public class ProcessStageRepository : IGenericRepository<ProcessStage>
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(ProcessStageRepository));
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(ProcessStageRepository));
 
 
         IConnectionFactory _connectionFactory;
@@ -27,6 +27,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         public string Add(ProcessStage entity)
         {
+            log.Info("[ProcessStageRepository][Add]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -39,12 +40,12 @@ namespace Recruit.DataAccessLayer
                         entity.stage
                     });
                 }
-                log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[ProcessStageRepository][Add]:Data save Successfully");
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[ProcessStageRepository][Add]:" + exception);
                 return ("Insert Unsuccessful" + exception);
             }
 
@@ -64,6 +65,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>The Row values for the specified Primary Key</returns>
         public ProcessStage Get(int id)
         {
+            log.Info("[ProcessStageRepository][Get]");
             var data = new ProcessStage();
             try
             {
@@ -71,7 +73,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //log
+                log.Error("[ProcessStageRepository][Get]"+exception);
             }
             return data;
         }
@@ -81,8 +83,8 @@ namespace Recruit.DataAccessLayer
         /// <returns>ALL the contents in the table from the DB</returns>
         public List<ProcessStage> GetAll()
         {
-
-            //  log.Info("#########################################");
+            log.Info("[ProcessStageRepository][GetAll]");
+            
             var data = new List<ProcessStage>();
             try
             {
@@ -93,7 +95,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                 log.Error("[ProcessStageRepository][Add]:" + exception);
             }
             return data;
 
@@ -106,6 +108,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         string IGenericRepository<ProcessStage>.Update(ProcessStage entity)
         {
+            log.Info("[ProcessStageRepository][Update]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -120,12 +123,12 @@ namespace Recruit.DataAccessLayer
 
                     });
                 }
-                // log.Info("[AddCandidateDetails]:Data save Successfully");
+               log.Info("[ProcessStageRepository][Update]:Data save Successfully");
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+             log.Error("[ProcessStageRepository][Update]:" + exception);
                 return ("Update Unsuccessful" + exception);
             }
 

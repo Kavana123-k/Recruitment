@@ -280,7 +280,7 @@ namespace Recruit.Models
    
     public class Init
     {
-        public static Logger log = LogManager.GetCurrentClassLogger();
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(Init));
         /// <summary>
         /// Configure the dependency injection services
         /// </summary>

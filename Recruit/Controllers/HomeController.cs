@@ -20,8 +20,9 @@ namespace Recruit.Controllers
 {
     public class HomeController : Controller
     {
-      //  public static Logger log;
-        private readonly ILogger _logger;
+        //  public static Logger log;
+        //private readonly ILogger _logger;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(HomeController));
 
 
         //private IConfiguration Configuration;
@@ -72,8 +73,6 @@ namespace Recruit.Controllers
             _serviceSource = serviceSource;
 
 
-            //log = LogManager.GetCurrentClassLogger();
-            //_logger = logger;
         }
 
 
@@ -83,15 +82,24 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult Index()
         {
-            //     _logger.LogInformation("[Index]:Action Method returns view of the Index page###########################");
-         
-           return View();
+
+            log.Info("[Index]:Action Method returns view which displays the Dashboard");
+            return View();
         }
         public IActionResult DisplayCandidatesDetails()
         {
-            //log.Info("[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details");
-            var data = _serviceCandidate.FindbyAll();
-            return View(data);
+            log.Info("[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details");
+            try
+            {
+                var data = _serviceCandidate.FindbyAll();
+                return View(data);
+            }
+            catch (Exception exception)
+            {
+                log.Error("[InsertCandidatesDetails]:" + exception);
+                return View();
+            }
+
         }
 
         /// <summary>
@@ -101,23 +109,30 @@ namespace Recruit.Controllers
         [HttpGet]
         public IActionResult InsertInterviewDetails(int id)
         {
-           // log.Info("[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details");
-          
-            TempData["Data"] = _serviceInterviewRoundStatus.FindbyAll();
-            var interviewDetail = new InterviewDetail();
-            var interviewDetailAll = new List<InterviewDetail>();
-            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            log.Info("[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=" + id);
+            try
             {
-                interviewDetail = _serviceInterviewDetail.FindBy(id);
-                return View(interviewDetail);
-                
+                TempData["Data"] = _serviceInterviewRoundStatus.FindbyAll();
+                var interviewDetail = new InterviewDetail();
+                var interviewDetailAll = new List<InterviewDetail>();
+                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                {
+                    interviewDetail = _serviceInterviewDetail.FindBy(id);
+                    return View(interviewDetail);
+
+                }
+                else
+                {
+                    interviewDetailAll = _serviceInterviewDetail.FindbyAll();
+                    return View(interviewDetailAll);
+                }
             }
-            else
+            catch (Exception exception)
             {
-                interviewDetailAll = _serviceInterviewDetail.FindbyAll();
-                return View(interviewDetailAll);
+                log.Error("[InsertInterviewDetails]:" + exception);
+                return View();
             }
-          
+
         }
 
         /// <summary>
@@ -128,39 +143,48 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertInterviewDetails([Bind] InterviewDetail entity)
         {
-            TempData["Data"] = _serviceInterviewRoundStatus.FindbyAll();
-            // log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details");
-            if (entity.id == 0)
+            try
             {
-                try
+                TempData["Data"] = _serviceInterviewRoundStatus.FindbyAll();
+                log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details ");
+                if (entity.id == 0)
                 {
-                    if (ModelState.IsValid)
+                    try
                     {
-                        TempData["msg"] = _serviceInterviewDetail.Insert(entity);
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceInterviewDetail.Insert(entity);
+                        }
                     }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertInterviewDetails]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
+
                 }
-                catch (Exception exception)
+                else
                 {
-                  //  log.Error("[InsertInterviewDetails]:" + exception);
-                    TempData["msg"] = exception.Message;
+                    try
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceInterviewDetail.Update(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertInterviewDetails]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
+
                 }
-               
             }
-            else
+
+            catch (Exception exception)
             {
-                try
-                { 
-                    if (ModelState.IsValid)
-                    {
-                        TempData["msg"] = _serviceInterviewDetail.Update(entity);
-                    }
-                }
-                catch (Exception exception)
-                {
-                   // log.Error("[InsertInterviewDetails]:" + exception);
-                    TempData["msg"] = exception.Message;
-                }
-               
+                log.Error("[InsertInterviewDetails]:" + exception);
+
             }
             return View();
         }
@@ -173,8 +197,9 @@ namespace Recruit.Controllers
         [HttpGet]
         public IActionResult InsertCandidates(int id)
         {
-
-           // log.Info("[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details");
+            try
+            {
+                log.Info("[InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details [Data]=" + id);
 
                 TempData["Sources"] = _serviceSource.FindbyAll();
                 TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
@@ -183,18 +208,25 @@ namespace Recruit.Controllers
                 TempData["Employees"] = _serviceEmployee.FindbyAll();
                 TempData["Owners"] = _serviceOwner.FindbyAll();
 
-            var candidate = new Candidate();
-            var candidateAll = new List<Candidate>();
-            if (!string.IsNullOrWhiteSpace(id.ToString()))
-            {
-                candidate = _serviceCandidate.FindBy(id);
-                return View(candidate);
+                var candidate = new Candidate();
+                var candidateAll = new List<Candidate>();
+                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                {
+                    candidate = _serviceCandidate.FindBy(id);
+                    return View(candidate);
+
+                }
+                else
+                {
+                    candidateAll = _serviceCandidate.FindbyAll();
+                    return View(candidateAll);
+                }
 
             }
-            else
+            catch (Exception exception)
             {
-                candidateAll = _serviceCandidate.FindbyAll();
-                return View(candidateAll);
+                log.Error("[InsertCandidates]:" + exception);
+                return View();
             }
         }
 
@@ -208,82 +240,86 @@ namespace Recruit.Controllers
 
         public IActionResult InsertCandidates([Bind] Candidate entity)
         {
-            //  log.Info("[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details");
-            TempData["Sources"] = _serviceSource.FindbyAll();
-            TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
-            TempData["ProcessStatuses"] = _serviceProcessStatus.FindbyAll();
-            TempData["Vacancies"] = _serviceVacancy.FindbyAll();
-            TempData["Employees"] = _serviceEmployee.FindbyAll();
-            TempData["Owners"] = _serviceOwner.FindbyAll();
-            if (entity.id == 0)
+            log.Info("[InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details");
+            try
             {
-                try
+                TempData["Sources"] = _serviceSource.FindbyAll();
+                TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
+                TempData["ProcessStatuses"] = _serviceProcessStatus.FindbyAll();
+                TempData["Vacancies"] = _serviceVacancy.FindbyAll();
+                TempData["Employees"] = _serviceEmployee.FindbyAll();
+                TempData["Owners"] = _serviceOwner.FindbyAll();
+                if (entity.id == 0)
                 {
-
-
-                    if (ModelState.IsValid)
+                    try
                     {
 
-                        TempData["msg"] = _serviceCandidate.Insert(entity);
+
+                        if (ModelState.IsValid)
+                        {
+
+                            TempData["msg"] = _serviceCandidate.Insert(entity);
+                        }
                     }
-                }
-                catch (Exception exception)
-                {
-                   // log.Error("[InsertCandidates]:" + exception);
-                    TempData["msg"] = exception.Message;
-                }
-               
-            }
-            else
-            {
-                try
-                {
-                    if (ModelState.IsValid)
+                    catch (Exception exception)
                     {
-
-                        TempData["msg"] = _serviceCandidate.Update(entity);
+                        log.Error("[InsertCandidates]:" + exception);
+                        TempData["msg"] = exception.Message;
                     }
-                }
-                catch (Exception exception)
-                {
-                    // log.Error("[InsertCandidates]:" + exception);
-                    TempData["msg"] = exception.Message;
-                }
-                finally
-                {
 
-                    TempData["Sources"] = _serviceSource.FindbyAll();
+                }
+                else
+                {
+                    try
+                    {
+                        if (ModelState.IsValid)
+                        {
 
-                    TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
-                    TempData["ProcessStatuses"] = _serviceProcessStatus.FindbyAll();
-                    TempData["Vacancies"] = _serviceVacancy.FindbyAll();
-                    TempData["Employees"] = _serviceEmployee.FindbyAll();
-                    TempData["Owners"] = _serviceOwner.FindbyAll();
+                            TempData["msg"] = _serviceCandidate.Update(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertCandidates]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
+
                 }
             }
-           
+            catch (Exception exception)
+            {
+                log.Error("[InsertCandidates]:" + exception);
+            }
+
             return View();
         }
 
         [HttpGet]
         public IActionResult InsertLocations(int id)
         {
-            // log.Info("[InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details");
-            
-            var location = new Location();
-            var locationAll = new List<Location>();
-            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            log.Info("[InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=" + id);
+            try
             {
-                location = _serviceLocation.FindBy(id);
-                return View(location);
-                
+                var location = new Location();
+                var locationAll = new List<Location>();
+                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                {
+                    location = _serviceLocation.FindBy(id);
+                    return View(location);
+
+                }
+                else
+                {
+                    locationAll = _serviceLocation.FindbyAll();
+                    return View(locationAll);
+                }
             }
-            else
+            catch (Exception exception)
             {
-                locationAll = _serviceLocation.FindbyAll();
-                return View(locationAll);
+                log.Error("[InsertLocations]:" + exception);
+                return View();
             }
-           
+
 
         }
 
@@ -295,38 +331,45 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertLocations([Bind] Location entity)
         {
-           
-            //  log.Info("[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details");
-            if (entity.id == 0)
+
+            log.Info("[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details");
+            try
             {
-                try
+                if (entity.id == 0)
                 {
-                    if (ModelState.IsValid)
+                    try
                     {
-                        TempData["msg"] = _serviceLocation.Insert(entity);
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceLocation.Insert(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertLocations]:" + exception);
+                        TempData["msg"] = exception.Message;
                     }
                 }
-                catch (Exception exception)
+                else
                 {
-                    //   log.Error("[InsertLocations]:" + exception);
-                    TempData["msg"] = exception.Message;
+                    try
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceLocation.Update(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertLocations]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
+
                 }
             }
-            else
+            catch (Exception exception)
             {
-                try
-                {
-                    if (ModelState.IsValid)
-                    {
-                        TempData["msg"] = _serviceLocation.Update(entity);
-                    }
-                }
-                catch (Exception exception)
-                {
-                    //   log.Error("[InsertLocations]:" + exception);
-                    TempData["msg"] = exception.Message;
-                }
-
+                log.Error("[InsertLocations]:" + exception);
             }
             return View();
         }
@@ -338,19 +381,29 @@ namespace Recruit.Controllers
         [HttpGet]
         public IActionResult InsertSources(int id)
         {
-           // log.Info("[InsertSources]:[GET]Action Method returns view which gets the page to insert the table Sources Details");
-            var source = new Source();
-            var soucrceAll = new List<Source>();
-            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            log.Info("[InsertSources]:[GET]Action Method returns view which gets the page to insert the table Sources Details [Data]=" + id);
+            try
             {
-                source = _serviceSource.FindBy(id);
-                return View(source);
-                
+
+                var source = new Source();
+                var soucrceAll = new List<Source>();
+                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                {
+                    source = _serviceSource.FindBy(id);
+                    return View(source);
+
+                }
+                else
+                {
+                    soucrceAll = _serviceSource.FindbyAll();
+                    return View(soucrceAll);
+                }
             }
-            else
+            catch (Exception exception)
             {
-                soucrceAll = _serviceSource.FindbyAll();
-                return View(soucrceAll);
+                log.Error("[InsertSources]:" + exception);
+                return View();
+
             }
         }
 
@@ -363,37 +416,44 @@ namespace Recruit.Controllers
         public IActionResult InsertSources([Bind] Source entity)
         {
 
-            //  log.Info("[InsertSources]:[Post]Action Method returns view which posts the input page to the table Sources Details");
-            if (entity.id == 0)
+            log.Info("[InsertSources]:[Post]Action Method returns view which posts the input page to the table Sources Details");
+            try
             {
-                try
+                if (entity.id == 0)
                 {
-                    if (ModelState.IsValid)
+                    try
                     {
-                        TempData["msg"] = _serviceSource.Insert(entity);
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceSource.Insert(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertSources]:" + exception);
+                        TempData["msg"] = exception.Message;
                     }
                 }
-                catch (Exception exception)
+                else
                 {
-                    //  log.Error("[InsertSources]:" + exception);
-                    TempData["msg"] = exception.Message;
+                    try
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceSource.Update(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertSources]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
+
                 }
             }
-            else
+            catch (Exception exception)
             {
-                try
-                {
-                    if (ModelState.IsValid)
-                    {
-                        TempData["msg"] = _serviceSource.Update(entity);
-                    }
-                }
-                catch (Exception exception)
-                {
-                    // log.Error("[InsertSources]:" + exception);
-                    TempData["msg"] = exception.Message;
-                }
-
+                log.Error("[InsertSources]:" + exception);
             }
             return View();
         }
@@ -405,19 +465,28 @@ namespace Recruit.Controllers
         [HttpGet]
         public IActionResult InsertVacancies(int id)
         {
-            //log.Info("[InsertVacancies]:[GET]Action Method returns view which gets the page to insert the Vacancies Details");
-            var vacancy = new Vacancy();
-            var vacancyAll = new List<Vacancy>();
-            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            log.Info("[InsertVacancies]:[GET]Action Method returns view which gets the page to insert the Vacancies Details [Data]=" + id);
+            try
             {
-                vacancy = _serviceVacancy.FindBy(id);
-                return View(vacancy);
+                var vacancy = new Vacancy();
+                var vacancyAll = new List<Vacancy>();
+                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                {
+                    vacancy = _serviceVacancy.FindBy(id);
+                    return View(vacancy);
 
+                }
+                else
+                {
+                    vacancyAll = _serviceVacancy.FindbyAll();
+                    return View(vacancyAll);
+                }
             }
-            else
+            catch (Exception exception)
             {
-                vacancyAll = _serviceVacancy.FindbyAll();
-                return View(vacancyAll);
+                log.Error("[InsertVacancies]:" + exception);
+                return View();
+
             }
         }
 
@@ -430,36 +499,44 @@ namespace Recruit.Controllers
         public IActionResult InsertVacancies([Bind] Vacancy entity)
         {
 
-            //  log.Info("[InsertVacancies]:[Post]Action Method returns view which posts the input page to the table Vacancies Details");
-            if (entity.id == 0)
+            log.Info("[InsertVacancies]:[Post]Action Method returns view which posts the input page to the table Vacancies Details");
+            try
             {
-                try
+                if (entity.id == 0)
                 {
-                    if (ModelState.IsValid)
+                    try
                     {
-                        TempData["msg"] = _serviceVacancy.Insert(entity);
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceVacancy.Insert(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertVacancies]:" + exception);
+                        TempData["msg"] = exception.Message;
                     }
                 }
-                catch (Exception exception)
+                else
                 {
-                   // log.Error("[InsertVacancies]:" + exception);
-                    TempData["msg"] = exception.Message;
+                    try
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceVacancy.Update(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertVacancies]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
+
                 }
             }
-            else
+            catch (Exception exception)
             {
-                try
-                {
-                    if (ModelState.IsValid)
-                    {
-                        TempData["msg"] = _serviceVacancy.Update(entity);
-                    }
-                }
-                catch (Exception exception)
-                {
-                   // log.Error("[InsertVacancies]:" + exception);
-                    TempData["msg"] = exception.Message;
-                }
+                log.Error("[InsertVacancies]:" + exception);
 
             }
             return View();
@@ -472,19 +549,27 @@ namespace Recruit.Controllers
         [HttpGet]
         public IActionResult InsertProcessStatus(int id)
         {
-           // log.Info("[InsertProcessStatus]:[GET]Action Method returns view which gets the page to insert the Process Status Details");
-            var processStatus = new ProcessStatus();
-            var processStatusAll = new List<ProcessStatus>();
-            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            log.Info("[InsertProcessStatus]:[GET]Action Method returns view which gets the page to insert the Process Status Details [Data]=" + id);
+            try
             {
-                processStatus = _serviceProcessStatus.FindBy(id);
-                return View(processStatus);
+                var processStatus = new ProcessStatus();
+                var processStatusAll = new List<ProcessStatus>();
+                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                {
+                    processStatus = _serviceProcessStatus.FindBy(id);
+                    return View(processStatus);
 
+                }
+                else
+                {
+                    processStatusAll = _serviceProcessStatus.FindbyAll();
+                    return View(processStatusAll);
+                }
             }
-            else
+            catch (Exception exception)
             {
-                processStatusAll = _serviceProcessStatus.FindbyAll();
-                return View(processStatusAll);
+                log.Error("[InsertProcessStatus]:" + exception);
+                return View();
             }
         }
 
@@ -496,39 +581,46 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertProcessStatus([Bind] ProcessStatus entity)
         {
-
-            // log.Info("[InsertProcessStatus]:[Post]Action Method returns view which posts the input page to the table Process Status Details");
-            if (entity.id == 0)
+            log.Info("[InsertProcessStatus]:[Post]Action Method returns view which posts the input page to the table Process Status Details");
+            try
             {
-                try
+                if (entity.id == 0)
                 {
-                    if (ModelState.IsValid)
+                    try
                     {
-                        TempData["msg"] = _serviceProcessStatus.Insert(entity);
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceProcessStatus.Insert(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertProcessStatus]:" + exception);
+                        TempData["msg"] = exception.Message;
                     }
                 }
-                catch (Exception exception)
+                else
                 {
-                  //  log.Error("[InsertProcessStatus]:" + exception);
-                    TempData["msg"] = exception.Message;
-                }
-            }
-            else
-            {
-                try
-                {
-                    if (ModelState.IsValid)
+                    try
                     {
-                        TempData["msg"] = _serviceProcessStatus.Update(entity);
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceProcessStatus.Update(entity);
+                        }
                     }
-                }
-                catch (Exception exception)
-                {
-                  //  log.Error("[InsertProcessStatus]:" + exception);
-                    TempData["msg"] = exception.Message;
-                }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertProcessStatus]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
 
+                }
             }
+            catch (Exception exception)
+            {
+                log.Error("[InsertProcessStatus]:" + exception);
+            }
+
             return View();
         }
         /// <summary>
@@ -539,19 +631,27 @@ namespace Recruit.Controllers
         [HttpGet]
         public IActionResult InsertProcessStages(int id)
         {
-           // log.Info("[InsertProcessStages]:[GET]Action Method returns view which gets the page to insert the Process Stages Details");
-            var processStage = new ProcessStage();
-            var processStageAll = new List<ProcessStage>();
-            if (!string.IsNullOrWhiteSpace(id.ToString()))
+            log.Info("[InsertProcessStages]:[GET]Action Method returns view which gets the page to insert the Process Stages Details [Data]=" + id);
+            try
             {
-                processStage = _serviceProcessStage.FindBy(id);
-                return View(processStage);
+                var processStage = new ProcessStage();
+                var processStageAll = new List<ProcessStage>();
+                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                {
+                    processStage = _serviceProcessStage.FindBy(id);
+                    return View(processStage);
 
+                }
+                else
+                {
+                    processStageAll = _serviceProcessStage.FindbyAll();
+                    return View(processStageAll);
+                }
             }
-            else
+            catch (Exception exception)
             {
-                processStageAll = _serviceProcessStage.FindbyAll();
-                return View(processStageAll);
+                log.Error("[InsertProcessStages]:" + exception);
+                return View();
             }
         }
 
@@ -563,38 +663,46 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertProcessStages([Bind] ProcessStage entity)
         {
-            if (entity.id == 0)
+            try
             {
+                if (entity.id == 0)
+                {
 
-                // log.Info("[InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details");
-                try
-                {
-                    if (ModelState.IsValid)
+                    log.Info("[InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details");
+                    try
                     {
-                        TempData["msg"] = _serviceProcessStage.Insert(entity);
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceProcessStage.Insert(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertProcessStages]:" + exception);
+                        TempData["msg"] = exception.Message;
                     }
                 }
-                catch (Exception exception)
+                else
                 {
-                    //log.Error("[InsertProcessStages]:" + exception);
-                    TempData["msg"] = exception.Message;
+                    try
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceProcessStage.Update(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertProcessStages]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
                 }
             }
-            else
+            catch (Exception exception)
             {
-                try
-                {
-                    if (ModelState.IsValid)
-                    {
-                        TempData["msg"] = _serviceProcessStage.Update(entity);
-                    }
-                }
-                catch (Exception exception)
-                {
-                    //log.Error("[InsertProcessStages]:" + exception);
-                    TempData["msg"] = exception.Message;
-                }
+                log.Error("[InsertProcessStages]:" + exception);
             }
+
             return View();
         }
         /// <summary>
@@ -604,7 +712,7 @@ namespace Recruit.Controllers
         [HttpGet]
         public IActionResult InsertInterviewRoundStatuses()
         {
-           // log.Info("[InsertInterviewRoundStatuses]:[GET]Action Method returns view which gets the page to insert the table Interview Round Statuses Details");
+            log.Info("[InsertInterviewRoundStatuses]:[GET]Action Method returns view which gets the page to insert the table Interview Round Statuses Details");
             return View();
         }
 
@@ -616,40 +724,48 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertInterviewRoundStatuses([Bind] InterviewRoundStatus entity)
         {
-
-            if (entity.id == 0)
+            try
             {
-
-                // log.Info("[InsertInterviewRoundStatuses]:[Post]Action Method returns view which posts the input page to the table Interview Round Statuses Details");
-                try
+                if (entity.id == 0)
                 {
-                    if (ModelState.IsValid)
+
+                    log.Info("[InsertInterviewRoundStatuses]:[Post]Action Method returns view which posts the input page to the table Interview Round Statuses Details");
+                    try
                     {
-                        TempData["msg"] = _serviceInterviewRoundStatus.Insert(entity);
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceInterviewRoundStatus.Insert(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertInterviewRoundStatuses]:" + exception);
+                        TempData["msg"] = exception.Message;
                     }
                 }
-                catch (Exception exception)
+                else
                 {
-                    //  log.Error("[InsertInterviewRoundStatuses]:" + exception);
-                    TempData["msg"] = exception.Message;
+                    try
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceInterviewRoundStatus.Update(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertInterviewRoundStatuses]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
+
                 }
             }
-            else
+            catch (Exception exception)
             {
-                try
-                {
-                    if (ModelState.IsValid)
-                    {
-                        TempData["msg"] = _serviceInterviewRoundStatus.Update(entity);
-                    }
-                }
-                catch (Exception exception)
-                {
-                    //  log.Error("[InsertInterviewRoundStatuses]:" + exception);
-                    TempData["msg"] = exception.Message;
-                }
+                log.Error("[InsertInterviewRoundStatuses]:" + exception);
 
             }
+
             return View();
         }
         /// <summary>
@@ -658,9 +774,17 @@ namespace Recruit.Controllers
         /// <returns>returns a list containing the details to the view </returns>
         public IActionResult DisplayInterviewDetails()
         {
-           
-            List<InterviewDetail> interviewDetails = _serviceInterviewDetail.FindbyAll();
-            return View(interviewDetails);
+            try
+            {
+                List<InterviewDetail> interviewDetails = _serviceInterviewDetail.FindbyAll();
+
+                return View(interviewDetails);
+            }
+            catch (Exception exception)
+            {
+                log.Error("[DisplayInterviewDetails]:" + exception);
+                return View();
+            }
 
         }
 
@@ -671,20 +795,37 @@ namespace Recruit.Controllers
         public IActionResult DisplayLocations()
         {
 
-           // log.Info("[DisplayLocations]:Action Method returns view which displays the Locations Details");
-          List<Location> location = _serviceLocation.FindbyAll();
-            return View(location);
+            log.Info("[DisplayLocations]:Action Method returns view which displays the Locations Details");
+            try
+            {
+                List<Location> location = _serviceLocation.FindbyAll();
+                return View(location);
+            }
+
+            catch (Exception exception)
+            {
+                log.Error("[DisplayLocations]:" + exception);
+                return View();
+            }
         }
+
         /// <summary>
         /// method to display the Process Statuses table
         /// </summary>
         /// <returns></returns>
         public IActionResult DisplayProcessStatus()
         {
-           // log.Info("[DisplayProcessStatus]:Action Method returns view which displays the Locations Details");
-           
-            List<ProcessStatus> processStatus = _serviceProcessStatus.FindbyAll();
-            return View(processStatus);
+           log.Info("[DisplayProcessStatus]:Action Method returns view which displays the Locations Details");
+            try
+            {
+                List<ProcessStatus> processStatus = _serviceProcessStatus.FindbyAll();
+                return View(processStatus);
+            }
+            catch (Exception exception)
+            {
+                log.Error("[DisplayProcessStatus]:" + exception);
+                return View();
+            }
         }
         /// <summary>
         /// method to display the process stages table
@@ -692,10 +833,17 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayProcessStages()
         {
-           // log.Info("[DisplayProcessStages]:Action Method returns view which displays the Locations Details");
-           
-            List<ProcessStage> processStage = _serviceProcessStage.FindbyAll();
-            return View(processStage);
+            log.Info("[DisplayProcessStages]:Action Method returns view which displays the Locations Details");
+            try
+            {
+                List<ProcessStage> processStage = _serviceProcessStage.FindbyAll();
+                return View(processStage);
+            }
+            catch (Exception exception)
+            {
+                log.Error("[DisplayProcessStages]:" + exception);
+                return View();
+            }
         }
         /// <summary>
         /// method to display the vacancies table
@@ -705,10 +853,17 @@ namespace Recruit.Controllers
 
         public IActionResult DisplayVacancies()
         {
-           // log.Info("[DisplayVacancies]:Action Method returns view which displays the Locations Details");
-          
-            List<Vacancy> vacancy = _serviceVacancy.FindbyAll();
-            return View(vacancy);
+          log.Info("[DisplayVacancies]:Action Method returns view which displays the Locations Details");
+            try
+            {
+                List<Vacancy> vacancy = _serviceVacancy.FindbyAll();
+                return View(vacancy);
+            }
+            catch (Exception exception)
+            {
+                log.Error("[DisplayVacancies]:" + exception);
+                return View();
+            }
         }
 
         /// <summary>
@@ -717,10 +872,17 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplayEmployees()
         {
-          //  log.Info("[DisplayEmployees]:Action Method returns view which displays the Locations Details");
-            
-            List<Employee> employee = _serviceEmployee.FindbyAll();
-            return View(employee);
+            log.Info("[DisplayEmployees]:Action Method returns view which displays the Locations Details");
+            try
+            {
+                List<Employee> employee = _serviceEmployee.FindbyAll();
+                return View(employee);
+            }
+            catch (Exception exception)
+            {
+                log.Error("[DisplayEmployees]:" + exception);
+                return View();
+            }
         }
         /// <summary>
         /// Method to Display Sources
@@ -728,10 +890,17 @@ namespace Recruit.Controllers
         /// <returns></returns>
         public IActionResult DisplaySources()
         {
-           // log.Info("[DisplaySource]:Action Method returns view which displays the Locations Details");
-            
-            List<Source> source = _serviceSource.FindbyAll();
-            return View(source);
+            log.Info("[DisplaySource]:Action Method returns view which displays the Locations Details");
+            try
+            {
+                List<Source> source = _serviceSource.FindbyAll();
+                return View(source);
+            }
+            catch (Exception exception)
+            {
+                log.Error("[DisplaySource]:" + exception);
+                return View();
+            }
         }
 
 

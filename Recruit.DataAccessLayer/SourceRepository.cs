@@ -12,7 +12,7 @@ namespace Recruit.DataAccessLayer
 {
     public class SourceRepository : IGenericRepository<Source>
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(SourceRepository));
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(SourceRepository));
 
 
         IConnectionFactory _connectionFactory;
@@ -27,6 +27,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         public string Add(Source entity)
         {
+            log.Info("[SourceRepository][Add]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -40,12 +41,12 @@ namespace Recruit.DataAccessLayer
 
                     });
                 }
-                log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[SourceRepository][Add]:Data save Successfully");
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[SourceRepository][Add]" + exception);
                 return ("Insert Unsuccessful" + exception);
             }
 
@@ -65,6 +66,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>The Row values for the specified Primary Key</returns>
         public Source Get(int id)
         {
+            log.Info("[SourceRepository][Get]");
             var data = new Source();
             try
             {
@@ -72,7 +74,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //log
+                log.Error("[SourceRepository][Get]" + exception);
             }
             return data;
         }
@@ -83,7 +85,8 @@ namespace Recruit.DataAccessLayer
         public List<Source> GetAll()
         {
 
-            //  log.Info("#########################################");
+            log.Info("[SourceRepository][GetAll]");
+          
             var data = new List<Source>();
             try
             {
@@ -94,7 +97,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                 log.Error("[SourceRepository][GetAll]" + exception);
             }
             return data;
 
@@ -107,6 +110,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         string IGenericRepository<Source>.Update(Source entity)
         {
+            log.Info("[SourceRepository][Update]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -120,12 +124,12 @@ namespace Recruit.DataAccessLayer
                         entity.name
                     });
                 }
-                // log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[SourceRepository][Update]:Data save Successfully");
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                 log.Error("[SourceRepository][Update]:" + exception);
                 return ("Update Unsuccessful" + exception);
             }
 

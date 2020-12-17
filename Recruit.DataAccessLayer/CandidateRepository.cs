@@ -12,7 +12,8 @@ namespace Recruit.DataAccessLayer
 {
    public class CandidateRepository : IGenericRepository<Candidate>
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(CandidateRepository));
+        
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(CandidateRepository));
 
 
         IConnectionFactory _connectionFactory;
@@ -27,6 +28,7 @@ namespace Recruit.DataAccessLayer
         /// <returns></returns>
         string IGenericRepository<Candidate>.Add(Candidate entity)
         {
+            log.Info("[CandidateRepository][Add]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -77,12 +79,12 @@ namespace Recruit.DataAccessLayer
 
                     });
                 }
-                log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[CandidateRepository][Add]:Data save Successfully");
                return ("Data save Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[CandidateRepository][Add]:" + exception);
                return ("Insert Unsuccessful" + exception);
             }
 
@@ -98,6 +100,7 @@ namespace Recruit.DataAccessLayer
 
         public Candidate Get(int id)
         {
+            log.Info("[CandidateRepository][Get]");
             var data = new Candidate();
             try
             {
@@ -107,7 +110,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[CandidateRepository][Get]:" + exception);
             }
             return data;
         }
@@ -118,7 +121,8 @@ namespace Recruit.DataAccessLayer
       public  List<Candidate> GetAll()
         {
 
-         //   log.Info("#########################################");
+         
+            log.Info("[CandidateRepository][GetAll]");
             var data = new List<Candidate>();
             try
             {
@@ -135,7 +139,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[CandidateRepository][GetAll]:" + exception);
             }
             return data;
 
@@ -148,7 +152,7 @@ namespace Recruit.DataAccessLayer
         public List<Candidate> GetAllRows()
         {
 
-            //   log.Info("#########################################");
+            log.Info("[CandidateRepository][GetAllRows]");
             var data = new List<Candidate>();
             try
             {
@@ -160,7 +164,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[CandidateRepository][GetAllRows]:" + exception);
             }
             return data;
 
@@ -174,6 +178,7 @@ namespace Recruit.DataAccessLayer
 
         string IGenericRepository<Candidate>.Update(Candidate entity)
         {
+            log.Info("[CandidateRepository][Update]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -222,12 +227,12 @@ namespace Recruit.DataAccessLayer
                         entity.links_for_interview
                     });
                 }
-               // log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[CandidateRepository][Update]:Data save Successfully");
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[CandidateRepository][Update]:" + exception);
                 return ("Update Unsuccessful" + exception);
             }
 

@@ -12,9 +12,9 @@ namespace Recruit.DataAccessLayer
 {
     public class InterviewDetailRepository : IGenericRepository<InterviewDetail>
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(InterviewDetailRepository));
+        
 
-
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(InterviewDetailRepository));
         IConnectionFactory _connectionFactory;
         public InterviewDetailRepository(IConnectionFactory connectionFactory)
         {
@@ -27,6 +27,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         public string Add(InterviewDetail entity)
         {
+            log.Info("[InterviewDetailRepository][Add]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -44,12 +45,12 @@ namespace Recruit.DataAccessLayer
                         });
                    
                 }
-                log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[InterviewDetailRepository][Add]:Data save Successfully");
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+               log.Error("[InterviewDetailRepository][Add]:" + exception);
                 return ("Insert Unsuccessful" + exception);
             }
 
@@ -69,6 +70,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>The Row values for the specified Primary Key</returns>
         public InterviewDetail Get(int id)
         {
+            log.Info("[InterviewDetailRepository][Get]");
             var data = new InterviewDetail();
             try
             {
@@ -76,7 +78,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //log
+                log.Error("[InterviewDetailRepository][Get]"+ exception);
             }
             return data;
         }
@@ -87,7 +89,7 @@ namespace Recruit.DataAccessLayer
         public List<InterviewDetail> GetAll()
         {
 
-            //  log.Info("#########################################");
+            log.Info("[InterviewDetailRepository][GetAll]");
             var data = new List<InterviewDetail>();
             try
             {
@@ -101,7 +103,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+            log.Error("[InterviewDetailRepository][GetAll]:" + exception);
             }
             return data;
 
@@ -113,8 +115,8 @@ namespace Recruit.DataAccessLayer
         /// <returns></returns>
         public List<InterviewDetail> GetAllRows()
         {
-
-            //  log.Info("#########################################");
+            log.Info("[InterviewDetailRepository][GetAllRows]");
+          
             var data = new List<InterviewDetail>();
             try
             {
@@ -125,7 +127,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[InterviewDetailRepository][GetAllRows]:" + exception);
             }
             return data;
 
@@ -138,6 +140,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         string IGenericRepository<InterviewDetail>.Update(InterviewDetail entity)
         {
+            log.Info("[InterviewDetailRepository][Update]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -155,12 +158,12 @@ namespace Recruit.DataAccessLayer
                         entity.reason
                     });
                 }
-                // log.Info("[AddCandidateDetails]:Data save Successfully");
+             log.Info("[InterviewDetailRepository][Update]:Data save Successfully");
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+               log.Error("[InterviewDetailRepository][Update]:" + exception);
                 return ("Update Unsuccessful" + exception);
             }
 

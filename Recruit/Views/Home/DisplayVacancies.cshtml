@@ -5,8 +5,8 @@
 }
 
 @*@{
-        var data = ViewBag.Message;
-    }*@
+    var data = ViewBag.Message;
+ }*@
 
 
 <!DOCTYPE html>
@@ -31,21 +31,23 @@
                 </tr>
             </thead>
             <tbody>
+
+
+
                 @foreach (var data in Model)
-        {
-                <tr>
-                    <td><a href="~/Home/InsertVacancies/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
-                    <td>@data.code</td>
-                    <td>@data.name</td>
-                    <td>@data.vacancy</td>
+                {
+                    <tr>
+                        <td><a href="~/Home/InsertVacancies/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
+                        <td>@data.code</td>
+                        <td>@data.name</td>
+                        <td>@data.vacancy</td>
+                    </tr>
+                }
+                </tbody>
 
-
-                </tr>
-        }
-            </tbody>
-               
         </table>
-        </div>
+    
+    </div>
         <div>
             <a asp-action="Index">Back to Dashboard</a>
         </div>

@@ -12,7 +12,7 @@ namespace Recruit.DataAccessLayer
 {
     public class LocationRepository : IGenericRepository<Location>
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(OwnerRepository));
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(LocationRepository));
 
 
         IConnectionFactory _connectionFactory;
@@ -27,6 +27,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
        public string Add(Location entity)
         {
+            log.Info("[LocationRepository][Add]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -37,12 +38,12 @@ namespace Recruit.DataAccessLayer
                         entity.city
                      });
                 }
-                log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[LocationRepository][Add]:Data save Successfully");
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[LocationRepository][Add]:" + exception);
                 return ("Insert Unsuccessful" + exception);
             }
 
@@ -62,6 +63,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>The Row values for the specified Primary Key</returns>
        public Location Get(int id)
         {
+            log.Info("[LocationRepository][Get]");
             var data = new Location() ;
             try
             {
@@ -69,7 +71,7 @@ namespace Recruit.DataAccessLayer
             }
             catch(Exception exception)
             {
-            //log
+                log.Error("[LocationRepository][Get]:" + exception);
             }
             return data;
         }
@@ -80,7 +82,7 @@ namespace Recruit.DataAccessLayer
        public List<Location> GetAll()
         {
 
-          //  log.Info("#########################################");
+            log.Info("[LocationRepository][GetAll]");
             var data = new List<Location>();
             try
             {
@@ -91,7 +93,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[LocationRepository][GetAll]:" + exception);
             }
             return data;
 
@@ -104,6 +106,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         string IGenericRepository<Location>.Update(Location entity)
         {
+            log.Info("[LocationRepository][Update]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -116,12 +119,12 @@ namespace Recruit.DataAccessLayer
                         entity.city
                     });
                 }
-                // log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[LocationRepository][Update]:Data save Successfully");
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                 log.Error("[LocationRepository][Update]:" + exception);
                 return ("Update Unsuccessful" + exception);
             }
 

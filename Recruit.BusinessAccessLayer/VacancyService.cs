@@ -8,9 +8,7 @@ namespace Recruit.BusinessAccessLayer
     public class VacancyService : IService<Vacancy>
     {
         readonly IUnitOfWork _unitOfWork;
-
-
-        // private IGenericRepository<Candidate> _GenericRepositoy;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(VacancyService));
         public VacancyService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -22,6 +20,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Contents of the Row that is Specified</returns>
         public Vacancy FindBy(int id)
         {
+            log.Info("[VacancyService][FindBy]");
             return _unitOfWork.vacancyRepository.Get(id);
         }
         /// <summary>
@@ -30,7 +29,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>All the contents from the table</returns>
         public List<Vacancy> FindbyAll()
         {
-
+            log.Info("[VacancyService][FindByAll]");
             return _unitOfWork.vacancyRepository.GetAll();
         }
         /// <summary>
@@ -40,6 +39,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Message</returns>
         public string Insert(Vacancy Entity)
         {
+            log.Info("[VacancyService][Insert]");
             return _unitOfWork.vacancyRepository.Add(Entity);
         }
         /// <summary>
@@ -49,6 +49,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public string Update(Vacancy Entity)
         {
+            log.Info("[VacancyService][Update]");
             return _unitOfWork.vacancyRepository.Update(Entity);
         }
         /// <summary>
@@ -58,6 +59,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public bool Delete(int id)
         {
+            log.Info("[VacancyService][Delete]");
             throw new System.NotImplementedException();
         }
     }

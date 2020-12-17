@@ -8,9 +8,9 @@ namespace Recruit.BusinessAccessLayer
     public class InterviewRoundStatusService : IService<InterviewRoundStatus>
     {
         readonly IUnitOfWork _unitOfWork;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(InterviewRoundStatusService));
 
-
-        // private IGenericRepository<Candidate> _GenericRepositoy;
+        
         public InterviewRoundStatusService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -22,6 +22,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Contents of the Row that is Specified</returns>
         public InterviewRoundStatus FindBy(int id)
         {
+            log.Info("[InterviewRoundStatusService][FindBy]" + id);
             return _unitOfWork.interviewRoundStatusRepository.Get(id);
         }
         /// <summary>
@@ -30,7 +31,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>All the contents from the table</returns>
         public List<InterviewRoundStatus> FindbyAll()
         {
-
+            log.Info("[InterviewRoundStatusService][FindByAll]");
             return _unitOfWork.interviewRoundStatusRepository.GetAll();
         }
         /// <summary>
@@ -40,6 +41,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Message</returns>
         public string Insert(InterviewRoundStatus Entity)
         {
+            log.Info("[InterviewRoundStatusService][Insert]");
             return _unitOfWork.interviewRoundStatusRepository.Add(Entity);
         }
         /// <summary>
@@ -49,6 +51,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public string Update(InterviewRoundStatus Entity)
         {
+            log.Info("[InterviewRoundStatusService][Update]");
             return _unitOfWork.interviewRoundStatusRepository.Update(Entity);
         }
         /// <summary>
@@ -58,6 +61,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public bool Delete(int id)
         {
+            log.Info("[InterviewRoundStatusService][Delete]" + id);
             throw new System.NotImplementedException();
         }
     }

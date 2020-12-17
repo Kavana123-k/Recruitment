@@ -9,8 +9,8 @@ namespace Recruit.BusinessAccessLayer
     {
         readonly IUnitOfWork _unitOfWork;
 
-
-        // private IGenericRepository<Candidate> _GenericRepositoy;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(LocationService));
+        
         public LocationService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -22,6 +22,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Contents of the Row that is Specified</returns>
         public Location FindBy(int id)
         {
+            log.Info("[LocationService][FindBy]" + id);
             return _unitOfWork.locationRepository.Get(id);
         }
         /// <summary>
@@ -30,7 +31,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>All the contents from the table</returns>
         public List<Location> FindbyAll()
         {
-
+            log.Info("[LocationService][FindByAll]");
             return _unitOfWork.locationRepository.GetAll();
         }
         /// <summary>
@@ -40,6 +41,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Message</returns>
         public string Insert(Location Entity)
         {
+            log.Info("[LocationService][Insert]");
             return _unitOfWork.locationRepository.Add(Entity);
         }
         /// <summary>
@@ -49,6 +51,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public string Update(Location Entity)
         {
+            log.Info("[LocationService][Update]");
             return _unitOfWork.locationRepository.Update(Entity);
         }
         /// <summary>

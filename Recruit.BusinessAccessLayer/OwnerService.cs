@@ -8,9 +8,9 @@ namespace Recruit.BusinessAccessLayer
     public class OwnerService : IService<Owner>
     {
         readonly IUnitOfWork _unitOfWork;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(OwnerService));
 
 
-        // private IGenericRepository<Candidate> _GenericRepositoy;
         public OwnerService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -22,6 +22,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Contents of the Row that is Specified</returns>
         public Owner FindBy(int id)
         {
+            log.Info("[OwnerService][FindBy]" + id);
             return _unitOfWork.ownerRepository.Get(id);
         }
         /// <summary>
@@ -30,7 +31,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>All the contents from the table</returns>
         public List<Owner> FindbyAll()
         {
-
+            log.Info("[OwnerService][FindByAll]");
             return _unitOfWork.ownerRepository.GetAll();
         }
         /// <summary>
@@ -40,6 +41,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Message</returns>
         public string Insert(Owner Entity)
         {
+            log.Info("[OwnerService][Insert]");
             return _unitOfWork.ownerRepository.Add(Entity);
         }
         /// <summary>
@@ -49,6 +51,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public string Update(Owner Entity)
         {
+            log.Info("[OwnerService][Update]" );
             return _unitOfWork.ownerRepository.Update(Entity);
         }
         /// <summary>
@@ -58,6 +61,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public bool Delete(int id)
         {
+            log.Info("[OwnerService][Delete]" + id);
             throw new System.NotImplementedException();
         }
     }

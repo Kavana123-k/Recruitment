@@ -8,9 +8,9 @@ namespace Recruit.BusinessAccessLayer
     public class CandidateService :IService<Candidate>
     {
         readonly IUnitOfWork _unitOfWork;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(CandidateService));
 
-
-       // private IGenericRepository<Candidate> _GenericRepositoy;
+        // private IGenericRepository<Candidate> _GenericRepositoy;
         public CandidateService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -22,6 +22,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Contents of the Row that is Specified</returns>
         public Candidate FindBy(int id)
         {
+            log.Info("[CandidateService][FindBy]" + id);
             return _unitOfWork.candidateRepository.Get(id);
         }
         /// <summary>
@@ -30,8 +31,8 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>All the contents from the table</returns>
         public List<Candidate> FindbyAll()
         {
-
-          return  _unitOfWork.candidateRepository.GetAll();
+            log.Info("[CandidateService][FindbyAll]");
+            return _unitOfWork.candidateRepository.GetAll();
         }
         /// <summary>
         /// BAL service Method to INSERT
@@ -40,6 +41,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Message</returns>
         public string Insert(Candidate Entity)
         {
+            log.Info("[CandidateService][Insert]");
             return _unitOfWork.candidateRepository.Add(Entity);
         }
         /// <summary>
@@ -49,6 +51,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public string Update(Candidate Entity)
         {
+            log.Info("[CandidateService][Update]");
             return _unitOfWork.candidateRepository.Update(Entity);
         }
         /// <summary>
@@ -58,6 +61,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public bool Delete(int id)
         {
+            log.Info("[CandidateService][Delete]");
             throw new System.NotImplementedException();
         }
     }

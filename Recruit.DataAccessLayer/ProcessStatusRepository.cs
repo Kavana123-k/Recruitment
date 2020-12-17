@@ -12,7 +12,7 @@ namespace Recruit.DataAccessLayer
 {
     public class ProcessStatusRepository : IGenericRepository<ProcessStatus>
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(ProcessStatusRepository));
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(ProcessStatusRepository));
 
 
         IConnectionFactory _connectionFactory;
@@ -27,6 +27,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         public string Add(ProcessStatus entity)
         {
+            log.Info("[ProcessStatusRepository][Add]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -40,12 +41,12 @@ namespace Recruit.DataAccessLayer
 
                     });
                 }
-                log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[ProcessStatusRepository][Add]:Data save Successfully");
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[ProcessStatusRepository][Add]:" + exception);
                 return ("Insert Unsuccessful" + exception);
             }
 
@@ -65,6 +66,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>The Row values for the specified Primary Key</returns>
         public ProcessStatus Get(int id)
         {
+            log.Info("[ProcessStatusRepository][Get]");
             var data = new ProcessStatus();
             try
             {
@@ -72,7 +74,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //log
+                log.Error("[ProcessStatusRepository][Get]"+exception);
             }
             return data;
         }
@@ -82,8 +84,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>ALL the contents in the table from the DB</returns>
         public List<ProcessStatus> GetAll()
         {
-
-            //  log.Info("#########################################");
+            log.Info("[ProcessStatusRepository][GetAll]");
             var data = new List<ProcessStatus>();
             try
             {
@@ -94,7 +95,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                 log.Error("[ProcessStatusRepository][GetAll]" + exception);
             }
             return data;
 
@@ -121,12 +122,12 @@ namespace Recruit.DataAccessLayer
                         entity.colour
                     });
                 }
-                // log.Info("[AddCandidateDetails]:Data save Successfully");
+                 log.Info("[ProcessStatusRepository][GetAll]:Data save Successfully");
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                  log.Error("[ProcessStatusRepository][GetAll]" + exception);
                 return ("Update Unsuccessful" + exception);
             }
 

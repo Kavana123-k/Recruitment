@@ -3864,3 +3864,9 @@ Error Number:102,State:1,Class:15
 2020-12-16 19:04:21.4410|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
 2020-12-16 19:04:58.3573|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
 2020-12-16 19:04:58.9301|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-17 11:31:33.0887|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-17 11:31:34.8469|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-17 12:44:49.2031|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-17 12:44:50.8897|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End
+2020-12-17 13:00:07.3055|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate Start
+2020-12-17 13:00:08.3092|INFO|Recruit.Models.Init|[UpdateDatabase]:Migrate End

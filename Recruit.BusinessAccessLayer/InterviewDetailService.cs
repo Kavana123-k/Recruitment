@@ -8,9 +8,9 @@ namespace Recruit.BusinessAccessLayer
     public class InterviewDetailService : IService<InterviewDetail>
     {
         readonly IUnitOfWork _unitOfWork;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(InterviewDetailService));
 
-
-        // private IGenericRepository<Candidate> _GenericRepositoy;
+        
         public InterviewDetailService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -22,6 +22,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Contents of the Row that is Specified</returns>
         public InterviewDetail FindBy(int id)
         {
+            log.Info("[InterviewDetailService][FindBy]" + id);
             return _unitOfWork.interviewDetailRepository.Get(id);
         }
         /// <summary>
@@ -30,7 +31,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>All the contents from the table</returns>
         public List<InterviewDetail> FindbyAll()
         {
-
+            log.Info("[InterviewDetailService][FindByAll]" );
             return _unitOfWork.interviewDetailRepository.GetAll();
         }
         /// <summary>
@@ -40,6 +41,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Message</returns>
         public string Insert(InterviewDetail Entity)
         {
+            log.Info("[InterviewDetailService][Insert]");
             return _unitOfWork.interviewDetailRepository.Add(Entity);
         }
         /// <summary>
@@ -49,6 +51,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public string Update(InterviewDetail Entity)
         {
+            log.Info("[InterviewDetailService][Update]" );
             return _unitOfWork.interviewDetailRepository.Update(Entity);
         }
     
@@ -59,6 +62,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public bool Delete(int id)
         {
+            log.Info("[InterviewDetailService][Delete]");
             throw new System.NotImplementedException();
         }
     }

@@ -9,8 +9,8 @@ namespace Recruit.BusinessAccessLayer
     {
         readonly IUnitOfWork _unitOfWork;
 
-
-        // private IGenericRepository<Candidate> _GenericRepositoy;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(ProcessStageService));
+        
         public ProcessStageService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -22,6 +22,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Contents of the Row that is Specified</returns>
         public ProcessStage FindBy(int id)
         {
+            log.Info("[ProcessStageService][FindBy]" + id);
             return _unitOfWork.processStageRepository.Get(id);
         }
         /// <summary>
@@ -30,7 +31,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>All the contents from the table</returns>
         public List<ProcessStage> FindbyAll()
         {
-
+            log.Info("[ProcessStageService][FindByAll]");
             return _unitOfWork.processStageRepository.GetAll();
         }
         /// <summary>
@@ -40,6 +41,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns>Message</returns>
         public string Insert(ProcessStage Entity)
         {
+            log.Info("[ProcessStageService][Insert]");
             return _unitOfWork.processStageRepository.Add(Entity);
         }
         /// <summary>
@@ -49,6 +51,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public string Update(ProcessStage Entity)
         {
+            log.Info("[ProcessStageService][Update]");
             return _unitOfWork.processStageRepository.Update(Entity);
         }
         /// <summary>
@@ -58,6 +61,7 @@ namespace Recruit.BusinessAccessLayer
         /// <returns></returns>
         public bool Delete(int id)
         {
+            log.Info("[ProcessStageService][Delete]" + id);
             throw new System.NotImplementedException();
         }
     }

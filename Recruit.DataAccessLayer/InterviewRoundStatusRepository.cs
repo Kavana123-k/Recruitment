@@ -12,7 +12,7 @@ namespace Recruit.DataAccessLayer
 {
     public class InterviewRoundStatusRepository : IGenericRepository<InterviewRoundStatus>
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(InterviewRoundStatusRepository));
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(InterviewRoundStatusRepository));
 
 
         IConnectionFactory _connectionFactory;
@@ -27,6 +27,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         public string Add(InterviewRoundStatus entity)
         {
+            log.Info("[InterviewRoundStatusRepository][Add]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -40,12 +41,12 @@ namespace Recruit.DataAccessLayer
 
                     });
                 }
-                log.Info("[AddCandidateDetails]:Data save Successfully");
+                log.Info("[InterviewRoundStatusRepository][Add]:Data save Successfully");
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+              log.Error("[InterviewRoundStatusRepository][Add]:" + exception);
                 return ("Insert Unsuccessful" + exception);
             }
 
@@ -65,6 +66,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>The Row values for the specified Primary Key</returns>
         public InterviewRoundStatus Get(int id)
         {
+            log.Info("[InterviewRoundStatusRepository][Get]");
             var data = new InterviewRoundStatus();
             try
             {
@@ -72,7 +74,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //log
+                log.Error("[InterviewRoundStatusRepository][Get]:" + exception);
             }
             return data;
         }
@@ -82,8 +84,8 @@ namespace Recruit.DataAccessLayer
         /// <returns>ALL the contents in the table from the DB</returns>
         public List<InterviewRoundStatus> GetAll()
         {
+            log.Info(" [InterviewRoundStatusRepository][GetAll]");
 
-            //  log.Info("#########################################");
             var data = new List<InterviewRoundStatus>();
             try
             {
@@ -94,7 +96,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[InterviewRoundStatusRepository][GetAll]:" + exception);
             }
             return data;
 
@@ -107,6 +109,7 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         string IGenericRepository<InterviewRoundStatus>.Update(InterviewRoundStatus entity)
         {
+            log.Info("[InterviewRoundStatusRepository][Update]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
@@ -119,12 +122,12 @@ namespace Recruit.DataAccessLayer
                         entity.status
                     });
                 }
-                // log.Info("[AddCandidateDetails]:Data save Successfully");
+               log.Info("[InterviewRoundStatusRepository][Update]:Data save Successfully");
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-                //  log.Error("[DisplayCandidatesDetails]:" + exception);
+                log.Error("[InterviewRoundStatusRepository][Update]:" + exception);
                 return ("Update Unsuccessful" + exception);
             }
 
