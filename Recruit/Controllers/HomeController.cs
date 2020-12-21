@@ -20,25 +20,13 @@ namespace Recruit.Controllers
 {
     public class HomeController : Controller
     {
-        //  public static Logger log;
-        //private readonly ILogger _logger;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(HomeController));
-
-
-        //private IConfiguration Configuration;
-
-        //IUnitOfWork unitOfWork;
 
         /// <summary>
         /// constructor for configuration to use connectionstring from appsettings.json
         /// </summary>
         /// <param name="_configuration"></param>
-        //public HomeController(IConfiguration _configuration)
-        //{
-        //    Configuration = _configuration;
-        //    log = LogManager.GetCurrentClassLogger();
-        //}
-        //  private IUnitOfWork unitOfWork;
+       
 
         static Recruit.BusinessAccessLayer.Interface.IService<Candidate> _serviceCandidate;
         static Recruit.BusinessAccessLayer.Interface.IService<Location> _serviceLocation;
@@ -86,9 +74,14 @@ namespace Recruit.Controllers
             log.Info("[Index]:Action Method returns view which displays the Dashboard");
             return View();
         }
+
+        /// <summary>
+        /// Action Method returns view which displays the Candidates Details
+        /// </summary>
+        /// <returns></returns>
         public IActionResult DisplayCandidatesDetails()
         {
-            log.Info("[DisplayCandidatesDetails]:Action Method returns view which displays the Candidates Details");
+            log.Debug("[DisplayCandidatesDetails]: ");
             try
             {
                 var data = _serviceCandidate.FindbyAll();
@@ -113,6 +106,11 @@ namespace Recruit.Controllers
             try
             {
                 TempData["Data"] = _serviceInterviewRoundStatus.FindbyAll();
+
+              //  TempData["AllLocations"] = GetAllLocations();
+
+               // Candia.Preferred = new List<Location>();
+
                 var interviewDetail = new InterviewDetail();
                 var interviewDetailAll = new List<InterviewDetail>();
                 if (!string.IsNullOrWhiteSpace(id.ToString()))
@@ -259,6 +257,9 @@ namespace Recruit.Controllers
                         {
 
                             TempData["msg"] = _serviceCandidate.Insert(entity);
+
+
+                            //  Storepreferredlocation(candId, entity.PreferredLoc);
                         }
                     }
                     catch (Exception exception)

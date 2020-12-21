@@ -269,6 +269,10 @@
               "target": "Package",
               "version": "[3.2.9, )"
             },
+            "KendoUICore": {
+              "target": "Package",
+              "version": "[2020.3.1118, )"
+            },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[5.0.0, )"

@@ -1,4 +1,5 @@
-﻿@model List<Vacancy>
+﻿@*@using KendoUICore;*@
+@model List<Vacancy>
 
 @{
     ViewBag.Title = "Vacancies";
@@ -20,42 +21,66 @@
 <body>
     <h2>Vacancies</h2>
     <div class="table-wrapper">
-        <table class="fl-table">
-            <thead>
-                <tr>
-                       <th>Id</th>
-                    <th>Code</th>
-                    <th>Position</th>
-                    <th>Vacancies</th>
-
-                </tr>
-            </thead>
-            <tbody>
-
-
-
-                @foreach (var data in Model)
-                {
+            <table class="fl-table">
+                <thead>
                     <tr>
-                        <td><a href="~/Home/InsertVacancies/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
-                        <td>@data.code</td>
-                        <td>@data.name</td>
-                        <td>@data.vacancy</td>
+                           <th>Id</th>
+                        <th>Code</th>
+                        <th>Position</th>
+                        <th>Vacancies</th>
+
                     </tr>
-                }
-                </tbody>
+                </thead>
+                <tbody>
 
-        </table>
-    
-    </div>
-        <div>
-            <a asp-action="Index">Back to Dashboard</a>
+
+
+                    @foreach (var data in Model)
+                    {
+                        <tr>
+                            <td><a href="~/Home/InsertVacancies/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
+                            <td>@data.code</td>
+                            <td>@data.name</td>
+                            <td>@data.vacancy</td>
+                        </tr>
+                    }
+                    </tbody>
+
+            </table>
+
         </div>
+    @*@(Html.Kendo().Grid<Recruit.Models.Vacancy>
+    ()
+    .Name("grid")
+    .Pageable()
+    .Sortable()
+    .Scrollable()
+    .HtmlAttributes(new { style = "height:550px;" })
+    .Columns(columns =>
+    {
+        columns.Bound(o => o.id);
+        columns.Bound(o => o.code);
+        columns.Bound(o => o.name);
+        columns.Bound(o => o.vacancy);
+     
+    })
+    .DataSource(dataSource => dataSource
+    .Ajax()
+    .PageSize(15)
+    .Read(read => read.Action("ColumnReordering_Orders_Read", "Grid"))
+    )
+    .Resizable(resize => resize.Columns(true))
+    .Reorderable(reorder => reorder.Columns(true))
+    )*@
+
+    <div>
+        <a asp-action="Index">Back to Dashboard</a>
+    </div>
 
 
-        @section Scripts {
-            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-        }
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
 </body>
 
 </html>

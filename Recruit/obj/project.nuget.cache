@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/IBAguAZEclvNjnuadsEzv3VhDZ9IwajIpSPuNM4tQv1dXhsa6PL1f6CHDMeJ0O6Y0mxFRSrhLYHWllQcGpFiQ==",
+  "dgSpecHash": "HueNWLByo31rdeTGgggZwO0E6vRQaYz0I1F4Fz4KboKZuV7KouPq/oc2cguQqqVyyoX4EOj9VddnnpGr4vuIVw==",
   "success": true,
   "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\Recruit\\Recruit\\Recruit.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,8 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\fluentmigrator.runner.sqlite\\3.2.9\\fluentmigrator.runner.sqlite.3.2.9.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\fluentmigrator.runner.sqlserver\\3.2.9\\fluentmigrator.runner.sqlserver.3.2.9.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\fluentmigrator.runner.sqlserverce\\3.2.9\\fluentmigrator.runner.sqlserverce.3.2.9.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\jquery\\1.9.1\\jquery.1.9.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\kendouicore\\2020.3.1118\\kendouicore.2020.3.1118.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

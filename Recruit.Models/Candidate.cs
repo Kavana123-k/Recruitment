@@ -91,6 +91,9 @@ namespace Recruit.Models
         [Required(ErrorMessage = "Current Locations is invalid")]
         public String current_location { get; set; }
 
+        [NotMapped]
+        public List<Location> preferred_locations { get; set; }
+
 
         [ForeignKey("process_stage_id")]
         [Required(ErrorMessage = "Process Stage is invalid")]

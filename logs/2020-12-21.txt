@@ -1,0 +1,126 @@
+2020-12-21 11:02:17,931 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-21 11:02:18,620 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-21 11:02:21,701 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-21 11:02:27,392 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-21 11:02:27,419 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-21 11:02:27,454 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-21 11:02:27,749 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-21 11:02:33,106 : [4] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2020-12-21 11:02:33,122 : [4] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2020-12-21 11:02:34,181 : [4] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
+2020-12-21 11:02:35,321 : [4] : ERROR : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll]:System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keyword 'JOIN'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1055
+   at Dapper.SqlMapper.QueryImpl[T](IDbConnection cnn, CommandDefinition command, Type effectiveType)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1083
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 725
+   at Recruit.DataAccessLayer.CandidateRepository.GetAll() in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\CandidateRepository.cs:line 139
+ClientConnectionId:b95bc3af-a980-461b-8b11-100ea0a52720
+Error Number:156,State:1,Class:15 : 
+2020-12-21 11:07:29,945 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-21 11:07:31,360 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-21 11:07:33,845 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-21 11:07:35,777 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-21 11:07:35,794 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-21 11:07:35,809 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-21 11:07:35,924 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-21 11:08:14,721 : [13] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2020-12-21 11:08:14,742 : [13] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2020-12-21 11:08:15,057 : [13] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
+2020-12-21 11:08:15,592 : [13] : ERROR : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll]:System.Data.SqlClient.SqlException (0x80131904): The multi-part identifier "tbl_candidates.id" could not be bound.
+The multi-part identifier "tbl_candidates.first_name" could not be bound.
+The multi-part identifier "tbl_candidates.last_name" could not be bound.
+Invalid column name 'email'.
+Invalid column name 'phone'.
+Invalid column name 'total_experience'.
+Invalid column name 'relevant_experience'.
+Invalid column name 'current_employer'.
+Invalid column name 'current_designation'.
+Invalid column name 'current_ctc'.
+Invalid column name 'expected_ctc'.
+Invalid column name 'reason_for_change'.
+Invalid column name 'notice_period'.
+Invalid column name 'is_serving_notice'.
+Invalid column name 'last_working_day'.
+Invalid column name 'current_location'.
+Invalid column name 'process_stage_date'.
+Invalid column name 'process_start_date'.
+Invalid column name 'process_end_date'.
+Invalid column name 'comments'.
+Invalid column name 'date_of_joining'.
+Invalid column name 'notes'.
+Invalid column name 'links_for_interviewFROM'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1055
+   at Dapper.SqlMapper.QueryImpl[T](IDbConnection cnn, CommandDefinition command, Type effectiveType)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1083
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 725
+   at Recruit.DataAccessLayer.CandidateRepository.GetAll() in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\CandidateRepository.cs:line 139
+ClientConnectionId:fe8269aa-e1be-4a5b-8ea9-93466210b7b5
+Error Number:4104,State:1,Class:16 : 
+2020-12-21 11:10:53,077 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-21 11:10:54,373 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-21 11:10:56,426 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-21 11:10:58,113 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-21 11:10:58,133 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-21 11:10:58,150 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-21 11:10:58,254 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-21 11:24:24,559 : [8] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2020-12-21 11:24:24,598 : [8] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2020-12-21 11:24:24,824 : [8] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
+2020-12-21 11:44:19,498 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-21 11:44:20,792 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-21 11:44:27,006 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-21 11:44:28,794 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-21 11:44:28,825 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-21 11:44:28,852 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-21 11:44:28,990 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-21 11:47:56,181 : [17] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2020-12-21 11:47:56,201 : [17] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2020-12-21 11:47:56,230 : [17] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
+2020-12-21 11:53:38,355 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-21 11:53:39,390 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-21 11:53:40,726 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-21 11:53:42,603 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-21 11:53:42,628 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-21 11:53:42,646 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-21 11:53:42,779 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-21 11:53:59,795 : [4] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2020-12-21 11:53:59,810 : [4] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2020-12-21 11:54:00,127 : [4] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
+2020-12-21 11:58:38,147 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-21 11:58:38,493 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-21 11:58:39,380 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-21 11:58:42,223 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-21 11:58:42,238 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-21 11:58:42,257 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-21 11:58:42,385 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-21 11:59:10,470 : [13] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2020-12-21 11:59:10,481 : [13] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2020-12-21 11:59:10,513 : [13] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
