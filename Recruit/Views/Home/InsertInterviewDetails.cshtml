@@ -31,14 +31,19 @@
             <span asp-validation-for="end_date_time" class="text-danger"></span>
         </div>
         <div class="column">
-          
-            <partial name="_InterviewRoundStatusDropdownPartial" data=@TempData["Data"]/>
-            
+
+            <partial name="_InterviewRoundStatusDropdownPartial" data=@TempData["Data"] />
+
         </div>
         <div class="column">
             <label class="control-label">Reason</label>
             <input asp-for="reason" class="form-control" />
             <span asp-validation-for="reason" class="text-danger"></span>
+        </div>
+        <div class="column">
+            <label class="control-label">Interviewer Id</label>
+            <input asp-for="employee_id" class="form-control" />
+            <span asp-validation-for="employee_id" class="text-danger"></span>
         </div>
         <div class="column">
             <input type="submit" value="Submit" class="btn bg-primary" align="center" /><br />

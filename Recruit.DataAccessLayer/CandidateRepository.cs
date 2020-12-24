@@ -28,6 +28,7 @@ namespace Recruit.DataAccessLayer
         /// <returns></returns>
         string IGenericRepository<Candidate>.Add(Candidate entity)
         {
+            int id;
             log.Info("[CandidateRepository][Add]");
             try
             {
@@ -43,49 +44,31 @@ namespace Recruit.DataAccessLayer
                                          + "@current_designation,@position_applied_code,@current_ctc,@expected_ctc,@reason_for_change,@notice_period," +
                                          "@is_serving_notice," +
                                          "@last_working_day,@current_location,@process_stage_id,@process_stage_date,@process_start_date,@process_end_date," +
-                                         "@interview_status_id,@resume_owner_id,@owner_for_reminder_id,@comments,@date_of_joining,@notes,@links_for_interview )";
+                                         "@interview_status_id,@resume_owner_id,@owner_for_reminder_id,@comments,@date_of_joining,@notes,@links_for_interview );SELECT CAST(SCOPE_IDENTITY() as int)";
+
+                    id = database.QuerySingle<int>(insertQuery, new{entity.first_name,entity.last_name,entity.email,entity.phone,entity.source_code,entity.referral_id,entity.total_experience,entity.relevant_experience,entity.current_employer,
+                        entity.current_designation,entity.position_applied_code,entity.current_ctc,entity.expected_ctc, entity.reason_for_change,entity.notice_period,entity.is_serving_notice,entity.last_working_day,entity.current_location,entity.process_stage_id,  entity.process_stage_date,entity.process_start_date,entity.process_end_date,entity.interview_status_id,entity.resume_owner_id,entity.owner_for_reminder_id,entity.comments,entity.date_of_joining,entity.notes,entity.links_for_interview});
+
+
+                }
+
+
+                using (var database = _connectionFactory.GetConnection)
+                {
+                    string insertQuery = @"INSERT INTO tbl_preferred_locations([candidate_id], [location_id])
+                        VALUES (@id, @location_id)";
 
                     var result = database.Execute(insertQuery, new
                     {
-                        entity.first_name,
-                        entity.last_name,
-                        entity.email,
-                        entity.phone,
-                        entity.source_code,
-                        entity.referral_id,
-                        entity.total_experience,
-                        entity.relevant_experience,
-                        entity.current_employer,
-                        entity.current_designation,
-                        entity.position_applied_code,
-                        entity.current_ctc,
-                        entity.expected_ctc,
-                        entity.reason_for_change,
-                        entity.notice_period,
-                        entity.is_serving_notice,
-                        entity.last_working_day,
-                        entity.current_location,
-                        entity.process_stage_id,
-                        entity.process_stage_date,
-                        entity.process_start_date,
-                        entity.process_end_date,
-                        entity.interview_status_id,
-                        entity.resume_owner_id,
-                        entity.owner_for_reminder_id,
-                        entity.comments,
-                        entity.date_of_joining,
-                        entity.notes,
-                        entity.links_for_interview
+                        id,
+                        entity.location_id,
+                      
 
-                    });
+                    }) ;
+
                 }
+            
                 log.Info("[CandidateRepository][Add]:Data save Successfully");
-
-                //var returnData = new Result { 
-                //Code=1,
-                //Message= "Data save Successfully",
-                //Data= "34"
-                //}; 
 
                return ("Data save Successfully");
             }
@@ -113,6 +96,7 @@ namespace Recruit.DataAccessLayer
             {
 
                 data = GetAllRows().Where(records => records.id == id).FirstOrDefault();
+                data.location_id = GetAllPreferredLocations(id);
 
             }
             catch (Exception exception)
@@ -152,42 +136,13 @@ namespace Recruit.DataAccessLayer
                         "INNER JOIN tbl_owners as t1 ON tbl_candidates.resume_owner_id = t1.id " +
                         "INNER JOIN tbl_owners as t2 ON tbl_candidates.owner_for_reminder_id = t2.id").ToList();
                 }
+
             }
             catch (Exception exception)
             {
                 log.Error("[CandidateRepository][GetAll]:" + exception);
             }
-            return data;
-//            select tbl_candidates.id,tbl_candidates.first_name,tbl_candidates.last_name,email,phone,tbl_sources.name as 'source_name',"+
-// "total_experience, relevant_experience, current_employer, current_designation, tbl_vacancies.name as 'position'," +
-// "current_ctc, expected_ctc, reason_for_change, notice_period, is_serving_notice, last_working_day, current_location, tbl_process_stages.stage as 'stage'," +
-// " process_stage_date, process_start_date, process_end_date, tbl_process_statuses.status as 'status', t1.first_name as 'owner', t2.first_name as 'remind',comments,date_of_joining,notes,links_for_interview " +
-//"from tbl_candidates, tbl_sources, tbl_vacancies, tbl_process_stages, tbl_process_statuses, tbl_owners as t1, tbl_owners as t2" +
-//" where tbl_candidates.source_code = tbl_sources.id  and tbl_candidates.position_applied_code = tbl_vacancies.id and tbl_candidates.process_stage_id = tbl_process_stages.id   and tbl_candidates.interview_status_id = tbl_process_statuses.id and tbl_candidates.resume_owner_id = t1.id and tbl_candidates.owner_for_reminder_id = t2.id ").ToList();
-        
-
-        /*SELECT  tbl_candidates.id, tbl_candidates.first_name, tbl_candidates.last_name, email, phone,"+
-                       " tbl_sources.name as 'source_name', tbl_employees.name as 'emp_ref', total_experience, relevant_experience," +
-                        "current_employer, current_designation, tbl_vacancies.name as 'position', current_ctc, expected_ctc," +
-                        "reason_for_change, notice_period, is_serving_notice, last_working_day, current_location," +
-                        "tbl_process_stages.stage as 'stage', process_stage_date, process_start_date, process_end_date," +
-                        "tbl_process_statuses.status as 'status', t1.first_name as 'owner'," +
-                        "t2.first_name as 'remind', comments, date_of_joining, notes, links_for_interview" +
-
-                        "FROM tbl_candidates" +
-
-                        "LEFT JOIN tbl_employees ON tbl_candidates.referral_id = tbl_employees.id" +
-
-                        "INNER JOIN  tbl_vacancies ON tbl_candidates.position_applied_code = tbl_vacancies.id" +
-
-                        "INNER JOIN tbl_sources   ON  tbl_candidates.source_code = tbl_sources.id" +
-
-                        "INNER JOIN tbl_process_statuses ON tbl_candidates.interview_status_id = tbl_process_statuses.id" +
-
-                        "INNER JOIN tbl_process_stages ON tbl_candidates.process_stage_id = tbl_process_stages.id" +
-
-                        "INNER JOIN tbl_owners as t1 ON tbl_candidates.resume_owner_id = t1.id" +
-                       " INNER JOIN tbl_owners as t2 ON tbl_candidates.owner_for_reminder_id = t2.id*/
+            return data;        
     }
         /// <summary>
         /// Method gets all the row values to perform search
@@ -209,6 +164,33 @@ namespace Recruit.DataAccessLayer
             catch (Exception exception)
             {
                 log.Error("[CandidateRepository][GetAllRows]:" + exception);
+            }
+            return data;
+
+
+        }
+        /// <summary>
+        /// method to get interviewers details
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public long GetAllPreferredLocations(int id)
+        {
+            log.Info("[InterviewDetailRepository][GetAllPreferredLocations]");
+
+            long data = 0;
+            try
+            {
+                using (var database = _connectionFactory.GetConnection)
+                {
+                    string query = @"select location_id from tbl_preferred_locations WHERE candidate_id=@id";
+
+                    data = database.QuerySingle<int>(query, new { id, });
+                }
+            }
+            catch (Exception exception)
+            {
+                log.Error("[InterviewDetailRepository][GetAllPreferredLocations]:" + exception);
             }
             return data;
 
@@ -270,6 +252,21 @@ namespace Recruit.DataAccessLayer
                         entity.notes,
                         entity.links_for_interview
                     });
+                }
+                using (var database = _connectionFactory.GetConnection)
+                {
+                    string updateQuery = @"UPDATE tbl_preferred_locations SET location_id=@location_id
+                                            WHERE candidate_id=@id";
+
+
+                    var result = database.Execute(updateQuery, new
+                    {
+                        entity.location_id,
+                     
+                        entity.id
+
+                    });
+
                 }
                 log.Info("[CandidateRepository][Update]:Data save Successfully");
                 return ("Data Updated Successfully");

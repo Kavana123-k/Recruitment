@@ -1,83 +1,6 @@
 ﻿@model Recruit.Models.Candidate
 <hr />
-@{
-    List<SelectListItem> sources = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<Source>)TempData["Sources"])
-    {
-        sources.Add(new SelectListItem
-        {
-            Text = items.name,
-            Value = items.id.ToString(),
-            Selected = true
-        });
-    }
-    List<SelectListItem> stages = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<ProcessStage>)TempData["ProcessStages"])
-    {
-        stages.Add(new SelectListItem
-        {
 
-
-            Text = items.stage,
-            Value = items.id.ToString(),
-            Selected = true
-
-        });
-    }
-    List<SelectListItem> status = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<ProcessStatus>)TempData["ProcessStatuses"])
-    {
-        status.Add(new SelectListItem
-        {
-
-
-            Text = items.status,
-            Value = items.id.ToString(),
-            Selected = true
-
-        });
-    }
-    List<SelectListItem> vacancy = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<Vacancy>)TempData["Vacancies"])
-    {
-        vacancy.Add(new SelectListItem
-        {
-
-
-            Text = items.name,
-            Value = items.id.ToString(),
-            Selected = true
-
-        });
-    }
-
-    List<SelectListItem> employees = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<Employee>)TempData["Employees"])
-    {
-        employees.Add(new SelectListItem
-        {
-
-
-            Text = items.name,
-            Value = items.id.ToString(),
-            Selected = true
-
-        });
-    }
-    List<SelectListItem> owners = new List<SelectListItem>();
-    @foreach (var items in (IEnumerable<Owner>)TempData["Owners"])
-    {
-        owners.Add(new SelectListItem
-        {
-
-
-            Text = items.first_name,
-            Value = items.id.ToString(),
-            Selected = true
-
-        });
-    }
-}
 
 
 <link rel="stylesheet" href="~/css/layoutstyles.css">
@@ -216,6 +139,11 @@
                 <label class="control-label">Current Location</label>
                 <input asp-for="current_location" class="form-control" />
                 <span asp-validation-for="current_location" class="text-danger"></span>
+            </div>
+            <div class="column">
+                <label class="control-label">Preferred Location id</label>
+                <input asp-for="location_id" class="form-control" />
+                <span asp-validation-for="location_id" class="text-danger"></span>
             </div>
         </div>
         <div class="row">

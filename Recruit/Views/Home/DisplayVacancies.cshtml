@@ -1,4 +1,4 @@
-﻿@*@using KendoUICore;*@
+﻿@*@using Kendo.Mvc;*@
 @model List<Vacancy>
 
 @{
@@ -6,8 +6,8 @@
 }
 
 @*@{
-    var data = ViewBag.Message;
- }*@
+       var data = ViewBag.Message;
+    }*@
 
 
 <!DOCTYPE html>
@@ -62,7 +62,7 @@
         columns.Bound(o => o.code);
         columns.Bound(o => o.name);
         columns.Bound(o => o.vacancy);
-     
+
     })
     .DataSource(dataSource => dataSource
     .Ajax()

@@ -267,7 +267,9 @@ namespace Recruit.Models
                 .WithColumn("candidate_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_candidates table defines the id of the candidate")
         .ForeignKey("FK_tbl_interviewers_tbl_candidates_CandidateId", "tbl_candidates", "id")
         .WithColumn("employee_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_employees table defines the interviewers")
-        .ForeignKey("FK_tbl_interviewers_tbl_employees_employye_id", "tbl_employees", "id");
+        .ForeignKey("FK_tbl_interviewers_tbl_employees_employye_id", "tbl_employees", "id")
+         .WithColumn("interview_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_interview_details table defines the interview")
+        .ForeignKey("FK_tbl_interviewers_tbl_interview_details_id", "tbl_interview_details", "id");
         }
 
         public override void Down()

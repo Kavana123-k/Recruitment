@@ -1,0 +1,3 @@
+﻿@model InterviewDetail
+
+@*@Html.ListBoxFor(model => model.Interviewer, new MultiSelectList(Models.GetCategoryList().OrderBy(c => c.Value), "Key", "Value", Model.Interviewer), "Select Category", new { @class = "chzn-select form-control", multiple = "multiple" })*@

@@ -1,0 +1,454 @@
+2020-12-22 11:30:17,275 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 11:30:17,936 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 11:30:22,982 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 11:30:27,902 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 11:30:28,058 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 11:30:28,147 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 11:30:28,629 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 11:30:39,977 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=0 : 
+2020-12-22 11:30:40,005 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 11:30:41,509 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 11:30:41,964 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][FindBy]0 : 
+2020-12-22 11:30:41,975 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Get] : 
+2020-12-22 11:30:41,986 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllRows] : 
+2020-12-22 11:31:12,092 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 11:31:12,113 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 11:31:12,153 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details  : 
+2020-12-22 11:31:12,163 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][Insert] : 
+2020-12-22 11:31:12,195 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Add] : 
+2020-12-22 11:34:42,151 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Add] : 
+2020-12-22 11:36:26,716 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 11:36:27,408 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 11:36:32,654 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 11:36:41,692 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 11:36:41,783 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 11:36:42,247 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 11:36:42,373 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 11:37:09,746 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=0 : 
+2020-12-22 11:37:09,777 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 11:37:10,321 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 11:37:10,425 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][FindBy]0 : 
+2020-12-22 11:37:10,437 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Get] : 
+2020-12-22 11:37:10,469 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllRows] : 
+2020-12-22 11:37:34,264 : [17] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 11:37:34,299 : [17] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 11:37:34,344 : [17] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details  : 
+2020-12-22 11:37:34,368 : [17] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][Insert] : 
+2020-12-22 11:37:34,387 : [17] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Add] : 
+2020-12-22 11:42:21,281 : [17] : ERROR : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__tbl_inter__inter__6EF57B66". The conflict occurred in database "Recruitment", table "dbo.tbl_interview_details", column 'id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.InterviewDetailRepository.Add(InterviewDetail entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\InterviewDetailRepository.cs:line 61
+ClientConnectionId:7ebf5139-20b9-4f40-b0ec-8de0e2f497de
+Error Number:547,State:0,Class:16 : 
+2020-12-22 12:01:16,314 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 12:01:18,105 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 12:01:23,787 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 12:01:28,443 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 12:01:28,494 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 12:01:28,531 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 12:01:28,793 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 12:02:03,663 : [10] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][FindByAll] : 
+2020-12-22 12:02:04,028 : [10] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAll] : 
+2020-12-22 12:02:06,384 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=0 : 
+2020-12-22 12:02:06,396 : [15] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 12:02:06,415 : [15] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 12:02:06,446 : [15] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][FindBy]0 : 
+2020-12-22 12:02:06,462 : [15] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Get] : 
+2020-12-22 12:02:06,499 : [15] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllRows] : 
+2020-12-22 12:02:24,034 : [10] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 12:02:24,082 : [10] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 12:02:24,129 : [10] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details  : 
+2020-12-22 12:02:24,142 : [10] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][Insert] : 
+2020-12-22 12:02:24,157 : [10] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Add] : 
+2020-12-22 12:02:24,673 : [10] : ERROR : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__tbl_inter__inter__6EF57B66". The conflict occurred in database "Recruitment", table "dbo.tbl_interview_details", column 'id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.InterviewDetailRepository.Add(InterviewDetail entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\InterviewDetailRepository.cs:line 62
+ClientConnectionId:fbc5a539-b544-4f76-ba68-09c659c6b13c
+Error Number:547,State:0,Class:16 : 
+2020-12-22 12:03:35,287 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 12:03:35,924 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 12:03:37,937 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 12:03:40,088 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 12:03:40,118 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 12:03:40,168 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 12:03:40,356 : [6] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 12:05:46,687 : [14] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=0 : 
+2020-12-22 12:05:46,704 : [14] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 12:05:46,748 : [14] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 12:05:46,891 : [14] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][FindBy]0 : 
+2020-12-22 12:05:46,907 : [14] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Get] : 
+2020-12-22 12:05:46,922 : [14] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllRows] : 
+2020-12-22 12:06:37,196 : [18] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 12:06:37,209 : [18] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 12:06:37,240 : [18] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details  : 
+2020-12-22 12:06:37,253 : [18] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][Insert] : 
+2020-12-22 12:06:37,280 : [18] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Add] : 
+2020-12-22 12:06:37,466 : [18] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Add]:Data save Successfully : 
+2020-12-22 12:15:00,465 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 12:15:02,450 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 12:15:03,769 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 12:15:05,380 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 12:15:05,410 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 12:15:05,432 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 12:15:05,623 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 12:15:54,048 : [17] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details [Data]=0 : 
+2020-12-22 12:15:54,061 : [17] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 12:15:54,328 : [17] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 12:15:54,455 : [17] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 12:15:54,464 : [17] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 12:15:54,477 : [17] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 12:15:54,489 : [17] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 12:15:54,576 : [17] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 12:15:54,588 : [17] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 12:15:54,603 : [17] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 12:15:54,614 : [17] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 12:15:54,632 : [17] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 12:15:54,643 : [17] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 12:15:54,658 : [17] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindBy]0 : 
+2020-12-22 12:15:54,669 : [17] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Get] : 
+2020-12-22 12:15:54,680 : [17] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAllRows] : 
+2020-12-22 12:17:00,899 : [10] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details : 
+2020-12-22 12:17:00,910 : [10] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 12:17:00,922 : [10] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 12:17:00,949 : [10] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 12:17:00,959 : [10] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 12:17:00,971 : [10] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 12:17:00,982 : [10] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 12:17:00,996 : [10] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 12:17:01,008 : [10] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 12:17:01,036 : [10] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 12:17:01,046 : [10] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 12:17:01,061 : [10] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 12:17:01,073 : [10] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 12:17:10,052 : [10] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][Insert] : 
+2020-12-22 12:17:10,064 : [10] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Add] : 
+2020-12-22 12:17:10,669 : [10] : ERROR : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Add]:System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.ThrowZeroRows(Row row) in /_/Dapper/SqlMapper.cs:line 1155
+   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) in /_/Dapper/SqlMapper.cs:line 1194
+   at Dapper.SqlMapper.QuerySingle[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 785
+   at Recruit.DataAccessLayer.CandidateRepository.Recruit.DataAccessLayer.Interface.IGenericRepository<Recruit.Models.Candidate>.Add(Candidate entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\CandidateRepository.cs:line 82 : 
+2020-12-22 12:19:37,090 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 12:19:37,713 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 12:19:38,721 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 12:19:41,928 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 12:19:41,945 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 12:19:41,980 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 12:19:42,198 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 12:19:48,388 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=0 : 
+2020-12-22 12:19:48,407 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 12:19:48,512 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 12:19:48,625 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][FindBy]0 : 
+2020-12-22 12:19:48,639 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Get] : 
+2020-12-22 12:19:48,651 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllRows] : 
+2020-12-22 12:36:14,147 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 12:36:14,709 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 12:36:16,683 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 12:36:18,946 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 12:36:18,959 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 12:36:18,984 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 12:36:19,233 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 12:36:24,325 : [7] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details [Data]=0 : 
+2020-12-22 12:36:24,337 : [7] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 12:36:24,431 : [7] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 12:36:24,591 : [7] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 12:36:24,609 : [7] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 12:36:24,628 : [7] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 12:36:24,636 : [7] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 12:36:24,645 : [7] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 12:36:24,655 : [7] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 12:36:24,665 : [7] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 12:36:24,674 : [7] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 12:36:24,686 : [7] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 12:36:24,693 : [7] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 12:36:24,705 : [7] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindBy]0 : 
+2020-12-22 12:36:24,715 : [7] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Get] : 
+2020-12-22 12:36:24,726 : [7] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAllRows] : 
+2020-12-22 12:37:31,774 : [13] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details : 
+2020-12-22 12:37:31,786 : [13] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 12:37:31,830 : [13] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 12:37:31,850 : [13] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 12:37:31,860 : [13] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 12:37:31,884 : [13] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 12:37:31,893 : [13] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 12:37:31,965 : [13] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 12:37:31,975 : [13] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 12:37:32,036 : [13] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 12:37:32,046 : [13] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 12:37:32,064 : [13] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 12:37:32,075 : [13] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 12:37:32,090 : [13] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][Insert] : 
+2020-12-22 12:37:32,102 : [13] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Add] : 
+2020-12-22 12:53:20,247 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 12:53:21,387 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 12:53:23,294 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 12:53:25,193 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 12:53:25,205 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 12:53:25,219 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 12:53:25,339 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 12:53:54,208 : [13] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details [Data]=0 : 
+2020-12-22 12:53:54,217 : [13] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 12:53:54,472 : [13] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 12:53:54,567 : [13] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 12:53:54,576 : [13] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 12:53:54,589 : [13] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 12:53:54,600 : [13] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 12:53:54,613 : [13] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 12:53:54,623 : [13] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 12:53:54,635 : [13] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 12:53:54,645 : [13] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 12:53:54,660 : [13] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 12:53:54,669 : [13] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 12:53:54,683 : [13] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindBy]0 : 
+2020-12-22 12:53:54,695 : [13] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Get] : 
+2020-12-22 12:53:54,705 : [13] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAllRows] : 
+2020-12-22 12:54:56,228 : [19] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details : 
+2020-12-22 12:54:56,246 : [19] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 12:54:56,287 : [19] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 12:54:56,308 : [19] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 12:54:56,319 : [19] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 12:54:56,337 : [19] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 12:54:56,348 : [19] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 12:54:56,383 : [19] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 12:54:56,394 : [19] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 12:54:56,430 : [19] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 12:54:56,441 : [19] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 12:54:56,464 : [19] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 12:54:56,474 : [19] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 12:54:56,492 : [19] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][Insert] : 
+2020-12-22 12:54:56,564 : [19] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Add] : 
+2020-12-22 12:54:56,943 : [19] : ERROR : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Add]:System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.ThrowZeroRows(Row row) in /_/Dapper/SqlMapper.cs:line 1155
+   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) in /_/Dapper/SqlMapper.cs:line 1194
+   at Dapper.SqlMapper.QuerySingle[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 785
+   at Recruit.DataAccessLayer.CandidateRepository.Recruit.DataAccessLayer.Interface.IGenericRepository<Recruit.Models.Candidate>.Add(Candidate entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\CandidateRepository.cs:line 82 : 
+2020-12-22 14:11:20,553 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 14:11:21,203 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 14:11:22,689 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 14:11:25,343 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 14:11:25,377 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 14:11:25,400 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 14:11:25,562 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 14:39:33,021 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details [Data]=0 : 
+2020-12-22 14:39:33,033 : [15] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 14:39:33,092 : [15] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 14:39:33,333 : [15] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 14:39:33,350 : [15] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 14:39:33,374 : [15] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 14:39:33,382 : [15] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 14:39:33,394 : [15] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 14:39:33,404 : [15] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 14:39:33,416 : [15] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 14:39:33,428 : [15] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 14:39:33,460 : [15] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 14:39:33,468 : [15] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 14:39:33,479 : [15] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindBy]0 : 
+2020-12-22 14:39:33,490 : [15] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Get] : 
+2020-12-22 14:39:33,497 : [15] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAllRows] : 
+2020-12-22 14:42:38,101 : [10] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details : 
+2020-12-22 14:42:38,112 : [10] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 14:42:38,134 : [10] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 14:42:38,224 : [10] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 14:42:38,234 : [10] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 14:42:38,252 : [10] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 14:42:38,262 : [10] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 14:42:38,282 : [10] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 14:42:38,292 : [10] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 14:42:38,312 : [10] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 14:42:38,321 : [10] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 14:42:38,347 : [10] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 14:42:38,357 : [10] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 14:42:38,372 : [10] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][Insert] : 
+2020-12-22 14:42:38,384 : [10] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Add] : 
+2020-12-22 14:52:26,812 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 14:52:28,745 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 14:52:36,348 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 14:52:38,392 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 14:52:38,449 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 14:52:38,478 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 14:52:38,641 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 14:52:46,691 : [4] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2020-12-22 14:52:46,724 : [4] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2020-12-22 14:52:46,762 : [4] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
+2020-12-22 14:52:55,469 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details [Data]=0 : 
+2020-12-22 14:52:55,482 : [4] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 14:52:55,563 : [4] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 14:52:55,610 : [4] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 14:52:55,622 : [4] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 14:52:55,639 : [4] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 14:52:55,652 : [4] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 14:52:55,668 : [4] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 14:52:55,680 : [4] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 14:52:55,697 : [4] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 14:52:55,708 : [4] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 14:52:55,725 : [4] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 14:52:55,737 : [4] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 14:52:55,752 : [4] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindBy]0 : 
+2020-12-22 14:52:55,763 : [4] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Get] : 
+2020-12-22 14:52:55,776 : [4] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAllRows] : 
+2020-12-22 15:10:01,753 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 15:10:02,545 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 15:10:04,199 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 15:10:06,531 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 15:10:06,548 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 15:10:06,579 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 15:10:06,729 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 15:17:26,330 : [16] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[GET]Action Method returns view which gets thepage to insert the Interview Details [Data]=0 : 
+2020-12-22 15:17:26,340 : [16] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 15:17:26,369 : [16] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 15:17:26,502 : [16] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 15:17:26,520 : [16] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 15:17:26,539 : [16] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 15:17:26,550 : [16] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 15:17:26,560 : [16] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 15:17:26,568 : [16] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 15:17:26,578 : [16] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 15:17:26,585 : [16] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 15:17:26,597 : [16] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 15:17:26,605 : [16] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 15:17:26,618 : [16] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindBy]0 : 
+2020-12-22 15:17:26,629 : [16] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Get] : 
+2020-12-22 15:17:26,639 : [16] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAllRows] : 
+2020-12-22 15:19:03,595 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details : 
+2020-12-22 15:19:03,609 : [15] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 15:19:03,639 : [15] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 15:19:03,657 : [15] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 15:19:03,668 : [15] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 15:19:03,682 : [15] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 15:19:03,692 : [15] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 15:19:03,705 : [15] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 15:19:03,715 : [15] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 15:19:03,728 : [15] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 15:19:03,738 : [15] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 15:19:03,750 : [15] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 15:19:03,758 : [15] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 15:19:03,770 : [15] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][Insert] : 
+2020-12-22 15:19:03,780 : [15] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Add] : 
+2020-12-22 15:19:04,535 : [15] : ERROR : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_candidates_phone'. Cannot insert duplicate key in object 'dbo.tbl_candidates'. The duplicate key value is (+918073379723).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1055
+   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) in /_/Dapper/SqlMapper.cs:line 1174
+   at Dapper.SqlMapper.QuerySingle[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 785
+   at Recruit.DataAccessLayer.CandidateRepository.Recruit.DataAccessLayer.Interface.IGenericRepository<Recruit.Models.Candidate>.Add(Candidate entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\CandidateRepository.cs:line 82
+ClientConnectionId:12d62bae-c6ce-4e57-b076-e8c9193fc6e2
+Error Number:2627,State:1,Class:14 : 
+2020-12-22 15:19:21,991 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertCandidates]:[Post]Action Method returns view which posts the input page to the table Candidates Details : 
+2020-12-22 15:19:22,007 : [15] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2020-12-22 15:19:22,029 : [15] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2020-12-22 15:19:22,054 : [15] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-22 15:19:22,069 : [15] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-22 15:19:22,091 : [15] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2020-12-22 15:19:22,105 : [15] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2020-12-22 15:19:22,134 : [15] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2020-12-22 15:19:22,147 : [15] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2020-12-22 15:19:22,166 : [15] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2020-12-22 15:19:22,178 : [15] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2020-12-22 15:19:22,197 : [15] : INFO  : Recruit.BusinessAccessLayer.OwnerService : [OwnerService][FindByAll] : 
+2020-12-22 15:19:22,210 : [15] : INFO  : Recruit.DataAccessLayer.OwnerRepository : [OwnerRepository][GetAll] : 
+2020-12-22 15:19:22,237 : [15] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][Insert] : 
+2020-12-22 15:19:22,250 : [15] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Add] : 
+2020-12-22 15:19:22,439 : [15] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][Add]:Data save Successfully : 
+2020-12-22 16:10:16,905 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 16:10:17,931 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 16:10:18,787 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 16:10:20,606 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 16:10:20,626 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 16:10:20,641 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 16:10:20,775 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 16:10:35,754 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][FindByAll] : 
+2020-12-22 16:10:36,031 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAll] : 
+2020-12-22 16:10:39,592 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=17 : 
+2020-12-22 16:10:39,600 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 16:10:39,610 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 16:10:39,650 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][FindBy]17 : 
+2020-12-22 16:10:39,661 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Get] : 
+2020-12-22 16:10:39,693 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllRows] : 
+2020-12-22 16:58:05,276 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 16:58:06,105 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 16:58:08,139 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 16:58:10,003 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 16:58:10,024 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 16:58:10,054 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 16:58:10,271 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-22 16:58:28,195 : [5] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2020-12-22 16:58:28,212 : [5] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2020-12-22 16:58:28,440 : [5] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
+2020-12-22 17:17:38,377 : [22] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=0 : 
+2020-12-22 17:17:38,389 : [22] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 17:17:38,401 : [22] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 17:17:38,494 : [22] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][FindBy]0 : 
+2020-12-22 17:17:38,507 : [22] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Get] : 
+2020-12-22 17:17:38,518 : [22] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllRows] : 
+2020-12-22 17:18:03,866 : [25] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2020-12-22 17:18:03,880 : [25] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2020-12-22 17:18:03,916 : [25] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details  : 
+2020-12-22 17:18:03,928 : [25] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][Insert] : 
+2020-12-22 17:18:03,941 : [25] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Add] : 
+2020-12-22 17:18:04,288 : [25] : ERROR : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_tbl_interview_details_tbl_candidates_CandidateId". The conflict occurred in database "Recruitment", table "dbo.tbl_candidates", column 'id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1055
+   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) in /_/Dapper/SqlMapper.cs:line 1174
+   at Dapper.SqlMapper.QuerySingle[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 785
+   at Recruit.DataAccessLayer.InterviewDetailRepository.Add(InterviewDetail entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\InterviewDetailRepository.cs:line 41
+ClientConnectionId:e50ba411-8384-4424-ab9f-01f3cb67dad6
+Error Number:547,State:0,Class:16 : 
+2020-12-22 17:44:59,877 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-22 17:45:00,439 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-22 17:45:01,654 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-22 17:45:04,925 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-22 17:45:04,942 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-22 17:45:04,979 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-22 17:45:05,206 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 

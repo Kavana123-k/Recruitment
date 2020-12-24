@@ -12,7 +12,7 @@ namespace Recruit.DataAccessLayer
 {
     public class InterviewDetailRepository : IGenericRepository<InterviewDetail>
     {
-        
+
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(InterviewDetailRepository));
         IConnectionFactory _connectionFactory;
@@ -27,30 +27,45 @@ namespace Recruit.DataAccessLayer
         /// <returns>String containing the message if successful and exception Message if not</returns>
         public string Add(InterviewDetail entity)
         {
+            int id;
             log.Info("[InterviewDetailRepository][Add]");
             try
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                        string insertQuery = @"INSERT INTO tbl_interview_details([candidate_id], [start_date_time], [end_date_time],[status_id], [reason])
-                        VALUES (@candidate_id, @start_date_time, @end_date_time,@status_id, @reason)";
+                    string insertQuery = @"INSERT INTO tbl_interview_details([candidate_id], [start_date_time], [end_date_time],[status_id], [reason])
+                        VALUES (@candidate_id, @start_date_time, @end_date_time,@status_id, @reason);
+                        SELECT CAST(SCOPE_IDENTITY() as int)";
 
-                        var result = database.Execute(insertQuery, new
-                        {
-                            entity.candidate_id,
-                            entity.start_date_time,
-                            entity.end_date_time,
-                            entity.status_id,
-                            entity.reason
-                        });
-                   
+
+                     id = database.QuerySingle<int>(insertQuery, new { entity.candidate_id, entity.start_date_time, entity.end_date_time, entity.status_id, entity.reason });
+
+
                 }
+             
+              
+                using (var database = _connectionFactory.GetConnection)
+                {
+                    string insertQuery = @"INSERT INTO tbl_interviewers([candidate_id], [employee_id], [interview_id])
+                        VALUES (@candidate_id, @employee_id, @id)";
+
+                    var result = database.Execute(insertQuery, new
+                    {
+                        entity.candidate_id,
+                        entity.employee_id,
+                        id,
+
+                    });
+
+                }
+
                 log.Info("[InterviewDetailRepository][Add]:Data save Successfully");
+
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
-               log.Error("[InterviewDetailRepository][Add]:" + exception);
+                log.Error("[InterviewDetailRepository][Add]:" + exception);
                 return ("Insert Unsuccessful" + exception);
             }
 
@@ -75,12 +90,40 @@ namespace Recruit.DataAccessLayer
             try
             {
                 data = GetAllRows().Where(records => records.id == id).FirstOrDefault();
+               data.employee_id= GetAllInterviewers(id);
             }
             catch (Exception exception)
             {
-                log.Error("[InterviewDetailRepository][Get]"+ exception);
+                log.Error("[InterviewDetailRepository][Get]" + exception);
             }
             return data;
+        }
+        /// <summary>
+        /// method to get interviewers details
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public long GetAllInterviewers(int id)
+        {
+            log.Info("[InterviewDetailRepository][GetAllInterviewers]");
+
+            long data=0;
+            try
+            {
+                using (var database = _connectionFactory.GetConnection)
+                {
+                    string query = @"select employee_id from tbl_interviewers WHERE interview_id=@id";
+
+                    data = database.QuerySingle<int>(query, new { id, });
+                }
+            }
+            catch (Exception exception)
+            {
+                log.Error("[InterviewDetailRepository][GetAllInterviewers]:" + exception);
+            }
+            return data;
+
+
         }
         /// <summary>
         /// Method to perform DISPLAY Operation
@@ -103,7 +146,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-            log.Error("[InterviewDetailRepository][GetAll]:" + exception);
+                log.Error("[InterviewDetailRepository][GetAll]:" + exception);
             }
             return data;
 
@@ -116,13 +159,13 @@ namespace Recruit.DataAccessLayer
         public List<InterviewDetail> GetAllRows()
         {
             log.Info("[InterviewDetailRepository][GetAllRows]");
-          
+
             var data = new List<InterviewDetail>();
             try
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    data = database.Query<InterviewDetail>("Select * from tbl_interview_details").ToList();
+                    data = database.Query<InterviewDetail>("Select id,candidate_id,start_date_time,end_date_time, status_id, reason from tbl_interview_details").ToList();
                 }
             }
             catch (Exception exception)
@@ -158,12 +201,28 @@ namespace Recruit.DataAccessLayer
                         entity.reason
                     });
                 }
-             log.Info("[InterviewDetailRepository][Update]:Data save Successfully");
+              
+                using (var database = _connectionFactory.GetConnection)
+                {
+                    string updateQuery = @"UPDATE tbl_interviewers SET candidate_id=@candidate_id,employee_id=@employee_id
+                                            WHERE interview_id=@id";
+
+                   
+                    var result = database.Execute(updateQuery, new
+                    {
+                        entity.candidate_id,
+                        entity.employee_id,
+                        entity.id,
+
+                    });
+
+                }
+                log.Info("[InterviewDetailRepository][Update]:Data save Successfully");
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-               log.Error("[InterviewDetailRepository][Update]:" + exception);
+                log.Error("[InterviewDetailRepository][Update]:" + exception);
                 return ("Update Unsuccessful" + exception);
             }
 

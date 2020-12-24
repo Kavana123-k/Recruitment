@@ -38,6 +38,7 @@ namespace Recruit.Controllers
         static Recruit.BusinessAccessLayer.Interface.IService<ProcessStage> _serviceProcessStage;
         static Recruit.BusinessAccessLayer.Interface.IService<Vacancy> _serviceVacancy;
         static Recruit.BusinessAccessLayer.Interface.IService<Source> _serviceSource;
+       // static Recruit.BusinessAccessLayer.Interface.IService<Interviewer> _serviceInterviewer;
         public HomeController(Recruit.BusinessAccessLayer.Interface.IService<Candidate> serviceCanidate,
                                 Recruit.BusinessAccessLayer.Interface.IService<Location> serviceLocation,
                                 Recruit.BusinessAccessLayer.Interface.IService<Employee> serviceEmployee,
@@ -47,7 +48,8 @@ namespace Recruit.Controllers
             Recruit.BusinessAccessLayer.Interface.IService<ProcessStatus> serviceProcessStatus,
             Recruit.BusinessAccessLayer.Interface.IService<ProcessStage> serviceProcessStage,
             Recruit.BusinessAccessLayer.Interface.IService<Vacancy> serviceVacancy,
-            Recruit.BusinessAccessLayer.Interface.IService<Source> serviceSource)
+            Recruit.BusinessAccessLayer.Interface.IService<Source> serviceSource
+           )
         {
             _serviceCandidate = serviceCanidate;
             _serviceLocation = serviceLocation;
@@ -59,7 +61,7 @@ namespace Recruit.Controllers
             _serviceProcessStage = serviceProcessStage;
             _serviceVacancy = serviceVacancy;
             _serviceSource = serviceSource;
-
+          
 
         }
 
@@ -152,6 +154,11 @@ namespace Recruit.Controllers
                         if (ModelState.IsValid)
                         {
                             TempData["msg"] = _serviceInterviewDetail.Insert(entity);
+                            //var y = _serviceInterviewer.Insert(entity.id, entity.candidate_id, entity.employee_id);
+                            //if (x == "Data save Successfully" && y == "Data save Successfully") 
+                            //{
+                            //    TempData["msg"] = "Data saved Successfully";
+                            //}
                         }
                     }
                     catch (Exception exception)
@@ -778,7 +785,7 @@ namespace Recruit.Controllers
             try
             {
                 List<InterviewDetail> interviewDetails = _serviceInterviewDetail.FindbyAll();
-
+                TempData["interviewer"] = _serviceInterviewDetail.Findinterviewers();
                 return View(interviewDetails);
             }
             catch (Exception exception)

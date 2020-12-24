@@ -31,8 +31,30 @@ namespace Recruit.Models
         [DataType(DataType.Text)]
         public string reason { get; set; }
 
-        public InterviewRoundStatus RoundStatus { get; set; }
 
-       
+        //custom attribute
+
+        //[ForeignKey("candidate_id")]
+        //[Required(ErrorMessage = "Enter the Canidate Id")]
+        //public Int64 candidate_id { get; set; }
+
+
+        #region Custom Attributes
+
+        /// <summary>
+        /// custom attribute to store the interviewer details
+        /// </summary>
+        [ForeignKey("employee_id")]
+        [Required(ErrorMessage = "Enter the Employee Id")]
+        public Int64 employee_id { get; set; }
+
+
+        //[ForeignKey("interview_id")]
+        //[Required(ErrorMessage = "Enter the Interview Id")]
+        //public Int64 interview_id { get; set; }
+
+        #endregion
+
+
     }
 }

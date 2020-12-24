@@ -153,6 +153,23 @@ namespace Recruit.Models
         public String links_for_interview { get; set; }
 
 
+        #region Custom Attributes
+
+        /// <summary>
+        /// custom attribute to store the Preferred Location details
+        /// </summary>
+        [ForeignKey("location_id")]
+        [Required(ErrorMessage = "Enter the Location Id")]
+        public Int64 location_id { get; set; }
+
+
+        //[ForeignKey("interview_id")]
+        //[Required(ErrorMessage = "Enter the Interview Id")]
+        //public Int64 interview_id { get; set; }
+
+        #endregion
+
+
     }
 
 }
