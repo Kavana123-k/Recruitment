@@ -96,6 +96,7 @@ namespace Recruit.DataAccessLayer
             {
 
                 data = GetAllRows().Where(records => records.id == id).FirstOrDefault();
+                
                 data.location_id = GetAllPreferredLocations(id);
 
             }
@@ -170,7 +171,7 @@ namespace Recruit.DataAccessLayer
 
         }
         /// <summary>
-        /// method to get interviewers details
+        /// method to get preferred locations
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -210,7 +211,7 @@ namespace Recruit.DataAccessLayer
                 using (var database = _connectionFactory.GetConnection)
                 {
                     string updateQuery = @"UPDATE tbl_candidates SET first_name=@first_name,last_name=@last_name,email=@email,phone=@phone,
-                                            source_code=@source_code,referral_id=@referral_id,total_experience=@total_experience,relevant_experience=@relevant_experience,
+                                                                source_code=@source_code,referral_id=@referral_id,total_experience=@total_experience,relevant_experience=@relevant_experience,
                                             current_employer=@current_employer,current_designation=@current_designation,position_applied_code=@position_applied_code,
                                             current_ctc=@current_ctc,expected_ctc=@expected_ctc,reason_for_change=@reason_for_change,notice_period=@notice_period,
                                             is_serving_notice=@is_serving_notice,last_working_day=@last_working_day,current_location=@current_location,
@@ -222,7 +223,7 @@ namespace Recruit.DataAccessLayer
                     var result = database.Execute(updateQuery, new
                     {
                         entity.id,
-                        entity.first_name,
+                        entity.first_name,      
                         entity.last_name,
                         entity.email,
                         entity.phone,

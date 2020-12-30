@@ -1,15 +1,44 @@
 ﻿@model List<InterviewDetail>
-
-@{
+@using Kendo.Mvc.UI;
+<h1>Employee Details</h1>
+@(Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.id).Title("ID").Filterable(ftb => ftb.Multi(true).Search(true)).Width(80);
+        columns.Bound(p => p.first_name).Title("Candidate Name").Filterable(ftb => ftb.Multi(true).Search(true)).Width(200);
+        columns.Bound(p => p.start_date_time).Title("Start Time & Date").Width(400);
+        columns.Bound(p => p.end_date_time).Title("End Time & Date").Width(400);
+        columns.Bound(p => p.status).Title("Status").Filterable(ftb => ftb.Multi(true).Search(true)).Width(100);
+        columns.Bound(p => p.reason).Title("Reason").Width(400);
+        columns.Command(command => { command.Edit(); }).Width(172);
+    })
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr=>scr.Height(430))
+    .Filterable()
+   //  .Update(Edit => Edit.Action("EditingInline_Update", "Grid"))
+//.DataSource(dataSource => dataSource
+//    .Ajax()
+//    .PageSize(20)
+// .ServerOperation(false)
+//)
+)
+<!--@{
     ViewBag.Title = "InterviewDetails";
-}
+}-->
 
 @*@{
-    var data = ViewBag.Message;
-}*@
+        var data = ViewBag.Message;
+    }*@
 
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -35,16 +64,16 @@
 
             <tbody>
                 @foreach (var data in Model)
-        {
-                <tr>
-                    <td><a href="~/Home/InsertInterviewDetails/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
-                    <td>@data.first_name</td>
-                    <td>@data.start_date_time</td>
-                    <td>@data.end_date_time</td>
-                    <td>@data.status</td>
-                    <td>@data.reason</td>
-                </tr>
-        }
+                {
+                    <tr>
+                        <td><a href="~/Home/InsertInterviewDetails/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
+                        <td>@data.first_name</td>
+                        <td>@data.start_date_time</td>
+                        <td>@data.end_date_time</td>
+                        <td>@data.status</td>
+                        <td>@data.reason</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>
@@ -58,4 +87,4 @@
     }
 </body>
 
-</html>
+</html>-->

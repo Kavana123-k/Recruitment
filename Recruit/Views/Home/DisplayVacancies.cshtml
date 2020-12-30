@@ -1,86 +1,27 @@
-﻿@*@using Kendo.Mvc;*@
-@model List<Vacancy>
-
-@{
-    ViewBag.Title = "Vacancies";
-}
-
-@*@{
-       var data = ViewBag.Message;
-    }*@
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" href="~/css/layoutstyles.css">
-    <link rel="stylesheet" href="~/css/tablestyles.css">
-</head>
-<body>
-    <h2>Vacancies</h2>
-    <div class="table-wrapper">
-            <table class="fl-table">
-                <thead>
-                    <tr>
-                           <th>Id</th>
-                        <th>Code</th>
-                        <th>Position</th>
-                        <th>Vacancies</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-
-
-
-                    @foreach (var data in Model)
-                    {
-                        <tr>
-                            <td><a href="~/Home/InsertVacancies/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
-                            <td>@data.code</td>
-                            <td>@data.name</td>
-                            <td>@data.vacancy</td>
-                        </tr>
-                    }
-                    </tbody>
-
-            </table>
-
-        </div>
-    @*@(Html.Kendo().Grid<Recruit.Models.Vacancy>
-    ()
-    .Name("grid")
-    .Pageable()
-    .Sortable()
-    .Scrollable()
-    .HtmlAttributes(new { style = "height:550px;" })
+﻿@using Kendo.Mvc.UI;
+@model IEnumerable<Recruit.Models.Vacancy>
+    <h1>Vacancy Details</h1>
+@(Html.Kendo().Grid(Model)
+    .Name("Grid")
     .Columns(columns =>
     {
-        columns.Bound(o => o.id);
-        columns.Bound(o => o.code);
-        columns.Bound(o => o.name);
-        columns.Bound(o => o.vacancy);
-
+        columns.Bound(p => p.id).Title("ID");
+        columns.Bound(p => p.code).Title("Code").Filterable(ftb => ftb.Multi(true).Search(true)).Width(300);
+        columns.Bound(p => p.name).Title("Designation").Filterable(ftb => ftb.Multi(true).Search(true)).Width(300);
+        columns.Bound(p => p.vacancy).Title("Vacancies");
     })
-    .DataSource(dataSource => dataSource
-    .Ajax()
-    .PageSize(15)
-    .Read(read => read.Action("ColumnReordering_Orders_Read", "Grid"))
-    )
-    .Resizable(resize => resize.Columns(true))
-    .Reorderable(reorder => reorder.Columns(true))
-    )*@
-
-    <div>
-        <a asp-action="Index">Back to Dashboard</a>
-    </div>
-
-
-    @section Scripts {
-        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    }
-</body>
-
-</html>
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr=>scr.Height(430))
+    .Filterable()
+//.DataSource(dataSource => dataSource
+//    .Ajax()
+//    .PageSize(20)
+// .ServerOperation(false)
+//)
+)

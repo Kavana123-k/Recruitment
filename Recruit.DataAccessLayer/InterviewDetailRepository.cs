@@ -132,7 +132,7 @@ namespace Recruit.DataAccessLayer
         public List<InterviewDetail> GetAll()
         {
 
-            log.Info("[InterviewDetailRepository][GetAll]");
+            log.Info("[GetAll]: ");
             var data = new List<InterviewDetail>();
             try
             {

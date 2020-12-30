@@ -29,6 +29,7 @@ namespace Recruit
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddKendo();
             services.AddSingleton<Recruit.BusinessAccessLayer.Interface.IService<Candidate>, Recruit.BusinessAccessLayer.CandidateService>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IUnitOfWork,Recruit.DataAccessLayer.UnitOfWork>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IGenericRepository<Candidate>, Recruit.DataAccessLayer.CandidateRepository>();

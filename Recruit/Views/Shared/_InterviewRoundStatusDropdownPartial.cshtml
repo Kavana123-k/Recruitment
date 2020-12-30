@@ -4,7 +4,7 @@
 @{
     List<SelectListItem> statusList = new List<SelectListItem>();
 
-    @foreach (var items in (IEnumerable<InterviewRoundStatus>)TempData["Data"])
+    @foreach (var items in (IEnumerable<InterviewRoundStatus>)TempData["status"])
     {
         statusList.Add(new SelectListItem
         {

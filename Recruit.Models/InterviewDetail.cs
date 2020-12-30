@@ -14,19 +14,23 @@ namespace Recruit.Models
         [ForeignKey("candidate_id")]
         [Required(ErrorMessage = "Candidate id invalid")]
         public Int64 candidate_id { get; set; }
+
         public String first_name { get; set; }
         [Required(ErrorMessage = "Please choose correct date time")]
         [Display(Name = "Interview Start date")]
         [DataType(DataType.DateTime)]
         public DateTime start_date_time { get; set; }
+
         [Required(ErrorMessage = "Please choose correct date time")]
         [Display(Name = "Interview end date")]
         [DataType(DataType.DateTime)]
         public DateTime end_date_time { get; set; }
+
         [ForeignKey("status_id")]
         [Required(ErrorMessage = "Interview Round Status invalid")]
         public Int64 status_id { get; set; }
         public string status { get; set; }
+
         [StringLength(150)]
         [DataType(DataType.Text)]
         public string reason { get; set; }
@@ -47,6 +51,9 @@ namespace Recruit.Models
         [ForeignKey("employee_id")]
         [Required(ErrorMessage = "Enter the Employee Id")]
         public Int64 employee_id { get; set; }
+
+        [NotMapped]
+        public List<Interviewer> Interviewers { get; set; }
 
 
         //[ForeignKey("interview_id")]

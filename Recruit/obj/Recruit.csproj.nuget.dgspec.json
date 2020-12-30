@@ -269,6 +269,10 @@
               "target": "Package",
               "version": "[3.2.9, )"
             },
+            "Kendo.Mvc": {
+              "target": "Package",
+              "version": "[2020.3.915.545, )"
+            },
             "KendoUICore": {
               "target": "Package",
               "version": "[2020.3.1118, )"
@@ -304,6 +308,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.2, )"
+            },
+            "Telerik.UI.for.AspNet.Core": {
+              "target": "Package",
+              "version": "[2020.3.1118, )"
             },
             "log4net": {
               "target": "Package",

@@ -32,7 +32,7 @@
         </div>
         <div class="column">
 
-            <partial name="_InterviewRoundStatusDropdownPartial" data=@TempData["Data"] />
+            <partial name="_InterviewRoundStatusDropdownPartial" data=@TempData["status"] />
 
         </div>
         <div class="column">
@@ -41,6 +41,7 @@
             <span asp-validation-for="reason" class="text-danger"></span>
         </div>
         <div class="column">
+            @*<partial name="_InterviewRoundStatusDropdownPartial" data=@TempData["emp"] />*@
             <label class="control-label">Interviewer Id</label>
             <input asp-for="employee_id" class="form-control" />
             <span asp-validation-for="employee_id" class="text-danger"></span>

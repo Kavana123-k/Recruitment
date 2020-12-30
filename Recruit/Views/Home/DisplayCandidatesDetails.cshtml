@@ -1,110 +1,58 @@
 ﻿@model List<Candidate>
 
-@{
-    ViewBag.Title = "CandidatesDetails";
-}
 
-@*@{
-        var data = ViewBag.Message;
-    }*@
+@using Kendo.Mvc.UI;
+<h1>Candidate Details</h1>
+@(Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.id).Title("ID").Width(75).Locked(true).Lockable(false);
+        columns.Bound(p => p.first_name).Title("First Name").Width(150).Locked(true);
+        columns.Bound(p => p.last_name).Title("Last Name").Width(150);
+        columns.Bound(p => p.email).Title("Email").Width(200);
+        columns.Bound(p => p.phone).Title("Phone").Width(200);
+        columns.Bound(p => p.source_name).Title("Source").Width(200);
+        columns.Bound(p => p.emp_ref).Title("Referred By").Width(150);
+        columns.Bound(p => p.total_experience).Title("Total Experience").Width(150);
+        columns.Bound(p => p.relevant_experience).Title("Relevant Experience").Width(200);
+        columns.Bound(p => p.current_employer).Title("Current Employer").Width(200);
+        columns.Bound(p => p.current_designation).Title("Current Designation").Width(300);
+        columns.Bound(p => p.position).Title("Position").Width(300);
+        columns.Bound(p => p.current_ctc).Title("Current CTC").Width(200);
+        columns.Bound(p => p.expected_ctc).Title("Expected CTC").Width(200);
+        columns.Bound(p => p.reason_for_change).Title("Reason For Change").Width(300);
+        columns.Bound(p => p.notice_period).Title("Notice Period").Width(200);
+        columns.Bound(p => p.is_serving_notice).Title("Is Serving Notice").Width(200).Filterable(ftb => ftb.Multi(true).CheckAll(false));
+        columns.Bound(p => p.last_working_day).Title("Last Working Day ").Width(400);
+        columns.Bound(p => p.current_location).Title("Current Location").Width(200);
+        columns.Bound(p => p.stage).Title("Process Stage").Width(200);
+        columns.Bound(p => p.process_stage_date).Title("Process Stage Date").Width(400);
+        columns.Bound(p => p.process_start_date).Title("Process Start Date").Width(400);
+        columns.Bound(p => p.process_end_date).Title("Process End Date").Width(400);
+        columns.Bound(p => p.status).Title("Interview Status").Width(200);
+        columns.Bound(p => p.owner).Title("Resume Owner").Width(200);
+        columns.Bound(p => p.remind).Title("Owner For Reminder").Width(300);
+        columns.Bound(p => p.comments).Title("Comments").Width(300);
+        columns.Bound(p => p.date_of_joining).Title("Date Of Joining").Width(400);
+        columns.Bound(p => p.notes).Title("Notes").Width(300);
+        columns.Bound(p => p.links_for_interview).Title("Links for Interview").Width(300).Locked(false);
 
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" href="~/css/layoutstyles.css">
-    <link rel="stylesheet" href="~/css/tablestyles.css">
-</head>
-<body>
-    <h2>Candidate Details</h2>
-    <div class="table-wrapper">
-        <table class="fl-table">
-            <thead>
-
-                <tr>
-                    <th>Id</th>
-                    <th>First Name</th>
-                    <th>Fast Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Source</th>
-                    <th>Referred By</th>
-                    <th>Total Experience</th>
-                    <th>Relevant Experience</th>
-                    <th>Current Employer</th>
-                    <th>Current Designation</th>
-                    <th>Position Applied For</th>
-                    <th>Current Ctc</th>
-                    <th>Expected Ctc</th>
-                    <th>Reason For Change</th>
-                    <th>Notice Period</th>
-                    <th>Is Serving Notice</th>
-                    <th>Last Working Day</th>
-                    <th>Current Location</th>
-                    <th>Process Stage</th>
-                    <th>Process Stage Date</th>
-                    <th>Process Start Date</th>
-                    <th>Process End Date</th>
-                    <th>Interview Status</th>
-                    <th>Resume Owner</th>
-                    <th>Owner For Reminder</th>
-                    <th>Comments</th>
-                    <th>Date Of Joining</th>
-                    <th>Notes</th>
-                    <th>Links For Interview</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var data in Model)
-        {
-                <tr>
-                    @*<td>@data.id</td>*@
-                    <td><a href="~/Home/InsertCandidates/@data.id" class="btn btn-default" onclick="Update">@data.id </a></td>
-                    <td>@data.first_name</td>
-                    <td>@data.last_name</td>
-                    <td>@data.email</td>
-                    <td>@data.phone</td>
-                    <td>@data.source_name</td>
-                    <td>@data.emp_ref</td>
-                    <td>@data.total_experience</td>
-                    <td>@data.relevant_experience</td>
-                    <td>@data.current_employer</td>
-                    <td>@data.current_designation</td>
-                    <td>@data.position</td>
-                    <td>@data.current_ctc</td>
-                    <td>@data.expected_ctc</td>
-                    <td>@data.reason_for_change</td>
-                    <td>@data.notice_period</td>
-                    <td>@data.is_serving_notice</td>
-                    <td>@data.last_working_day</td>
-                    <td>@data.current_location</td>
-                    <td>@data.stage</td>
-                    <td>@data.process_stage_date</td>
-                    <td>@data.process_start_date</td>
-                    <td>@data.process_end_date</td>
-                    <td>@data.status</td>
-                    <td>@data.owner</td>
-                    <td>@data.remind</td>
-                    <td>@data.comments</td>
-                    <td>@data.date_of_joining</td>
-                    <td>@data.notes</td>
-                    <td>@data.links_for_interview</td>
-                </tr>
-        }
-            </tbody>
-        </table>
-    </div>
-    <div>
-        <a asp-action="Index">Back to Dashboard</a>
-    </div>
-
-
-    @section Scripts {
-        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    }
-</body>
-
-</html>
+    })
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr=>scr.Height(430))
+    .Filterable()
+       .Reorderable(reorderable => reorderable.Columns(true))
+    .Resizable(resizable => resizable.Columns(true))
+//.DataSource(dataSource => dataSource
+//    .Ajax()
+//    .PageSize(20)
+// .ServerOperation(false)
+//)
+)

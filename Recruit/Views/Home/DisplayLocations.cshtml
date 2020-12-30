@@ -1,55 +1,27 @@
 ﻿@model List<Location>
 
-@{
-    ViewData["Title"] = "Locations";
-    // Layout = "~/Views/Home/CandidatesDetails.cshtml";
-}
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" href="~/css/layoutstyles.css">
-    <link rel="stylesheet" href="~/css/tablestyles.css">
-</head>
-<body>
-    <h2>Locations Details</h2>
-    <div class="table-wrapper">
-        <table class="fl-table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>City</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var data in Model)
-                {
-                    <tr>
-                        <td>
-                            <a href="~/Home/InsertLocations/@data.id" class="btn btn-default" onclick="Update">@data.id </a>
-
-                        </td>
-                        @*<td>@data.id</td>*@
-                        <td>@data.city</td>
-                    </tr>
-                }
-            </tbody>
-
-
-        </table>
-    </div>
-    <div>
-        <a asp-action="Index">Back to Dashboard</a>
-    </div>
-
-
-    @section Scripts {
-        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    }
-    
-    
-</body>
-</html>
+@using Kendo.Mvc.UI;
+<h1>Location Details</h1>
+@(Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.id).Title("ID");
+        columns.Bound(p => p.city).Title("City");
+        
+    })
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr=>scr.Height(430))
+  
+    //.DataSource(dataSource => dataSource
+    //    .Ajax()
+    //    .PageSize(20)
+    // .ServerOperation(false)
+     //)
+)

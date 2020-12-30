@@ -4,9 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Recruit</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/layoutstyles.css">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/layoutstyles.css">
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.1.219/styles/kendo.default-v2.min.css" />
+      @*  <title>@ViewData["Title"] - Recruit</title>*@
+
+    <link href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.flat.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/jszip.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/kendo.all.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/kendo.aspnetmvc.min.js"></script>
+
+  @*      <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/layoutstyles.css">
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>*@
+
+
 
 </head>
 <body>
@@ -20,14 +44,14 @@
         </button>
         <div class="dropdown-container">
             @*<a  class="nav-link " asp-area="" asp-controller="Candidate" asp-action="InsertCandidates" asp-route-id="0">Candidate Details-1</a>*@
-            <a  class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertCandidates" asp-route-id="0">Candidate Details</a>
-            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertInterviewDetails"asp-route-id="0">Interview Details</a>
-            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertLocations"asp-route-id="0">Locations</a>
-            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertSources"asp-route-id="0">Sources</a>
-            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertVacancies"asp-route-id="0">Vacancies</a>
-            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertProcessStatus"asp-route-id="0">Process Status</a>
-            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertProcessStages"asp-route-id="0">Process Stages</a>
-            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertInterviewRoundStatuses"asp-route-id="0">Interview Round Status</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertCandidates" asp-route-id="0">Candidate Details</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertInterviewDetails" asp-route-id="0">Interview Details</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertLocations" asp-route-id="0">Locations</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertSources" asp-route-id="0">Sources</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertVacancies" asp-route-id="0">Vacancies</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertProcessStatus" asp-route-id="0">Process Status</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertProcessStages" asp-route-id="0">Process Stages</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertInterviewRoundStatuses" asp-route-id="0">Interview Round Status</a>
         </div>
         <button class="dropdown-btn">
             Display
@@ -46,9 +70,9 @@
         </div>
 
     </div>
-       
-        
-   
+
+
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -59,14 +83,14 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        
+
                         <li class="nav-item">
                             <a class="nav-link text-dark">
                                 <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-                                
+
                             </a>
                         </li>
-                     
+
                     </ul>
                 </div>
             </div>
@@ -84,11 +108,14 @@
             &copy; 2020 - Recruit - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/dropdown-nav.js"></script>
     <script src="~/js/functions.js"></script>
+    @*<script type="text/javascript" asp-append-version="true" src="~/lib/kendo/js/kendo.aspnetmvc.min.js"></script>*@
+
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

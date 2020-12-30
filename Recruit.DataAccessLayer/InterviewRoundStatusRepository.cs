@@ -32,11 +32,11 @@ namespace Recruit.DataAccessLayer
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    string insertQuery = @"INSERT INTO tbl_interview_round_statuses([id],[status])VALUES (@id,@status)";
+                    string insertQuery = @"INSERT INTO tbl_interview_round_statuses([status])VALUES (@status)";
 
                     var result = database.Execute(insertQuery, new
                     {
-                        entity.id,
+                      
                         entity.status
 
                     });

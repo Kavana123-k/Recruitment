@@ -107,7 +107,7 @@ namespace Recruit.Controllers
             log.Info("[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=" + id);
             try
             {
-                TempData["Data"] = _serviceInterviewRoundStatus.FindbyAll();
+                TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
 
               //  TempData["AllLocations"] = GetAllLocations();
 
@@ -115,7 +115,7 @@ namespace Recruit.Controllers
 
                 var interviewDetail = new InterviewDetail();
                 var interviewDetailAll = new List<InterviewDetail>();
-                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                if (id!=0)
                 {
                     interviewDetail = _serviceInterviewDetail.FindBy(id);
                     return View(interviewDetail);
@@ -123,8 +123,8 @@ namespace Recruit.Controllers
                 }
                 else
                 {
-                    interviewDetailAll = _serviceInterviewDetail.FindbyAll();
-                    return View(interviewDetailAll);
+                   
+                    return View();
                 }
             }
             catch (Exception exception)
@@ -145,7 +145,8 @@ namespace Recruit.Controllers
         {
             try
             {
-                TempData["Data"] = _serviceInterviewRoundStatus.FindbyAll();
+                TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
+                TempData["emp"] = _serviceEmployee.FindbyAll();
                 log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details ");
                 if (entity.id == 0)
                 {
@@ -214,8 +215,8 @@ namespace Recruit.Controllers
                 TempData["Owners"] = _serviceOwner.FindbyAll();
 
                 var candidate = new Candidate();
-                var candidateAll = new List<Candidate>();
-                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                
+                if (id!=0)
                 {
                     candidate = _serviceCandidate.FindBy(id);
                     return View(candidate);
@@ -223,8 +224,8 @@ namespace Recruit.Controllers
                 }
                 else
                 {
-                    candidateAll = _serviceCandidate.FindbyAll();
-                    return View(candidateAll);
+        
+                    return View();
                 }
 
             }
@@ -785,7 +786,7 @@ namespace Recruit.Controllers
             try
             {
                 List<InterviewDetail> interviewDetails = _serviceInterviewDetail.FindbyAll();
-                TempData["interviewer"] = _serviceInterviewDetail.Findinterviewers();
+               // TempData["interviewer"] = _serviceInterviewDetail.Findinterviewers();
                 return View(interviewDetails);
             }
             catch (Exception exception)

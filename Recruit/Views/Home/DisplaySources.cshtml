@@ -1,51 +1,145 @@
 ﻿@model List<Source>
-
-@{
+@using Kendo.Mvc.UI;
+@*@model IEnumerable<Recruit.Models.Vacancy>*@
+<h1>Sources Details</h1>
+@(Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.id).Title("ID");
+        columns.Bound(p => p.code).Title("Code");
+        columns.Bound(p => p.name).Title("Source");
+        
+    })
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr=>scr.Height(430))
+  
+    //.DataSource(dataSource => dataSource
+    //    .Ajax()
+    //    .PageSize(20)
+    // .ServerOperation(false)
+     //)
+)
+<!--@{
     ViewBag.Title = "Sources";
-}
-
+}-->
 @*@{
         var data = ViewBag.Message;
     }*@
 
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link rel="stylesheet" href="~/css/layoutstyles.css">
-    <link rel="stylesheet" href="~/css/tablestyles.css">
-</head>
+    <base href="https://demos.telerik.com/kendo-ui/grid/index">
+
+    <style type="text/css">
+        html {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>-->
+@*<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.1.219/styles/kendo.default-v2.min.css" />*@
+<!--<link rel="stylesheet" href="~/css/layoutstyles.css">
+<link rel="stylesheet" href="~/css/tablestyles.css">-->
+@*<script  src="https://kendo.cdn.telerik.com/2020.1.219/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2020.1.219/js/kendo.all.min.js"></script>*@
+<!--</head>
 <body>
-    <h2>Sources</h2>
-    <div class="table-wrapper">
-        <table class="fl-table">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Code</th>
-                    <th>Source</th>
-                   
+    <h3>Sources</h3>
 
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var data in Model)
-                {
-                <tr>
-                    <td><a href="~/Home/InsertSources/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
-                    <td>@data.code</td>
-                    <td>@data.name</td>
+    <div id="grid2"></div>
+    <script>
+        $(document).ready(function () {
+            getjsonnfromjsonfiledata();
+            getmvcdatafromcontroller();
 
+    });
 
+        function getmvcdatafromcontroller() {
+              var model =@{@Html.Raw(Json.Serialize(Model))};
+            $('#grid2').kendoGrid({
+            dataSource: {
+                data : model,
+                pageSize :5
+            },
+            selectable : "single",
+            schema: {
+                model: {
+                    fields: {
+                        id: { type: "long" },
+                        code: { type: "string" },
+                        name: { type: "string" },
 
-                </tr>
+                    }
                 }
-            </tbody>
+            },
+            sortable : {
+                mode :"single",
+                allowUnsort : "false"
+            },
+            serverPaging: true,
+            height: 300,
+            pageSize:10,
+            pageable : {
+                refresh : false,
+                pageSizes : true,
+                buttonCount:10
+            },
+            columns: [
+                { field: "id", title: "id", width: "25%" },
+                { field: "code", title: "Code", width: "150px" },
+                { field: "name", title: "Source Name", width: "150px" }
 
-        </table>
-    </div>
+            ]
+        });
+        }
+        function getjsonnfromjsonfiledata() {
+            $("#grid").kendoGrid({
+                dataSource: {
+                    type: "odata",
+                    transport: {
+                        read: "https://demos.telerik.com/kendo-ui/service/Northwind.svc/Customers"
+                    },
+                    pageSize: 20
+                },
+                height: 550,
+                groupable: true,
+                sortable: true,
+                pageable: {
+                    refresh: true,
+                    pageSizes: true,
+                    buttonCount: 5
+                },
+                columns: [{
+                    template: "<div class='customer-photo'" +
+                        "style='background-image: url(../content/web/Customers/#:data.CustomerID#.jpg);'></div>" +
+                        "<div class='customer-name'>#: ContactName #</div>",
+                    field: "id",
+                    title: "id",
+                    width: 240
+                }, {
+                    field: "code",
+                    title: "Code"
+                }, {
+                    field: "name",
+                    title: "Source Name"
+                }]
+            });
+        }
+
+        function getRootUrl() {
+            return window.location.origin ? window.location.origin + '/' : window.location.protocol + '/' + window.location.host + '/';
+        }
+    </script>
     <div>
         <a asp-action="Index">Back to Dashboard</a>
     </div>
@@ -56,4 +150,4 @@
     }
 </body>
 
-</html>
+</html>-->

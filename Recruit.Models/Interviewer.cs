@@ -11,7 +11,7 @@ namespace Recruit.Models
         [Key]
         public Int64 id { get; set; }
         [ForeignKey("candidate_id")]
-        [Required(ErrorMessage = "Enter the Canidate Id")]
+        [Required(ErrorMessage = "Enter the Candidate Id")]
         public Int64 candidate_id { get; set; }
         [ForeignKey("employee_id")]
         [Required(ErrorMessage = "Enter the Employee Id")]
@@ -19,5 +19,8 @@ namespace Recruit.Models
         [ForeignKey("interview_id")]
         [Required(ErrorMessage = "Enter the Location Id")]
         public Int64 interview_id { get; set; }
+
+        [NotMapped]
+        public string EmployeeName { get; set; }
     }
 }

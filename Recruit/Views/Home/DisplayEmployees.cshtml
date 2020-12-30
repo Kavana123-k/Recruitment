@@ -1,56 +1,28 @@
 ﻿@model List<Employee>
 
-@{
-    ViewBag.Title = "Employees Details";
-}
+@using Kendo.Mvc.UI;
+<h1>Employee Details</h1>
+@(Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.id).Title("ID");
+        columns.Bound(p => p.name).Title("Name");
 
-@*@{
-        var data = ViewBag.Message;
-    }*@
+    })
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr=>scr.Height(430))
+    
+    //.DataSource(dataSource => dataSource
+    //    .Ajax()
+    //    .PageSize(20)
+    // .ServerOperation(false)
+     //)
+)
 
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" href="~/css/layoutstyles.css">
-    <link rel="stylesheet" href="~/css/tablestyles.css">
-</head>
-<body>
-    <h2>Employees Details</h2>
-    <div class="table-wrapper">
-        <table class="fl-table">
-            <thead>              
-                <tr>
-                    
-                    <th>ID</th>
-                    <th>Name</th>
-
-
-                </tr>
-            </thread>
-                <tbody>
-                    @foreach (var data in Model)
-                     {
-                    <tr>
-                       
-                        <td>@data.id</td>
-                        <td>@data.name</td>
-
-
-                    </tr>
-                     }
-                </tbody>
-            </table>
-        </div>
-                <div>
-                    <a asp-action="Index">Back to Dashboard</a>
-                </div>
-
-
-                @section Scripts {
-                    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-                }
-</body>
-</html>

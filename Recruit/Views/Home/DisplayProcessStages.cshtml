@@ -1,59 +1,56 @@
 ﻿@model List<ProcessStage>
-
-@{
-    ViewBag.Title = "Process Stages";
-}
-
-@*@{
-        var data = ViewBag.Message;
-    }*@
+@using Kendo.Mvc.UI;
+@*@model IEnumerable<Recruit.Models.Vacancy>*@
+<h1>Process Stage Details</h1>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" href="~/css/layoutstyles.css">
-    <link rel="stylesheet" href="~/css/tablestyles.css">
-</head>
-<body>
-    <h2>Process Stages</h2>
-    <div class="table-wrapper">
-        <table class="fl-table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Code</th>
-                    <th>Stage</th>
+@*@(Html.Kendo().Grid(Model)
+        .Name("Grid")
+        .Columns(columns =>
+        {
+            columns.Bound(p => p.id).Title("ID");
+            columns.Bound(p => p.code).Title("Code");
+            columns.Bound(p => p.stage).Title("Stage");
 
+        })
+        .HtmlAttributes(new { style = "height: 550px;" })
+        .Pageable(
+         pageable => pageable
+             .Input(true)
+             .Numeric(false)
+         )
+        .Sortable()
+        .Scrollable(scr=>scr.Height(430))
 
-                </tr>
-            </thead>
-               
-            <tbody>
-                @foreach (var data in Model)
-            {
-                <tr>
-                    @*<td>@data.id</td>*@
-                    <td><a href="~/Home/InsertProcessStages/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
-                    <td>@data.code</td>
-                    <td>@data.stage</td>
-
-
-                </tr>
-            }
-            </tbody>
-              
-        </table>
-    </div>
-    <div>
-        <a asp-action="Index">Back to Dashboard</a>
-    </div>
-
-
-    @section Scripts {
-        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    }
-</body>
-</html>
+        //.DataSource(dataSource => dataSource
+        //    .Ajax()
+        //    .PageSize(20)
+        // .ServerOperation(false)
+         //)
+    )*@
+@(Html.Kendo().Grid(Model)
+    .Name("grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.id).Title("ID");
+        columns.Bound(p => p.code).Title("Code");
+        columns.Bound(p => p.stage).Title("Stage");
+        columns.Command(command => { command.Edit();  }).Width(160);
+    })
+    .ToolBar(toolbar => toolbar.Create())
+    .Editable(editable => editable.Mode(GridEditMode.PopUp))
+    .Pageable()
+    .Sortable()
+    .Scrollable()
+    .HtmlAttributes(new { style = "height:430px;" })
+    .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(20)
+        .Events(events => events.Error("Error"))
+       .Model(model => model.Id(p => p.id))
+        .Create(update => update.Action("InsertProcessStages", "Home"))
+        .Read(read => read.Action("DisplayProcessStages", "Home"))
+        .Update(update => update.Action("InsertProcessStages", "Home",  new { id =0 }))
+        .Destroy(update => update.Action("DisplayProcessStages", "Home"))
+    )
+)

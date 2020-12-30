@@ -1,60 +1,50 @@
-﻿@model List<ProcessStatus>
+﻿
 
-@{
-    ViewBag.Title = "Process Status";
-}
-
-@*@{
-        var data = ViewBag.Message;
-    }*@
-
-
-<!DOCTYPE html>
-<html>
+@model IEnumerable<Recruit.Models.ProcessStatus>
+@using Kendo.Mvc.UI
+<h1>Process Status Details</h1>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" href="~/css/layoutstyles.css">
-    <link rel="stylesheet" href="~/css/tablestyles.css">
+    @*<link rel="stylesheet" href="~/lib/kendo/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="~/lib/kendo/styles/kendo.default.min.css">
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/kendo/js/kendo.web.min.js"></script>
+    <script src="~/lib/kendo/js/kendo.aspnetmvc.min.js"></script>
+    <script src="~/lib/kendo/js/kendo.all.min.js"></script>*@
+    
+    
+    @*@Scripts.Render("~/Scripts/modernizr-2.6.2.js")*@
+
 </head>
 <body>
-    <h2>Process Status</h2>
-    <div class="table-wrapper">
-        <table class="fl-table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Code</th>
-                    <th>Status</th>
-                    <th>Colour</th>
 
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var data in Model)
-        {
-                <tr>
-                    @*<td>@data.id</td>*@
-                    <td><a href="~/Home/InsertProcessStatus/@data.id" class="btn btn-default" onclick="Update">@data.id</a></td>
-                    <td>@data.code</td>
-                    <td>@data.status</td>
-                    <td>@data.colour</td>
+    @(Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.id).Title("ID");
+        columns.Bound(p => p.code).Title("code").Width(130);
+        columns.Bound(p => p.status).Title("Status");
+        columns.Bound(p => p.colour).Title("colour").Width(130);
+    })
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr=>scr.Height(430))
+ 
+    //.DataSource(dataSource => dataSource
+    //    .Ajax()
+    //    .PageSize(20)
+    // .ServerOperation(false)
+     //)
+)
+    @*<script src="https://kendo.cdn.telerik.com/2017.1.223/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.aspnetmvc.min.js"></script>
 
-                </tr>
-        }
-            </tbody>
-               
-
-              
-        </table>
-        </div>
-        <div>
-            <a asp-action="Index">Back to Dashboard</a>
-        </div>
-
-
-        @section Scripts {
-            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-        }
+    @Html.Kendo().DeferredScripts(true)*@
 </body>
-</html>
