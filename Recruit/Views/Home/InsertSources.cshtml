@@ -28,12 +28,14 @@
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
+    <div>
+    <a asp-action="Index">Back to Dashboard</a>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to Dashboard</a>
+<div class="column">
+    <partial name="_DisplaySourcesPartial" data=@TempData["source"] />
 </div>
+    </div>
 
 
 @section Scripts {
@@ -42,10 +44,23 @@
 @{
     if (@TempData["Msg"] != null)
     {
-        <script>
+        if (TempData["Msg"] == "Data save Successfully" || TempData["Msg"] == "Data Updated Successfully")
+        {
+            <script>
 
-            alert('@TempData["msg"]')
-        </script>
+        UIkit.notification({ message: '@TempData["Msg"]', status: 'success', timeout: 5000 })
+           window.location.href = "@Url.Action("DisplaySources", "Home")";
+            </script>
+        }
+        else
+        {
+            <script>
+
+    UIkit.notification({ message: '@TempData["Msg"]', status: 'danger', timeout: 5000 })
+
+
+            </script>
+        }
 
     }
 } 

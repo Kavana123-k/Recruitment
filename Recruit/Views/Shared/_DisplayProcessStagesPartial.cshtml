@@ -1,0 +1,27 @@
+﻿
+
+@using Kendo.Mvc.UI;
+@*@model IEnumerable<Recruit.Models.Vacancy>*@
+
+
+@(Html.Kendo().Grid((IEnumerable<ProcessStage>)TempData["stage"])
+    .Name("grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.id).Title("ID").Width(80);
+        columns.Bound(p => p.code).Title("Code");
+        columns.Bound(p => p.stage).Title("Stage");
+
+        
+    })
+
+
+    .Pageable()
+    .Scrollable()
+    .HtmlAttributes(new { style = "height:430px;" })
+    .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(20)
+
+    )
+)

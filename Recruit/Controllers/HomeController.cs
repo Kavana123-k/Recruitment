@@ -38,7 +38,7 @@ namespace Recruit.Controllers
         static Recruit.BusinessAccessLayer.Interface.IService<ProcessStage> _serviceProcessStage;
         static Recruit.BusinessAccessLayer.Interface.IService<Vacancy> _serviceVacancy;
         static Recruit.BusinessAccessLayer.Interface.IService<Source> _serviceSource;
-       // static Recruit.BusinessAccessLayer.Interface.IService<Interviewer> _serviceInterviewer;
+     //  static Recruit.BusinessAccessLayer.Interface.IService<InterviewTimelineModel> _seviceInterviewTimeline;
         public HomeController(Recruit.BusinessAccessLayer.Interface.IService<Candidate> serviceCanidate,
                                 Recruit.BusinessAccessLayer.Interface.IService<Location> serviceLocation,
                                 Recruit.BusinessAccessLayer.Interface.IService<Employee> serviceEmployee,
@@ -49,6 +49,7 @@ namespace Recruit.Controllers
             Recruit.BusinessAccessLayer.Interface.IService<ProcessStage> serviceProcessStage,
             Recruit.BusinessAccessLayer.Interface.IService<Vacancy> serviceVacancy,
             Recruit.BusinessAccessLayer.Interface.IService<Source> serviceSource
+        //    Recruit.BusinessAccessLayer.Interface.IService<InterviewTimelineModel> seviceInterviewTimeline
            )
         {
             _serviceCandidate = serviceCanidate;
@@ -61,7 +62,8 @@ namespace Recruit.Controllers
             _serviceProcessStage = serviceProcessStage;
             _serviceVacancy = serviceVacancy;
             _serviceSource = serviceSource;
-          
+          //  _seviceInterviewTimeline = seviceInterviewTimeline;
+
 
         }
 
@@ -307,6 +309,7 @@ namespace Recruit.Controllers
         public IActionResult InsertLocations(int id)
         {
             log.Info("[InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=" + id);
+            TempData["Location"] = _serviceLocation.FindbyAll();
             try
             {
                 var location = new Location();
@@ -342,6 +345,7 @@ namespace Recruit.Controllers
         {
 
             log.Info("[InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details");
+            TempData["Location"] = _serviceLocation.FindbyAll();
             try
             {
                 if (entity.id == 0)
@@ -390,6 +394,7 @@ namespace Recruit.Controllers
         [HttpGet]
         public IActionResult InsertSources(int id)
         {
+            TempData["source"] = _serviceSource.FindbyAll();
             log.Info("[InsertSources]:[GET]Action Method returns view which gets the page to insert the table Sources Details [Data]=" + id);
             try
             {
@@ -424,6 +429,7 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertSources([Bind] Source entity)
         {
+            TempData["source"] = _serviceSource.FindbyAll();
 
             log.Info("[InsertSources]:[Post]Action Method returns view which posts the input page to the table Sources Details");
             try
@@ -475,6 +481,7 @@ namespace Recruit.Controllers
         public IActionResult InsertVacancies(int id)
         {
             log.Info("[InsertVacancies]:[GET]Action Method returns view which gets the page to insert the Vacancies Details [Data]=" + id);
+            TempData["vacancy"]= _serviceVacancy.FindbyAll(); ;
             try
             {
                 var vacancy = new Vacancy();
@@ -509,6 +516,7 @@ namespace Recruit.Controllers
         {
 
             log.Info("[InsertVacancies]:[Post]Action Method returns view which posts the input page to the table Vacancies Details");
+            TempData["vacancy"]= _serviceVacancy.FindbyAll();
             try
             {
                 if (entity.id == 0)
@@ -558,6 +566,7 @@ namespace Recruit.Controllers
         [HttpGet]
         public IActionResult InsertProcessStatus(int id)
         {
+            TempData["status"] = _serviceProcessStatus.FindbyAll();
             log.Info("[InsertProcessStatus]:[GET]Action Method returns view which gets the page to insert the Process Status Details [Data]=" + id);
             try
             {
@@ -590,6 +599,7 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertProcessStatus([Bind] ProcessStatus entity)
         {
+            TempData["status"] = _serviceProcessStatus.FindbyAll();
             log.Info("[InsertProcessStatus]:[Post]Action Method returns view which posts the input page to the table Process Status Details");
             try
             {
@@ -640,6 +650,7 @@ namespace Recruit.Controllers
         [HttpGet]
         public IActionResult InsertProcessStages(int id)
         {
+            TempData["stage"] = _serviceProcessStage.FindbyAll();
             log.Info("[InsertProcessStages]:[GET]Action Method returns view which gets the page to insert the Process Stages Details [Data]=" + id);
             try
             {
@@ -672,6 +683,7 @@ namespace Recruit.Controllers
         [HttpPost]
         public IActionResult InsertProcessStages([Bind] ProcessStage entity)
         {
+            TempData["stage"] = _serviceProcessStage.FindbyAll();
             try
             {
                 if (entity.id == 0)
@@ -910,6 +922,15 @@ namespace Recruit.Controllers
                 log.Error("[DisplaySource]:" + exception);
                 return View();
             }
+        }
+       /// <summary>
+       /// Method to display individual interviewdetails
+       /// </summary>
+       /// <returns></returns>
+       public IActionResult DisplaySpecificInterviewDetails(int id)
+        {
+         //   List<InterviewDetail> interview = _seviceInterviewTimeline.FindBy(id);
+            return View();
         }
 
 

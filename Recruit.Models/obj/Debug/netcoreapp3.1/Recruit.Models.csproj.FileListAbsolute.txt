@@ -15,3 +15,4 @@ C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recr
 C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recruit.Models.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recruit.Models.dll
 C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recruit.Models.pdb
+C:\Users\LENOVO\source\repos\Recruit\Recruit.Models\obj\Debug\netcoreapp3.1\Recruit.Models.csprojAssemblyReference.cache

@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruit", "Recruit\Recruit.csproj", "{8D02CB6D-084E-4AC6-9625-91429DA556C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruit.BusinessAccessLayer", "Recruit.BusinessAccessLayer\Recruit.BusinessAccessLayer.csproj", "{A4E4B687-C28E-4ACD-B3DC-81E4DCE722CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruit.BusinessAccessLayer", "Recruit.BusinessAccessLayer\Recruit.BusinessAccessLayer.csproj", "{A4E4B687-C28E-4ACD-B3DC-81E4DCE722CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruit.DataAccessLayer", "Recruit.DataAccessLayer\Recruit.DataAccessLayer.csproj", "{EC6310E3-C594-4AFA-8E44-676C000AA2C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruit.DataAccessLayer", "Recruit.DataAccessLayer\Recruit.DataAccessLayer.csproj", "{EC6310E3-C594-4AFA-8E44-676C000AA2C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruit.Models", "Recruit.Models\Recruit.Models.csproj", "{89AD0BC4-883C-489C-BE87-09BE3FF50D51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruit.Models", "Recruit.Models\Recruit.Models.csproj", "{89AD0BC4-883C-489C-BE87-09BE3FF50D51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{2A2A6679-6C3D-418D-904C-720B56B32AD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing", "Testing\Testing.csproj", "{2A2A6679-6C3D-418D-904C-720B56B32AD6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{F6409D75-4B39-4AA2-9042-684BA881395F}"
 EndProject

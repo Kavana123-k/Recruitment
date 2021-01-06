@@ -261,3 +261,9 @@ C:\Users\LENOVO\source\repos\Recruit\Recruit\bin\Debug\netcoreapp3.1\zh-CN\Kendo
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Recruit.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Recruit.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Recruit.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LocationsPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_DisplayVacanciesPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_DisplayProcessStagesPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_DisplayProcessStatusesPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_DisplaySourcesPartial.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_DisplayInterviewDetails.cshtml.g.cs

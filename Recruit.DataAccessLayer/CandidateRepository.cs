@@ -75,7 +75,7 @@ namespace Recruit.DataAccessLayer
             catch (Exception exception)
             {
                 log.Error("[CandidateRepository][Add]:" + exception);
-               return ("Insert Unsuccessful" + exception);
+               return ("Insert Unsuccessful " + exception.Message);
             }
 
         }
@@ -275,7 +275,7 @@ namespace Recruit.DataAccessLayer
             catch (Exception exception)
             {
                 log.Error("[CandidateRepository][Update]:" + exception);
-                return ("Update Unsuccessful" + exception);
+                return ("Update Unsuccessful " + exception.Message);
             }
 
         }

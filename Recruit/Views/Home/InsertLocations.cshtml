@@ -10,8 +10,9 @@
 
 <hr />
 <link rel="stylesheet" href="~/css/layoutstyles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
 <div class="row">
-    <div class="col-md-4">
+    <div class="column" align="justify">
         <form asp-action="InsertLocations">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -23,25 +24,52 @@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+            <div>
+                <a asp-action="Index">Back to Dashboard</a>
+            </div>
+
         </form>
     </div>
+    <div class="column" align="justify">
+        <partial name="_LocationsPartial" data=@TempData["Location"] />
+    </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to Dashboard</a>
-</div>
-
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js"></script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+<!--@{
+    if (@TempData["Msg"] != null)
+    {
+        <script>-->
+            @*UIkit.notification({ message: '@TempData["Msg"]', timeout: 2000 })*@
+           
+        <!--</script>
+
+    }
+}-->
 @{
     if (@TempData["Msg"] != null)
     {
-        <script>
+        if (TempData["Msg"] == "Data save Successfully" || TempData["Msg"] == "Data Updated Successfully")
+        {
+    <script>
 
-            alert('@TempData["msg"]')
-        </script>
+        UIkit.notification({ message: '@TempData["Msg"]', status: 'success', timeout: 5000 })
+           window.location.href = "@Url.Action("DisplayLocations", "Home")";
+    </script>
+        }
+        else
+        {
+<script>
+
+    UIkit.notification({ message: '@TempData["Msg"]', status: 'danger', timeout:5000})
+
+
+</script>
+        }
 
     }
-} 
+}

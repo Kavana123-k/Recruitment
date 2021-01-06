@@ -4,11 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Recruit</title>
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="~/css/layoutstyles.css">
-        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.1.219/styles/kendo.default-v2.min.css" />
-      @*  <title>@ViewData["Title"] - Recruit</title>*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/layoutstyles.css">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.1.219/styles/kendo.default-v2.min.css" />
+    
+
+    @*  <title>@ViewData["Title"] - Recruit</title>*@
 
     <link href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
     <link href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
@@ -19,16 +21,16 @@
     <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/kendo.all.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/kendo.aspnetmvc.min.js"></script>
 
-  @*      <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="~/css/layoutstyles.css">
-    </environment>
-    <environment names="Staging,Production">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>*@
+    @*      <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+            <link rel="stylesheet" href="~/css/layoutstyles.css">
+        </environment>
+        <environment names="Staging,Production">
+            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        </environment>*@
 
 
 
@@ -73,10 +75,10 @@
 
 
 
-    <header>
+    <header id="headerslide">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
+            <div class="container-fluid p-0">
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -87,23 +89,25 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark">
                                 <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+                                
 
                             </a>
                         </li>
 
                     </ul>
                 </div>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
             </div>
         </nav>
     </header>
 
-    <div class="container">
+    <div class="container-fluid" id="contantslide">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted" id="footerslide">
         <div class="container">
             &copy; 2020 - Recruit - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
@@ -113,6 +117,7 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/dropdown-nav.js"></script>
     <script src="~/js/functions.js"></script>
+   
     @*<script type="text/javascript" asp-append-version="true" src="~/lib/kendo/js/kendo.aspnetmvc.min.js"></script>*@
 
 

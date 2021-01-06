@@ -19,6 +19,7 @@ namespace Recruit.DataAccessLayer
         private readonly IGenericRepository<Owner> _ownerRepository;
         private readonly IGenericRepository<ProcessStatus> _processStatusRepository;
         private readonly IGenericRepository<ProcessStage> _processStageRepository;
+        
         public UnitOfWork(IGenericRepository<Candidate> candidateRepository,
                             IGenericRepository<Location> locationRepository,
                                 IGenericRepository<InterviewDetail> interviewDetailRepository,
@@ -29,6 +30,7 @@ namespace Recruit.DataAccessLayer
                                 IGenericRepository<Owner> ownerRepository,
                                 IGenericRepository<ProcessStatus> processStatusRepository,
                                 IGenericRepository<ProcessStage> processStageRepository
+                                  
                                 )
         {
             _candidateRepository = candidateRepository;
@@ -41,7 +43,7 @@ namespace Recruit.DataAccessLayer
             _ownerRepository = ownerRepository;
             _processStatusRepository = processStatusRepository;
             _processStageRepository = processStageRepository;
-
+            
 
 
 
@@ -123,6 +125,7 @@ namespace Recruit.DataAccessLayer
                 return _sourceRepository;
             }
         }
+     
     }
 
 }

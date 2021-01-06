@@ -32,12 +32,18 @@
     .Name("grid")
     .Columns(columns =>
     {
-        columns.Bound(p => p.id).Title("ID");
-        columns.Bound(p => p.code).Title("Code");
-        columns.Bound(p => p.stage).Title("Stage");
-        columns.Command(command => { command.Edit();  }).Width(160);
+        columns.Bound(p => p.id).Title("ID").Width(10);
+        columns.Bound(p => p.code).Title("Code").Width(30);
+        columns.Bound(p => p.stage).Title("Stage").Width(40);
+
+        columns.Bound(p => p.id).Title(" ").Width(10).ClientTemplate(
+                             "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
+                                 Url.Action("InsertProcessStages", "Home") +
+                               "/#=id#'" +
+                             ">Edit</a>"
+                         );
     })
-    .ToolBar(toolbar => toolbar.Create())
+    .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertProcessStages/'></span>Add Process Stages</a>"))
     .Editable(editable => editable.Mode(GridEditMode.PopUp))
     .Pageable()
     .Sortable()

@@ -47,7 +47,7 @@ namespace Recruit.DataAccessLayer
             catch (Exception exception)
             {
               log.Error("[InterviewRoundStatusRepository][Add]:" + exception);
-                return ("Insert Unsuccessful" + exception);
+                return ("Insert Unsuccessful " + exception.Message);
             }
 
         }

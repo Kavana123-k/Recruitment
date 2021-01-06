@@ -239,10 +239,23 @@
 @{
     if (@TempData["Msg"] != null)
     {
-        <script>
+        if (TempData["Msg"] == "Data save Successfully" || TempData["Msg"] == "Data Updated Successfully")
+        {
+    <script>
 
-            alert('@TempData["msg"]')
-        </script>
+        UIkit.notification({ message: '@TempData["Msg"]', status: 'success', timeout: 5000 })
+           window.location.href = "@Url.Action("DisplayCandidatesDetails", "Home")";
+    </script>
+        }
+        else
+        {
+<script>
+
+    UIkit.notification({ message: '@TempData["Msg"]', status: 'danger', timeout: 5000})
+
+
+</script>
+        }
 
     }
 }

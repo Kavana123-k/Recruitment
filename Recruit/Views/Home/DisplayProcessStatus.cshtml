@@ -3,48 +3,40 @@
 @model IEnumerable<Recruit.Models.ProcessStatus>
 @using Kendo.Mvc.UI
 <h1>Process Status Details</h1>
-<head>
-    @*<link rel="stylesheet" href="~/lib/kendo/styles/kendo.common.min.css">
-    <link rel="stylesheet" href="~/lib/kendo/styles/kendo.default.min.css">
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/kendo/js/kendo.web.min.js"></script>
-    <script src="~/lib/kendo/js/kendo.aspnetmvc.min.js"></script>
-    <script src="~/lib/kendo/js/kendo.all.min.js"></script>*@
-    
-    
-    @*@Scripts.Render("~/Scripts/modernizr-2.6.2.js")*@
-
-</head>
 <body>
 
     @(Html.Kendo().Grid(Model)
-    .Name("Grid")
+    .Name("grid")
     .Columns(columns =>
     {
-        columns.Bound(p => p.id).Title("ID");
-        columns.Bound(p => p.code).Title("code").Width(130);
-        columns.Bound(p => p.status).Title("Status");
-        columns.Bound(p => p.colour).Title("colour").Width(130);
+        columns.Bound(p => p.id).Title("ID").Width(10);
+        columns.Bound(p => p.code).Title("code").Width(30);
+        columns.Bound(p => p.status).Title("Status").Width(40);
+        columns.Bound(p => p.colour).Title("colour").Width(20);
+        columns.Bound(p => p.id).Title(" ").Width(10).ClientTemplate(
+                            "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
+                                Url.Action("InsertProcessStatus", "Home") +
+                              "/#=id#'" +
+                            ">Edit</a>"
+                        );
     })
-    .HtmlAttributes(new { style = "height: 550px;" })
-    .Pageable(
-     pageable => pageable
-         .Input(true)
-         .Numeric(false)
-     )
+    .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertProcessStatus/'></span>Add Process Status</a>"))
+    .Editable(editable => editable.Mode(GridEditMode.PopUp))
+    .Pageable()
     .Sortable()
-    .Scrollable(scr=>scr.Height(430))
- 
-    //.DataSource(dataSource => dataSource
-    //    .Ajax()
-    //    .PageSize(20)
-    // .ServerOperation(false)
-     //)
+    .Scrollable()
+    .HtmlAttributes(new { style = "height:430px;" })
+    .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(20)
+        .Events(events => events.Error("Error"))
+       .Model(model => model.Id(p => p.id))
+        .Create(update => update.Action("InsertProcessStatus", "Home"))
+        .Read(read => read.Action("DisplayProcessStatus", "Home"))
+        .Update(update => update.Action("InsertProcessStatus", "Home",  new { id =0 }))
+        .Destroy(update => update.Action("DisplayProcessStatus", "Home"))
+    )
 )
-    @*<script src="https://kendo.cdn.telerik.com/2017.1.223/js/jquery.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.aspnetmvc.min.js"></script>
-
-    @Html.Kendo().DeferredScripts(true)*@
+   
 </body>

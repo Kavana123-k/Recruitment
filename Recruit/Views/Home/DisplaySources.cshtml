@@ -3,29 +3,37 @@
 @*@model IEnumerable<Recruit.Models.Vacancy>*@
 <h1>Sources Details</h1>
 @(Html.Kendo().Grid(Model)
-    .Name("Grid")
+    .Name("grid")
     .Columns(columns =>
     {
-        columns.Bound(p => p.id).Title("ID");
-        columns.Bound(p => p.code).Title("Code");
-        columns.Bound(p => p.name).Title("Source");
-        
+        columns.Bound(p => p.id).Title("ID").Width(10);
+        columns.Bound(p => p.code).Title("Code").Width(20);
+        columns.Bound(p => p.name).Title("Source").Width(30);
+        columns.Bound(p => p.id).Title(" ").Width(10).ClientTemplate(
+                            "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
+                                Url.Action("InsertSources", "Home") +
+                              "/#=id#'" +
+                            ">Edit</a>"
+                        );
     })
-    .HtmlAttributes(new { style = "height: 550px;" })
-    .Pageable(
-     pageable => pageable
-         .Input(true)
-         .Numeric(false)
-     )
+    .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertSources/'></span>Add Source</a>"))
+    .Editable(editable => editable.Mode(GridEditMode.PopUp))
+    .Pageable()
     .Sortable()
-    .Scrollable(scr=>scr.Height(430))
-  
-    //.DataSource(dataSource => dataSource
-    //    .Ajax()
-    //    .PageSize(20)
-    // .ServerOperation(false)
-     //)
+    .Scrollable()
+    .HtmlAttributes(new { style = "height:430px;" })
+    .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(20)
+        .Events(events => events.Error("Error"))
+       .Model(model => model.Id(p => p.id))
+        .Create(update => update.Action("InsertSources", "Home"))
+        .Read(read => read.Action("DisplaySources", "Home"))
+        .Update(update => update.Action("InsertSources", "Home",  new { id =0 }))
+        .Destroy(update => update.Action("DisplaySources", "Home"))
+    )
 )
+
 <!--@{
     ViewBag.Title = "Sources";
 }-->

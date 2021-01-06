@@ -4,7 +4,7 @@
 @using Kendo.Mvc.UI;
 <h1>Candidate Details</h1>
 @(Html.Kendo().Grid(Model)
-    .Name("Grid")
+    .Name("grid")
     .Columns(columns =>
     {
         columns.Bound(p => p.id).Title("ID").Width(75).Locked(true).Lockable(false);
@@ -36,23 +36,30 @@
         columns.Bound(p => p.comments).Title("Comments").Width(300);
         columns.Bound(p => p.date_of_joining).Title("Date Of Joining").Width(400);
         columns.Bound(p => p.notes).Title("Notes").Width(300);
-        columns.Bound(p => p.links_for_interview).Title("Links for Interview").Width(300).Locked(false);
-
+        columns.Bound(p => p.id).Title(" ").Width(100).ClientTemplate(
+                            "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
+                                Url.Action("InsertCandidates", "Home") +
+                              "/#=id#'" +
+                            ">Edit</a>"
+                        );
     })
-    .HtmlAttributes(new { style = "height: 550px;" })
-    .Pageable(
-     pageable => pageable
-         .Input(true)
-         .Numeric(false)
-     )
-    .Sortable()
-    .Scrollable(scr=>scr.Height(430))
+    .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertCandidates/'></span>Add Candidates</a>"))
+    .Editable(editable => editable.Mode(GridEditMode.PopUp))
+    .Pageable()
     .Filterable()
-       .Reorderable(reorderable => reorderable.Columns(true))
-    .Resizable(resizable => resizable.Columns(true))
-//.DataSource(dataSource => dataSource
-//    .Ajax()
-//    .PageSize(20)
-// .ServerOperation(false)
-//)
+    .Sortable()
+    .Sortable()
+    .Scrollable()
+    .HtmlAttributes(new { style = "height:430px;" })
+    .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(20)
+        .Events(events => events.Error("Error"))
+       .Model(model => model.Id(p => p.id))
+        .Create(update => update.Action("InsertCandidates", "Home"))
+        .Read(read => read.Action("DisplayCandidatesDetails", "Home"))
+        .Update(update => update.Action("InsertCandidates", "Home",  new { id =0 }))
+        .Destroy(update => update.Action("DisplayCandidatesDetails", "Home"))
+    )
 )
+

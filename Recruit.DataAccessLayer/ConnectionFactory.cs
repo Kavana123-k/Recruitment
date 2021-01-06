@@ -10,15 +10,15 @@ namespace Recruit.DataAccessLayer
 {
     public class ConnectionFactory : IConnectionFactory
     {
-        
-        //private IConfiguration Configuration;
-         
-        //public ConnectionFactory(IConfiguration _configuration)
-        //{
-        //    Configuration = _configuration;
-            
-        //}
-      
+
+        private IConfiguration Configuration;
+
+        public ConnectionFactory(IConfiguration _configuration)
+        {
+            Configuration = _configuration;
+
+        }
+
         public IDbConnection GetConnection
         {
             get
@@ -27,8 +27,8 @@ namespace Recruit.DataAccessLayer
 
                 var factory = DbProviderFactories.GetFactory("System.Data.SqlClient");
                 var conn = factory.CreateConnection();
-                //  conn.ConnectionString = this.Configuration.GetConnectionString("MyConn");
-                conn.ConnectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = Recruitment; Integrated Security = True";
+                conn.ConnectionString = this.Configuration.GetConnectionString("MyConn");
+              //  conn.ConnectionString = "Data Source = DESKTOP-T3N0J77; Initial Catalog = Recruitment; Integrated Security = True";
                 conn.Open();
                 return conn;
             }

@@ -80,6 +80,7 @@ namespace Recruit
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IGenericRepository<Vacancy>, Recruit.DataAccessLayer.VacancyRepository>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IConnectionFactory, Recruit.DataAccessLayer.ConnectionFactory>();
 
+         
 
         } 
 

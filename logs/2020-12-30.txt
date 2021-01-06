@@ -1239,3 +1239,82 @@ Error Number:2601,State:1,Class:14 :
 2020-12-30 22:49:37,441 : [16] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][Update] : 
 2020-12-30 22:49:37,450 : [16] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Update] : 
 2020-12-30 22:49:37,611 : [16] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Update]:Data save Successfully : 
+2020-12-30 22:53:54,564 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2020-12-30 22:53:54,800 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2020-12-30 22:53:55,309 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2020-12-30 22:53:56,678 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2020-12-30 22:53:56,696 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2020-12-30 22:53:56,712 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2020-12-30 22:53:56,841 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2020-12-30 22:54:46,343 : [15] : INFO  : Recruit.Controllers.HomeController : [DisplayProcessStages]:Action Method returns view which displays the Locations Details : 
+2020-12-30 22:54:46,357 : [15] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-30 22:54:46,515 : [15] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-30 22:58:14,092 : [22] : INFO  : Recruit.Controllers.HomeController : [InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details : 
+2020-12-30 22:58:14,101 : [22] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][Insert] : 
+2020-12-30 22:58:14,113 : [22] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add] : 
+2020-12-30 22:58:14,207 : [22] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add]:Data save Successfully : 
+2020-12-30 22:58:31,705 : [21] : INFO  : Recruit.Controllers.HomeController : [InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details : 
+2020-12-30 22:58:31,706 : [24] : INFO  : Recruit.Controllers.HomeController : [InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details : 
+2020-12-30 22:58:31,724 : [24] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][Insert] : 
+2020-12-30 22:58:31,716 : [21] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][Insert] : 
+2020-12-30 22:58:31,733 : [24] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add] : 
+2020-12-30 22:58:31,740 : [21] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add] : 
+2020-12-30 22:58:31,767 : [21] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add]:Data save Successfully : 
+2020-12-30 22:58:32,084 : [24] : ERROR : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.tbl_process_stages' with unique index 'IX_tbl_process_stages_code'. The duplicate key value is (test).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.ProcessStageRepository.Add(ProcessStage entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\ProcessStageRepository.cs:line 37
+ClientConnectionId:f4fe4ba2-5dec-497a-a98e-1f0f408b9a00
+Error Number:2601,State:1,Class:14 : 
+2020-12-30 22:58:36,639 : [21] : INFO  : Recruit.Controllers.HomeController : [DisplayProcessStages]:Action Method returns view which displays the Locations Details : 
+2020-12-30 22:58:36,652 : [21] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-30 22:58:36,667 : [21] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-30 22:59:11,218 : [21] : INFO  : Recruit.Controllers.HomeController : [InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details : 
+2020-12-30 22:59:11,230 : [21] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][Insert] : 
+2020-12-30 22:59:11,243 : [21] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add] : 
+2020-12-30 22:59:11,294 : [21] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add]:Data save Successfully : 
+2020-12-30 22:59:16,018 : [21] : INFO  : Recruit.Controllers.HomeController : [DisplayProcessStages]:Action Method returns view which displays the Locations Details : 
+2020-12-30 22:59:16,029 : [21] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-30 22:59:16,044 : [21] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2020-12-30 22:59:48,755 : [32] : INFO  : Recruit.Controllers.HomeController : [InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details : 
+2020-12-30 22:59:48,767 : [32] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][Insert] : 
+2020-12-30 22:59:48,781 : [32] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add] : 
+2020-12-30 22:59:48,801 : [32] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add]:Data save Successfully : 
+2020-12-30 22:59:58,929 : [32] : INFO  : Recruit.Controllers.HomeController : [InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details : 
+2020-12-30 22:59:58,938 : [33] : INFO  : Recruit.Controllers.HomeController : [InsertProcessStages]:[Post]Action Method returns view which posts the input page to the table Process Stages Details : 
+2020-12-30 22:59:58,941 : [32] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][Insert] : 
+2020-12-30 22:59:58,959 : [33] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][Insert] : 
+2020-12-30 22:59:58,972 : [32] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add] : 
+2020-12-30 22:59:58,982 : [33] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add] : 
+2020-12-30 22:59:58,997 : [32] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add]:Data save Successfully : 
+2020-12-30 22:59:59,056 : [33] : ERROR : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.tbl_process_stages' with unique index 'IX_tbl_process_stages_code'. The duplicate key value is (test3).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.ProcessStageRepository.Add(ProcessStage entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\ProcessStageRepository.cs:line 37
+ClientConnectionId:f4fe4ba2-5dec-497a-a98e-1f0f408b9a00
+Error Number:2601,State:1,Class:14 : 
+2020-12-30 23:00:02,252 : [32] : INFO  : Recruit.Controllers.HomeController : [DisplayProcessStages]:Action Method returns view which displays the Locations Details : 
+2020-12-30 23:00:02,263 : [32] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2020-12-30 23:00:02,276 : [32] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
