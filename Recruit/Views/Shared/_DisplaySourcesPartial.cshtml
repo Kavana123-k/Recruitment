@@ -3,20 +3,23 @@
 
 
 @(Html.Kendo().Grid((IEnumerable<Source>)TempData["source"])
-    .Name("grid")
+   
+    .Name("Grid")
     .Columns(columns =>
     {
-        columns.Bound(p => p.id).Title("ID").Width(80);
+        columns.Bound(p => p.id).Title("ID");
         columns.Bound(p => p.code).Title("Code");
         columns.Bound(p => p.name).Title("Source");
-      
-    })
-    .Pageable()
-    .Scrollable()
-    .HtmlAttributes(new { style = "height:430px;" })
-    .DataSource(dataSource => dataSource
-        .Ajax()
-        .PageSize(20)
 
-    )
+    })
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr=>scr.Height(430))
+
+
 )

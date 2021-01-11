@@ -1,18 +1,24 @@
-﻿@model List<ProcessStage>
+﻿
+@model List<ProcessStage>
 @using Kendo.Mvc.UI;
-@*@model IEnumerable<Recruit.Models.Vacancy>*@
 <h1>Process Stage Details</h1>
 
 
-@*@(Html.Kendo().Grid(Model)
+@(Html.Kendo().Grid(Model)
         .Name("Grid")
         .Columns(columns =>
         {
             columns.Bound(p => p.id).Title("ID");
             columns.Bound(p => p.code).Title("Code");
             columns.Bound(p => p.stage).Title("Stage");
-
+            columns.Template(
+                           "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
+                               Url.Action("InsertProcessStages", "Home") +
+                             "/#=id#'" +
+                           ">Edit</a>"
+                       );
         })
+         .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertProcessStages/'></span>Add Process Stages</a>"))
         .HtmlAttributes(new { style = "height: 550px;" })
         .Pageable(
          pageable => pageable
@@ -22,41 +28,4 @@
         .Sortable()
         .Scrollable(scr=>scr.Height(430))
 
-        //.DataSource(dataSource => dataSource
-        //    .Ajax()
-        //    .PageSize(20)
-        // .ServerOperation(false)
-         //)
-    )*@
-@(Html.Kendo().Grid(Model)
-    .Name("grid")
-    .Columns(columns =>
-    {
-        columns.Bound(p => p.id).Title("ID").Width(10);
-        columns.Bound(p => p.code).Title("Code").Width(30);
-        columns.Bound(p => p.stage).Title("Stage").Width(40);
-
-        columns.Bound(p => p.id).Title(" ").Width(10).ClientTemplate(
-                             "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
-                                 Url.Action("InsertProcessStages", "Home") +
-                               "/#=id#'" +
-                             ">Edit</a>"
-                         );
-    })
-    .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertProcessStages/'></span>Add Process Stages</a>"))
-    .Editable(editable => editable.Mode(GridEditMode.PopUp))
-    .Pageable()
-    .Sortable()
-    .Scrollable()
-    .HtmlAttributes(new { style = "height:430px;" })
-    .DataSource(dataSource => dataSource
-        .Ajax()
-        .PageSize(20)
-        .Events(events => events.Error("Error"))
-       .Model(model => model.Id(p => p.id))
-        .Create(update => update.Action("InsertProcessStages", "Home"))
-        .Read(read => read.Action("DisplayProcessStages", "Home"))
-        .Update(update => update.Action("InsertProcessStages", "Home",  new { id =0 }))
-        .Destroy(update => update.Action("DisplayProcessStages", "Home"))
     )
-)

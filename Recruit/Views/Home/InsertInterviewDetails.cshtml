@@ -41,10 +41,10 @@
             <span asp-validation-for="reason" class="text-danger"></span>
         </div>
         <div class="column">
-            @*<partial name="_InterviewRoundStatusDropdownPartial" data=@TempData["emp"] />*@
-            <label class="control-label">Interviewer Id</label>
+            <partial name="_InterviewerPartial" data=@TempData["interviewers"] />
+            @*<label class="control-label">Interviewer Id</label>
             <input asp-for="employee_id" class="form-control" />
-            <span asp-validation-for="employee_id" class="text-danger"></span>
+            <span asp-validation-for="employee_id" class="text-danger"></span>*@
         </div>
         <div class="column">
             <input type="submit" value="Submit" class="btn bg-primary" align="center" /><br />

@@ -1,0 +1,35 @@
+2021-01-09 12:56:55,089 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-09 12:56:55,583 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-09 12:56:57,441 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-09 12:57:02,571 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-09 12:57:02,605 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-09 12:57:02,625 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-09 12:57:03,267 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-09 12:57:28,650 : [13] : INFO  : Recruit.Controllers.HomeController : [DisplayVacancies]:Action Method returns view which displays the Locations Details : 
+2021-01-09 12:57:28,657 : [13] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2021-01-09 12:57:29,579 : [13] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2021-01-09 12:57:51,362 : [20] : INFO  : Recruit.Controllers.HomeController : [InsertVacancies]:[GET]Action Method returns view which gets the page to insert the Vacancies Details [Data]=1 : 
+2021-01-09 12:57:51,374 : [20] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2021-01-09 12:57:51,384 : [20] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2021-01-09 12:57:51,419 : [20] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindBy] : 
+2021-01-09 12:57:51,427 : [20] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][Get] : 
+2021-01-09 12:57:51,435 : [20] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2021-01-09 12:57:58,923 : [20] : INFO  : Recruit.Controllers.HomeController : [InsertVacancies]:[GET]Action Method returns view which gets the page to insert the Vacancies Details [Data]=0 : 
+2021-01-09 12:57:58,932 : [20] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2021-01-09 12:57:58,939 : [20] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2021-01-09 12:57:58,965 : [20] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindBy] : 
+2021-01-09 12:57:58,974 : [20] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][Get] : 
+2021-01-09 12:57:58,987 : [20] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2021-01-09 13:00:08,165 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-09 13:00:08,447 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-09 13:00:10,345 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-09 13:00:12,686 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-09 13:00:12,701 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-09 13:00:12,720 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-09 13:00:12,875 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-09 13:00:21,187 : [5] : INFO  : Recruit.Controllers.HomeController : [InsertVacancies]:[GET]Action Method returns view which gets the page to insert the Vacancies Details [Data]=0 : 
+2021-01-09 13:00:21,198 : [5] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2021-01-09 13:00:21,220 : [5] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
+2021-01-09 13:00:21,312 : [5] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindBy] : 
+2021-01-09 13:00:21,322 : [5] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][Get] : 
+2021-01-09 13:00:21,332 : [5] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 

@@ -1,3 +1,28 @@
 ﻿@model InterviewDetail
+@{
+    List<SelectListItem> empList = new List<SelectListItem>();
 
-@*@Html.ListBoxFor(model => model.Interviewer, new MultiSelectList(Models.GetCategoryList().OrderBy(c => c.Value), "Key", "Value", Model.Interviewer), "Select Category", new { @class = "chzn-select form-control", multiple = "multiple" })*@
+    @foreach (var items in (IEnumerable<Employee>)TempData["interviewers"])
+    {
+        empList.Add(new SelectListItem
+        {
+
+
+            Text = items.name,
+            Value = (items.id).ToString(),
+            //Selected = true
+
+        });
+    }
+  
+}
+
+<div class="col-sm-6">
+    <label class="control-label">Interviewers</label><br />
+    @Html.ListBoxFor(model => model.Interviewers, new MultiSelectList(empList, "Value", "Text"), new { @class = "form-control", multiple = "Text", id = "Value" })
+
+    <br />
+
+    <span asp-validation-for="employee_id" class="text-danger"></span>
+
+</div> 

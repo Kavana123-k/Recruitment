@@ -2,23 +2,25 @@
 @using Kendo.Mvc.UI;
 
 
-@(Html.Kendo().Grid((IEnumerable<ProcessStatus>)TempData["status"])
-    .Name("grid")
+
+    @(Html.Kendo().Grid((IEnumerable<ProcessStatus>)TempData["status"])
+    .Name("Grid")
     .Columns(columns =>
     {
-        columns.Bound(p => p.id).Title("ID").Width(80);
+        columns.Bound(p => p.id).Title("ID");
         columns.Bound(p => p.code).Title("code").Width(130);
         columns.Bound(p => p.status).Title("Status");
         columns.Bound(p => p.colour).Title("colour").Width(130);
-        
     })
-  
-    .Pageable()
-    .Scrollable()
-    .HtmlAttributes(new { style = "height:430px;" })
-    .DataSource(dataSource => dataSource
-        .Ajax()
-        .PageSize(20)
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr=>scr.Height(430))
 
-    )
+
 )
+

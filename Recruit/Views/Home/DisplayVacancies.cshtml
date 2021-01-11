@@ -1,37 +1,68 @@
-﻿@using Kendo.Mvc.UI;
+﻿@*@using Kendo.Mvc.UI;
+    @model IEnumerable<Recruit.Models.Vacancy>
+    <h1>Vacancy Details</h1>
+
+    @(Html.Kendo().Grid(Model)
+        .Name("grid")
+        .Columns(columns =>
+        {
+            columns.Bound(p => p.id).Title("ID").Width(10).Filterable(false);
+            columns.Bound(p => p.code).Title("Code").Filterable(ftb => ftb.Multi(true).Search(true)).Width(30);
+            columns.Bound(p => p.name).Title("Designation").Filterable(ftb => ftb.Multi(true).Search(true)).Width(30);
+            columns.Bound(p => p.vacancy).Title("Vacancies").Width(20);
+            columns.Bound(p => p.id).Title(" ").Filterable(false).Width(10).ClientTemplate(
+                                "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
+                                    Url.Action("InsertVacancies", "Home") +
+                                  "/#=id#'" +
+                                ">Edit</a>"
+                            );
+        })
+        .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertVacancies/'></span>Add Vacancy</a>"))
+
+        .Pageable()
+        .Sortable()
+        .Filterable()
+        .Sortable()
+        .Scrollable()
+        .HtmlAttributes(new { style = "height:430px;" })
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .PageSize(20)
+
+        )
+    )*@
+@using Kendo.Mvc.UI;
 @model IEnumerable<Recruit.Models.Vacancy>
 <h1>Vacancy Details</h1>
-
 @(Html.Kendo().Grid(Model)
-    .Name("grid")
+    .Name("Grid")
     .Columns(columns =>
     {
-        columns.Bound(p => p.id).Title("ID").Width(10);
-        columns.Bound(p => p.code).Title("Code").Filterable(ftb => ftb.Multi(true).Search(true)).Width(30);
-        columns.Bound(p => p.name).Title("Designation").Filterable(ftb => ftb.Multi(true).Search(true)).Width(30);
-        columns.Bound(p => p.vacancy).Title("Vacancies").Width(20);
-        columns.Bound(p => p.id).Title(" ").Width(10).ClientTemplate(
+        columns.Bound(p => p.id).Title("ID");
+        columns.Bound(p => p.code).Title("Code").Filterable(ftb => ftb.Multi(true).Search(true)).Width(300);
+        columns.Bound(p => p.name).Title("Designation").Filterable(ftb => ftb.Multi(true).Search(true)).Width(300);
+        columns.Bound(p => p.vacancy).Title("Vacancies");
+        columns.Template(
+
                             "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
                                 Url.Action("InsertVacancies", "Home") +
                               "/#=id#'" +
-                            ">Edit</a>"
-                        );
+                            ">Edit</a>");
     })
-    .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertVacancies/'></span>Add Vacancy</a>"))
-    .Editable(editable => editable.Mode(GridEditMode.PopUp))
-    .Pageable()
+     .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertVacancies/'></span>Add Vacancy</a>"))
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+     
     .Sortable()
-    .Sortable()
-    .Scrollable()
-    .HtmlAttributes(new { style = "height:430px;" })
-    .DataSource(dataSource => dataSource
-        .Ajax()
-        .PageSize(20)
-        .Events(events => events.Error("Error"))
-       .Model(model => model.Id(p => p.id))
-        .Create(update => update.Action("InsertVacancies", "Home"))
-        .Read(read => read.Action("DisplayVacancies", "Home"))
-        .Update(update => update.Action("InsertVacancies", "Home",  new { id =0 }))
-        .Destroy(update => update.Action("DisplayVacancies", "Home"))
-    )
+    .Scrollable(scr=>scr.Height(430))
+    .Filterable()
+//.DataSource(dataSource => dataSource
+//    .Ajax()
+//    .PageSize(20)
+// .ServerOperation(false)
+//)
 )

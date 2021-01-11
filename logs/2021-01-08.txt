@@ -1,0 +1,109 @@
+2021-01-08 10:37:08,481 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-08 10:37:10,108 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-08 10:37:11,545 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-08 10:37:15,770 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-08 10:37:15,811 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-08 10:37:15,903 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-08 10:37:16,185 : [6] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-08 10:37:23,089 : [5] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-08 10:37:23,102 : [5] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:37:23,193 : [5] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:38:26,928 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-08 10:38:27,385 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-08 10:38:28,458 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-08 10:38:30,865 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-08 10:38:30,880 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-08 10:38:30,894 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-08 10:38:31,054 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-08 10:38:31,054 : [5] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-08 10:38:31,074 : [5] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:38:31,104 : [5] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:38:43,908 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-08 10:38:43,918 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:38:43,936 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:38:43,952 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-08 10:38:43,965 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-08 10:38:43,981 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:38:48,387 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-08 10:39:28,572 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-08 10:39:29,636 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-08 10:39:30,460 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-08 10:39:32,672 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-08 10:39:32,693 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-08 10:39:32,708 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-08 10:39:32,850 : [8] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-08 10:43:18,756 : [16] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-08 10:43:18,803 : [16] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:43:18,848 : [16] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:43:44,281 : [16] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-08 10:43:44,291 : [16] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:43:44,303 : [16] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:43:44,322 : [16] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-08 10:43:44,334 : [16] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-08 10:43:44,344 : [16] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:45:16,978 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-08 10:45:17,305 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-08 10:45:18,656 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-08 10:45:22,561 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-08 10:45:22,580 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-08 10:45:22,593 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-08 10:45:22,776 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-08 10:45:22,832 : [5] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-08 10:45:22,847 : [5] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:45:22,911 : [5] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:45:23,045 : [5] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-08 10:45:23,090 : [5] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-08 10:45:23,137 : [5] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:46:57,247 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-08 10:46:57,257 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:46:57,275 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:46:57,294 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-08 10:46:57,306 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-08 10:46:57,741 : [15] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:269b19d8-ab8b-40a0-8390-a75601d55468
+Error Number:2627,State:1,Class:14 : 
+2021-01-08 10:47:17,929 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-08 10:47:17,944 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:47:17,959 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:47:17,978 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-08 10:47:17,990 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-08 10:47:18,016 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:Data save Successfully : 
+2021-01-08 10:47:18,517 : [20] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-08 10:47:18,535 : [20] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:47:18,555 : [20] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:49:03,071 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-08 10:49:03,670 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-08 10:49:04,858 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-08 10:49:06,964 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-08 10:49:07,024 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-08 10:49:07,054 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-08 10:49:07,207 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-08 10:53:03,445 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-08 10:53:03,464 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:53:03,498 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:53:03,596 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-08 10:53:03,606 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-08 10:53:03,616 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:55:06,879 : [19] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-08 10:55:06,894 : [19] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:55:06,911 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-08 10:55:06,927 : [19] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-08 10:55:06,940 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-08 10:55:07,027 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:Data save Successfully : 
+2021-01-08 10:55:07,687 : [23] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-08 10:55:07,707 : [23] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-08 10:55:07,723 : [23] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 

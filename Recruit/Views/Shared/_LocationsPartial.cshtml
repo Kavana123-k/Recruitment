@@ -1,24 +1,21 @@
-﻿
-@using Kendo.Mvc.UI;
-
+﻿@using Kendo.Mvc.UI;
 
 @(Html.Kendo().Grid((IEnumerable<Location>)TempData["Location"])
-    .Name("grid")
+    .Name("Grid")
     .Columns(columns =>
     {
         columns.Bound(p => p.id).Title("ID");
         columns.Bound(p => p.city).Title("City");
 
-
-
-
     })
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr=>scr.Height(430))
 
- .Pageable()
-    .Scrollable()
-    .HtmlAttributes(new { style = "height:430px;" })
-    .DataSource(dataSource => dataSource
-        .Ajax()
-        .PageSize(20)
-
-))
+   
+)

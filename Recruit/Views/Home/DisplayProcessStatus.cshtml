@@ -4,39 +4,29 @@
 @using Kendo.Mvc.UI
 <h1>Process Status Details</h1>
 
-<body>
 
     @(Html.Kendo().Grid(Model)
-    .Name("grid")
+    .Name("Grid")
     .Columns(columns =>
     {
-        columns.Bound(p => p.id).Title("ID").Width(10);
-        columns.Bound(p => p.code).Title("code").Width(30);
-        columns.Bound(p => p.status).Title("Status").Width(40);
-        columns.Bound(p => p.colour).Title("colour").Width(20);
-        columns.Bound(p => p.id).Title(" ").Width(10).ClientTemplate(
-                            "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
-                                Url.Action("InsertProcessStatus", "Home") +
-                              "/#=id#'" +
-                            ">Edit</a>"
-                        );
+        columns.Bound(p => p.id).Title("ID");
+        columns.Bound(p => p.code).Title("code").Width(130);
+        columns.Bound(p => p.status).Title("Status");
+        columns.Bound(p => p.colour).Title("colour").Width(130);
+        columns.Template(
+                           "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
+                               Url.Action("InsertProcessStatus", "Home") +
+                             "/#=id#'" +
+                           ">Edit</a>"
+                       );
     })
     .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertProcessStatus/'></span>Add Process Status</a>"))
-    .Editable(editable => editable.Mode(GridEditMode.PopUp))
-    .Pageable()
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
     .Sortable()
-    .Scrollable()
-    .HtmlAttributes(new { style = "height:430px;" })
-    .DataSource(dataSource => dataSource
-        .Ajax()
-        .PageSize(20)
-        .Events(events => events.Error("Error"))
-       .Model(model => model.Id(p => p.id))
-        .Create(update => update.Action("InsertProcessStatus", "Home"))
-        .Read(read => read.Action("DisplayProcessStatus", "Home"))
-        .Update(update => update.Action("InsertProcessStatus", "Home",  new { id =0 }))
-        .Destroy(update => update.Action("DisplayProcessStatus", "Home"))
-    )
+    .Scrollable(scr=>scr.Height(430))
 )
-   
-</body>

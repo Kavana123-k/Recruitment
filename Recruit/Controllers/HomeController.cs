@@ -110,10 +110,11 @@ namespace Recruit.Controllers
             try
             {
                 TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
+                TempData["interviewers"] = _serviceEmployee.FindbyAll();
 
-              //  TempData["AllLocations"] = GetAllLocations();
+                //  TempData["AllLocations"] = GetAllLocations();
 
-               // Candia.Preferred = new List<Location>();
+                // Candia.Preferred = new List<Location>();
 
                 var interviewDetail = new InterviewDetail();
                 var interviewDetailAll = new List<InterviewDetail>();
@@ -148,7 +149,7 @@ namespace Recruit.Controllers
             try
             {
                 TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
-                TempData["emp"] = _serviceEmployee.FindbyAll();
+                TempData["interviewers"] = _serviceEmployee.FindbyAll();
                 log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details ");
                 if (entity.id == 0)
                 {
