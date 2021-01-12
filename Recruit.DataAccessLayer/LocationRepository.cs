@@ -39,11 +39,18 @@ namespace Recruit.DataAccessLayer
                      });
                 }
                 log.Info("[LocationRepository][Add]:Data save Successfully");
-                return ("Data save Successfully");
+               // return 0;
+                return ("\n\n Data save Successfully");
             }
             catch (Exception exception)
             {
+                 
                 log.Error("[LocationRepository][Add]:" + exception);
+                if ((exception.Message).Contains("Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'"))
+                {
+                    //return 1;
+                    return ("Insert Unsuccessful " + exception.Message); 
+                }
                 return ("Insert Unsuccessful " + exception.Message);
             }
 

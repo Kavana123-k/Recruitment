@@ -22,10 +22,17 @@
                 <span asp-validation-for="city" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Submit" class="btn btn-primary" />
+                
+                    <input type="submit" value="@ViewBag.SubmitValue" class="btn btn-primary" /> 
+                  
+               
             </div>
             <div>
                 <a asp-action="Index">Back to Dashboard</a>
+                
+            </div>
+            <div>
+                <a asp-action="DisplayLocations">Back to Display Locations</a>
             </div>
 
         </form>
@@ -39,7 +46,7 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+                }
 <!--@{
     if (@TempData["Msg"] != null)
     {
@@ -53,23 +60,23 @@
 @{
     if (@TempData["Msg"] != null)
     {
-        if (TempData["Msg"] == "Data save Successfully" || TempData["Msg"] == "Data Updated Successfully")
+        if (TempData["Msg"] == "\n\n Data save Successfully" || TempData["Msg"] == "Data Updated Successfully")
         {
-    <script>
+         <script>
 
-        @*UIkit.notification({ message: '@TempData["Msg"]', status: 'success', timeout: 5000 })*@
-        UIkit.notification({ message: '@TempData["Msg"]', timeout: 2000 })
+             UIkit.notification({ message: '@TempData["Msg"]', timeout: 5000 })
+        @*UIkit.notification({ message: '@TempData["Msg"]', status:'success' timeout: 2000 })*@
            window.location.href = "@Url.Action("DisplayLocations", "Home")";
-    </script>
+        </script>
         }
         else
         {
-<script>
+        <script>
 
-    UIkit.notification({ message: '@TempData["Msg"]', status: 'danger', timeout:5000})
+               UIkit.notification({ message: '@TempData["Msg"]', status: 'danger', timeout:5000})
 
 
-</script>
+        </script>
         }
 
     }

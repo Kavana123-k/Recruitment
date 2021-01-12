@@ -1,0 +1,711 @@
+2021-01-12 16:56:41,034 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 16:56:42,082 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 16:56:43,592 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 16:56:47,462 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 16:56:47,482 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 16:56:47,509 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 16:56:47,697 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 16:57:02,551 : [5] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 16:57:02,578 : [5] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 16:57:03,088 : [5] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 16:57:06,805 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=2 : 
+2021-01-12 16:57:06,817 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 16:57:06,834 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 16:57:06,856 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]2 : 
+2021-01-12 16:57:06,867 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 16:57:06,876 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 16:57:23,140 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 16:57:23,149 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 16:57:23,162 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 16:57:23,173 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 16:57:23,180 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 16:57:23,187 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:01:13,347 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 17:01:13,586 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 17:01:16,157 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 17:01:20,638 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 17:01:20,680 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 17:01:20,787 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 17:01:20,968 : [6] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:01:20,968 : [7] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:01:21,400 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:01:26,971 : [4] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 17:01:26,984 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:01:27,147 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:01:29,753 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:01:29,786 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:01:29,863 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:01:29,894 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:01:29,906 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:01:29,917 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:01:31,620 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:02:43,778 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 17:02:45,174 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 17:02:45,952 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 17:02:48,392 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 17:02:48,411 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 17:02:48,436 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 17:02:48,653 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:04:03,158 : [15] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 17:04:03,175 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:04:03,205 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:05,587 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:04:05,597 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:04:05,608 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:05,625 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:04:05,636 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:04:05,644 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:10,011 : [15] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 17:04:10,021 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:04:10,035 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:31,097 : [19] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:04:31,108 : [19] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:04:31,118 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:31,131 : [19] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:04:31,143 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:04:31,152 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:54,642 : [19] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:04:54,701 : [19] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:04:54,734 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:54,766 : [19] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:04:54,781 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:04:54,795 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:57,299 : [19] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:04:57,307 : [19] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:04:57,315 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:57,326 : [19] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:04:57,333 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:04:57,342 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:59,883 : [19] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:04:59,895 : [19] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:04:59,905 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:04:59,914 : [19] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:04:59,922 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:04:59,928 : [19] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:05:20,066 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 17:05:20,973 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 17:05:22,005 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 17:05:24,707 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 17:05:24,955 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 17:05:25,001 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 17:05:25,182 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:05:53,415 : [11] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:05:53,425 : [11] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:05:53,452 : [11] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:05:53,561 : [11] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:05:53,573 : [11] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:05:53,585 : [11] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:05:56,672 : [11] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 17:05:56,684 : [11] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:05:56,693 : [11] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:08:56,383 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 17:08:57,811 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 17:08:58,479 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 17:09:00,863 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 17:09:00,879 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 17:09:00,898 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 17:09:01,075 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:09:30,660 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:09:30,674 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:09:30,710 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:09:30,800 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:09:30,809 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:09:30,817 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:10:07,373 : [18] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:10:07,392 : [18] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:10:07,404 : [18] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:10:07,425 : [18] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:10:07,439 : [18] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:10:07,455 : [18] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:10:11,245 : [18] : ERROR : Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware : An unhandled exception has occurred while executing the request. : 
+System.InvalidOperationException: The 'Microsoft.AspNetCore.Mvc.ViewFeatures.Infrastructure.DefaultTempDataSerializer' cannot serialize an object of type 'System.Collections.Generic.List`1[Recruit.Models.Location]'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Infrastructure.DefaultTempDataSerializer.Serialize(IDictionary`2 values)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.CookieTempDataProvider.SaveTempData(HttpContext context, IDictionary`2 values)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.TempDataDictionary.Save()
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.SaveTempData(IActionResult result, ITempDataDictionaryFactory factory, IList`1 filters, HttpContext httpContext)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.OnResultExecuted(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-12 17:10:11,245 : [15] : ERROR : Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware : An unhandled exception has occurred while executing the request. : 
+System.InvalidOperationException: The 'Microsoft.AspNetCore.Mvc.ViewFeatures.Infrastructure.DefaultTempDataSerializer' cannot serialize an object of type 'System.Collections.Generic.List`1[Recruit.Models.Location]'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Infrastructure.DefaultTempDataSerializer.Serialize(IDictionary`2 values)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.CookieTempDataProvider.SaveTempData(HttpContext context, IDictionary`2 values)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.TempDataDictionary.Save()
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.SaveTempData(IActionResult result, ITempDataDictionaryFactory factory, IList`1 filters, HttpContext httpContext)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter.OnResultExecuted(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-12 17:10:20,098 : [15] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 17:10:20,132 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:10:20,184 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:10:23,130 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:10:23,142 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:10:23,153 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:10:23,170 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:10:23,180 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:10:23,191 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:12:43,016 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 17:12:43,948 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 17:12:44,731 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 17:12:47,002 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 17:12:47,021 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 17:12:47,036 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 17:12:47,188 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:17:49,323 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:17:49,332 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:17:49,492 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:17:49,586 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:17:49,597 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:17:49,604 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:17:57,832 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:17:57,845 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:17:57,862 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:17:57,883 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:17:57,896 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:17:58,448 : [15] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:a223a3dc-631b-491c-8793-b3ac573dd705
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:19:33,659 : [22] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:19:33,682 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:19:33,698 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:19:33,718 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:19:33,732 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:19:33,824 : [22] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:a223a3dc-631b-491c-8793-b3ac573dd705
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:19:39,667 : [22] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:19:39,678 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:19:39,695 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:19:39,710 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:19:39,720 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:19:39,784 : [22] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:a223a3dc-631b-491c-8793-b3ac573dd705
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:19:44,641 : [23] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:19:44,655 : [23] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:19:44,674 : [23] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:19:44,688 : [23] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:19:44,702 : [23] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:19:44,783 : [23] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:a223a3dc-631b-491c-8793-b3ac573dd705
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:19:48,414 : [22] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:19:48,427 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:19:48,446 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:19:48,464 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:19:48,477 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:19:48,536 : [22] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:a223a3dc-631b-491c-8793-b3ac573dd705
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:20:01,419 : [22] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:20:01,434 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:20:01,453 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:20:01,474 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:20:01,489 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:20:01,574 : [22] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:a223a3dc-631b-491c-8793-b3ac573dd705
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:20:06,736 : [22] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:20:06,750 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:20:06,767 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:20:06,795 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:20:06,809 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:20:06,879 : [22] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:a223a3dc-631b-491c-8793-b3ac573dd705
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:20:09,618 : [22] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:20:09,637 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:20:09,655 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:20:09,670 : [22] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:20:09,686 : [22] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:20:09,747 : [22] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:a223a3dc-631b-491c-8793-b3ac573dd705
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:23:59,908 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 17:24:00,575 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 17:24:01,466 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 17:24:03,828 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 17:24:03,846 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 17:24:03,859 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 17:24:04,038 : [6] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:24:38,435 : [13] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:24:38,445 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:24:38,590 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:24:38,679 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:24:38,689 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:24:38,697 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:24:43,884 : [13] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:24:43,896 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:24:43,920 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:24:43,937 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:24:43,952 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:24:44,292 : [13] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:6d21e193-0fa9-48b1-9fb2-dc3f95b9cfa6
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:25:37,554 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 17:25:37,818 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 17:25:38,834 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 17:25:42,709 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 17:25:42,771 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 17:25:42,816 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 17:25:43,150 : [7] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:25:43,360 : [13] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:25:43,434 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:25:43,545 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:25:43,807 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:25:43,822 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:25:44,694 : [13] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:782b3a70-2bad-489d-8321-455539017695
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:25:57,092 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 17:25:57,106 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:25:57,119 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:25:57,140 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 17:25:57,154 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 17:25:57,234 : [4] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:782b3a70-2bad-489d-8321-455539017695
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 17:39:36,171 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 17:39:36,584 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 17:39:37,562 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 17:39:40,200 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 17:39:40,220 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 17:39:40,232 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 17:39:40,402 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 17:40:41,384 : [15] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 17:40:41,397 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:40:41,436 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:40:51,457 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:40:51,466 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:40:51,486 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:40:51,513 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:40:51,525 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:40:51,540 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:58:26,973 : [24] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 17:58:26,988 : [24] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 17:58:27,002 : [24] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 17:58:27,025 : [24] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]0 : 
+2021-01-12 17:58:27,039 : [24] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 17:58:27,052 : [24] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:02:04,298 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 18:02:04,728 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 18:02:05,485 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 18:02:08,305 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 18:02:08,322 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 18:02:08,337 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 18:02:08,471 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 18:02:23,222 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 18:02:23,231 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:02:23,254 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:02:28,877 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 18:02:34,293 : [4] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 18:02:34,307 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:02:34,317 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:02:36,731 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 18:02:36,741 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:02:36,750 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:03:35,886 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=2 : 
+2021-01-12 18:03:35,899 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:03:35,908 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:03:35,924 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindBy]2 : 
+2021-01-12 18:03:35,937 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Get] : 
+2021-01-12 18:03:35,947 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:03:46,640 : [15] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 18:03:46,654 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:03:46,666 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:03:48,086 : [16] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 18:03:48,095 : [16] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:03:48,103 : [16] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:15:26,606 : [28] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:15:26,615 : [28] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:15:26,624 : [28] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:15:26,655 : [28] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:15:26,682 : [28] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:15:27,542 : [28] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (doha).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:f6a80cec-6855-48af-9080-d79f2c587f40
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 18:17:44,040 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 18:17:44,407 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 18:17:45,240 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 18:17:48,442 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 18:17:48,467 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 18:17:48,483 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 18:17:48,663 : [8] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 18:17:56,452 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 18:17:56,462 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:17:56,487 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:18:09,750 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:18:09,763 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:18:09,776 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:18:09,804 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:18:09,825 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:18:09,938 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:Data save Successfully : 
+2021-01-12 18:22:07,861 : [20] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:22:07,877 : [20] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:22:07,900 : [20] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:22:07,933 : [20] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:22:07,945 : [20] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:22:08,230 : [20] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (puttur).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:fba3b35c-c102-403d-bc29-668346be7488
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 18:23:11,536 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 18:23:11,915 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 18:23:12,705 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 18:23:14,871 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 18:23:14,892 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 18:23:14,909 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 18:23:15,063 : [7] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 18:24:36,427 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 18:24:37,032 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 18:24:37,797 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 18:24:39,965 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 18:24:39,981 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 18:24:39,999 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 18:24:40,139 : [6] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 18:25:01,633 : [13] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 18:25:01,644 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:25:01,684 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:25:13,879 : [13] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:25:13,892 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:25:13,921 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:25:13,946 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:25:13,962 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:25:14,058 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:Data save Successfully : 
+2021-01-12 18:26:19,856 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 18:26:21,364 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 18:26:22,191 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 18:26:25,612 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 18:26:25,631 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 18:26:25,700 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 18:26:25,871 : [6] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 18:26:31,125 : [5] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:26:31,136 : [5] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:26:31,166 : [5] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:26:31,256 : [5] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:26:31,267 : [5] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:26:31,485 : [5] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (mysore).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:a19a5a6e-2b2d-4fd3-9695-3ccbe02ba4cd
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 18:27:02,472 : [10] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:27:02,484 : [10] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:27:02,498 : [10] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:27:02,517 : [10] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:27:02,530 : [10] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:27:02,550 : [10] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:Data save Successfully : 
+2021-01-12 18:27:45,060 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 18:27:45,847 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 18:27:47,928 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 18:27:51,141 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 18:27:51,173 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 18:27:51,194 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 18:27:51,357 : [8] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 18:27:53,774 : [5] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 18:27:53,788 : [5] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:27:53,816 : [5] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:28:07,596 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:28:07,607 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:28:07,618 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:28:07,631 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:28:07,659 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:28:07,907 : [4] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (Bengaluru).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:cd71c252-71a2-4047-96c6-7c57a64b4601
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 18:28:18,354 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:28:18,386 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:28:18,409 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:28:18,430 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:28:18,444 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:28:18,513 : [4] : ERROR : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:System.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'. Cannot insert duplicate key in object 'dbo.tbl_locations'. The duplicate key value is (kochi).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2813
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 572
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 443
+   at Recruit.DataAccessLayer.LocationRepository.Add(Location entity) in C:\Users\LENOVO\source\repos\Recruit\Recruit.DataAccessLayer\LocationRepository.cs:line 36
+ClientConnectionId:cd71c252-71a2-4047-96c6-7c57a64b4601
+Error Number:2627,State:1,Class:14 : 
+2021-01-12 18:28:28,161 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:28:28,210 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:28:28,225 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:28:28,239 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:28:28,252 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:28:28,269 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:Data save Successfully : 
+2021-01-12 18:28:34,297 : [5] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 18:28:34,308 : [5] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:28:34,321 : [5] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:32:48,769 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 18:32:49,261 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 18:32:50,030 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 18:32:52,645 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 18:32:52,672 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 18:32:52,719 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 18:32:52,872 : [6] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 18:33:04,586 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 18:33:04,602 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:33:04,627 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:33:41,745 : [15] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:33:41,760 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:33:41,774 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:33:41,793 : [15] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:33:41,806 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:33:41,929 : [15] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:Data save Successfully : 
+2021-01-12 18:38:59,956 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-12 18:39:00,442 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-12 18:39:01,282 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-12 18:39:03,898 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-12 18:39:03,924 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-12 18:39:03,938 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-12 18:39:04,138 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-12 18:40:27,892 : [13] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 18:40:27,911 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:40:27,940 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:40:31,161 : [13] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[GET]Action Method returns view which gets thepage to insert the Locations Details [Data]=0 : 
+2021-01-12 18:40:31,168 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:40:31,175 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:40:46,226 : [13] : INFO  : Recruit.Controllers.HomeController : [InsertLocations]:[Post]Action Method returns view which posts the input page to the table Locations Details : 
+2021-01-12 18:40:46,237 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:40:46,246 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-12 18:40:46,264 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][Insert] : 
+2021-01-12 18:40:46,276 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add] : 
+2021-01-12 18:40:46,359 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][Add]:Data save Successfully : 
+2021-01-12 18:40:49,106 : [13] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-12 18:40:49,113 : [13] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-12 18:40:49,120 : [13] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 

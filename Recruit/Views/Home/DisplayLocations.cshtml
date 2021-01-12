@@ -1,40 +1,4 @@
-﻿@*@model List<Location>
-
-@using Kendo.Mvc.UI;
-<h1>Location Details</h1>
-
-@(Html.Kendo().Grid(Model)
-    .Name("grid").Width(720).Height(430)
-    .Columns(columns =>
-    {
-        columns.Bound(p => p.id).Title("ID");
-        columns.Bound(p => p.city).Title("City");
-        columns.Template(
-                            "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
-                                Url.Action("InsertLocations", "Home") +
-                              "/#=id#'" +
-                            ">Edit</a>"
-                        );
-
-        //Bound(p => p.id).Title(" ").Width(100).
-
-        // columns.Command(column => column.Edit());
-
-        //columns.Command(command => { command.Edit(); }).Width(160);
-    })
-    .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertLocations/'></span>Add Locations</a>"))
-    //.Editable(editable => editable.Mode(GridEditMode.PopUp))
-    .Pageable()
-    .Sortable()
-    .Scrollable()
-    //.HtmlAttributes(new { style = "height:430px;" })
-    .DataSource(dataSource => dataSource
-        .Ajax()
-        .PageSize(20)
-    // .Events(events => events.Error("Error"))
-    //.Model(model => model.Id(p => p.id))
-    )
-)*@
+﻿
 @model List<Location>
 
 @using Kendo.Mvc.UI;

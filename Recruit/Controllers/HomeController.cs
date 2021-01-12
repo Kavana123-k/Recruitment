@@ -314,17 +314,29 @@ namespace Recruit.Controllers
             try
             {
                 var location = new Location();
-                var locationAll = new List<Location>();
-                if (!string.IsNullOrWhiteSpace(id.ToString()))
+              
+                //if (!string.IsNullOrWhiteSpace(id.ToString()))
+                //{
+                //    location = _serviceLocation.FindBy(id);
+                //    return View(location);
+
+                //}
+                //else
+                //{
+                //    locationAll = _serviceLocation.FindbyAll();
+                //    return View(locationAll);
+                //}
+
+                if (id != 0)
                 {
                     location = _serviceLocation.FindBy(id);
+                    ViewBag.SubmitValue = "Update";
                     return View(location);
-
                 }
                 else
                 {
-                    locationAll = _serviceLocation.FindbyAll();
-                    return View(locationAll);
+                    ViewBag.SubmitValue = "Insert";
+                    return View();
                 }
             }
             catch (Exception exception)
@@ -355,6 +367,15 @@ namespace Recruit.Controllers
                     {
                         if (ModelState.IsValid)
                         {
+                            //int code = _serviceLocation.Insert(entity);
+                            //if(code==0)
+                            //{
+                            //    TempData["msg"] = "Data save Successfully";
+                            //}
+                            //else if(code==1)
+                            //{
+                            //    TempData["msg"] = "Data Entered is Already Present";
+                            //}
                             TempData["msg"] = _serviceLocation.Insert(entity);
                         }
                     }

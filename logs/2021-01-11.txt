@@ -204,3 +204,13 @@
 2021-01-11 11:09:19,322 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Get] : 
 2021-01-11 11:09:19,333 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllRows] : 
 2021-01-11 11:09:19,358 : [4] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllInterviewers] : 
+2021-01-11 11:14:12,319 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-11 11:14:12,621 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-11 11:14:13,365 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-11 11:14:15,149 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-11 11:14:15,173 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-11 11:14:15,196 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-11 11:14:15,369 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-11 11:14:30,955 : [4] : INFO  : Recruit.Controllers.HomeController : [DisplayVacancies]:Action Method returns view which displays the Locations Details : 
+2021-01-11 11:14:30,966 : [4] : INFO  : Recruit.BusinessAccessLayer.VacancyService : [VacancyService][FindByAll] : 
+2021-01-11 11:14:30,997 : [4] : INFO  : Recruit.DataAccessLayer.VacancyRepository : [VacancyRepository][GetAll] : 
