@@ -10,6 +10,7 @@ namespace Recruit.Models
     {
         [Key]
         public Int64 id { get; set; }
+
         [StringLength(20)]
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "City is invalid")]

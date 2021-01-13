@@ -331,11 +331,13 @@ namespace Recruit.Controllers
                 {
                     location = _serviceLocation.FindBy(id);
                     ViewBag.SubmitValue = "Update";
+                    
                     return View(location);
                 }
                 else
                 {
-                    ViewBag.SubmitValue = "Insert";
+                    ViewBag.SubmitValue = "Add";
+                    
                     return View();
                 }
             }
@@ -367,12 +369,17 @@ namespace Recruit.Controllers
                     {
                         if (ModelState.IsValid)
                         {
+                            
                             //int code = _serviceLocation.Insert(entity);
                             //if(code==0)
                             //{
                             //    TempData["msg"] = "Data save Successfully";
                             //}
                             //else if(code==1)
+                            //{
+                            //    TempData["msg"] = "Data Entered is Already Present";
+                            //}
+                            //else if(code==2)
                             //{
                             //    TempData["msg"] = "Data Entered is Already Present";
                             //}
@@ -391,6 +398,7 @@ namespace Recruit.Controllers
                     {
                         if (ModelState.IsValid)
                         {
+                            
                             TempData["msg"] = _serviceLocation.Update(entity);
                         }
                     }
