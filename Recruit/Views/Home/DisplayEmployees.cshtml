@@ -3,7 +3,7 @@
 @using Kendo.Mvc.UI;
 <h1 align="center"style="color: white;">Employee Details</h1>
 @(Html.Kendo().Grid(Model)
-    .Name("Grid")
+    .Name("EmpGrid")
     .Columns(columns =>
     {
         columns.Bound(p => p.id).Title("ID");

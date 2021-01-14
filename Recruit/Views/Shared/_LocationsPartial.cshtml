@@ -1,7 +1,7 @@
 ﻿@using Kendo.Mvc.UI;
 
 @(Html.Kendo().Grid((IEnumerable<Location>)TempData["Location"])
-    .Name("Grid")
+    .Name("LocationGrid")
     .Columns(columns =>
     {
         columns.Bound(p => p.id).Title("ID");

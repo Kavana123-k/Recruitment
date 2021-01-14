@@ -35,12 +35,12 @@
 @model IEnumerable<Recruit.Models.Vacancy>
 <h1 align="center"style="color: white;">Vacancy Details</h1>
 @(Html.Kendo().Grid(Model)
-    .Name("Grid").Width(500)
+    .Name("VacancyGrid").Width(500)
     .Columns(columns =>
     {
         columns.Bound(p => p.id).Title("ID");
-        columns.Bound(p => p.code).Title("Code").Filterable(ftb => ftb.Multi(true).Search(true)).Width(300);
-        columns.Bound(p => p.name).Title("Designation").Filterable(ftb => ftb.Multi(true).Search(true)).Width(300);
+        columns.Bound(p => p.code).Title("Code").Filterable(ftb => ftb.Multi(true).Search(true));
+        columns.Bound(p => p.name).Title("Designation").Filterable(ftb => ftb.Multi(true).Search(true));
         columns.Bound(p => p.vacancy).Title("Vacancies");
         columns.Template(
 

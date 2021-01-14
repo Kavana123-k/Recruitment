@@ -5,7 +5,7 @@
 
 
 @(Html.Kendo().Grid((IEnumerable<ProcessStage>)TempData["stage"])
-        .Name("Grid")
+        .Name("StageGrid")
         .Columns(columns =>
         {
             columns.Bound(p => p.id).Title("ID");

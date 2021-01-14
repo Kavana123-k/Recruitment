@@ -4,7 +4,7 @@
 
 @(Html.Kendo().Grid((IEnumerable<Source>)TempData["source"])
    
-    .Name("Grid")
+    .Name("SourceGrid")
     .Columns(columns =>
     {
         columns.Bound(p => p.id).Title("ID");

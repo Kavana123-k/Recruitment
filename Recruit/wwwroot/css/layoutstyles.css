@@ -96,6 +96,26 @@
     width: 600px;
     margin: auto;
 }
+#StageGrid {
+    height: 550px;
+    width: 750px;
+    margin: auto;
+}
+#StatusGrid {
+    height: 550px;
+    width: 800px;
+    margin: auto;
+}
+#VacancyGrid {
+    height: 550px;
+    width: 900px;
+    margin: auto;
+}
+#EmpGrid {
+    height: 550px;
+    width: 600px;
+    margin: auto;
+}
 
 
 
