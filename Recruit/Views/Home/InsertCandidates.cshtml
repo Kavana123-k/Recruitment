@@ -3,14 +3,14 @@
 
 
 
-<link rel="stylesheet" href="~/css/layoutstyles.css">
 
 
+<h1 align="center"style="color: white;">Candidate Details</h1>
 
 <body>
 
 
-    <h1>Candidate Details</h1>
+
 
     <form asp-action="InsertCandidates" class="form-horizontal">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -218,7 +218,7 @@
         </div>
         <div class="row">
             <div class="column">
-                <input type="submit" value="Submit" class="btn bg-primary" />
+                <input type="submit" value="@ViewBag.SubmitValue" class="btn bg-primary" />
 
             </div>
         </div>
@@ -231,7 +231,10 @@
 <div>
     <a asp-action="Index">Back to Dashboard</a>
 </div>
+<div>
 
+    <a asp-action="DisplayCandidatesDetails">Back to Display Candidate Details</a>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
@@ -241,20 +244,20 @@
     {
         if (TempData["Msg"] == "Data save Successfully" || TempData["Msg"] == "Data Updated Successfully")
         {
-    <script>
+            <script>
 
         UIkit.notification({ message: '@TempData["Msg"]', status: 'success', timeout: 5000 })
            window.location.href = "@Url.Action("DisplayCandidatesDetails", "Home")";
-    </script>
+            </script>
         }
         else
         {
-<script>
+            <script>
 
     UIkit.notification({ message: '@TempData["Msg"]', status: 'danger', timeout: 5000})
 
 
-</script>
+            </script>
         }
 
     }

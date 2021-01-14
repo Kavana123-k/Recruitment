@@ -33,9 +33,9 @@
     )*@
 @using Kendo.Mvc.UI;
 @model IEnumerable<Recruit.Models.Vacancy>
-<h1>Vacancy Details</h1>
+<h1 align="center"style="color: white;">Vacancy Details</h1>
 @(Html.Kendo().Grid(Model)
-    .Name("Grid")
+    .Name("Grid").Width(500)
     .Columns(columns =>
     {
         columns.Bound(p => p.id).Title("ID");

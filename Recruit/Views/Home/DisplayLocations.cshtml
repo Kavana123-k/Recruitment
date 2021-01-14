@@ -2,9 +2,9 @@
 @model List<Location>
 
 @using Kendo.Mvc.UI;
-<h1>Location Details</h1>
+<h1 align="center"style="color: white;">Location Details</h1>
 @(Html.Kendo().Grid(Model)
-    .Name("Grid")
+    .Name("LocationGrid")
     .Columns(columns =>
     {
         columns.Bound(p => p.id).Title("ID");

@@ -1,7 +1,7 @@
 ﻿@model Recruit.Models.InterviewDetail
 
 
-<h2>Insert Interview Details</h2>
+<h1 align="center"style="color: white;">Insert Interview Details</h1>
 <hr />
 
 
@@ -47,7 +47,7 @@
             <span asp-validation-for="employee_id" class="text-danger"></span>*@
         </div>
         <div class="column">
-            <input type="submit" value="Submit" class="btn bg-primary" align="center" /><br />
+            <input type="submit" value="@ViewBag.SubmitValue" class="btn bg-primary" align="center" /><br />
 
 
             <a asp-action="Index">Back to Dashboard</a>

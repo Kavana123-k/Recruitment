@@ -2,9 +2,9 @@
 @model List<Source>
 @using Kendo.Mvc.UI;
 @*@model IEnumerable<Recruit.Models.Vacancy>*@
-<h1>Sources Details</h1>
+<h1 align="center"style="color: white;">Sources Details</h1>
 @(Html.Kendo().Grid(Model)
-    .Name("Grid")
+    .Name("SourceGrid")
     .Columns(columns =>
     {
         columns.Bound(p => p.id).Title("ID");
@@ -26,7 +26,7 @@
          .Numeric(false)
      )
     .Sortable()
-    .Scrollable(scr=>scr.Height(430))
+    .Scrollable(scr=>scr.Height(100))
 
     //.DataSource(dataSource => dataSource
     //    .Ajax()

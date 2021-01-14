@@ -41,11 +41,17 @@ namespace Recruit.DataAccessLayer
                     });
                 }
                 log.Info("[OwnerRepository][Add]:Data save Successfully");
+                //return 0;
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
                log.Error("[OwnerRepository][Add]:" + exception);
+                //if ((exception.Message).Contains("Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'"))
+                //{
+                //    //return 1;
+                //    return ("Insert Unsuccessful " + exception.Message);
+                //}
                 return ("Insert Unsuccessful " + exception.Message);
             }
 
@@ -122,11 +128,17 @@ namespace Recruit.DataAccessLayer
                     });
                 }
                 log.Info("[OwnerRepository][Update]:Data save Successfully");
+                //return 2;
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
                 log.Error("[OwnerRepository][Update]:" + exception);
+                //if ((exception.Message).Contains("Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'"))
+                //{
+                //    //return 3;
+                //    return ("Insert Unsuccessful " + exception.Message);
+                //}
                 return ("Update Unsuccessful " + exception.Message);
             }
 

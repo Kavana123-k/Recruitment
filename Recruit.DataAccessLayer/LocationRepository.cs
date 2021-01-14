@@ -46,11 +46,11 @@ namespace Recruit.DataAccessLayer
             {
                  
                 log.Error("[LocationRepository][Add]:" + exception);
-                if ((exception.Message).Contains("Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'"))
-                {
-                    //return 1;
-                    return ("Insert Unsuccessful " + exception.Message); 
-                }
+                //if ((exception.Message).Contains("Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'"))
+                //{
+                //    //return 1;
+                //    return ("Insert Unsuccessful " + exception.Message); 
+                //}
                 return ("Insert Unsuccessful " + exception.Message);
             }
 
@@ -127,7 +127,7 @@ namespace Recruit.DataAccessLayer
                     });
                 }
                 log.Info("[LocationRepository][Update]:Data save Successfully");
-                // return 0;
+                // return 2;
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
@@ -135,7 +135,7 @@ namespace Recruit.DataAccessLayer
                  log.Error("[LocationRepository][Update]:" + exception);
                 //if ((exception.Message).Contains("Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'"))
                 //{
-                //    //return 1;
+                //    //return 3;
                 //    return ("Update Unsuccessful " + exception.Message);
                 //}
                 //return ("update Unsuccessful " + exception.Message);

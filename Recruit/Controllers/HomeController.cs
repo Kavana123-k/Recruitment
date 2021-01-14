@@ -88,6 +88,7 @@ namespace Recruit.Controllers
             log.Debug("[DisplayCandidatesDetails]: ");
             try
             {
+
                 var data = _serviceCandidate.FindbyAll();
                 return View(data);
             }
@@ -120,13 +121,14 @@ namespace Recruit.Controllers
                 var interviewDetailAll = new List<InterviewDetail>();
                 if (id!=0)
                 {
+                    ViewBag.SubmitValue = "Update";
                     interviewDetail = _serviceInterviewDetail.FindBy(id);
                     return View(interviewDetail);
 
                 }
                 else
                 {
-                   
+                    ViewBag.SubmitValue = "Add";
                     return View();
                 }
             }
@@ -221,13 +223,14 @@ namespace Recruit.Controllers
                 
                 if (id!=0)
                 {
+                    ViewBag.SubmitValue = "Update";
                     candidate = _serviceCandidate.FindBy(id);
                     return View(candidate);
 
                 }
                 else
                 {
-        
+                    ViewBag.SubmitValue = "Add";
                     return View();
                 }
 
@@ -430,17 +433,18 @@ namespace Recruit.Controllers
             {
 
                 var source = new Source();
-                var soucrceAll = new List<Source>();
-                if (!string.IsNullOrWhiteSpace(id.ToString()))
+              
+                if (id!=0)
                 {
+                    ViewBag.SubmitValue = "Update";
                     source = _serviceSource.FindBy(id);
                     return View(source);
 
                 }
                 else
                 {
-                    soucrceAll = _serviceSource.FindbyAll();
-                    return View(soucrceAll);
+                    ViewBag.SubmitValue = "Add";
+                    return View();
                 }
             }
             catch (Exception exception)
@@ -515,17 +519,18 @@ namespace Recruit.Controllers
             try
             {
                 var vacancy = new Vacancy();
-                var vacancyAll = new List<Vacancy>();
-                if (!string.IsNullOrWhiteSpace(id.ToString()))
+               
+                if (id!=0)
                 {
+                    ViewBag.SubmitValue = "Update";
                     vacancy = _serviceVacancy.FindBy(id);
                     return View(vacancy);
 
                 }
                 else
                 {
-                    vacancyAll = _serviceVacancy.FindbyAll();
-                    return View(vacancyAll);
+                    ViewBag.SubmitValue = "Add";
+                    return View();
                 }
             }
             catch (Exception exception)
@@ -601,17 +606,18 @@ namespace Recruit.Controllers
             try
             {
                 var processStatus = new ProcessStatus();
-                var processStatusAll = new List<ProcessStatus>();
-                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                
+                if (id!=0)
                 {
+                    ViewBag.SubmitValue = "Update";
                     processStatus = _serviceProcessStatus.FindBy(id);
                     return View(processStatus);
 
                 }
                 else
                 {
-                    processStatusAll = _serviceProcessStatus.FindbyAll();
-                    return View(processStatusAll);
+                    ViewBag.SubmitValue = "Add";
+                    return View();
                 }
             }
             catch (Exception exception)
@@ -685,17 +691,18 @@ namespace Recruit.Controllers
             try
             {
                 var processStage = new ProcessStage();
-                var processStageAll = new List<ProcessStage>();
-                if (!string.IsNullOrWhiteSpace(id.ToString()))
+                
+                if (id!=0)
                 {
+                    ViewBag.SubmitValue = "Update";
                     processStage = _serviceProcessStage.FindBy(id);
                     return View(processStage);
 
                 }
                 else
                 {
-                    processStageAll = _serviceProcessStage.FindbyAll();
-                    return View(processStageAll);
+                    ViewBag.SubmitValue = "Add";
+                    return View();
                 }
             }
             catch (Exception exception)

@@ -67,10 +67,10 @@
     transition: margin-left .5s;
     padding: 16px;
 }
-body {
-    background-image: url("http://hdqwalls.com/wallpapers/cloudy-sky-evening-sky-4k-zm.jpg")
-
-}
+/*body {*/
+    /*background-image: url("http://hdqwalls.com/wallpapers/cloudy-sky-evening-sky-4k-zm.jpg")*/
+    /*background-color: #9b59b6;
+}*/
 .column {
     float: left;
     width: 50%;
@@ -85,6 +85,16 @@ body {
     content: "";
     display: table;
     clear: both;
+}
+#SourceGrid {
+    height: 550px;
+    width: 600px;
+    margin: auto;
+}
+#LocationGrid {
+    height: 550px;
+    width: 600px;
+    margin: auto;
 }
 
 

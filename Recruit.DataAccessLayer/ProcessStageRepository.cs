@@ -41,11 +41,17 @@ namespace Recruit.DataAccessLayer
                     });
                 }
                 log.Info("[ProcessStageRepository][Add]:Data save Successfully");
+                //return 0;
                 return ("Data save Successfully");
             }
             catch (Exception exception)
             {
                 log.Error("[ProcessStageRepository][Add]:" + exception);
+                //if ((exception.Message).Contains("Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'"))
+                //{
+                //    //return 1;
+                //    return ("Insert Unsuccessful " + exception.Message);
+                //}
                 return ("Insert Unsuccessful " + exception.Message);
             }
 
@@ -124,11 +130,17 @@ namespace Recruit.DataAccessLayer
                     });
                 }
                log.Info("[ProcessStageRepository][Update]:Data save Successfully");
+                //return 2;
                 return ("Data Updated Successfully");
             }
             catch (Exception exception)
             {
-             log.Error("[ProcessStageRepository][Update]:" + exception);
+                //if ((exception.Message).Contains("Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'"))
+                //{
+                //    //return 3;
+                //    return ("Insert Unsuccessful " + exception.Message);
+                //}
+                log.Error("[ProcessStageRepository][Update]:" + exception);
                 return ("Update Unsuccessful " + exception.Message);
             }
 

@@ -127,6 +127,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
+                
                   log.Error("[ProcessStatusRepository][GetAll]" + exception);
                 return ("Update Unsuccessful " + exception.Message);
             }

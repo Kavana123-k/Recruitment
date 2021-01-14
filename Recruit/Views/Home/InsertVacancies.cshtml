@@ -5,7 +5,7 @@
 
 }
 
-<h1>Vacancy Details</h1>
+<h1 align="center"style="color: white;">Vacancy Details</h1>
 
 
 <hr />
@@ -30,12 +30,16 @@
                 <span asp-validation-for="vacancy" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Submit" class="btn btn-primary" />
+                <input type="submit" value="@ViewBag.SubmitValue" class="btn btn-primary" />
             </div>
 
         </form>
         <div>
             <a asp-action="Index">Back to Dashboard</a>
+        </div>
+        <div>
+
+            <a asp-action="DisplayVacancies">Back to Display Vacancies</a>
         </div>
     </div>
     <div class="column">
