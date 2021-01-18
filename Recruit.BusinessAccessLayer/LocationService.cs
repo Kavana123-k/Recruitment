@@ -63,5 +63,15 @@ namespace Recruit.BusinessAccessLayer
         {
             throw new System.NotImplementedException();
         }
+        /// <summary>
+        /// BAL Service Method to Display required
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public List<Location> GetRequired(int id)
+        {
+            log.Info("[GetRequired]");
+            throw new System.NotImplementedException();
+        }
     }
 }

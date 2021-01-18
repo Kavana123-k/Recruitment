@@ -92,6 +92,15 @@ namespace Recruit.DataAccessLayer
         {
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// Method to get required details
+        /// </summary>
+        /// <param name="entity"></param>
+
+        public List<Candidate> GetRequired(int Id)
+        {
+            throw new NotImplementedException();
+        }
 
         public Candidate Get(int id)
         {

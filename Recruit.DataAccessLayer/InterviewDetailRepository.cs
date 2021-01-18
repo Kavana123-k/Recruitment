@@ -33,12 +33,12 @@ namespace Recruit.DataAccessLayer
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    string insertQuery = @"INSERT INTO tbl_interview_details([candidate_id], [start_date_time], [end_date_time],[status_id], [reason])
-                        VALUES (@candidate_id, @start_date_time, @end_date_time,@status_id, @reason);
+                    string insertQuery = @"INSERT INTO tbl_interview_details([candidate_id], [start_date_time], [end_date_time],[status_id], [reason],[interview_stage_id])
+                        VALUES (@candidate_id, @start_date_time, @end_date_time,@status_id, @reason,@interview_stage_id);
                         SELECT CAST(SCOPE_IDENTITY() as int)";
 
 
-                     id = database.QuerySingle<int>(insertQuery, new { entity.candidate_id, entity.start_date_time, entity.end_date_time, entity.status_id, entity.reason });
+                     id = database.QuerySingle<int>(insertQuery, new { entity.candidate_id, entity.start_date_time, entity.end_date_time, entity.status_id, entity.reason,entity.interview_stage_id });
 
 
                 }
@@ -143,7 +143,7 @@ namespace Recruit.DataAccessLayer
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    data = database.Query<InterviewDetail>("SELECT tbl_interview_details.id,first_name," +
+                    data = database.Query<InterviewDetail>("SELECT tbl_interview_details.id,interview_stage_id,first_name," +
                         "start_date_time,end_date_time,status,reason FROM tbl_interview_details," +
                         "tbl_candidates,tbl_interview_round_statuses where" +
                         " tbl_interview_details.candidate_id = tbl_candidates.id and tbl_interview_details.status_id = tbl_interview_round_statuses.id").ToList();
@@ -170,7 +170,7 @@ namespace Recruit.DataAccessLayer
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    data = database.Query<InterviewDetail>("Select id,candidate_id,start_date_time,end_date_time, status_id, reason from tbl_interview_details").ToList();
+                    data = database.Query<InterviewDetail>("Select id,interview_stage_id,candidate_id,start_date_time,end_date_time, status_id, reason from tbl_interview_details").ToList();
                 }
             }
             catch (Exception exception)
@@ -193,7 +193,7 @@ namespace Recruit.DataAccessLayer
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    string updateQuery = @"UPDATE tbl_interview_details SET candidate_id=@candidate_id,start_date_time=@start_date_time,
+                    string updateQuery = @"UPDATE tbl_interview_details SET candidate_id=@candidate_id,interview_stage_id=@interview_stage_id,start_date_time=@start_date_time,
                                             end_date_time=@end_date_time,status_id=@status_id,reason=@reason WHERE id=@id";
 
                     var result = database.Execute(updateQuery, new
@@ -203,7 +203,8 @@ namespace Recruit.DataAccessLayer
                         entity.start_date_time,
                         entity.end_date_time,
                         entity.status_id,
-                        entity.reason
+                        entity.reason,
+                        entity.interview_stage_id
                     });
                 }
               
@@ -237,6 +238,15 @@ namespace Recruit.DataAccessLayer
                 return ("Update Unsuccessful " + exception.Message);
             }
 
+        }
+        /// <summary>
+        /// Method to get required details
+        /// </summary>
+        /// <param name="entity"></param>
+
+        public List<InterviewDetail> GetRequired(int Id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

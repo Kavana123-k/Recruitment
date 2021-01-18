@@ -38,7 +38,7 @@ namespace Recruit.Controllers
         static Recruit.BusinessAccessLayer.Interface.IService<ProcessStage> _serviceProcessStage;
         static Recruit.BusinessAccessLayer.Interface.IService<Vacancy> _serviceVacancy;
         static Recruit.BusinessAccessLayer.Interface.IService<Source> _serviceSource;
-     //  static Recruit.BusinessAccessLayer.Interface.IService<InterviewTimelineModel> _seviceInterviewTimeline;
+        static Recruit.BusinessAccessLayer.Interface.IService<Timeline> _seviceTimeline;
         public HomeController(Recruit.BusinessAccessLayer.Interface.IService<Candidate> serviceCanidate,
                                 Recruit.BusinessAccessLayer.Interface.IService<Location> serviceLocation,
                                 Recruit.BusinessAccessLayer.Interface.IService<Employee> serviceEmployee,
@@ -48,8 +48,8 @@ namespace Recruit.Controllers
             Recruit.BusinessAccessLayer.Interface.IService<ProcessStatus> serviceProcessStatus,
             Recruit.BusinessAccessLayer.Interface.IService<ProcessStage> serviceProcessStage,
             Recruit.BusinessAccessLayer.Interface.IService<Vacancy> serviceVacancy,
-            Recruit.BusinessAccessLayer.Interface.IService<Source> serviceSource
-        //    Recruit.BusinessAccessLayer.Interface.IService<InterviewTimelineModel> seviceInterviewTimeline
+            Recruit.BusinessAccessLayer.Interface.IService<Source> serviceSource,
+            Recruit.BusinessAccessLayer.Interface.IService<Timeline> seviceTimeline
            )
         {
             _serviceCandidate = serviceCanidate;
@@ -62,7 +62,7 @@ namespace Recruit.Controllers
             _serviceProcessStage = serviceProcessStage;
             _serviceVacancy = serviceVacancy;
             _serviceSource = serviceSource;
-          //  _seviceInterviewTimeline = seviceInterviewTimeline;
+            _seviceTimeline = seviceTimeline;
 
 
         }
@@ -111,7 +111,8 @@ namespace Recruit.Controllers
             try
             {
                 TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
-                TempData["interviewers"] = _serviceEmployee.FindbyAll();
+                TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
+                //  TempData["interviewers"] = _serviceEmployee.FindbyAll();
 
                 //  TempData["AllLocations"] = GetAllLocations();
 
@@ -151,7 +152,8 @@ namespace Recruit.Controllers
             try
             {
                 TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
-                TempData["interviewers"] = _serviceEmployee.FindbyAll();
+                TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
+                //  TempData["interviewers"] = _serviceEmployee.FindbyAll();
                 log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details ");
                 if (entity.id == 0)
                 {
@@ -845,6 +847,25 @@ namespace Recruit.Controllers
             }
 
         }
+        /// <summary>
+        /// Method to display interview details
+        /// </summary>
+        /// <returns>returns a list containing the details to the view </returns>
+        public JsonResult DisplayInterviewDetailsList()
+        {
+            try
+            {
+                List<InterviewDetail> interviewDetails = _serviceInterviewDetail.FindbyAll();
+                // TempData["interviewer"] = _serviceInterviewDetail.Findinterviewers();
+                return Json( interviewDetails);
+            }
+            catch (Exception exception)
+            {
+                log.Error("[DisplayInterviewDetails]:" + exception);
+                return  Json( new List<InterviewDetail>());
+            }
+
+        }
 
         /// <summary>
         /// method to display the location table
@@ -966,8 +987,8 @@ namespace Recruit.Controllers
        /// <returns></returns>
        public IActionResult DisplaySpecificInterviewDetails(int id)
         {
-         //   List<InterviewDetail> interview = _seviceInterviewTimeline.FindBy(id);
-            return View();
+          List<Timeline> timeline = _seviceTimeline.GetRequired(id);
+            return View(timeline);
         }
 
 

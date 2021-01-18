@@ -62,5 +62,15 @@ namespace Recruit.BusinessAccessLayer
             log.Info("[VacancyService][Delete]");
             throw new System.NotImplementedException();
         }
+        /// <summary>
+        /// BAL Service Method to Display required
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public List<Vacancy> GetRequired(int id)
+        {
+            log.Info("[GetRequired]");
+            throw new System.NotImplementedException();
+        }
     }
 }

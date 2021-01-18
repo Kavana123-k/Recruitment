@@ -145,6 +145,15 @@ namespace Recruit.DataAccessLayer
             }
 
         }
+        /// <summary>
+        /// Method to get required details
+        /// </summary>
+        /// <param name="entity"></param>
+
+        public List<ProcessStage> GetRequired(int Id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

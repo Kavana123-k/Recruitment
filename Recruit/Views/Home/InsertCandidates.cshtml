@@ -6,8 +6,9 @@
 
 
 <h1 align="center"style="color: white;">Candidate Details</h1>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
 
-<body  style="height: auto;">
+<body style="height: auto;">
 
 
 
@@ -228,13 +229,16 @@
 
 
 
-<div>
-    <a asp-action="Index">Back to Dashboard</a>
-</div>
-<div>
+    <div>
+        <a asp-action="Index">Back to Dashboard</a>
+    </div>
+    <div>
 
-    <a asp-action="DisplayCandidatesDetails">Back to Display Candidate Details</a>
-</div>
+        <a asp-action="DisplayCandidatesDetails">Back to Display Candidate Details</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js"></script>
+
 </body>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -13,8 +13,13 @@ namespace Recruit.Models
         public Int64 id { get; set; }
         [ForeignKey("candidate_id")]
         [Required(ErrorMessage = "Candidate id invalid")]
+
         public Int64 candidate_id { get; set; }
 
+        [Required(ErrorMessage = "Please choose correct Interview Stage")]
+        [Display(Name = "Interview Stage")]
+        
+        public String interview_stage_id { get; set; }
         public String first_name { get; set; }
         [Required(ErrorMessage = "Please choose correct date time")]
         [Display(Name = "Interview Start date")]

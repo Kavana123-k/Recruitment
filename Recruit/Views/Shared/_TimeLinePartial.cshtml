@@ -1,0 +1,19 @@
+﻿@using Kendo.Mvc.UI;
+
+<div id="example">
+    <div class="demo-section k-content wide">
+        @(Html.Kendo().Timeline<Recruit.Models.InterviewDetail> ()
+               .Name("Timeline")
+               .DataDateField("EventDate")
+               .DataDescriptionField("Description")
+               .DataSubtitleField("Subtitle")
+               .DataTitleField("Title")
+               .DataImagesField("Images")
+               .DataActionsField("Actions")
+               .Orientation(TimelineOrientation.Vertical)
+               .AlternatingMode()
+               .CollapsibleEvents()
+               .DataSource(dt => dt.Read("GetEvents", "Home"))
+    )
+    </div>
+</div>

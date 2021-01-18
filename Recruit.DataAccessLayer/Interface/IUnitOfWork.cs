@@ -14,8 +14,8 @@ namespace Recruit.DataAccessLayer.Interface
         IGenericRepository<ProcessStatus> processStatusRepository { get; }
         IGenericRepository<Source> sourceRepository { get; }
         IGenericRepository<Vacancy> vacancyRepository { get; }
-        
-       
+        IGenericRepository<Timeline> timelineRepository { get; }
+
 
 
 

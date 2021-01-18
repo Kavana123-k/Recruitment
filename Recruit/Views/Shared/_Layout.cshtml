@@ -7,21 +7,30 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/layoutstyles.css">
-    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.1.219/styles/kendo.default-v2.min.css" />
+    @*<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.1.219/styles/kendo.default-v2.min.css" />*@
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.3.1118/styles/kendo.default-v2.min.css" />
 
-
-    @*  <title>@ViewData["Title"] - Recruit</title>*@
-
-    <link href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    @*<link href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
     <link href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.flat.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.flat.min.css" rel="stylesheet" type="text/css" />*@
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
 
+
+
+
     <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/jszip.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/kendo.all.min.js"></script>
+    @*<script src="https://kendo.cdn.telerik.com/2017.3.1026/js/kendo.all.min.js"></script>*@
+    @*<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>*@
+    <script src="https://kendo.cdn.telerik.com/2020.3.1118/js/kendo.all.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/kendo.aspnetmvc.min.js"></script>
+
+
+
+
+
 
     @*      <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
             <link rel="stylesheet" href="~/css/site.css" />
@@ -43,7 +52,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Dashboard</a>
         <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayCandidatesDetails">Candidate details</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayInterviewDetails">Interview details</a>
+        @*<a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayInterviewDetails">Interview details</a>*@
         <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayEmployees">Employee Details</a>
         <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayLocations">Locations</a>
         <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayVacancies">Vacancies</a>
@@ -51,35 +60,35 @@
         <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayProcessStages">Process Stages</a>
         <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplaySources">Sources</a>
         <!--<button class="dropdown-btn">
-        Insert
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">-->
+            Insert
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">-->
         @*<a  class="nav-link " asp-area="" asp-controller="Candidate" asp-action="InsertCandidates" asp-route-id="0">Candidate Details-1</a>*@
         <!--<a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertCandidates" asp-route-id="0">Candidate Details</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertInterviewDetails" asp-route-id="0">Interview Details</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertLocations" asp-route-id="0">Locations</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertSources" asp-route-id="0">Sources</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertVacancies" asp-route-id="0">Vacancies</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertProcessStatus" asp-route-id="0">Process Status</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertProcessStages" asp-route-id="0">Process Stages</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertInterviewRoundStatuses" asp-route-id="0">Interview Round Status</a>
-    </div>
-    <button class="dropdown-btn">
-        Display
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayCandidatesDetails">Candidate details</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayInterviewDetails">Interview details</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayEmployees">Employee Details</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayLocations">Locations</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayVacancies">Vacancies</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayProcessStatus">Process Statuses</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayProcessStages">Process Stages</a>
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplaySources">Sources</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertInterviewDetails" asp-route-id="0">Interview Details</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertLocations" asp-route-id="0">Locations</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertSources" asp-route-id="0">Sources</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertVacancies" asp-route-id="0">Vacancies</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertProcessStatus" asp-route-id="0">Process Status</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertProcessStages" asp-route-id="0">Process Stages</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="InsertInterviewRoundStatuses" asp-route-id="0">Interview Round Status</a>
+        </div>
+        <button class="dropdown-btn">
+            Display
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayCandidatesDetails">Candidate details</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayInterviewDetails">Interview details</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayEmployees">Employee Details</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayLocations">Locations</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayVacancies">Vacancies</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayProcessStatus">Process Statuses</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplayProcessStages">Process Stages</a>
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="DisplaySources">Sources</a>
 
-    </div>-->
+        </div>-->
 
     </div>
 

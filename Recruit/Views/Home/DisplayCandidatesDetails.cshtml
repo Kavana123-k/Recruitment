@@ -40,10 +40,17 @@
         columns.Bound(p => p.links_for_interview).Title("Links for Interview").Width(300);
         columns.Template(
                            "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
+                               Url.Action("DisplaySpecificInterviewDetails", "Home") +
+                             "/#=id#'" +
+                           ">Details</a>"
+                       ).Width(200).Title("Interview Details").Locked(false);
+        columns.Template(
+                           "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
                                Url.Action("InsertCandidates", "Home") +
                              "/#=id#'" +
                            ">Edit</a>"
-                       ).Locked(false).Width(200);
+                       ).Width(200).Locked(false);
+
 
     })
       .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='InsertCandidates/'></span>Add Candidates</a>"))

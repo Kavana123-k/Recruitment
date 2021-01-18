@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Recruit.Models.Timeline>
+@using Kendo.Mvc.UI;
+@(Html.Kendo().Grid(Model)
+        .Name("Grid")
+        .Columns(columns =>
+        {
+            columns.Bound(p => p.id).Title("ID").Filterable(ftb => ftb.Multi(true).Search(true)).Width(80);
+            columns.Bound(p => p.stage).Title("Interview Stage").Filterable(ftb => ftb.Multi(true).Search(true)).Width(200);
+            columns.Bound(p => p.first_name).Title("Candidate Name").Filterable(ftb => ftb.Multi(true).Search(true)).Width(200);
+            columns.Bound(p => p.start_date_time).Title("Start Time & Date").Width(400);
+            columns.Bound(p => p.end_date_time).Title("End Time & Date").Width(400);
+            columns.Bound(p => p.status_id).Title("Status").Filterable(ftb => ftb.Multi(true).Search(true)).Width(100);
+            columns.Bound(p => p.status).Title("Status").Filterable(ftb => ftb.Multi(true).Search(true)).Width(100);
+            columns.Bound(p => p.reason).Title("Reason").Width(400);
+            columns.Bound(p => p.employee_id).Title("Emp_id").Width(400);
+            columns.Bound(p => p.emp_name).Title("Interviewer").Width(400);
+            columns.Template(
+                                 "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
+                                     Url.Action("InsertInterviewDetails","Home") +
+                                   "/#=id#'" +
+                                 ">Edit</a>"
+                             ).Width(200);
+        })
+          .ToolBar(toolbar => toolbar.ClientTemplate("<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
+                                     Url.Action("InsertInterviewDetails","Home") +
+                                   "/#=0#'" +
+                                 ">Add Interview Details</a>"))
+        .HtmlAttributes(new { style = "height: 550px;" })
+        .Pageable(
+         pageable => pageable
+             .Input(true)
+             .Numeric(false)
+         )
+        .Sortable()
+        .Scrollable(scr=>scr.Height(430))
+        .Filterable()
+
+
+    )
+        )
+<div>
+
+    <a asp-action="DisplayCandidatesDetails">Back to Display Candidate Details</a>
+</div>
+
+@*@(Html.Kendo().Timeline<IEnumerable<Recruit.Models.InterviewDetail>>()
+    .Name("Timeline")
+    .DataDateField("start_date_time")
+    .DataDescriptionField("first_name")
+    .DataSubtitleField("status")
+    .DataTitleField("reason")
+    //.DataImagesField("Images")
+    //.DataActionsField("Actions")
+    .Orientation(TimelineOrientation.Horizontal)
+    //.AlternatingMode()
+    //.CollapsibleEvents()
+    .DataSource(dt => dt.Read("DisplayInterviewDetailsList", "Home"))
+    )*@

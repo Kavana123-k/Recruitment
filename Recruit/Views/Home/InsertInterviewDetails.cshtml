@@ -6,6 +6,7 @@
 
 
 <link rel="stylesheet" href="~/css/layoutstyles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
 <body>
 
 
@@ -16,6 +17,12 @@
             <label class="control-label">Candidate Id</label>
             <input asp-for="candidate_id" class="form-control" />
             <span asp-validation-for="candidate_id" class="text-danger"></span>
+        </div>
+        <div class="column">
+            @*<label class="control-label">Interview Stage</label>
+            <input asp-for="interview_stage" class="form-control" />
+            <span asp-validation-for="interview_stage" class="text-danger"></span>*@
+            <partial name="_InterviewStagesPartial" data=@TempData["ProcessStages"] />
         </div>
         <div class="column">
 
@@ -41,10 +48,10 @@
             <span asp-validation-for="reason" class="text-danger"></span>
         </div>
         <div class="column">
-            <partial name="_InterviewerPartial" data=@TempData["interviewers"] />
-            @*<label class="control-label">Interviewer Id</label>
+            @*<partial name="_InterviewerPartial" data=@TempData["interviewers"] />*@
+            <label class="control-label">Interviewer Id</label>
             <input asp-for="employee_id" class="form-control" />
-            <span asp-validation-for="employee_id" class="text-danger"></span>*@
+            <span asp-validation-for="employee_id" class="text-danger"></span>
         </div>
         <div class="column">
             <input type="submit" value="@ViewBag.SubmitValue" class="btn bg-primary" align="center" /><br />
@@ -53,13 +60,18 @@
             <a asp-action="Index">Back to Dashboard</a>
         </div>
 
+        
+
 
         @section Scripts {
             @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
         }
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js"></script>
 
 </body>
+
 
 @{
     if (@TempData["Msg"] != null)
@@ -69,7 +81,8 @@
     <script>
 
         UIkit.notification({ message: '@TempData["Msg"]', status: 'success', timeout: 5000 })
-           window.location.href = "@Url.Action("DisplayInterviewDetails", "Home")";
+
+           window.location.href = "@Url.Action("DisplaySpecificInterviewDetails", "Home")";
     </script>
         }
         else

@@ -12,5 +12,7 @@ namespace Recruit.DataAccessLayer.Interface
         string Add(TEntity entity);
         void Delete(TEntity entity);
         string Update(TEntity entity);
+
+       public List<TEntity> GetRequired(int id);
     }
 }

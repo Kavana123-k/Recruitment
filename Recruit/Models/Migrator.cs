@@ -112,9 +112,11 @@ namespace Recruit.Models
 
             Create.Table("tbl_interview_details").WithDescription("Table used to store the Interview Details")
                 .WithColumn("id").AsInt64().Identity().PrimaryKey().WithColumnDescription("Primary key")//Creation of tbl_interview_details
+                .WithColumn("interview_status_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_Process_stages table defines the id of the process Stage")
+                 .ForeignKey("FK_tbl_interview_details_tbl_Process_stages_interview_status_id", "tbl_process_stages", "id")
                 .WithColumn("candidate_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_candidates table defines the id of the candidate")
                  .ForeignKey("FK_tbl_interview_details_tbl_candidates_CandidateId", "tbl_candidates", "id")
-
+                
                 .WithColumn("start_date_time").AsDateTime().NotNullable().WithColumnDescription("Start date for the candidate used for keeping of history of the candidate interview details")
                  .WithColumn("end_date_time").AsDateTime().NotNullable().WithColumnDescription("end date for the candidate used for keeping track of history of the candidate interview details")
                  .WithColumn("status_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_interview_round_statuses table defines the the round status")
@@ -277,9 +279,61 @@ namespace Recruit.Models
             Delete.Table("tbl_interviewers");
         }
     }
-   
-   
-   
+    //[Migration(20210118135600)]
+    //public class Insertstatusstages : Migration
+    //{
+    //    public override void Up()
+    //    {
+
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "initial_stage", stage = " 1st Panel" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "phn_screening", stage = "2nd Panel" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "apti_given", stage = "3rd Panel" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "apti_rcvd", stage = "4th Panel" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_gvn", stage = "Final Panel" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = " On Hold" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = "Shortlisted" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = "Selected" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = "Offered" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = "Offer Rejected by Candidate" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = "Joined" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = "Candiate not interested" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = "Sent to HM for Screening" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = "Resume rejected by HM" });
+    //        Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = "Rejected" });
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+    //        Insert.IntoTable("tbl_process_statuses").Row(new { code = "initial_stage", status = "Initial stage", colour = "#FFFFFF" });
+    //        Insert.IntoTable("tbl_process_statuses").Row(new { code = "mt_invite_snt", status = "Meeting Invite sent", colour = "#C0C0C0" });
+    //        Insert.IntoTable("tbl_process_statuses").Row(new { code = "mt_ivt_yet_snt", status = "offer letter sent", colour = "#808080" });
+    //        Insert.IntoTable("tbl_process_statuses").Row(new { code = "offer_sent", status = "Meeting Invite sent", colour = "#FF0000" });
+    //        Insert.IntoTable("tbl_process_statuses").Row(new { code = "offer_yet_send", status = "offer letter yet to send", colour = "#800000" });
+    //        Insert.IntoTable("tbl_process_statuses").Row(new { code = "Candi_joined", status = "Candidate joined", colour = "#FFFF00" });
+
+    //    }
+
+    //    public override void Down()
+    //    {
+    //        Delete.Table("tbl_interviewers");
+    //    }
+    //}
+
+
+
     public class Init
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(Init));

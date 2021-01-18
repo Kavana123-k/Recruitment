@@ -35,6 +35,12 @@ namespace Recruit.BusinessAccessLayer.Interface
         /// <param name="id">Primary Key</param>
         /// <returns></returns>
         bool Delete(int id);
+        /// <summary>
+        ///  Generic interface Method to perform the Delete operation on the db table
+        /// </summary>
+        /// <param name="id">Primary Key</param>
+        /// <returns></returns>
+        List<T> GetRequired(int id);
 
 
     }

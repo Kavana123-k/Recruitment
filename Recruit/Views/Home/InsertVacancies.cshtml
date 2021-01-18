@@ -5,11 +5,12 @@
 
 }
 
-<h1 align="center"style="color: white;">Vacancy Details</h1>
+<h1 align="center" style="color: white;">Vacancy Details</h1>
 
 
 <hr />
 <link rel="stylesheet" href="~/css/layoutstyles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
 <div class="row">
     <div class="column">
         <form asp-action="InsertVacancies">
@@ -46,6 +47,9 @@
         <partial name="_DisplayVacanciesPartial" data=@TempData["vacancy"] />
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js"></script>
+
 
 
 
@@ -58,21 +62,23 @@
     {
         if (TempData["Msg"] == "Data save Successfully" || TempData["Msg"] == "Data Updated Successfully")
         {
-    <script>
+            <script>
 
-        UIkit.notification({ message: '@TempData["Msg"]', status: 'success', timeout: 5000 })
-           window.location.href = "@Url.Action("DisplayVacancies", "Home")";
-    </script>
+             @*UIkit.notification({ message: '@TempData["Msg"]', { status: 'success' }, timeout: 5000 })*@
+             @*UIkit.notification({ message: '@TempData["Msg"]', status: 'success' timeout: 2000 })*@
+             UIkit.notification({message: '@TempData["Msg"]',status:'success',pos:'top-center'})
+             window.location.href = "@Url.Action("DisplayVacancies", "Home")";
+            </script>
         }
         else
         {
-<script>
+            <script>
 
-    UIkit.notification({ message: '@TempData["Msg"]', status: 'danger', timeout: 5000 })
+               UIkit.notification({ message: '@TempData["Msg"]', status: 'danger', timeout:5000})
 
 
-</script>
+            </script>
         }
 
     }
-} 
+}

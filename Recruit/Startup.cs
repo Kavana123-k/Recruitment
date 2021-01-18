@@ -79,8 +79,13 @@ namespace Recruit
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IUnitOfWork, Recruit.DataAccessLayer.UnitOfWork>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IGenericRepository<Vacancy>, Recruit.DataAccessLayer.VacancyRepository>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IConnectionFactory, Recruit.DataAccessLayer.ConnectionFactory>();
+           
+            services.AddSingleton<Recruit.BusinessAccessLayer.Interface.IService<Timeline>, Recruit.BusinessAccessLayer.TimelineService>();
+            services.AddSingleton<Recruit.DataAccessLayer.Interface.IUnitOfWork, Recruit.DataAccessLayer.UnitOfWork>();
+            services.AddSingleton<DataAccessLayer.Interface.IGenericRepository<Timeline>,DataAccessLayer.TimelineRepository>();           
+            services.AddSingleton<Recruit.DataAccessLayer.Interface.IConnectionFactory, Recruit.DataAccessLayer.ConnectionFactory>();
 
-         
+
 
         } 
 

@@ -5,11 +5,12 @@
 
 }
 
-<h1 align="center"style="color: white;">Source Details</h1>
+<h1 align="center" style="color: white;">Source Details</h1>
 
 
 <hr />
 <link rel="stylesheet" href="~/css/layoutstyles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="InsertSources">
@@ -36,10 +37,13 @@
             <a asp-action="DisplaySources">Back to Display Sources</a>
         </div>
     </div>
-<div class="column">
-    <partial name="_DisplaySourcesPartial" data=@TempData["source"] />
-</div>
+    <div class="column">
+        <partial name="_DisplaySourcesPartial" data=@TempData["source"] />
     </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js"></script>
+
 
 
 @section Scripts {
