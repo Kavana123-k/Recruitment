@@ -12,8 +12,8 @@
             columns.Bound(p => p.status_id).Title("Status").Filterable(ftb => ftb.Multi(true).Search(true)).Width(100);
             columns.Bound(p => p.status).Title("Status").Filterable(ftb => ftb.Multi(true).Search(true)).Width(100);
             columns.Bound(p => p.reason).Title("Reason").Width(400);
-            columns.Bound(p => p.employee_id).Title("Emp_id").Width(400);
-            columns.Bound(p => p.emp_name).Title("Interviewer").Width(400);
+            columns.Bound(p => p.employee_id).Title("Emp_id").Filterable(ftb => ftb.Multi(true).Search(true)).Width(400);
+            columns.Bound(p => p.emp_name).Title("Interviewer").Filterable(ftb => ftb.Multi(true).Search(true)).Width(400);
             columns.Template(
                                  "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
                                      Url.Action("InsertInterviewDetails","Home") +
