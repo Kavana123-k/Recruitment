@@ -78,6 +78,10 @@
     height: 100px; /* Should be removed. Only for demonstration */
     /*background-image: url( "https://www.ppt-backgrounds.net/thumbs/rainbow-tumblr-design-presentation-backgrounds.jpg");*/
 }
+.row {
+    margin-right: 10%;
+    margin-left: 20%;
+}
 
 
 /* Clear floats after the columns */
@@ -116,7 +120,37 @@
     width: 600px;
     margin: auto;
 }
+#referral_id {
+    width: 100%;
+}
+#source_code {
+    width: 100%;
+}
+#position_applied_code {
+    width: 100%;
+}
+#process_stage_id {
+    width: 100%;
+}
+#process_status_id {
+    width: 100%;
+}
+#interview_status_id {
+    width: 100%;
+}
 
+#resume_owner_id {
+    width: 100%;
+}
+#owner_for_reminder_id {
+    width: 100%;
+}
+#interview_stage_id {
+    width: 80%;
+}
+#status_id {
+    width: 80%;
+}
 
 
 

@@ -16,7 +16,7 @@
     }
     <div class="column">
         <label class="control-label">Source</label>
-        @Html.DropDownListFor(model => model.source_code, new SelectList(sources, "Value", "Text"), "---Choose Sources---")<br />
+        @Html.DropDownListFor(model => model.source_code, new SelectList(sources, "Value", "Text"), "---Choose Sources---", new { @class = "form-control" })
         <span asp-validation-for="source_code" class="text-danger"></span>
 
 

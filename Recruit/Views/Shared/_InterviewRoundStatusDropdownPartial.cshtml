@@ -18,10 +18,10 @@
     }
 }
 <div class="column">
-    <label class="control-label">Status</label><br />
-    @Html.DropDownListFor(model => model.status_id, new SelectList(statusList, "Value", "Text"), "---Choose Status---")
+    <label class="control-label">Status</label>
+    @Html.DropDownListFor(model => model.status_id, new SelectList(statusList, "Value", "Text"), "---Choose Status---", new { @class = "form-control" })
     
-    <br />
+ 
 
     <span asp-validation-for="status_id" class="text-danger"></span>
 </div>

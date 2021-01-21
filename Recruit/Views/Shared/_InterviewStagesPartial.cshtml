@@ -15,10 +15,9 @@
         });
     }
 }
-<div class="column">
-    <label class="control-label">Process stage </label><br />
-    @Html.DropDownListFor(model => model.interview_stage_id, new SelectList(stages, "Value", "Text"), "---Choose Status---")<br />
+
+    <label class="control-label">Interview stage </label>
+    @Html.DropDownListFor(model => model.interview_stage_id, new SelectList(stages, "Value", "Text"), "---Choose Status---", new { @class = "form-control" })
     <span asp-validation-for="interview_stage_id" class="text-danger"></span>
 
 
-</div>

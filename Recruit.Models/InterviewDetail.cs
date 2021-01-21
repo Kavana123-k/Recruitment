@@ -55,10 +55,15 @@ namespace Recruit.Models
         /// </summary>
         [ForeignKey("employee_id")]
         [Required(ErrorMessage = "Enter the Employee Id")]
-        public Int64 employee_id { get; set; }
+        public List<Int64> employee_id { get; set; }
+        public string emp_name
+        {
+            get; set;
+        }
+        public List<string> employee_name { get; set; }
 
         [NotMapped]
-        public List<Interviewer> Interviewers { get; set; }
+        public List<Interviewer> Interviewer { get; set; }
 
 
         //[ForeignKey("interview_id")]

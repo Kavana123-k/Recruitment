@@ -74,6 +74,7 @@ body {
       height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    position:relative;
 }
 label{
     color:white;
@@ -84,6 +85,12 @@ label{
     bottom: 0;
     width: 100%;
     white-space: nowrap;
-    line-height: 60px; /* Vertically center the text there */
+    line-height: 60px;  Vertically center the text there 
 }
+/*.footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+}*/
 

@@ -1,6 +1,4 @@
 ﻿@model Recruit.Models.InterviewDetail
-@using Kendo.Mvc.UI
-
 
 
 @{
@@ -15,13 +13,13 @@
 }
 
 
-
 <link rel="stylesheet" href="~/css/layoutstyles.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
 <style>
     .form-control {
         width: 80%;
     }
+
     .row {
         margin-right: 10%;
         margin-left: 20%;
@@ -34,22 +32,31 @@
 
     <form asp-action="InsertInterviewDetails" class="form-horizontal">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
         <div class="row">
             <div class="column">
                 <label class="control-label">Candidate Id</label>
-                <input asp-for="candidate_id" class="form-control" disabled />
+                <input asp-for="candidate_id" class="form-control" />
                 <span asp-validation-for="candidate_id" class="text-danger"></span>
             </div>
-            @*<div class="column">
+            <div class="column">
                 <label class="control-label">Candidate name</label>
                 <input asp-for="first_name" class="form-control" disabled />
                 <span asp-validation-for="first_name" class="text-danger"></span>
-            </div>*@
+            </div>
+        </div>
+        <div class="row">
             <div class="column">
                 @*<label class="control-label">Interview Stage</label>
-                <input asp-for="interview_stage" class="form-control" />
-                <span asp-validation-for="interview_stage" class="text-danger"></span>*@
+                    <input asp-for="interview_stage" class="form-control" />
+                    <span asp-validation-for="interview_stage" class="text-danger"></span>*@
                 <partial name="_InterviewStagesPartial" data=@TempData["ProcessStages"] />
+            </div>
+            <div class="column">
+                <partial name="_InterviewerPartial" data=@TempData["interviewers"] />
+                @*<label class="control-label">Interviewer Id</label>
+                    <input asp-for="employee_id" class="form-control" />
+                    <span asp-validation-for="employee_id" class="text-danger"></span>*@
             </div>
         </div>
         <div class="row">
@@ -77,41 +84,8 @@
             </div>
         </div>
         <div class="row">
+
             <div class="column">
-                <!--<div>
-                    <label class="control-label">Interviewers</label><br />
-                    @(Html.Kendo().MultiSelectFor(model=>model.employee_id)
-                 .Name("Interviewer")
-                 .DataTextField("name")
-                 .DataValueField("employee_id")
-                 // .BindTo(new SelectList(Model.employee_id, "employee_id","name"))
-                  .Placeholder("Select Interviewers...")
-                  .AutoBind(false)
-                  // .Value(new[] { new {} })
-                     //.Value(new[] { new { ProductName = "Chang", ProductID = 2 }, new { ProductName = "Uncle Bob's Organic Dried Pears", ProductID = 7 } })
-                 .DataSource(source =>
-                 {
-                         source.Read(read =>
-                        {
-                           read.Action("GetEmployees", "Home");
-                          })
-                   .ServerFiltering(true);
-                })
-                 )
-                    <span asp-validation-for="employee_id" class="text-danger"></span>
-                </div>-->
-                @*<partial name="_InterviewerPartial" data=@TempData["interviewers"]/>*@
-                @*<label class="control-label">Interviewer Id</label>
-                <input asp-for="employee_id" class="form-control" />
-                <span asp-validation-for="employee_id" class="text-danger"></span>*@
-            <!--</div>-->
-                </div>
-            <div class="column">
-                @*<input type="submit" value="@ViewBag.SubmitValue" class="btn bg-primary" align="center" /><br />*@
-
-
-                <a asp-action="Index">Back to Dashboard</a>
-
                 @{
                     if (ViewBag.SubmitValue == "Update")
                     {
@@ -132,8 +106,19 @@
                         </div>
                     }
                 }
+
+
+
+                <div class="column">
+                    <a asp-action="Index">Back to Dashboard</a><br />
+                    <a asp-action="DisplaySpecificInterviewDetails" asp-route-id="@TempData["Candidate_id"]">Display Interview Details</a>
+                </div>
             </div>
         </div>
+
+
+
+
 
 
 
@@ -171,4 +156,4 @@
         }
 
     }
-} 
+}

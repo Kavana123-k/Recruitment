@@ -1,12 +1,21 @@
 ﻿@model Recruit.Models.Candidate
-<hr />
+@{
+    if (ViewBag.SubmitValue == "Update")
+    {
+        <h1 align="center" style="color: white;">Update Candidate Details</h1>
+    }
+    else
+    {
+        <h1 align="center" style="color: white;">Insert Candidate Details</h1>
+    }
+}
 
-
-
-
-
-<h1 align="center"style="color: white;">Candidate Details</h1>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
+<style>
+    .form-control {
+        width: 80%;
+    }
+</style>
 
 <body style="height: auto;">
 
@@ -17,15 +26,15 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 
-        <div class="row">
-            <div class="column">
-                @Html.LabelFor(model => model.id, new { @class = "control-label" })
-                @Html.DisplayFor(model => model.id, new { @class = "control-label" })
+        @*<div class="row">
+                <div class="column">
+                    @Html.LabelFor(model => model.id, new { @class = "control-label" })
+                    @Html.DisplayFor(model => model.id, new { @class = "control-label" })
 
 
-            </div>
+                </div>
 
-        </div>
+            </div>*@
 
         <div class="row">
             <div class="column">
@@ -41,6 +50,7 @@
             </div>
         </div>
         <div class="row">
+
             <div class="column">
                 <label class="control-label"> Email</label>
                 <input asp-for="email" class="form-control" />
@@ -69,6 +79,7 @@
             </div>
         </div>
         <div class="row">
+
             <div class="column">
                 <label class="control-label">Total experience</label>
                 <input asp-for="total_experience" class="form-control" />
@@ -93,6 +104,7 @@
             </div>
         </div>
         <div class="row">
+
             <div class="column">
                 @*<label class="control-label">Position applied </label>
                     @Html.DropDownListFor(model => model.position_applied_code, new SelectList(vacancy, "Value", "Text"), "---Choose Position---")<br />
@@ -119,6 +131,7 @@
             </div>
         </div>
         <div class="row">
+
             <div class="column">
                 <label class="control-label">Notice period</label>
                 <input asp-for="notice_period" class="form-control" />
@@ -141,13 +154,14 @@
                 <input asp-for="current_location" class="form-control" />
                 <span asp-validation-for="current_location" class="text-danger"></span>
             </div>
+        </div>
+        <div class="row">
             <div class="column">
                 <label class="control-label">Preferred Location id</label>
                 <input asp-for="location_id" class="form-control" />
                 <span asp-validation-for="location_id" class="text-danger"></span>
             </div>
-        </div>
-        <div class="row">
+
             <div class="column">
                 @*<label class="control-label">Process stage </label>
                     @Html.DropDownListFor(model => model.process_stage_id, new SelectList(stages, "Value", "Text"), "---Choose Status---")<br />
@@ -155,31 +169,35 @@
                 <partial name="_ProcessStagesPartial" data=@TempData["ProcessStages"] />
 
             </div>
+        </div>
+        <div class="row">
             <div class="column">
                 <label class="control-label">Process Stage date</label>
                 <input asp-for="process_stage_date" class="form-control" />
                 <span asp-validation-for="process_stage_date" class="text-danger"></span>
             </div>
-        </div>
-        <div class="row">
+
             <div class="column">
                 <label class="control-label">Process start date</label>
                 <input asp-for="process_start_date" class="form-control" />
                 <span asp-validation-for="process_start_date" class="text-danger"></span>
             </div>
+        </div>
+        <div class="row">
             <div class="column">
                 <label class="control-label">Process end date</label>
                 <input asp-for="process_end_date" class="form-control" />
                 <span asp-validation-for="process_end_date" class="text-danger"></span>
             </div>
-        </div>
-        <div class="row">
+
             <div class="column">
                 @*<label class="control-label">Interview status </label>
                     @Html.DropDownListFor(model => model.interview_status_id, new SelectList(status, "Value", "Text"), "---Choose Status---")<br />
                     <span asp-validation-for="interview_status_id" class="text-danger"></span>*@
                 <partial name="_ProcessStatusesPartial" data=@TempData["ProcessStatuses"] />
             </div>
+        </div>
+        <div class="row">
             <div class="column">
                 @*<label class="control-label">Resume owner id</label>
                             @Html.DropDownListFor(model => model.resume_owner_id, new SelectList(owners, "Value", "Text"), "---Choose Status---")<br />
@@ -194,48 +212,74 @@
                 <partial name="_OwnersPartial" data=@TempData["Owners"] />
             </div>
             <div class="column">
+
+                <partial name="_ReminderPartial" data=@TempData["Owners"] />
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
                 <label class="control-label">Comments</label>
                 <input asp-for="comments" class="form-control" />
                 <span asp-validation-for="comments" class="text-danger"></span>
             </div>
 
-        </div>
-        <div class="row">
+
             <div class="column">
                 <label class="control-label">Date of joining</label>
                 <input asp-for="date_of_joining" class="form-control" />
                 <span asp-validation-for="date_of_joining" class="text-danger"></span>
             </div>
+        </div>
+        <div class="row">
             <div class="column">
                 <label class="control-label">Notes</label>
                 <input asp-for="notes" class="form-control" />
                 <span asp-validation-for="notes" class="text-danger"></span>
             </div>
+
             <div class="column">
                 <label class="control-label">Links for Interview</label>
                 <input asp-for="links_for_interview" class="form-control" />
                 <span asp-validation-for="links_for_interview" class="text-danger"></span>
             </div>
-        </div>
-        <div class="row">
-            <div class="column">
-                <input type="submit" value="@ViewBag.SubmitValue" class="btn bg-primary" />
 
-            </div>
         </div>
+        @{
+            if (ViewBag.SubmitValue == "Update")
+            {
+                <div class="row">
+                    <div class="column">
+                        <input type="submit" value="Update" class="btn bg-primary" />
+
+                    </div>
+                    <div>
+                        <a asp-action="Index">Back to Dashboard</a><br />
+                        <a asp-action="DisplayCandidatesDetails">Back to Display Candidate Details</a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="row">
+                    <div class="column">
+                        <input type="submit" value="Add" class="btn bg-primary" />
+
+                    </div>
+                    <div>
+                        <a asp-action="Index">Back to Dashboard</a><br />
+                        <a asp-action="DisplayCandidatesDetails">Back to Display Candidate Details</a>
+                    </div>
+                </div>
+            }
+        }
+
 
 
     </form>
 
 
 
-    <div>
-        <a asp-action="Index">Back to Dashboard</a>
-    </div>
-    <div>
 
-        <a asp-action="DisplayCandidatesDetails">Back to Display Candidate Details</a>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js"></script>
 

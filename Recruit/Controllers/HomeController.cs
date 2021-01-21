@@ -15,6 +15,7 @@ using Recruit.DataAccessLayer;
 using log4net.Repository.Hierarchy;
 using log4net;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Recruit.Controllers
 {
@@ -110,16 +111,18 @@ namespace Recruit.Controllers
             log.Info("[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=" + id);
             try
             {
-                TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
+               TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
                 TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
-                //  TempData["interviewers"] = _serviceEmployee.FindbyAll();
 
+                var interviewers = _serviceEmployee.FindbyAll();
+                //   TempData["interviewers"] = new MultiSelectList(interviewers, "id", "name");
+              //  TempData["interviewers"] = interviewers;
                 //  TempData["AllLocations"] = GetAllLocations();
 
                 // Candia.Preferred = new List<Location>();
 
                 var interviewDetail = new InterviewDetail();
-                var interviewDetailAll = new List<InterviewDetail>();
+                
                 if (id!=0)
                 {
                     ViewBag.SubmitValue = "Update";
@@ -129,7 +132,7 @@ namespace Recruit.Controllers
                 }
                 else
                 {
-                    ViewBag.SubmitValue = "Add";
+                    ViewBag.SubmitValue = "Insert";
                     return View();
                 }
             }
@@ -153,7 +156,9 @@ namespace Recruit.Controllers
             {
                 TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
                 TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
-                //  TempData["interviewers"] = _serviceEmployee.FindbyAll();
+                var interviewers = _serviceEmployee.FindbyAll();
+               // TempData["interviewers"] = interviewers; //new MultiSelectList(interviewers, "id", "name");
+              //  ViewBag.SubmitValue = "Insert";
                 log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details ");
                 if (entity.id == 0)
                 {
@@ -232,7 +237,7 @@ namespace Recruit.Controllers
                 }
                 else
                 {
-                    ViewBag.SubmitValue = "Add";
+                    ViewBag.SubmitValue = "Insert";
                     return View();
                 }
 
@@ -341,7 +346,7 @@ namespace Recruit.Controllers
                 }
                 else
                 {
-                    ViewBag.SubmitValue = "Add";
+                    ViewBag.SubmitValue = "Insert";
                     
                     return View();
                 }
@@ -445,7 +450,7 @@ namespace Recruit.Controllers
                 }
                 else
                 {
-                    ViewBag.SubmitValue = "Add";
+                    ViewBag.SubmitValue = "Insert";
                     return View();
                 }
             }
@@ -531,7 +536,7 @@ namespace Recruit.Controllers
                 }
                 else
                 {
-                    ViewBag.SubmitValue = "Add";
+                    ViewBag.SubmitValue = "Insert";
                     return View();
                 }
             }
@@ -618,7 +623,7 @@ namespace Recruit.Controllers
                 }
                 else
                 {
-                    ViewBag.SubmitValue = "Add";
+                    ViewBag.SubmitValue = "Insert";
                     return View();
                 }
             }
@@ -703,7 +708,7 @@ namespace Recruit.Controllers
                 }
                 else
                 {
-                    ViewBag.SubmitValue = "Add";
+                    ViewBag.SubmitValue = "Insert";
                     return View();
                 }
             }
@@ -960,7 +965,25 @@ namespace Recruit.Controllers
             catch (Exception exception)
             {
                 log.Error("[DisplayEmployees]:" + exception);
-                return View();
+                return View("");
+            }
+        }
+        /// <summary>
+        /// method to display the employee table
+        /// </summary>
+        /// <returns></returns>
+        public JsonResult GetEmployees()
+        {
+            log.Info("[DisplayEmployees]:Action Method returns view which displays the Locations Details");
+            try
+            {
+                List<Employee> employee = _serviceEmployee.FindbyAll();
+                return Json(employee);
+            }
+            catch (Exception exception)
+            {
+                log.Error("[DisplayEmployees]:" + exception);
+                return Json("");
             }
         }
         /// <summary>
@@ -990,12 +1013,122 @@ namespace Recruit.Controllers
           List<Timeline> timeline = _seviceTimeline.GetRequired(id);
             return View(timeline);
         }
+        /// <summary>
+        /// Method to display the page with forms to insert into interview details
+        /// </summary>
+        /// <returns>a view </returns>
+        [HttpGet]
+        public IActionResult InsertSpecificInterviewDetails(int id)
+        {
+            log.Info("[InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=" + id);
+            try
+            {
+                TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
+                TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
+                TempData["Candidate_id"] = id;
+
+                var interviewers = _serviceEmployee.FindbyAll();
+
+              //  var data = new MultiSelectList(interviewers, "id", "name");
+                TempData["interviewers"] = interviewers;
+                //  TempData["AllLocations"] = GetAllLocations();
+
+                // Candia.Preferred = new List<Location>();
+                var items = (_seviceTimeline.GetRequired(id)); 
+                var Detail = new InterviewDetail();
+               var i= items.Where(c => c.candidate_id == id);
+                Detail = (InterviewDetail)i;
+                var interviewDetails = new InterviewDetail();
+
+                ViewBag.SubmitValue = "Add";
+                    interviewDetails.candidate_id = id;
+                interviewDetails.first_name = Detail.first_name;
+
+
+
+                return View(interviewDetails);
+
+               
+            }
+            catch (Exception exception)
+            {
+                log.Error("[InsertInterviewDetails]:" + exception);
+                return View();
+            }
+
+        }
+
+        /// <summary>
+        /// method used to post the inputs to the interview details table
+        /// </summary>
+        /// <param name="employeeEntities"></param>
+        /// <returns>a view</returns>
+        [HttpPost]
+        public IActionResult InsertSpecificInterviewDetails([Bind] InterviewDetail entity)
+        {
+            try
+            {
+                TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
+                TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
+                TempData["Candidate_id"] = entity.candidate_id;
+                var interviewers = _serviceEmployee.FindbyAll();
+                
+                 // var data= new MultiSelectList(interviewers, "id", "name");
+                TempData["interviewers"] = interviewers;
+                log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details ");
+                if (entity.id == 0)
+                {
+                    try
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceInterviewDetail.Insert(entity);
+                            //var y = _serviceInterviewer.Insert(entity.id, entity.candidate_id, entity.employee_id);
+                            //if (x == "Data save Successfully" && y == "Data save Successfully") 
+                            //{
+                            //    TempData["msg"] = "Data saved Successfully";
+                            //}
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertInterviewDetails]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
+
+                }
+                else
+                {
+                    try
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            TempData["msg"] = _serviceInterviewDetail.Update(entity);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        log.Error("[InsertInterviewDetails]:" + exception);
+                        TempData["msg"] = exception.Message;
+                    }
+
+                }
+            }
+
+            catch (Exception exception)
+            {
+                log.Error("[InsertInterviewDetails]:" + exception);
+
+            }
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            //return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }

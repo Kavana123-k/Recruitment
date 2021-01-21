@@ -1,0 +1,264 @@
+2021-01-22 00:01:50,063 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-22 00:01:50,431 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-22 00:01:51,181 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-22 00:01:53,678 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-22 00:01:53,708 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-22 00:01:53,732 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-22 00:01:53,861 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-22 00:02:04,410 : [4] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2021-01-22 00:02:04,426 : [4] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2021-01-22 00:02:04,481 : [4] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
+2021-01-22 00:02:09,655 : [4] : INFO  : Recruit.BusinessAccessLayer.TimelineService : [GetRequired] : 
+2021-01-22 00:02:09,670 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetRequired] : 
+2021-01-22 00:02:09,723 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetAll] : 
+2021-01-22 00:02:14,237 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=0 : 
+2021-01-22 00:02:14,263 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:02:14,342 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:02:14,424 : [4] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:02:14,498 : [4] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:02:14,557 : [4] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:02:14,607 : [4] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:02:14,644 : [4] : INFO  : Recruit.BusinessAccessLayer.TimelineService : [GetRequired] : 
+2021-01-22 00:02:14,676 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetRequired] : 
+2021-01-22 00:02:14,703 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetAll] : 
+2021-01-22 00:02:15,167 : [4] : ERROR : Recruit.Controllers.HomeController : [InsertInterviewDetails]:System.InvalidCastException: Unable to cast object of type 'WhereListIterator`1[Recruit.Models.Timeline]' to type 'Recruit.Models.InterviewDetail'.
+   at Recruit.Controllers.HomeController.InsertSpecificInterviewDetails(Int32 id) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Controllers\HomeController.cs:line 1040 : 
+2021-01-22 00:02:21,919 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=1 : 
+2021-01-22 00:02:21,952 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:02:21,967 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:02:22,007 : [4] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:02:22,022 : [4] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:02:22,037 : [4] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:02:22,050 : [4] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:02:22,075 : [4] : INFO  : Recruit.BusinessAccessLayer.TimelineService : [GetRequired] : 
+2021-01-22 00:02:22,084 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetRequired] : 
+2021-01-22 00:02:22,093 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetAll] : 
+2021-01-22 00:02:22,145 : [4] : ERROR : Recruit.Controllers.HomeController : [InsertInterviewDetails]:System.InvalidCastException: Unable to cast object of type 'WhereListIterator`1[Recruit.Models.Timeline]' to type 'Recruit.Models.InterviewDetail'.
+   at Recruit.Controllers.HomeController.InsertSpecificInterviewDetails(Int32 id) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Controllers\HomeController.cs:line 1040 : 
+2021-01-22 00:02:31,765 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=1 : 
+2021-01-22 00:02:31,777 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:02:31,790 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:02:31,805 : [4] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:02:31,815 : [4] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:02:31,828 : [4] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:02:31,839 : [4] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:02:31,851 : [4] : INFO  : Recruit.BusinessAccessLayer.TimelineService : [GetRequired] : 
+2021-01-22 00:02:31,861 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetRequired] : 
+2021-01-22 00:02:31,871 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetAll] : 
+2021-01-22 00:02:31,916 : [4] : ERROR : Recruit.Controllers.HomeController : [InsertInterviewDetails]:System.InvalidCastException: Unable to cast object of type 'WhereListIterator`1[Recruit.Models.Timeline]' to type 'Recruit.Models.InterviewDetail'.
+   at Recruit.Controllers.HomeController.InsertSpecificInterviewDetails(Int32 id) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Controllers\HomeController.cs:line 1040 : 
+2021-01-22 00:02:50,858 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=1 : 
+2021-01-22 00:02:52,913 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:02:52,940 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:02:54,492 : [4] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:02:54,501 : [4] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:02:55,666 : [4] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:02:55,677 : [4] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:02:59,876 : [4] : INFO  : Recruit.BusinessAccessLayer.TimelineService : [GetRequired] : 
+2021-01-22 00:02:59,885 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetRequired] : 
+2021-01-22 00:02:59,895 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetAll] : 
+2021-01-22 00:04:12,989 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-22 00:04:13,352 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-22 00:04:14,345 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-22 00:04:16,492 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-22 00:04:16,512 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-22 00:04:16,527 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-22 00:04:16,671 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-22 00:06:50,927 : [14] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=1 : 
+2021-01-22 00:06:50,974 : [14] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:06:51,711 : [14] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:06:51,835 : [14] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:06:51,846 : [14] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:06:51,865 : [14] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:06:51,874 : [14] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:06:51,885 : [14] : INFO  : Recruit.BusinessAccessLayer.TimelineService : [GetRequired] : 
+2021-01-22 00:06:51,907 : [14] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetRequired] : 
+2021-01-22 00:06:51,922 : [14] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetAll] : 
+2021-01-22 00:06:52,165 : [14] : ERROR : Recruit.Controllers.HomeController : [InsertInterviewDetails]:System.InvalidCastException: Unable to cast object of type 'WhereListIterator`1[Recruit.Models.Timeline]' to type 'Recruit.Models.InterviewDetail'.
+   at Recruit.Controllers.HomeController.InsertSpecificInterviewDetails(Int32 id) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Controllers\HomeController.cs:line 1040 : 
+2021-01-22 00:07:03,450 : [14] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=1 : 
+2021-01-22 00:07:03,922 : [14] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:07:03,937 : [14] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:07:04,130 : [14] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:07:04,146 : [14] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:07:05,091 : [14] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:07:05,102 : [14] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:07:41,346 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-22 00:07:41,619 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-22 00:07:42,357 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-22 00:07:44,576 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-22 00:07:44,594 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-22 00:07:44,610 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-22 00:07:44,748 : [6] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-22 00:08:21,734 : [14] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=1 : 
+2021-01-22 00:08:23,145 : [14] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:08:23,166 : [14] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:08:23,521 : [14] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:08:23,529 : [14] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:08:23,994 : [14] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:08:24,004 : [14] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:08:27,043 : [14] : INFO  : Recruit.BusinessAccessLayer.TimelineService : [GetRequired] : 
+2021-01-22 00:08:27,059 : [14] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetRequired] : 
+2021-01-22 00:08:27,070 : [14] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetAll] : 
+2021-01-22 00:18:51,992 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-22 00:18:52,583 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-22 00:18:53,590 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-22 00:18:56,718 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-22 00:18:56,748 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-22 00:18:56,791 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-22 00:18:57,074 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-22 00:19:00,154 : [5] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=1 : 
+2021-01-22 00:19:00,194 : [5] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:19:00,420 : [5] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:19:00,522 : [5] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:19:00,530 : [5] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:19:00,543 : [5] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:19:00,553 : [5] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:19:00,564 : [5] : INFO  : Recruit.BusinessAccessLayer.TimelineService : [GetRequired] : 
+2021-01-22 00:19:00,577 : [5] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetRequired] : 
+2021-01-22 00:19:00,590 : [5] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetAll] : 
+2021-01-22 00:19:00,775 : [5] : ERROR : Recruit.Controllers.HomeController : [InsertInterviewDetails]:System.InvalidCastException: Unable to cast object of type 'WhereListIterator`1[Recruit.Models.Timeline]' to type 'Recruit.Models.InterviewDetail'.
+   at Recruit.Controllers.HomeController.InsertSpecificInterviewDetails(Int32 id) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Controllers\HomeController.cs:line 1040 : 
+2021-01-22 00:19:11,547 : [4] : INFO  : Recruit.Controllers.HomeController : [DisplayEmployees]:Action Method returns view which displays the Locations Details : 
+2021-01-22 00:19:11,555 : [4] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:19:11,570 : [4] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:19:41,644 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:19:41,667 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:19:41,698 : [4] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:19:41,708 : [4] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:19:41,756 : [4] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:19:41,766 : [4] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:19:41,777 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details  : 
+2021-01-22 00:19:42,204 : [4] : ERROR : Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware : An unhandled exception has occurred while executing the request. : 
+System.InvalidOperationException: You cannot override component name when bound to a model expression.
+   at Kendo.Mvc.UI.Fluent.WidgetBuilderBase`2.Name(String componentName)
+   at AspNetCore.Views_Home_InsertInterviewDetails.<ExecuteAsync>b__24_2() in C:\Users\LENOVO\source\repos\Recruit\Recruit\Views\Home\InsertInterviewDetails.cshtml:line 83
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_Home_InsertInterviewDetails.<ExecuteAsync>b__24_1()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Home_InsertInterviewDetails.ExecuteAsync() in C:\Users\LENOVO\source\repos\Recruit\Recruit\Views\Home\InsertInterviewDetails.cshtml:line 14
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-22 00:25:26,062 : [4] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=1 : 
+2021-01-22 00:25:31,616 : [4] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:25:31,620 : [21] : INFO  : Recruit.Controllers.HomeController : [DisplaySource]:Action Method returns view which displays the Locations Details : 
+2021-01-22 00:25:31,621 : [5] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=0 : 
+2021-01-22 00:25:31,622 : [20] : INFO  : Recruit.Controllers.HomeController : [DisplaySource]:Action Method returns view which displays the Locations Details : 
+2021-01-22 00:25:31,631 : [4] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:25:31,643 : [21] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2021-01-22 00:25:31,656 : [5] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:25:31,708 : [5] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:25:31,684 : [4] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:25:31,695 : [21] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2021-01-22 00:25:31,666 : [20] : INFO  : Recruit.BusinessAccessLayer.SourceService : [SourceService][FindByAll] : 
+2021-01-22 00:25:31,718 : [5] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:25:31,762 : [5] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:25:31,749 : [20] : INFO  : Recruit.DataAccessLayer.SourceRepository : [SourceRepository][GetAll] : 
+2021-01-22 00:25:31,728 : [4] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:25:31,774 : [5] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:25:31,795 : [4] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:25:31,815 : [4] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:25:31,805 : [5] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:25:31,827 : [4] : INFO  : Recruit.BusinessAccessLayer.TimelineService : [GetRequired] : 
+2021-01-22 00:25:31,839 : [5] : INFO  : Recruit.BusinessAccessLayer.TimelineService : [GetRequired] : 
+2021-01-22 00:25:31,860 : [5] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetRequired] : 
+2021-01-22 00:25:31,850 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetRequired] : 
+2021-01-22 00:25:31,871 : [5] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetAll] : 
+2021-01-22 00:25:31,890 : [4] : INFO  : Recruit.DataAccessLayer.TimelineRepository : [GetAll] : 
+2021-01-22 00:25:32,022 : [5] : ERROR : Recruit.Controllers.HomeController : [InsertInterviewDetails]:System.InvalidCastException: Unable to cast object of type 'WhereListIterator`1[Recruit.Models.Timeline]' to type 'Recruit.Models.InterviewDetail'.
+   at Recruit.Controllers.HomeController.InsertSpecificInterviewDetails(Int32 id) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Controllers\HomeController.cs:line 1040 : 
+2021-01-22 00:25:32,022 : [4] : ERROR : Recruit.Controllers.HomeController : [InsertInterviewDetails]:System.InvalidCastException: Unable to cast object of type 'WhereListIterator`1[Recruit.Models.Timeline]' to type 'Recruit.Models.InterviewDetail'.
+   at Recruit.Controllers.HomeController.InsertSpecificInterviewDetails(Int32 id) in C:\Users\LENOVO\source\repos\Recruit\Recruit\Controllers\HomeController.cs:line 1040 : 
+2021-01-22 00:25:32,047 : [5] : INFO  : Recruit.Controllers.HomeController : [InsertInterviewDetails]:[Get]Action Method returns view which gets the page to insert the Interview Details [Data]=25 : 
+2021-01-22 00:25:32,053 : [4] : INFO  : Recruit.Controllers.HomeController : [DisplayLocations]:Action Method returns view which displays the Locations Details : 
+2021-01-22 00:25:32,058 : [5] : INFO  : Recruit.BusinessAccessLayer.InterviewRoundStatusService : [InterviewRoundStatusService][FindByAll] : 
+2021-01-22 00:25:32,078 : [5] : INFO  : Recruit.DataAccessLayer.InterviewRoundStatusRepository :  [InterviewRoundStatusRepository][GetAll] : 
+2021-01-22 00:25:32,069 : [4] : INFO  : Recruit.BusinessAccessLayer.LocationService : [LocationService][FindByAll] : 
+2021-01-22 00:25:32,092 : [5] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:25:32,101 : [4] : INFO  : Recruit.DataAccessLayer.LocationRepository : [LocationRepository][GetAll] : 
+2021-01-22 00:25:32,110 : [5] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:25:32,134 : [5] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
+2021-01-22 00:25:32,144 : [5] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 00:25:32,162 : [5] : INFO  : Recruit.BusinessAccessLayer.InterviewDetailService : [InterviewDetailService][FindBy]25 : 
+2021-01-22 00:25:32,175 : [5] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][Get] : 
+2021-01-22 00:25:32,186 : [5] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllRows] : 
+2021-01-22 00:25:32,208 : [5] : INFO  : Recruit.DataAccessLayer.InterviewDetailRepository : [InterviewDetailRepository][GetAllInterviewers] : 
+2021-01-22 00:25:32,502 : [5] : ERROR : Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware : An unhandled exception has occurred while executing the request. : 
+System.InvalidOperationException: You cannot override component name when bound to a model expression.
+   at Kendo.Mvc.UI.Fluent.WidgetBuilderBase`2.Name(String componentName)
+   at AspNetCore.Views_Home_InsertInterviewDetails.<ExecuteAsync>b__24_2() in C:\Users\LENOVO\source\repos\Recruit\Recruit\Views\Home\InsertInterviewDetails.cshtml:line 83
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_Home_InsertInterviewDetails.<ExecuteAsync>b__24_1()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Home_InsertInterviewDetails.ExecuteAsync() in C:\Users\LENOVO\source\repos\Recruit\Recruit\Views\Home\InsertInterviewDetails.cshtml:line 14
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-22 00:26:59,297 : [22] : INFO  : Recruit.Controllers.HomeController : [DisplayProcessStatus]:Action Method returns view which displays the Locations Details : 
+2021-01-22 00:26:59,316 : [22] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2021-01-22 00:26:59,332 : [22] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2021-01-22 00:27:03,101 : [22] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2021-01-22 00:27:03,113 : [22] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2021-01-22 00:27:03,128 : [22] : INFO  : Recruit.Controllers.HomeController : [InsertProcessStatus]:[GET]Action Method returns view which gets the page to insert the Process Status Details [Data]=0 : 
+2021-01-22 00:28:13,141 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-22 00:28:13,766 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-22 00:28:14,470 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-22 00:28:16,580 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-22 00:28:16,678 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-22 00:28:16,697 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-22 00:28:16,753 : [5] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-22 00:28:32,696 : [12] : INFO  : Recruit.Controllers.HomeController : [DisplayProcessStatus]:Action Method returns view which displays the Locations Details : 
+2021-01-22 00:28:32,725 : [12] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2021-01-22 00:28:32,759 : [12] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2021-01-22 00:28:38,454 : [5] : INFO  : Recruit.BusinessAccessLayer.ProcessStatusService : [ProcessStatusService][FindByAll] : 
+2021-01-22 00:28:38,461 : [5] : INFO  : Recruit.DataAccessLayer.ProcessStatusRepository : [ProcessStatusRepository][GetAll] : 
+2021-01-22 00:28:38,481 : [5] : INFO  : Recruit.Controllers.HomeController : [InsertProcessStatus]:[GET]Action Method returns view which gets the page to insert the Process Status Details [Data]=0 : 
+2021-01-22 00:31:17,478 : [14] : INFO  : Recruit.Controllers.HomeController : [DisplayProcessStages]:Action Method returns view which displays the Locations Details : 
+2021-01-22 00:31:17,492 : [14] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:31:17,506 : [14] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:31:19,250 : [14] : INFO  : Recruit.BusinessAccessLayer.ProcessStageService : [ProcessStageService][FindByAll] : 
+2021-01-22 00:31:19,259 : [14] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
+2021-01-22 00:31:19,271 : [14] : INFO  : Recruit.Controllers.HomeController : [InsertProcessStages]:[GET]Action Method returns view which gets the page to insert the Process Stages Details [Data]=0 : 

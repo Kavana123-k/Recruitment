@@ -1,28 +1,73 @@
 ﻿@model InterviewDetail
-@{
-    List<SelectListItem> empList = new List<SelectListItem>();
+@using Kendo.Mvc.UI
+@*@{
+        List<SelectListItem> empList = new List<SelectListItem>();
 
-    @foreach (var items in (IEnumerable<Employee>)TempData["interviewers"])
-    {
-        empList.Add(new SelectListItem
+        @foreach (var items in (IEnumerable<Employee>)TempData["interviewers"])
         {
+            empList.Add(new SelectListItem
+            {
 
 
-            Text = items.name,
-            Value = (items.id).ToString(),
-            //Selected = true
+                Text = items.name,
+                Value = (items.id).ToString(),
+                //Selected = true
 
-        });
-    }
-  
-}
+            });
+        }
 
-<div class="col-sm-6">
+    }*@
+
+@*<div class="col-sm-6">
     <label class="control-label">Interviewers</label><br />
-    @Html.ListBoxFor(model => model.Interviewers, new MultiSelectList(empList, "Value", "Text"), new { @class = "form-control", multiple = "Text", id = "Value" })
+    @Html.DropDownList("employee_id", (MultiSelectList)TempData["interviewers"], new { multiple = "multiple" })
+    @Html.ListBox("employee_id", (MultiSelectList)TempData["interviewers"])
 
     <br />
 
     <span asp-validation-for="employee_id" class="text-danger"></span>
 
-</div> 
+</div>*@
+<div>
+    <label class="control-label">Interviewers</label><br />
+    @(Html.Kendo().MultiSelect()
+          .Name("Interviewer")
+          .DataTextField("name")
+          .DataValueField("employee_id")
+         .BindTo(new SelectList(((IEnumerable<Employee>)TempData["interviewers"]),"id","name"))
+          .Placeholder("Select Interviewers...")
+          .AutoBind(false)
+     .Value(new[] { new {} })
+     //.Value(new[] { new { ProductName = "Chang", ProductID = 2 }, new { ProductName = "Uncle Bob's Organic Dried Pears", ProductID = 7 } })
+     .DataSource(source =>
+     {
+         source.Read(read =>
+         {
+             read.Action("GetEmployees", "Home");
+         })
+         .ServerFiltering(true);
+     })
+    )
+    <span asp-validation-for="employee_id" class="text-danger"></span>
+</div>
+@*<div>
+    <label class="control-label">Interviewers</label><br />
+  
+    @(Html.Kendo().MultiSelect()
+          .Name("Interviewer")
+          .DataTextField("name")
+          .DataValueField("id")
+          .Placeholder("Select Interviewers...")
+          .AutoBind(true)
+          .Value(new[] { new { name = "name", id = "id" } })
+          .DataSource(source =>
+          {
+              source.Read(read =>
+              {
+                  read.Action("DisplayEmployees", "Home");
+              })
+              .ServerFiltering(true);
+          })
+    )
+    <span asp-validation-for="employee_id" class="text-danger"></span>
+</div>*@

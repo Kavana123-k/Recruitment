@@ -5,12 +5,27 @@
 
 }
 
-<h1 align="center" style="color: white;">Process Stages</h1>
+@{
+    if (ViewBag.SubmitValue == "Update")
+    {
+        <h1 align="center" style="color: white;">Update Process Stages Details</h1>
+    }
+    else
+    {
+        <h1 align="center" style="color: white;">Insert Process Stages Details</h1>
+    }
+}
 
 
 <hr />
 <link rel="stylesheet" href="~/css/layoutstyles.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
+<style>
+    .form-control {
+        width: 80%;
+    }
+</style>
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="InsertProcessStages">
@@ -26,9 +41,26 @@
                 <span asp-validation-for="stage" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <input type="submit" value="@ViewBag.SubmitValue" class="btn btn-primary" />
-            </div>
+            @{
+                if (ViewBag.SubmitValue == "Update")
+                {
+                    <div class="row">
+                        <div class="column">
+                            <input type="submit" value="Update" class="btn bg-primary" />
+
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="column">
+                            <input type="submit" value="Add" class="btn bg-primary" />
+
+                        </div>
+                    </div>
+                }
+            }
             <div>
 
                 <a asp-action="DisplayProcessStages">Back to Display Process Stages</a>
