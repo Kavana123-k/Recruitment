@@ -43,7 +43,7 @@ namespace Recruit.DataAccessLayer
 
                 }
              
-                foreach (int items in entity.employee_id) {
+               // foreach (int items in entity.employee_id) {
                     using (var database = _connectionFactory.GetConnection)
                     {
                         string insertQuery = @"INSERT INTO tbl_interviewers([candidate_id], [employee_id], [interview_id])
@@ -52,13 +52,13 @@ namespace Recruit.DataAccessLayer
                         var result = database.Execute(insertQuery, new
                         {
                             entity.candidate_id,
-                           employee_id=items,
+                            entity.employee_id,
                             id,
 
                         });
                     }
 
-                }
+             //   }
 
                 log.Info("[InterviewDetailRepository][Add]:Data save Successfully");
                 //return 0;
@@ -110,18 +110,18 @@ namespace Recruit.DataAccessLayer
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public List<Int64> GetAllInterviewers(int id)
+        public long GetAllInterviewers(int id)
         {
             log.Info("[InterviewDetailRepository][GetAllInterviewers]");
 
-            List<Int64> data=null;
+            long data=0;
             try
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
                     string query = @"select employee_id from tbl_interviewers WHERE interview_id=@id";
 
-                    data = database.QuerySingle<List<Int64>>(query, new { id, });
+                    data = database.QuerySingle<Int64>(query, new { id, });
                 }
             }
             catch (Exception exception)
@@ -209,8 +209,7 @@ namespace Recruit.DataAccessLayer
                         entity.interview_stage_id
                     });
                 }
-                foreach (int items in entity.employee_id)
-                {
+              //  foreach (int items in entity.employee_id)                {
                     using (var database = _connectionFactory.GetConnection)
                     {
                         string updateQuery = @"UPDATE tbl_interviewers SET candidate_id=@candidate_id,employee_id=@employee_id
@@ -220,13 +219,13 @@ namespace Recruit.DataAccessLayer
                         var result = database.Execute(updateQuery, new
                         {
                             entity.candidate_id,
-                            employee_id=items,
+                            entity.employee_id,
                             entity.id,
 
                         });
 
                     }
-                }
+             //   }
                 log.Info("[InterviewDetailRepository][Update]:Data save Successfully");
                 //return 2;
                 return ("Data Updated Successfully");

@@ -11,12 +11,12 @@ namespace Recruit.Models
         [Key]
         public Int64 id { get; set; }
 
-        [StringLength(15)]
+      
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Code is invalid")]
         public string code { get; set; }
 
-        [StringLength(20)]
+       
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Stage is invalid")]
         public string stage { get; set; }

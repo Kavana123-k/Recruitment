@@ -271,3 +271,4 @@ C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Home\InsertSpecificInterviewDetails.cshtml.g.cs
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ReminderPartial.cshtml.g.cs
 C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\LENOVO\source\repos\Recruit\Recruit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LocationDropdownPartial.cshtml.g.cs

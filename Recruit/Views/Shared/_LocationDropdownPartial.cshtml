@@ -1,0 +1,22 @@
+﻿@model Candidate
+@{
+    List<SelectListItem> Location = new List<SelectListItem>
+        ();
+    @foreach (var items in (IEnumerable<Location>)TempData["Locations"])
+    {
+        Location.Add(new SelectListItem
+        {
+
+
+            Text = items.city,
+            Value = items.id.ToString(),
+            Selected = true
+
+        });
+    }
+}
+<div class="column">
+    <label class="control-label">Preferred Locations</label>
+    @Html.DropDownListFor(model => model.location_id, new SelectList(Location, "Value", "Text"), "---Choose Status---", new { @class = "form-control" })
+    <span asp-validation-for="location_id" class="text-danger"></span>
+</div>

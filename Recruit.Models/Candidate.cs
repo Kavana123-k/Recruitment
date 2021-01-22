@@ -164,7 +164,8 @@ namespace Recruit.Models
         [ForeignKey("location_id")]
         [Required(ErrorMessage = "Enter the Location Id")]
         public Int64 location_id { get; set; }
-
+        public string preferred_location { get; set; }
+   //     public List<Int64> location_id { get; set; }
 
         //[ForeignKey("interview_id")]
         //[Required(ErrorMessage = "Enter the Interview Id")]

@@ -116,7 +116,7 @@ namespace Recruit.Controllers
 
                 var interviewers = _serviceEmployee.FindbyAll();
                 //   TempData["interviewers"] = new MultiSelectList(interviewers, "id", "name");
-              //  TempData["interviewers"] = interviewers;
+               TempData["interviewers"] = interviewers;
                 //  TempData["AllLocations"] = GetAllLocations();
 
                 // Candia.Preferred = new List<Location>();
@@ -157,7 +157,7 @@ namespace Recruit.Controllers
                 TempData["status"] = _serviceInterviewRoundStatus.FindbyAll();
                 TempData["ProcessStages"] = _serviceProcessStage.FindbyAll();
                 var interviewers = _serviceEmployee.FindbyAll();
-               // TempData["interviewers"] = interviewers; //new MultiSelectList(interviewers, "id", "name");
+               TempData["interviewers"] = interviewers; //new MultiSelectList(interviewers, "id", "name");
               //  ViewBag.SubmitValue = "Insert";
                 log.Info("[InsertInterviewDetails]:[Post]Action Method returns view which posts the input page to the table Interview Details ");
                 if (entity.id == 0)
@@ -225,6 +225,7 @@ namespace Recruit.Controllers
                 TempData["Vacancies"] = _serviceVacancy.FindbyAll();
                 TempData["Employees"] = _serviceEmployee.FindbyAll();
                 TempData["Owners"] = _serviceOwner.FindbyAll();
+                TempData["Locations"] = _serviceLocation.FindbyAll();
 
                 var candidate = new Candidate();
                 
@@ -268,6 +269,7 @@ namespace Recruit.Controllers
                 TempData["Vacancies"] = _serviceVacancy.FindbyAll();
                 TempData["Employees"] = _serviceEmployee.FindbyAll();
                 TempData["Owners"] = _serviceOwner.FindbyAll();
+                TempData["Locations"] = _serviceLocation.FindbyAll();
                 if (entity.id == 0)
                 {
                     try
@@ -890,6 +892,26 @@ namespace Recruit.Controllers
             {
                 log.Error("[DisplayLocations]:" + exception);
                 return View();
+            }
+        }
+        /// <summary>
+        /// method to display the location table
+        /// </summary>
+        /// <returns></returns>
+        public JsonResult GetLocations()
+        {
+
+            log.Info("[DisplayLocations]:Action Method returns view which displays the Locations Details");
+            try
+            {
+                List<Location> location = _serviceLocation.FindbyAll();
+                return Json(location);
+            }
+
+            catch (Exception exception)
+            {
+                log.Error("[DisplayLocations]:" + exception);
+                return Json("");
             }
         }
 

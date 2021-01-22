@@ -37,7 +37,7 @@
         <div class="row">
             <div class="column">
                 <label class="control-label">Candidate Id</label>
-                <input asp-for="candidate_id" class="form-control" disabled />
+                <input asp-for="candidate_id" class="form-control" />
                 <span asp-validation-for="candidate_id" class="text-danger"></span>
             </div>
             @*<div class="column">
@@ -80,27 +80,10 @@
             <div class="column">
                 <!--<div>
                     <label class="control-label">Interviewers</label><br />
-                    @(Html.Kendo().MultiSelectFor(model=>model.employee_id)
-                 .Name("Interviewer")
-                 .DataTextField("name")
-                 .DataValueField("employee_id")
-                 // .BindTo(new SelectList(Model.employee_id, "employee_id","name"))
-                  .Placeholder("Select Interviewers...")
-                  .AutoBind(false)
-                  // .Value(new[] { new {} })
-                     //.Value(new[] { new { ProductName = "Chang", ProductID = 2 }, new { ProductName = "Uncle Bob's Organic Dried Pears", ProductID = 7 } })
-                 .DataSource(source =>
-                 {
-                         source.Read(read =>
-                        {
-                           read.Action("GetEmployees", "Home");
-                          })
-                   .ServerFiltering(true);
-                })
-                 )
+               
                     <span asp-validation-for="employee_id" class="text-danger"></span>
                 </div>-->
-                @*<partial name="_InterviewerPartial" data=@TempData["interviewers"]/>*@
+                <partial name="_InterviewerPartial" data=@TempData["interviewers"]/>
                 @*<label class="control-label">Interviewer Id</label>
                 <input asp-for="employee_id" class="form-control" />
                 <span asp-validation-for="employee_id" class="text-danger"></span>*@
@@ -157,7 +140,7 @@
 
         UIkit.notification({ message: '@TempData["Msg"]', status: 'success', timeout: 5000 })
 
-           window.location.href = "@Url.Action("DisplaySpecificInterviewDetails", "Home")";
+           window.location.href = "@Url.Action("DisplayCandidatesDetails", "Home")";
             </script>
         }
         else

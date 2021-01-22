@@ -52,21 +52,23 @@ namespace Recruit.DataAccessLayer
 
                 }
 
-
-                using (var database = _connectionFactory.GetConnection)
-                {
-                    string insertQuery = @"INSERT INTO tbl_preferred_locations([candidate_id], [location_id])
+                //foreach (int items in entity.location_id)
+                //{
+                    using (var database = _connectionFactory.GetConnection)
+                    {
+                        string insertQuery = @"INSERT INTO tbl_preferred_locations([candidate_id], [location_id])
                         VALUES (@id, @location_id)";
 
-                    var result = database.Execute(insertQuery, new
-                    {
-                        id,
-                        entity.location_id,
-                      
+                        var result = database.Execute(insertQuery, new
+                        {
+                            id,
+                            entity.location_id,
 
-                    }) ;
 
-                }
+                        });
+
+                    }
+                
             
                 log.Info("[CandidateRepository][Add]:Data save Successfully");
                 //return 0;
@@ -110,7 +112,7 @@ namespace Recruit.DataAccessLayer
             {
 
                 data = GetAllRows().Where(records => records.id == id).FirstOrDefault();
-                
+
                 data.location_id = GetAllPreferredLocations(id);
 
             }
@@ -135,21 +137,7 @@ namespace Recruit.DataAccessLayer
                 using (var database = _connectionFactory.GetConnection)
                 {
 
-                    data = database.Query<Candidate>("SELECT  tbl_candidates.id, tbl_candidates.first_name, tbl_candidates.last_name," +
-                        " email, phone,tbl_sources.name as 'source_name', tbl_employees.name as 'emp_ref', total_experience," +
-                        " relevant_experience,current_employer, current_designation, tbl_vacancies.name as 'position', current_ctc," +
-                        " expected_ctc,reason_for_change, notice_period, is_serving_notice, last_working_day, current_location," +
-                        "tbl_process_stages.stage as 'stage', process_stage_date, process_start_date, process_end_date," +
-                        "tbl_process_statuses.status as 'status', t1.first_name as 'owner',t2.first_name as 'remind', comments," +
-                        " date_of_joining, notes, links_for_interview" +
-                        " FROM tbl_candidates" +
-                        " LEFT JOIN tbl_employees ON tbl_candidates.referral_id = tbl_employees.id" +
-                        " INNER JOIN  tbl_vacancies ON tbl_candidates.position_applied_code = tbl_vacancies.id" +
-                        " INNER JOIN tbl_sources   ON  tbl_candidates.source_code = tbl_sources.id " +
-                        "INNER JOIN tbl_process_statuses ON tbl_candidates.interview_status_id = tbl_process_statuses.id" +
-                        " INNER JOIN tbl_process_stages ON tbl_candidates.process_stage_id = tbl_process_stages.id " +
-                        "INNER JOIN tbl_owners as t1 ON tbl_candidates.resume_owner_id = t1.id " +
-                        "INNER JOIN tbl_owners as t2 ON tbl_candidates.owner_for_reminder_id = t2.id").ToList();
+                    data = database.Query<Candidate>("SELECT  tbl_candidates.id, tbl_candidates.first_name, tbl_candidates.last_name, email, phone,tbl_sources.name as 'source_name', tbl_employees.name as 'emp_ref', total_experience, relevant_experience,current_employer, current_designation, tbl_vacancies.name as 'position', current_ctc, expected_ctc,reason_for_change, notice_period, is_serving_notice, last_working_day, current_location, tbl_preferred_locations.location_id, tbl_locations.city as 'Preferred_Location',tbl_process_stages.stage as 'stage',process_stage_date, process_start_date, process_end_date,tbl_process_statuses.status as 'status', t1.first_name as 'owner', t2.first_name as 'remind', comments,         date_of_joining, notes, links_for_interview FROM tbl_candidates LEFT JOIN tbl_employees ON tbl_candidates.referral_id = tbl_employees.id INNER JOIN  tbl_vacancies ON tbl_candidates.position_applied_code = tbl_vacancies.id INNER JOIN tbl_sources   ON  tbl_candidates.source_code = tbl_sources.id INNER JOIN tbl_process_statuses ON tbl_candidates.interview_status_id = tbl_process_statuses.id INNER JOIN tbl_process_stages ON tbl_candidates.process_stage_id = tbl_process_stages.id INNER JOIN tbl_owners as t1 ON tbl_candidates.resume_owner_id = t1.id INNER JOIN tbl_owners as t2 ON tbl_candidates.owner_for_reminder_id = t2.id LEFT JOIN tbl_preferred_locations ON tbl_candidates.id = tbl_preferred_locations.candidate_id LEFT JOIN tbl_locations ON tbl_preferred_locations.location_id = tbl_locations.id").ToList();
                 }
 
             }
@@ -268,21 +256,24 @@ namespace Recruit.DataAccessLayer
                         entity.links_for_interview
                     });
                 }
-                using (var database = _connectionFactory.GetConnection)
-                {
-                    string updateQuery = @"UPDATE tbl_preferred_locations SET location_id=@location_id
+                //foreach (int items in entity.location_id)
+                //{
+                    using (var database = _connectionFactory.GetConnection)
+                    {
+                        string updateQuery = @"UPDATE tbl_preferred_locations SET location_id=@location_id
                                             WHERE candidate_id=@id";
 
 
-                    var result = database.Execute(updateQuery, new
-                    {
-                        entity.location_id,
-                     
-                        entity.id
+                        var result = database.Execute(updateQuery, new
+                        {
+                            entity.location_id,
 
-                    });
+                            entity.id
 
-                }
+                        });
+
+                    }
+             //   }
                 log.Info("[CandidateRepository][Update]:Data save Successfully");
                 //return 2;
                 return ("Data Updated Successfully");

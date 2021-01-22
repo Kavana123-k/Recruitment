@@ -55,7 +55,8 @@ namespace Recruit.Models
         /// </summary>
         [ForeignKey("employee_id")]
         [Required(ErrorMessage = "Enter the Employee Id")]
-        public List<Int64> employee_id { get; set; }
+        // public List<Int64> employee_id { get; set; }
+        public Int64 employee_id { get; set; }
         public string emp_name
         {
             get; set;
