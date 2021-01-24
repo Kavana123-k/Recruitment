@@ -1,0 +1,10 @@
+/Recruit/bin
+/Recruit.BusinessAccessLayer/bin
+/Recruit.DataAccessLayer/bin
+/Recruit.Models/bin
+/Recruit/obj
+/Recruit.BusinessAccessLayer/obj
+/Recruit.DataAccessLayer/obj
+/Recruit.Models/obj
+/logs
+/.vs
