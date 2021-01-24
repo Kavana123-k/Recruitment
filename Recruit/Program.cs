@@ -14,14 +14,20 @@ using log4net.Config;
 using System.Xml;
 using System.IO;
 using System.Reflection;
+using System.Configuration;
 
 namespace Recruit
 {
     public class Program
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(Program));
+        private IConfiguration Configuration;
+
+      
         public static void Main(string[] args)
         {
+           
+       
             log.Info("[Main]:Application Start");
             var serviceProvider = Init.CreateServices();
 

@@ -2732,3 +2732,32 @@ Error Number:2627,State:1,Class:14 :
 2021-01-22 18:32:55,155 : [16] : INFO  : Recruit.DataAccessLayer.ProcessStageRepository : [ProcessStageRepository][GetAll] : 
 2021-01-22 18:32:55,168 : [16] : INFO  : Recruit.BusinessAccessLayer.EmployeeService : [EmployeeService][FindByAll] : 
 2021-01-22 18:32:55,177 : [16] : INFO  : Recruit.DataAccessLayer.EmployeeRepository : [EmployeeRepository][GetAll] : 
+2021-01-22 19:27:11,875 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-22 19:27:13,320 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-22 19:27:17,002 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-22 19:27:28,625 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-22 19:27:28,792 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-22 19:27:28,818 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-22 19:27:29,100 : [8] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-22 19:29:25,814 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-22 19:29:27,725 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-22 19:29:35,837 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-22 19:29:40,980 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-22 19:29:41,016 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-22 19:29:41,190 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-22 19:29:41,529 : [6] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-22 19:30:16,184 : [13] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2021-01-22 19:30:16,286 : [13] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2021-01-22 19:30:16,467 : [13] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
+2021-01-22 19:30:17,601 : [14] : DEBUG : Recruit.Controllers.HomeController : [DisplayCandidatesDetails]:  : 
+2021-01-22 19:30:17,642 : [14] : INFO  : Recruit.BusinessAccessLayer.CandidateService : [CandidateService][FindbyAll] : 
+2021-01-22 19:30:17,657 : [14] : INFO  : Recruit.DataAccessLayer.CandidateRepository : [CandidateRepository][GetAll] : 
+2021-01-22 21:58:54,626 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-22 21:58:55,602 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
+2021-01-22 21:58:58,780 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate End : 
+2021-01-22 21:59:19,717 : [1] : INFO  : Microsoft.Hosting.Lifetime : Application started. Press Ctrl+C to shut down. : 
+2021-01-22 21:59:19,995 : [1] : INFO  : Microsoft.Hosting.Lifetime : Hosting environment: Development : 
+2021-01-22 21:59:20,021 : [1] : INFO  : Microsoft.Hosting.Lifetime : Content root path: C:\Users\LENOVO\source\repos\Recruit\Recruit : 
+2021-01-22 21:59:21,656 : [4] : INFO  : Recruit.Controllers.HomeController : [Index]:Action Method returns view which displays the Dashboard : 
+2021-01-22 23:17:24,530 : [1] : INFO  : Recruit.Program : [Main]: Fluent Migrator to setup Database tables : 
+2021-01-22 23:17:28,007 : [1] : INFO  : Recruit.Models.Init : [UpdateDatabase]:Migrate Start : 
