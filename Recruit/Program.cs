@@ -23,13 +23,12 @@ namespace Recruit
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(Program));
         private IConfiguration Configuration;
 
-      
+
         public static void Main(string[] args)
         {
-           
-       
+
+
             log.Info("[Main]:Application Start");
-            var serviceProvider = Init.CreateServices();
 
             //  log.Info("Application - Main is invoked");
             XmlDocument log4netConfig = new XmlDocument();
@@ -38,13 +37,6 @@ namespace Recruit
                        typeof(log4net.Repository.Hierarchy.Hierarchy));
             log4net.Config.XmlConfigurator.Configure(repo, log4netConfig["log4net"]);
 
-            // Put the database update into a scope to ensure
-            // that all resources will be disposed.
-            log.Info("[Main]: Fluent Migrator to setup Database tables");
-            using (var scope = serviceProvider.CreateScope())
-            {
-                Init.UpdateDatabase(scope.ServiceProvider);
-            }
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -62,6 +54,17 @@ namespace Recruit
                   // logging.AddDebug();
                   // builder.SetMinimumLevel(LogLevel.Trace);
                   logging.AddLog4Net("log4net.config");// .AddNLog();
+
+
+                  Init._configuration = hostingContext.Configuration;
+                  var serviceProvider = Init.CreateServices();
+                  // Put the database update into a scope to ensure
+                  // that all resources will be disposed.
+                  log.Info("[Main]: Fluent Migrator to setup Database tables");
+                  using (var scope = serviceProvider.CreateScope())
+                  {
+                      Init.UpdateDatabase(scope.ServiceProvider);
+                  }
               })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {

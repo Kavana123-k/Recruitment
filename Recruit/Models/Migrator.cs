@@ -1,6 +1,7 @@
 ﻿using FluentMigrator;
 using FluentMigrator.Runner;
 using Microsoft.AspNetCore.Connections;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NLog;
 using System;
@@ -178,28 +179,19 @@ namespace Recruit.Models
     public class Init
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(Init));
-        //private readonly IConfiguration _configuration;
-      
+        internal static IConfiguration _configuration;
+
         //public Init(IConfiguration config)
         //{
         //    this._configuration = config;
         //}
-             
-   
+
+
         public static IServiceProvider CreateServices()
         {
-            
+
             try
             {
-               // var connectionString = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
-               // var conn=_configuration.GetConnectionString("MyConn");
-               // var a = s;
-                //var a = new ServiceCollection();
-                //var b= a.AddFluentMigratorCore();
-                // GetConnection cn = new GetConnection();
-             //   string connString = Startup.StaticConfig.GetConnectionString("MyConn");
-          //  string str = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
-                //   var conn = Configuration.GetConnectionString("MyConn");
                 return new ServiceCollection()
                     // Add common FluentMigrator services
                     .AddFluentMigratorCore()
@@ -215,7 +207,7 @@ namespace Recruit.Models
                         //supp = rb.AddSQLite();
 
                         // Set the connection string
-                        supp.WithGlobalConnectionString("Data Source=DESKTOP-T3N0J77;Initial Catalog=Recruitment;Integrated Security=True")
+                        supp.WithGlobalConnectionString(_configuration.GetConnectionString("MyConn"))
                            // Define the assembly containing the migrations
                            .ScanIn(typeof(CreateTables).Assembly).For.Migrations();
                     }

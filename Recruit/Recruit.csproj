@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyVersion>1.0.1.24</AssemblyVersion>
+    <FileVersion>1.0.1.24</FileVersion>
+    <Version>1.0.1.24</Version>
+    <OutputType>Exe</OutputType>
+    <UserSecretsId>c995e6b1-d8bb-47e6-8f73-7b6fbfc7d3c6</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
