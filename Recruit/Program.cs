@@ -1,33 +1,21 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Recruit.Models;
-//using NLog;
-using NLog.Extensions.Logging;
-using log4net.Config;
-using System.Xml;
 using System.IO;
 using System.Reflection;
-using System.Configuration;
+using System.Xml;
 
 namespace Recruit
 {
     public class Program
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(Program));
-        private IConfiguration Configuration;
-
 
         public static void Main(string[] args)
         {
-
-
             log.Info("[Main]:Application Start");
 
             //  log.Info("Application - Main is invoked");
@@ -54,7 +42,6 @@ namespace Recruit
                   // logging.AddDebug();
                   // builder.SetMinimumLevel(LogLevel.Trace);
                   logging.AddLog4Net("log4net.config");// .AddNLog();
-
 
                   Init._configuration = hostingContext.Configuration;
                   var serviceProvider = Init.CreateServices();

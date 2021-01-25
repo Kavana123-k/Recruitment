@@ -1,21 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Recruit.Models;
 
 namespace Recruit
 {
     public class Startup
     {
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -23,16 +16,14 @@ namespace Recruit
 
         public IConfiguration Configuration { get; }
 
-     
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-           
+
             services.AddKendo();
             services.AddSingleton<Recruit.BusinessAccessLayer.Interface.IService<Candidate>, Recruit.BusinessAccessLayer.CandidateService>();
-            services.AddSingleton<Recruit.DataAccessLayer.Interface.IUnitOfWork,Recruit.DataAccessLayer.UnitOfWork>();
+            services.AddSingleton<Recruit.DataAccessLayer.Interface.IUnitOfWork, Recruit.DataAccessLayer.UnitOfWork>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IGenericRepository<Candidate>, Recruit.DataAccessLayer.CandidateRepository>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IConnectionFactory, Recruit.DataAccessLayer.ConnectionFactory>();
 
@@ -75,21 +66,17 @@ namespace Recruit
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IUnitOfWork, Recruit.DataAccessLayer.UnitOfWork>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IGenericRepository<Source>, Recruit.DataAccessLayer.SourceRepository>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IConnectionFactory, Recruit.DataAccessLayer.ConnectionFactory>();
-           
+
             services.AddSingleton<Recruit.BusinessAccessLayer.Interface.IService<Vacancy>, Recruit.BusinessAccessLayer.VacancyService>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IUnitOfWork, Recruit.DataAccessLayer.UnitOfWork>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IGenericRepository<Vacancy>, Recruit.DataAccessLayer.VacancyRepository>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IConnectionFactory, Recruit.DataAccessLayer.ConnectionFactory>();
-           
+
             services.AddSingleton<Recruit.BusinessAccessLayer.Interface.IService<Timeline>, Recruit.BusinessAccessLayer.TimelineService>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IUnitOfWork, Recruit.DataAccessLayer.UnitOfWork>();
-            services.AddSingleton<DataAccessLayer.Interface.IGenericRepository<Timeline>,DataAccessLayer.TimelineRepository>();           
+            services.AddSingleton<DataAccessLayer.Interface.IGenericRepository<Timeline>, DataAccessLayer.TimelineRepository>();
             services.AddSingleton<Recruit.DataAccessLayer.Interface.IConnectionFactory, Recruit.DataAccessLayer.ConnectionFactory>();
-
-
-
-        } 
-
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -118,6 +105,5 @@ namespace Recruit
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
-       
     }
 }

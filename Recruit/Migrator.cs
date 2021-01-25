@@ -1,23 +1,16 @@
 ﻿using FluentMigrator;
 using FluentMigrator.Runner;
-using Microsoft.AspNetCore.Connections;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NLog;
 using System;
-using System.Configuration;
 
-namespace Recruit.Models
+namespace Recruit
 {
     [Migration(20201117141200)]
     public class CreateTables : Migration
     {
-
-
         public override void Up()
         {
-
-
             Create.Table("tbl_logins").WithDescription("Table to Store the Login credentials")
                 .WithColumn("id").AsInt64().PrimaryKey("PK_tbl_logins_id").WithColumnDescription("Primary key id").Identity()//Creation of tbl_logins
                 .WithColumn("user_id").AsString(20).WithColumnDescription("Userid for login").Unique("UK_tbl_logins_user_id")
@@ -45,7 +38,7 @@ namespace Recruit.Models
                 .WithColumn("status").AsString(50).NotNullable().WithColumnDescription("Status of the round of interview").Unique("UK_tbl_process_statuses_status")
                 .WithColumn("colour").AsString(10).Nullable().WithColumnDescription("Colour based on the interview status");
 
-            Create.Table("tbl_process_stages").WithDescription("Table used to Store Interview Stages")                                       //Creation of tbl_process_stages 
+            Create.Table("tbl_process_stages").WithDescription("Table used to Store Interview Stages")                                       //Creation of tbl_process_stages
                 .WithColumn("id").AsInt64().PrimaryKey("PK_tbl_process_stages_Id").WithColumnDescription("id of the specific ProcessStages").Identity()
                .WithColumn("code").AsString(15).Unique().NotNullable().WithColumnDescription("Code of the specified Process stages").Unique("UK_tbl_process_stages_code")
                 .WithColumn("stage").AsString(50).NotNullable().WithColumnDescription("Stages of the round of interview").Unique("UK_tbl_process_stages_stage");
@@ -128,8 +121,8 @@ namespace Recruit.Models
                  .WithColumn("status_id").AsInt64().NotNullable().WithColumnDescription("Foreignkey references the tbl_interview_round_statuses table defines the the round status")
                  .ForeignKey("FK_tbl_interview_details_tblInteviewRoundStatuses_StatusId", "tbl_interview_round_statuses", "id")
                  .WithColumn("reason").AsString(150).Nullable().WithColumnDescription("Notes on the Interview Process if needed");
-
         }
+
         public override void Down()
         {
             Delete.Table("tbl_logins");
@@ -144,10 +137,9 @@ namespace Recruit.Models
             Delete.Table("tbl_candidates");
             Delete.Table("tbl_preferred_locations");
             Delete.Table("tbl_interview_details");
-
-
         }
     }
+
     /// <summary>
     /// insert default values to the tables
     /// </summary>
@@ -173,9 +165,6 @@ namespace Recruit.Models
         }
     }
 
-
-
-
     public class Init
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(Init));
@@ -186,10 +175,8 @@ namespace Recruit.Models
         //    this._configuration = config;
         //}
 
-
         public static IServiceProvider CreateServices()
         {
-
             try
             {
                 return new ServiceCollection()
@@ -216,7 +203,6 @@ namespace Recruit.Models
                     .AddLogging(lb => lb.AddFluentMigratorConsole())
                     // Build the service provider
                     .BuildServiceProvider(false);
-
             }
             catch (Exception ex)
             {
@@ -244,7 +230,6 @@ namespace Recruit.Models
             {
                 log.Error("[UpdateDatabase]: ", ex);
             }
-
         }
     }
 }

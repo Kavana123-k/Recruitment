@@ -10,13 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="NLog.config" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="NLog.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="wwwroot\js\functions.js" />
   </ItemGroup>
 
@@ -31,8 +24,6 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
-    <PackageReference Include="NLog" Version="4.7.6" />
-    <PackageReference Include="NLog.Extensions.Logging" Version="1.6.5" />
     <PackageReference Include="OCM.ORM" Version="1.1.11.6" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
     <PackageReference Include="Telerik.UI.for.AspNet.Core" Version="2020.3.1118" />
