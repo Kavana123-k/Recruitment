@@ -16,6 +16,7 @@ using log4net.Repository.Hierarchy;
 using log4net;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Kendo.Mvc.UI;
 
 namespace Recruit.Controllers
 {

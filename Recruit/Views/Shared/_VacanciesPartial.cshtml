@@ -16,7 +16,7 @@
     }
 }
 <div class="column">
-    <label class="control-label">Position applied </label>
+    <label class="control-label1">Position applied </label>
     @Html.DropDownListFor(model => model.position_applied_code, new SelectList(vacancy, "Value", "Text"), "---Choose Position---", new { @class = "form-control" })
     <span asp-validation-for="position_applied_code" class="text-danger"></span>
 

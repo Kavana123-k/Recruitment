@@ -18,6 +18,10 @@ namespace Recruit.Models
         public string name { get; set; }
 
         public Int64? vacancy { get; set; }
+
+        public Int64 location_id { get; set; }
+
+        public string city { get; set; }
     }
 }
                                    

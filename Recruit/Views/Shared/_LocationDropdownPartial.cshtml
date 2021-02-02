@@ -16,7 +16,7 @@
     }
 }
 <div class="column">
-    <label class="control-label">Preferred Locations</label>
+    <label class="control-label1">Preferred Locations</label>
     @Html.DropDownListFor(model => model.location_id, new SelectList(Location, "Value", "Text"), "---Choose Status---", new { @class = "form-control" })
     <span asp-validation-for="location_id" class="text-danger"></span>
 </div>

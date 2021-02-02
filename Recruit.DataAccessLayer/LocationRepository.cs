@@ -25,7 +25,7 @@ namespace Recruit.DataAccessLayer
         /// </summary>
         /// <param name="entity">the row value which has to be inserted</param>
         /// <returns>String containing the message if successful and exception Message if not</returns>
-       public string Add(Location entity)
+        public string Add(Location entity)
         {
             log.Info("[LocationRepository][Add]");
             try
@@ -36,15 +36,15 @@ namespace Recruit.DataAccessLayer
                     var result = database.Execute(insertQuery, new
                     {
                         entity.city
-                     });
+                    });
                 }
                 log.Info("[LocationRepository][Add]:Data save Successfully");
-               // return 0;
+                // return 0;
                 return ("\n\n Data save Successfully");
             }
             catch (Exception exception)
             {
-                 
+
                 log.Error("[LocationRepository][Add]:" + exception);
                 //if ((exception.Message).Contains("Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'"))
                 //{
@@ -68,15 +68,15 @@ namespace Recruit.DataAccessLayer
         /// </summary>
         /// <param name="id">Primary key</param>
         /// <returns>The Row values for the specified Primary Key</returns>
-       public Location Get(int id)
+        public Location Get(int id)
         {
             log.Info("[LocationRepository][Get]");
-            var data = new Location() ;
+            var data = new Location();
             try
             {
-                data= GetAll().Where(records => records.id == id).FirstOrDefault();
+                data = GetAll().Where(records => records.id == id).FirstOrDefault();
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 log.Error("[LocationRepository][Get]:" + exception);
             }
@@ -86,7 +86,7 @@ namespace Recruit.DataAccessLayer
         /// Method to perform DISPLAY Operation
         /// </summary>
         /// <returns>ALL the contents in the table from the DB</returns>
-       public List<Location> GetAll()
+        public List<Location> GetAll()
         {
 
             log.Info("[LocationRepository][GetAll]");
@@ -132,7 +132,7 @@ namespace Recruit.DataAccessLayer
             }
             catch (Exception exception)
             {
-                 log.Error("[LocationRepository][Update]:" + exception);
+                log.Error("[LocationRepository][Update]:" + exception);
                 //if ((exception.Message).Contains("Violation of UNIQUE KEY constraint 'UK_tbl_locations_city'"))
                 //{
                 //    //return 3;

@@ -15,6 +15,13 @@
     .form-control {
         width: 80%;
     }
+
+    .control-label1::after {
+        content: '*';
+        font-weight: bold;
+        margin-right: 5px;
+        color: red;
+    }
 </style>
 
 <body style="height: auto;">
@@ -22,7 +29,7 @@
 
 
 
-    <form asp-action="InsertCandidates" class="form-horizontal">
+    <form asp-action="InsertCandidates" class="form-horizontal" autocomplete="off">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 
@@ -35,33 +42,63 @@
                 </div>
 
             </div>*@
+        
+            @*<fieldset>
+                <legend>Personal Info</legend>*@
+                <div class="row">
+                    <div class="column">
 
-        <div class="row">
-            <div class="column">
-                <label class="control-label">First Name</label>
-                @*<input asp-for="first_name" class="form-control" />*@
-                @Html.TextBoxFor(model => model.first_name, new { @class = "form-control" })
-                <span asp-validation-for="first_name" class="text-danger"></span>
-            </div>
-            <div class="column">
-                <label class="control-label">Last Name</label>
-                <input asp-for="last_name" class="form-control" />
-                <span asp-validation-for="last_name" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="row">
+                        <label class="control-label1"> First Name</label>
 
-            <div class="column">
-                <label class="control-label"> Email</label>
-                <input asp-for="email" class="form-control" />
-                <span asp-validation-for="email" class="text-danger"></span>
-            </div>
-            <div class="column">
-                <label class="control-label">Phone</label>
-                <input asp-for="phone" class="form-control" />
-                <span asp-validation-for="phone" class="text-danger"></span>
-            </div>
-        </div>
+                        @*<input asp-for="first_name" class="form-control" />*@
+                        @Html.TextBoxFor(model => model.first_name, new { @class = "form-control" })
+                        <span asp-validation-for="first_name" class="text-danger"></span>
+
+                    </div>
+                    <div class="column">
+
+                        <label class="control-label1">Last Name</label>
+
+                        <input asp-for="last_name" class="form-control" />
+                        <span asp-validation-for="last_name" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="column">
+                        <label class="control-label1"> Email</label>
+                        <input asp-for="email" class="form-control" />
+                        <span asp-validation-for="email" class="text-danger"></span>
+                    </div>
+                    <div class="column">
+                        <label class="control-label1">Phone</label>
+                        <input asp-for="phone" class="form-control" />
+                        <span asp-validation-for="phone" class="text-danger"></span>
+                    </div>
+                </div>
+            @*</fieldset>
+        </form>*@
+
+
+
+        @*<div class="row">
+
+                <div class="column">
+                    <label class="control-label1"> Date ofcBirth</label>
+                    <input asp-for="date_of_birth" class="form-control" />
+                    <span asp-validation-for="date_of_birth" class="text-danger"></span>
+                </div>
+                <div class="column">
+                    <label class="control-label">Passport Number</label>
+                    <input asp-for="passport_no" class="form-control" />
+                    <span asp-validation-for="passport_no" class="text-danger"></span>
+                </div>
+            </div>*@
+
+
+
         <div class="row">
             <div class="column">
                 @*<label class="control-label">Source</label>
@@ -81,12 +118,12 @@
         <div class="row">
 
             <div class="column">
-                <label class="control-label">Total experience</label>
+                <label class="control-label1">Total experience</label>
                 <input asp-for="total_experience" class="form-control" />
                 <span asp-validation-for="total_experience" class="text-danger"></span>
             </div>
             <div class="column">
-                <label class="control-label">Relevant experience</label>
+                <label class="control-label1">Relevant experience</label>
                 <input asp-for="relevant_experience" class="form-control" />
                 <span asp-validation-for="relevant_experience" class="text-danger"></span>
             </div>
@@ -98,7 +135,7 @@
                 <span asp-validation-for="current_employer" class="text-danger"></span>
             </div>
             <div class="column">
-                <label class="control-label">Current designation</label>
+                <label class="control-label1">Current designation</label>
                 <input asp-for="current_designation" class="form-control" />
                 <span asp-validation-for="current_designation" class="text-danger"></span>
             </div>
@@ -113,14 +150,14 @@
 
             </div>
             <div class="column">
-                <label class="control-label">Current ctc</label>
+                <label class="control-label1">Current ctc</label>
                 <input asp-for="current_ctc" class="form-control" />
                 <span asp-validation-for="current_ctc" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
             <div class="column">
-                <label class="control-label">Expected ctc</label>
+                <label class="control-label1">Expected ctc</label>
                 <input asp-for="expected_ctc" class="form-control" />
                 <span asp-validation-for="expected_ctc" class="text-danger"></span>
             </div>
@@ -130,19 +167,32 @@
                 <span asp-validation-for="reason_for_change" class="text-danger"></span>
             </div>
         </div>
+
         <div class="row">
 
             <div class="column">
-                <label class="control-label">Notice period (In Days)</label>
-                <input asp-for="notice_period" class="form-control" />
-                <span asp-validation-for="notice_period" class="text-danger"></span>
+                <div class="row1">
+                    <div class="column">
+                        <label class="control-label1">Notice period (In Days)</label>
+                        <input asp-for="notice_period" class="form-control" />
+                        <span asp-validation-for="notice_period" class="text-danger"></span>
+                    </div>
+                    <div class="column">
+                        <label class="control-label">Is serving notice</label>
+                        <input asp-for="is_serving_notice" class="form-control" />
+                        <span asp-validation-for="is_serving_notice" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-            <div class="column">
-                <label class="control-label">Is serving notice</label>
-                <input asp-for="is_serving_notice" class="form-control" />
-                <span asp-validation-for="is_serving_notice" class="text-danger"></span>
-            </div>
+
+            @*<div class="column">
+                    <label class="control-label">Adhar Number</label>
+                    <input asp-for="adhar_no" class="form-control" />
+                    <span asp-validation-for="adhar_no" class="text-danger"></span>
+                </div>*@
+
         </div>
+
         <div class="row">
             <div class="column">
                 <label class="control-label">Last working day</label>
@@ -150,7 +200,7 @@
                 <span asp-validation-for="last_working_day" class="text-danger"></span>
             </div>
             <div class="column">
-                <label class="control-label">Current Location</label>
+                <label class="control-label1">Current Location</label>
                 <input asp-for="current_location" class="form-control" />
                 <span asp-validation-for="current_location" class="text-danger"></span>
             </div>
@@ -158,8 +208,8 @@
         <div class="row">
             <div class="column">
                 @*<label class="control-label">Preferred Location id</label>
-        <input asp-for="location_id" class="form-control" />
-        <span asp-validation-for="location_id" class="text-danger"></span>*@
+                    <input asp-for="location_id" class="form-control" />
+                    <span asp-validation-for="location_id" class="text-danger"></span>*@
                 <partial name="_LocationDropdownPartial" data=@TempData["Locations"] />
             </div>
 
@@ -173,13 +223,13 @@
         </div>
         <div class="row">
             <div class="column">
-                <label class="control-label">Process Stage date</label>
+                <label class="control-label1">Process Stage date</label>
                 <input asp-for="process_stage_date" class="form-control" />
                 <span asp-validation-for="process_stage_date" class="text-danger"></span>
             </div>
 
             <div class="column">
-                <label class="control-label">Process start date</label>
+                <label class="control-label1">Process start date</label>
                 <input asp-for="process_start_date" class="form-control" />
                 <span asp-validation-for="process_start_date" class="text-danger"></span>
             </div>
@@ -219,8 +269,9 @@
         </div>
         <div class="row">
             <div class="column">
-                <label class="control-label">Comments</label>
-                <input asp-for="comments" class="form-control" />
+                <label class="control-label">Comments</label><br />
+                @*<input asp-for="comments" class="form-control" />*@
+                <textarea asp-for="comments" style="font-family:sans-serif;font-size:1.2em;"></textarea>
                 <span asp-validation-for="comments" class="text-danger"></span>
             </div>
 
@@ -231,20 +282,25 @@
                 <span asp-validation-for="date_of_joining" class="text-danger"></span>
             </div>
         </div>
+
         <div class="row">
+            @*<h1 class="required" style="text-align: left">*@
             <div class="column">
-                <label class="control-label">Notes</label>
-                <input asp-for="notes" class="form-control" />
+                <label class="control-label">Notes</label><br />
+                <textarea asp-for="notes" style="font-family:sans-serif;font-size:1.2em;"></textarea>
+                @*<input asp-for="notes" class="form-control" />*@
                 <span asp-validation-for="notes" class="text-danger"></span>
             </div>
-
             <div class="column">
                 <label class="control-label">Links for Interview</label>
                 <input asp-for="links_for_interview" class="form-control" />
                 <span asp-validation-for="links_for_interview" class="text-danger"></span>
-            </div>
+              
 
+            </div>
         </div>
+
+
         @{
             if (ViewBag.SubmitValue == "Update")
             {
@@ -310,4 +366,6 @@
         }
 
     }
+
+
 }

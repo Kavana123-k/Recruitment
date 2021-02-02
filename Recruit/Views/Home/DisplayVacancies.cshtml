@@ -42,6 +42,7 @@
         columns.Bound(p => p.code).Title("Code").Filterable(ftb => ftb.Multi(true).Search(true));
         columns.Bound(p => p.name).Title("Designation").Filterable(ftb => ftb.Multi(true).Search(true));
         columns.Bound(p => p.vacancy).Title("Vacancies");
+        columns.Bound(p=> p.city).Title("City").Filterable(ftb => ftb.Multi(true).Search(true));
         columns.Template(
 
                             "<a class='k-button k-button-icontext' onclick='addMaterialPopup()' href='" +
@@ -56,7 +57,7 @@
          .Input(true)
          .Numeric(false)
      )
-     
+
     .Sortable()
     .Scrollable(scr=>scr.Height(430))
     .Filterable()

@@ -10,7 +10,7 @@ namespace Recruit.Models
     {   
         [Key]
         public Int64 id { get; set; }
-        [StringLength(20)]
+        [StringLength(30)]
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Status is invalid")]
         public string status { get; set; }

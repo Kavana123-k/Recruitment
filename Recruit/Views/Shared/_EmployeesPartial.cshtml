@@ -15,7 +15,7 @@
             });
         }}
         <div class="column">
-            <label class="control-label">Referred by</label>
+            <label class="control-label1">Referred by</label>
             @Html.DropDownListFor(model => model.referral_id, new SelectList(employees, "Value", "Text"), "---Choose referred-by---", new { @class = "form-control" })
             <span asp-validation-for="referral_id" class="text-danger"></span>
         </div>

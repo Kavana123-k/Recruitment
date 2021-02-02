@@ -16,7 +16,8 @@ namespace Recruit.Models
 
         [StringLength(50)]
         [DataType(DataType.Text)]
-        [Required(ErrorMessage = "Firstname invalid")]
+        //   [Required, Display(Name = "Emai*")]
+        [Required(ErrorMessage = "Firstname invalid")] 
         public String first_name { get; set; }
 
 
@@ -154,6 +155,15 @@ namespace Recruit.Models
         [StringLength(50)]
         [DataType(DataType.Text)]
         public String links_for_interview { get; set; }
+
+
+        [Display(Name = "Date of Birth")]
+        [DataType(DataType.Date)]
+        //public Nullable<System.DateTime> date_of_birth { get; set; }
+
+        //public string passport_no { get; set; }
+
+        //public string adhar_no { get; set; }
 
 
         #region Custom Attributes

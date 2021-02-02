@@ -1,0 +1,27 @@
+﻿@model List<Employee>
+
+@using Kendo.Mvc.UI;
+< h1 align = "center"style = "color: white;" > Panel Details </ h1 >
+@(Html.Kendo().Grid(Model)
+    .Name("EmpGrid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.id).Title("ID");
+        columns.Bound(p => p.name).Title("Name");
+
+    })
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Pageable(
+     pageable => pageable
+         .Input(true)
+         .Numeric(false)
+     )
+    .Sortable()
+    .Scrollable(scr => scr.Height(430))
+
+//.DataSource(dataSource => dataSource
+//    .Ajax()
+//    .PageSize(20)
+// .ServerOperation(false)
+//)
+)

@@ -33,7 +33,7 @@ namespace Recruit.DataAccessLayer
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    string insertQuery = @"INSERT INTO tbl_locations([first_name],[last_name])VALUES (first_name,@last_name)";
+                    string insertQuery = @"INSERT INTO tbl_owners([first_name],[last_name])VALUES (first_name,@last_name)";
                     var result = database.Execute(insertQuery, new
                     {
                         entity.first_name,
@@ -118,7 +118,7 @@ namespace Recruit.DataAccessLayer
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    string updateQuery = @"UPDATE tbl_locations SET first_name=@first_name,last_name=@last_name WHERE id=@id";
+                    string updateQuery = @"UPDATE tbl_owners SET first_name=@first_name,last_name=@last_name WHERE id=@id";
 
                     var result = database.Execute(updateQuery, new
                     {

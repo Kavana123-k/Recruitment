@@ -16,7 +16,7 @@
     }
 }
 <div class="column">
-    <label class="control-label">Process stage </label>
+    <label class="control-label1">Process stage </label>
     @Html.DropDownListFor(model => model.process_stage_id, new SelectList(stages, "Value", "Text"), "---Choose Status---", new { @class = "form-control" })
     <span asp-validation-for="process_stage_id" class="text-danger"></span>
 

@@ -16,7 +16,7 @@
     }
 }
 <div class="column">
-    <label class="control-label">Resume Owner</label>
+    <label class="control-label1">Resume Owner</label>
     @Html.DropDownListFor(model => model.resume_owner_id, new SelectList(owners, "Value", "Text"), "---Choose Status---", new { @class = "form-control" })
     <span asp-validation-for="resume_owner_id" class="text-danger"></span>
 </div>

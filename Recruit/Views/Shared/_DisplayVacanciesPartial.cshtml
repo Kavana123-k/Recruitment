@@ -9,6 +9,7 @@
         columns.Bound(p => p.code).Title("Code");
         columns.Bound(p => p.name).Title("Designation");
         columns.Bound(p => p.vacancy).Title("Vacancies");
+        columns.Bound(p => p.city).Title("City");
     })
     .HtmlAttributes(new { style = "height: 550px;" })
     .Pageable(

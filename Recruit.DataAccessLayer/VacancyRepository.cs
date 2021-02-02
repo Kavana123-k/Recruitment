@@ -32,13 +32,14 @@ namespace Recruit.DataAccessLayer
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    string insertQuery = @"INSERT INTO tbl_vacancies([code],[name],[vacancy])VALUES (@code,@name,@vacancy)";
+                    string insertQuery = @"INSERT INTO tbl_vacancies([code],[name],[vacancy],[location_id])VALUES (@code,@name,@vacancy,@location_id)";
 
                     var result = database.Execute(insertQuery, new
                     {
                         entity.code,
                         entity.name,
-                        entity.vacancy
+                        entity.vacancy,
+                        entity.location_id
 
                     });
                 }
@@ -100,7 +101,7 @@ namespace Recruit.DataAccessLayer
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    data = database.Query<Vacancy>(" SELECT id,code, name,vacancy FROM tbl_vacancies").ToList();
+                    data = database.Query<Vacancy>(" SELECT tbl_vacancies.id,tbl_vacancies.code, tbl_vacancies.name,tbl_vacancies.vacancy,tbl_locations.city as city FROM tbl_vacancies left join tbl_locations on tbl_vacancies.location_id=tbl_locations.id").ToList();
                 }
             }
             catch (Exception exception)
@@ -123,14 +124,15 @@ namespace Recruit.DataAccessLayer
             {
                 using (var database = _connectionFactory.GetConnection)
                 {
-                    string updateQuery = @"UPDATE tbl_vacancies SET code=@code,name=@name,vacancy=@vacancy WHERE id=@id";
+                    string updateQuery = @"UPDATE tbl_vacancies SET code=@code,name=@name,vacancy=@vacancy,location_id=@location_id WHERE id=@id";
 
                     var result = database.Execute(updateQuery, new
                     {
                         entity.id,
                         entity.code,
                         entity.name,
-                        entity.vacancy
+                        entity.vacancy,
+                        entity.location_id
                     });
                 }
                 log.Info("[VacancyRepository][Update] : Data save Successfully");

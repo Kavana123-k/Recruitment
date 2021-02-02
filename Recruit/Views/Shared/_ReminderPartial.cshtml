@@ -17,7 +17,7 @@
 }
 
 <div class="column">
-    <label class="control-label">Owner For Reminder</label>
+    <label class="control-label1">Owner For Reminder</label>
     @Html.DropDownListFor(model => model.owner_for_reminder_id, new SelectList(owners, "Value", "Text"), "---Choose Status---", new { @class = "form-control" })
     <span asp-validation-for="owner_for_reminder_id" class="text-danger"></span>
 </div>

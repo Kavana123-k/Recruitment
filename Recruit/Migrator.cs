@@ -49,9 +49,11 @@ namespace Recruit
                .WithColumn("name").AsString(50).NotNullable().WithColumnDescription("Name of the Position that is open for applicant/Company Requirements").Unique("UK_tbl_vacancies_name")
                 .WithColumn("vacancy").AsInt64().Nullable().WithColumnDescription("Vacancies in the specified field");
 
+
+
             Create.Table("tbl_interview_round_statuses").WithDescription("Table used to store Roundwise Interview statuses")                           //Creation of tbl_interview_round_statuses
                 .WithColumn("id").AsInt64().PrimaryKey("PK_tbl_interview_round_statuses_Id").WithColumnDescription("id of the specific ProcessStatuses").Identity()
-                .WithColumn("status").AsString(20).NotNullable().WithColumnDescription("Status of the roundwise of interview statuses").Unique("UK_tbl_interview_round_statuses_status");
+                .WithColumn("status").AsString(30).NotNullable().WithColumnDescription("Status of the roundwise of interview statuses").Unique("UK_tbl_interview_round_statuses_status");
 
             Create.Table("tbl_owners").WithDescription("Table used to store resume owners details")                                                  //Creation of tbl_owners
                 .WithColumn("id").AsInt64().PrimaryKey("PK_tbl_owners_Id").WithColumnDescription("id of the specific Owner").Identity()
@@ -164,6 +166,104 @@ namespace Recruit
             Delete.Table("tbl_interviewers");
         }
     }
+
+    [Migration(20210129153200)]
+    public class Altertblcandidate : Migration
+    {
+        public override void Up()
+        {
+
+
+            Alter.Table("tbl_vacancies").AddColumn("location_id").AsInt64().WithDefaultValue(1).Nullable().WithColumnDescription("foreignkey references the tbl_locations table defines the id of locations")
+                  .ForeignKey("fk_tbl_vacancies_tbl_locations_location_id", "tbl_locations", "id");
+
+            //alter.table("tbl_candidates").addcolumn("date_of_birth").asdate().notnullable().withcolumndescription("date of birth of the candidate")
+            //                             .addcolumn("passport_no").asstring(50).notnullable().withcolumndescription("passport number of the candidate").unique("uk_tbl_candidates_passport_no")
+            //                             .addcolumn("adhar_no").asstring(50).notnullable().withcolumndescription("adhar card number of the candidate").unique("uk_tbl_candidates_adhar_no");
+        }
+        public override void Down()
+        {
+
+        }
+    }
+
+
+    [Migration(20210101114400)]
+    public class InsertValues : Migration
+    {
+        public override void Up()
+        {
+
+            Insert.IntoTable("tbl_owners").Row(new { first_name = "Jo", last_name = "tetherfi" });
+            Insert.IntoTable("tbl_owners").Row(new { first_name = "Laxman", last_name = "tetherfi" });
+            Insert.IntoTable("tbl_owners").Row(new { first_name = "chelsea", last_name = "tetherfi" });
+
+
+
+
+
+            Insert.IntoTable("tbl_sources").Row(new { code = "Refer", name = "Employee Referrals" });
+           
+            Insert.IntoTable("tbl_employees").Row(new { code = "IN001", name = "Bharish" });
+            Insert.IntoTable("tbl_employees").Row(new { code = "IN002", name = "Vishal" });
+            Insert.IntoTable("tbl_employees").Row(new { code = "IN003", name = "Sharan" });
+            Insert.IntoTable("tbl_employees").Row(new { code = "IN004", name = "Adithya" });
+            Insert.IntoTable("tbl_employees").Row(new { code = "IN005", name = "Ankitha" });
+            
+            Insert.IntoTable("tbl_logins").Row(new { user_id = "admin", first_name = "Admin", last_name = "01", password = "password" });
+            Insert.IntoTable("tbl_logins").Row(new { user_id = "IN001", first_name = "Jo", last_name = "tetherfi", password = "abc001" });
+            Insert.IntoTable("tbl_logins").Row(new { user_id = "IN002", first_name = "Laxman", last_name = "tetherfi", password = "abc002" });
+            Insert.IntoTable("tbl_logins").Row(new { user_id = "IN003", first_name = "chelsea", last_name = "tetherfi", password = "abc003" });
+
+
+            //Insert.IntoTable("tbl_vacancies").Row(new { code = "dot_net", name = "   Sr.Software / Software Engineer - .Net", vacancy = "1" });
+            //Insert.IntoTable("tbl_vacancies").Row(new { code = "frontend_ui", name = "Front - End Developers - UI", vacancy = "2" });
+            //Insert.IntoTable("tbl_vacancies").Row(new { code = "angular_js", name = "Angular JS developer", vacancy = "3" });
+            //Insert.IntoTable("tbl_vacancies").Row(new { code = "ml_fresher", name = "AI / ML - fresher", vacancy = "4" });
+            //Insert.IntoTable("tbl_vacancies").Row(new { code = "dev_trainee", name = "Trainee Software Developer", vacancy = "5" });
+
+
+            //Insert.IntoTable("tbl_process_stages").Row(new { code = "apti_rcvd", stage = "Aptitude Test Received" });
+            //Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_gvn", stage = "Assignment Given" });
+            //Insert.IntoTable("tbl_process_stages").Row(new { code = "asgnmt_rcvd", stage = "Assignment Received" });
+
+
+
+            //Insert.IntoTable("tbl_process_statuses").Row(new { code = "Candi_joined", status = "Candidate joined", colour = "#FFFF00" });
+            //Insert.IntoTable("tbl_process_statuses").Row(new { code = "No job openings", status = "No job openings", colour = "#FFFF00" });
+            Insert.IntoTable("tbl_process_statuses").Row(new { code = "No job openings", status = "No job openings", colour = "ff0000" });
+
+
+            //Insert.IntoTable("tbl_interview_round_statuses").Row(new { status = "Selected" });
+            //Insert.IntoTable("tbl_interview_round_statuses").Row(new { status = "Rejected" });
+            //Insert.IntoTable("tbl_interview_round_statuses").Row(new { status = "Onhold" });
+            //Insert.IntoTable("tbl_interview_round_statuses").Row(new { status = "Candidate Rejected the offer" });
+            //Insert.IntoTable("tbl_interview_round_statuses").Row(new { status = "Offered" });
+            //Insert.IntoTable("tbl_interview_round_statuses").Row(new { status = "Joined" });
+            //Insert.IntoTable("tbl_interview_round_statuses").Row(new { status = "Candidate Rejected REason" });
+            //Insert.IntoTable("tbl_interview_round_statuses").Row(new { status = "Ongoing" });
+
+
+
+
+
+        }
+        public override void Down()
+        {
+            Delete.FromTable("tbl_owners").AllRows();
+            Delete.FromTable("tbl_locations").AllRows();
+            Delete.FromTable("tbl_sources").AllRows();
+            Delete.FromTable("tbl_employees").AllRows();
+            Delete.FromTable("tbl_logins").AllRows();
+            Delete.FromTable("tbl_vacancies").AllRows();
+            Delete.FromTable("tbl_process_stages").AllRows();
+            Delete.FromTable("tbl_process_statuses").AllRows();
+            Delete.FromTable("tbl_interview_round_statuses").AllRows();
+        }
+    }
+
+
+
 
     public class Init
     {
